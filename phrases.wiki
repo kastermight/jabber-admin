@@ -1,0 +1,13 @@
+#summary phrases.txt explanation
+
+= Introduction =
+
+The phrases.txt file carries out function of storehouse of phrases for bot. You will not to edit plugins, just edit this file.
+
+
+= Details =
+
+Phrase syntax:
+{{
+<in-plugin phrase name>=<phrase (format included)>
+}}
