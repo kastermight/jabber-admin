@@ -8,6 +8,6 @@ The phrases.txt file carries out function of storehouse of phrases for bot. You 
 = Details =
 
 Phrase syntax:
-{{
+{{{
 <in-plugin phrase name>=<phrase (format included)>
-}}
+}}}
