@@ -4,6 +4,8 @@ import sqlite3
 import random
 import time
 
+def onPluginStart(bot):
+	bot.words = 0
 
 def init():
 	return {'status':0,'usage':'[add|del] <word>','descr':'Words manage','gc':1}

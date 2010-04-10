@@ -1,19 +1,22 @@
 # -*- coding: utf-8 -*-
 import xmpp
+import time
 
 
 def init():
-	return {'status':6,'usage':'<add|del|list> [nick]','descr':'Moderators functions','gc':1}
+	return {'status':0,'usage':'[add|delete|list] <nick>','descr':'Moderators functions','gc':1}
 
 class Moders():
 	def add(self,bot,mess,args):
+		if args[0] not in bot.visitors[unicode(mess.getFrom()).split('/')[0]]:
+			return
 		priv = bot.visitors[unicode(mess.getFrom()).split('/')[0]][unicode(mess.getFrom()).split('/')[1]][1]
 		if (priv == 'owner') or (priv == 'admin'):
 			nick = args[0]
-			if (bot.visitors[unicode(mess.getFrom()).split('/')[0]][nick][1] == 'owner') and (bot.visitors[unicode(mess.getFrom()).split('/')[0]][nick][1] == 'admin'):
-				return
 			if nick in bot.config['conf_moders'][unicode(mess.getFrom()).split('/')[0]]:
 				bot.send(xmpp.Message(unicode(mess.getFrom()).split('/')[0],bot.phrases['AL_MODER']%nick,'groupchat'))
+				return
+			if (bot.visitors[unicode(mess.getFrom()).split('/')[0]][nick][1] == 'owner') or (bot.visitors[unicode(mess.getFrom()).split('/')[0]][nick][1] == 'admin'):
 				return
 			bot.visitors[unicode(mess.getFrom()).split('/')[0]][nick][1] = 'member'
 			bot.config['conf_moders'][unicode(mess.getFrom()).split('/')[0]].append(nick)
@@ -30,7 +33,10 @@ class Moders():
 			bot.send(iq)
 			bot.send(xmpp.Message(unicode(mess.getFrom()).split('/')[0],bot.phrases['MODER_ADD']%nick,'groupchat'))
 	def delete(self,bot,mess,args):
+		if args[0] not in bot.visitors[unicode(mess.getFrom()).split('/')[0]]:
+			return
 		priv = bot.visitors[unicode(mess.getFrom()).split('/')[0]][unicode(mess.getFrom()).split('/')[1]][1]
+		print bot.visitors[unicode(mess.getFrom()).split('/')[0]][unicode(mess.getFrom()).split('/')[1]][1]
 		if (priv == 'owner') or (priv == 'admin'):
 			nick = args[0]
 			if (bot.visitors[unicode(mess.getFrom()).split('/')[0]][nick][1] == 'owner') and (bot.visitors[unicode(mess.getFrom()).split('/')[0]][nick][1] == 'admin'):
@@ -51,12 +57,16 @@ class Moders():
 			item2.setAttr('affiliation','member')
 			item2.setAttr('jid',bot.visitors[unicode(mess.getFrom()).split('/')[0]][nick][0])
 			bot.send(iq)
+			time.sleep(500)
 			bot.send(xmpp.Message(unicode(mess.getFrom()).split('/')[0],bot.phrases['MODER_DELETE']%nick,'groupchat'))
 	def list(self,bot,mess,args):
 		room = unicode(mess.getFrom()).split('/')[0]
-		text = bot.phrases['MODERS'] + ':'
-		for i in bot.config['conf_moders'][room]:
-			text += '\n' + i
+		if len(bot.config['conf_moders'][room]) == 0:
+			text = bot.phrases['NMODERS']
+		else:
+			text = bot.phrases['MODERS'] + ':'
+			for i in bot.config['conf_moders'][room]:
+				text += '\n' + i
 		bot.send(xmpp.Message(room,text,'groupchat'))
 
 def rungc(bot,mess):

@@ -158,14 +158,10 @@ def presenseHandler(conn, pres):
 			if i.getAttr('xmlns').find('http://jabber.org/protocol/muc') != -1:
 				x = i
 				break
-		if x == 0:
-			return
-		elif x.getTag('item') == None:
+		if (x == 0) or (x.getTag('item') == None):
 			return
 		if x.getTag('item').getAttr('role') == 'visitor':
 			bot.send(xmpp.Message(pres.getFrom(),bot.phrases['VISITOR_HELP'],'chat'))
-		if unicode(pres.getFrom()).split('/')[0] not in bot.visitors:
-			return
 		bot.visitors[unicode(pres.getFrom()).split('/')[0]].update({unicode(pres.getFrom()).split('/')[1]:[x.getTag('item').getAttr('jid'),x.getTag('item').getAttr('affiliation')]})
 		if (unicode(pres.getFrom()).split('/')[1] not in bot.config['conf_moders'][unicode(pres.getFrom()).split('/')[0]]) or (x.getTag('item').getAttr('affiliation') == 'owner') or (x.getTag('item').getAttr('affiliation') == 'admin'):
 			return
@@ -188,11 +184,6 @@ bot = xmpp.Client(server,debug=[])
 bot.config = config
 bot.phrases = loadPhrases()
 bot.plugins = loadPlugins()
-bot.vote = {}
-bot.visitors = {}
-bot.ad = 0
-bot.words = 0
-bot.updated = 0
 c = 0
 while c == 0:
 	try:
@@ -202,6 +193,11 @@ while c == 0:
 	except:
 		time.sleep(300)
 print '# Connected!'
+for cmds in bot.plugins.items():
+	if cmds[0] != 'plugins':
+		for i in cmds[1]:
+			if getattr(getattr(bot.plugins['plugins'],i,None),'onPluginStart',None) != None:
+				getattr(bot.plugins['plugins'],i,None).onPluginStart(bot)
 bot.RegisterHandler('message',message)
 bot.RegisterHandler('presence', subscribeHandler,'subscribe')
 bot.RegisterHandler('presence', unsubscribeHandler,'unsubscribe')
@@ -230,7 +226,9 @@ while bot.online:
 	if delta > keepalive:
 		bot.send(' ')
 		last_time = now
+for cmds in bot.plugins.items():
+	if cmds[0] != 'plugins':
+		for i in cmds[1]:
+			if (getattr(getattr(bot.plugins['plugins'],i,None),'onPluginEnd',None) != None):
+				bot.plugins[i].onPluginEnd(bot)
 bot.disconnect()
-if bot.updated == 1:
-	os.startfile(sys.argv[0])
-	sys.exit()

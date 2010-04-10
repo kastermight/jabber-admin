@@ -1,6 +1,9 @@
 # coding: utf-8
 import xmpp
 
+def onPluginStart(bot):
+	bot.vote = {}
+	bot.visitors = {}
 
 def init():
 	return {'status':10,'usage':'<join|leave> <room>','descr':'Rooms management','gc':0}

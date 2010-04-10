@@ -4,6 +4,9 @@ import time
 
 id = 0
 
+def onPluginStart(bot):
+	bot.ad = 0
+
 def init():
 	return {'status':10,'usage':'<start|stop>','descr':'ADverts','gc':0}
 
