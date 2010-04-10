@@ -26,7 +26,7 @@ def run(bot,mess):
 
 def rungc(bot,mess):
 	room=unicode(mess.getFrom()).split('/')[0]
-	text = bot.phrases['AV_COMMANDS']
+	text = bot.phrases['AV_COMMANDS'] + ':'
 	geted = bot.plugins.get('commands_0')
 	if ((geted != None)):
 		for x in geted:
