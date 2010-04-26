@@ -1,7 +1,4 @@
 # coding: utf-8
-import sys
-import os
-
 import xmpp
 import time
 import thread
@@ -160,8 +157,13 @@ def presenseHandler(conn, pres):
 				break
 		if (x == 0) or (x.getTag('item') == None):
 			return
+		if (x.getTag('item').getAttr('role') == 'none') and (x.getTag('item').getAttr('role') == 'none'):
+			if unicode(pres.getFrom()).split('/')[1] != bot.config['conf_nick']:
+				del bot.visitors[unicode(pres.getFrom()).split('/')[0]][unicode(pres.getFrom()).split('/')[1]]
+			return
 		if x.getTag('item').getAttr('role') == 'visitor':
 			bot.send(xmpp.Message(pres.getFrom(),bot.phrases['VISITOR_HELP'],'chat'))
+		print str(pres)
 		bot.visitors[unicode(pres.getFrom()).split('/')[0]].update({unicode(pres.getFrom()).split('/')[1]:[x.getTag('item').getAttr('jid'),x.getTag('item').getAttr('affiliation')]})
 		if (unicode(pres.getFrom()).split('/')[1] not in bot.config['conf_moders'][unicode(pres.getFrom()).split('/')[0]]) or (x.getTag('item').getAttr('affiliation') == 'owner') or (x.getTag('item').getAttr('affiliation') == 'admin'):
 			return
@@ -184,6 +186,12 @@ bot = xmpp.Client(server,debug=[])
 bot.config = config
 bot.phrases = loadPhrases()
 bot.plugins = loadPlugins()
+bot.get_priv = get_priv
+bot.message = message
+bot.presenseHandler = presenseHandler
+bot.unsubscribeHandler = unsubscribeHandler
+bot.subscribeHandler = subscribeHandler
+bot.runPlugin = runPlugin
 c = 0
 while c == 0:
 	try:
@@ -193,32 +201,19 @@ while c == 0:
 	except:
 		time.sleep(300)
 print '# Connected!'
-for cmds in bot.plugins.items():
-	if cmds[0] != 'plugins':
-		for i in cmds[1]:
-			if getattr(getattr(bot.plugins['plugins'],i,None),'onPluginStart',None) != None:
-				getattr(bot.plugins['plugins'],i,None).onPluginStart(bot)
 bot.RegisterHandler('message',message)
 bot.RegisterHandler('presence', subscribeHandler,'subscribe')
 bot.RegisterHandler('presence', unsubscribeHandler,'unsubscribe')
 bot.RegisterHandler('presence', presenseHandler)
 bot.sendInitPresence()
 bot.online = 1
-if bot.config['autojoin'] == 1:
-	for room in bot.config['conf_moders']:
-		p=xmpp.Presence(to='%s/%s'%(room,bot.config['conf_nick']))
-		p.addChild('x')
-		p.getTag('x').setAttr('xmlns','http://jabber.org/protocol/muc')
-		p.getTag('x').addChild('password')
-		p.getTag('x').getTag('password').setData('japass')
-		p.getTag('x').addChild('history',{'maxchars':'0','maxstanzas':'0'})
-		p.setStatus('JAdmin - mobile life')
-		bot.send(p)
-		bot.vote.update({room:{}})
-		bot.visitors.update({room:{}})
-		time.sleep(10)
 last_time = 0
 keepalive = 30
+for cmds in bot.plugins.items():
+	if cmds[0] != 'plugins':
+		for i in cmds[1]:
+			if getattr(getattr(bot.plugins['plugins'],i,None),'onPluginStart',None) != None:
+				getattr(bot.plugins['plugins'],i,None).onPluginStart(bot)
 while bot.online:
 	bot.Process(1)
 	now = int(time.time())

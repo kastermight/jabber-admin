@@ -1,9 +1,23 @@
 # coding: utf-8
 import xmpp
+import time
 
 def onPluginStart(bot):
 	bot.vote = {}
 	bot.visitors = {}
+	if bot.config['autojoin'] == 1:
+		for room in bot.config['conf_moders']:
+			p=xmpp.Presence(to='%s/%s'%(room,bot.config['conf_nick']))
+			p.addChild('x')
+			p.getTag('x').setAttr('xmlns','http://jabber.org/protocol/muc')
+			p.getTag('x').addChild('password')
+			p.getTag('x').getTag('password').setData('japass')
+			p.getTag('x').addChild('history',{'maxchars':'0','maxstanzas':'0'})
+			p.setStatus('JAdmin - mobile life')
+			bot.send(p)
+			bot.vote.update({room:{}})
+			bot.visitors.update({room:{}})
+			time.sleep(0.2)
 
 def init():
 	return {'status':10,'usage':'<join|leave> <room>','descr':'Rooms management','gc':0}
@@ -23,6 +37,7 @@ class Rooms():
 			bot.vote.update({conf:{}})
 			bot.visitors.update({conf:{}})
 			bot.config['conf_moders'].update({conf:[]})
+			time.sleep(0.2)
 			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['ROOMS_JOINED']%conf))
 		else:
 			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['ROOMS_AIN']%conf))

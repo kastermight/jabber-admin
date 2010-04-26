@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import xmpp
 import re
-from __main__ import message,get_priv
 import time
 
 
@@ -19,7 +18,7 @@ def run(bot,mess):
 		name = reg[1]
 		level = int(reg[2])
 		albody = reg[3]
-		if (get_priv(unicode(mess.getFrom()).split('/')[0]) >= level):
+		if (bot.get_priv(unicode(mess.getFrom()).split('/')[0]) >= level):
 			if getattr(bot.plugins['plugins'],name,None) == None:
 				class Alias():
 					def init(self):
@@ -32,7 +31,7 @@ def run(bot,mess):
 								msg = xmpp.Message()
 								msg.setFrom(mess2.getFrom())
 								msg.setBody(i)
-								message(-1,msg)
+								bot2.message(-1,msg)
 								time.sleep(0.1)
 						else:
 							bot.send(xmpp.Message(mess.getFrom(),rg.groups()[0] + "'s body:\n" + albody))
@@ -48,7 +47,7 @@ def run(bot,mess):
 		al = getattr(bot.plugins['plugins'],name,None)
 		if (al != None):
 			if ('alias',1) in al.init().iteritems():
-				for i in range(get_priv(unicode(mess.getFrom()).split('/')[0])+1):
+				for i in range(bot.get_priv(unicode(mess.getFrom()).split('/')[0])+1):
 					if ('commands_'+unicode(i) in bot.plugins) and (name in bot.plugins['commands_'+unicode(i)]):
 						bot.plugins['commands_'+unicode(i)].remove(name)
 						delattr(bot.plugins['plugins'],name)
