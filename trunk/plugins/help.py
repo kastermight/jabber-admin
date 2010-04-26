@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import xmpp
-from __main__ import get_priv
 
 
 def init():
@@ -8,7 +7,7 @@ def init():
 
 def run(bot,mess):
 	user=unicode(mess.getFrom())
-	priv = get_priv(user)
+	priv = bot.get_priv(user)
 	text = bot.phrases['ACC_LEVEL']%priv
 	for i in range(priv,-1,-1):
 		geted = bot.plugins.get('commands_'+unicode(i))
