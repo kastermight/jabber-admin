@@ -89,6 +89,13 @@ def loadPhrases():
 		ret.update({i[0]:unicode(i[1],'utf-8')})
 	return ret
 
+def plugins_exec(func,*args):
+	for cmds in bot.plugins.items():
+		if cmds[0] != 'plugins':
+			for i in cmds[1]:
+				if getattr(getattr(bot.plugins['plugins'],i,None),func,None) != None:
+					getattr(getattr(bot.plugins['plugins'],i,None),func,None)(bot,*args)
+
 def runPlugin(command,bot,mess,mode):
 	plugin = getattr(bot.plugins['plugins'],command)
 	if mode=='gc':
@@ -133,17 +140,17 @@ def message(conn,mess):
 		return
 
 def subscribeHandler(conn, pres):
-	global bot
 	jid = pres.getFrom().getStripped()
 	Roster.Authorize(bot.getRoster(),jid)
 	Roster.Subscribe(bot.getRoster(),jid)
+	plugins_exec('onSubscribe')
 
 def unsubscribeHandler(conn, pres):
-	global bot
 	jid = pres.getFrom().getStripped()
 	Roster.Unauthorize(bot.getRoster(),jid)
 	Roster.Unsubscribe(bot.getRoster(),jid)
 	Roster.delItem(bot.getRoster(),jid)
+	plugins_exec('onUnsubscribe')
 
 def presenseHandler(conn, pres):
 	global bot
@@ -157,27 +164,7 @@ def presenseHandler(conn, pres):
 				break
 		if (x == 0) or (x.getTag('item') == None):
 			return
-		if (x.getTag('item').getAttr('role') == 'none') and (x.getTag('item').getAttr('role') == 'none'):
-			if unicode(pres.getFrom()).split('/')[1] != bot.config['conf_nick']:
-				del bot.visitors[unicode(pres.getFrom()).split('/')[0]][unicode(pres.getFrom()).split('/')[1]]
-			return
-		if x.getTag('item').getAttr('role') == 'visitor':
-			bot.send(xmpp.Message(pres.getFrom(),bot.phrases['VISITOR_HELP'],'chat'))
-		print str(pres)
-		bot.visitors[unicode(pres.getFrom()).split('/')[0]].update({unicode(pres.getFrom()).split('/')[1]:[x.getTag('item').getAttr('jid'),x.getTag('item').getAttr('affiliation')]})
-		if (unicode(pres.getFrom()).split('/')[1] not in bot.config['conf_moders'][unicode(pres.getFrom()).split('/')[0]]) or (x.getTag('item').getAttr('affiliation') == 'owner') or (x.getTag('item').getAttr('affiliation') == 'admin'):
-			return
-		iq = xmpp.Iq('set')
-		iq.setAttr('to',unicode(pres.getFrom()).split('/')[0])
-		query = iq.addChild('query')
-		query.setAttr('xmlns','http://jabber.org/protocol/muc#admin')
-		item = query.addChild('item')
-		item.setAttr('nick',unicode(pres.getFrom()).split('/')[1])
-		item.setAttr('role','moderator')
-		item2 = query.addChild('item')
-		item2.setAttr('affiliation','member')
-		item2.setAttr('jid',x.getTag('item').getAttr('jid'))
-		bot.send(iq)
+		bot.plugins_exec('onConference',pres,x)
 
 config = loadConfig()
 jid = xmpp.JID(config['login'])
@@ -192,6 +179,7 @@ bot.presenseHandler = presenseHandler
 bot.unsubscribeHandler = unsubscribeHandler
 bot.subscribeHandler = subscribeHandler
 bot.runPlugin = runPlugin
+bot.plugins_exec = plugins_exec
 c = 0
 while c == 0:
 	try:
@@ -209,11 +197,7 @@ bot.sendInitPresence()
 bot.online = 1
 last_time = 0
 keepalive = 30
-for cmds in bot.plugins.items():
-	if cmds[0] != 'plugins':
-		for i in cmds[1]:
-			if getattr(getattr(bot.plugins['plugins'],i,None),'onPluginStart',None) != None:
-				getattr(bot.plugins['plugins'],i,None).onPluginStart(bot)
+plugins_exec('onPluginStart')
 while bot.online:
 	bot.Process(1)
 	now = int(time.time())
@@ -221,9 +205,5 @@ while bot.online:
 	if delta > keepalive:
 		bot.send(' ')
 		last_time = now
-for cmds in bot.plugins.items():
-	if cmds[0] != 'plugins':
-		for i in cmds[1]:
-			if (getattr(getattr(bot.plugins['plugins'],i,None),'onPluginEnd',None) != None):
-				bot.plugins[i].onPluginEnd(bot)
+plugins_exec('onPluginEnd')
 bot.disconnect()

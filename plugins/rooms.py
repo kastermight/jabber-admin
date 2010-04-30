@@ -19,6 +19,24 @@ def onPluginStart(bot):
 			bot.visitors.update({room:{}})
 			time.sleep(0.2)
 
+def onConference(bot,pres,x):
+	if x.getTag('item').getAttr('role') == 'visitor':
+		bot.send(xmpp.Message(pres.getFrom(),bot.phrases['VISITOR_HELP'],'chat'))
+	bot.visitors[unicode(pres.getFrom()).split('/')[0]].update({unicode(pres.getFrom()).split('/')[1]:[x.getTag('item').getAttr('jid'),x.getTag('item').getAttr('affiliation')]})
+	if (unicode(pres.getFrom()).split('/')[1] not in bot.config['conf_moders'][unicode(pres.getFrom()).split('/')[0]]) or (x.getTag('item').getAttr('affiliation') == 'owner') or (x.getTag('item').getAttr('affiliation') == 'admin'):
+		return
+	iq = xmpp.Iq('set')
+	iq.setAttr('to',unicode(pres.getFrom()).split('/')[0])
+	query = iq.addChild('query')
+	query.setAttr('xmlns','http://jabber.org/protocol/muc#admin')
+	item = query.addChild('item')
+	item.setAttr('nick',unicode(pres.getFrom()).split('/')[1])
+	item.setAttr('role','moderator')
+	item2 = query.addChild('item')
+	item2.setAttr('affiliation','member')
+	item2.setAttr('jid',x.getTag('item').getAttr('jid'))
+	bot.send(iq)
+
 def init():
 	return {'status':10,'usage':'<join|leave> <room>','descr':'Rooms management','gc':0}
 
