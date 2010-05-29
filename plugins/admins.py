@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 import xmpp
 
-def init():
-	return {'status':6,'descr':'Admins on-line','gc':2}
+def init(bot):
+	return {'status':6,'descr':bot.phrases['DESCR_ADMINS'],'gc':2}
 
 def run(bot,mess,mode='chat'):
 	text = bot.phrases['ADMINS'] + ':'
-	for i in bot.config['user_no_pass']:
+	for i in bot.config['permissions']['private_users']:
 		text += '\n' + i[0] + ':' + unicode(i[1])
 	bot.send(xmpp.Message(mess.getFrom(),text,mode))
 

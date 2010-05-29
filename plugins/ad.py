@@ -7,17 +7,18 @@ id = 0
 def onPluginStart(bot):
 	bot.ad = 0
 
-def init():
-	return {'status':10,'usage':'<start|stop>','descr':'ADverts','gc':0}
+def init(bot):
+	return {'status':10,'usage':'<start|stop>','descr':bot.phrases['DESCR_AD'],'gc':0}
 
 def runAD(bot,mess):
 	global id
-	time.sleep(600)
+	time.sleep(float(bot.config['plugins_settings']['ad_delay']))
 	ads = open('ad.txt').read().split('\n')
 	if id >= len(ads):
 		id = 0
-	for room in bot.visitors:
-		bot.send(xmpp.Message(room,ads[id],'groupchat'))
+	if ads[id] != "\n":
+		for room in bot.visitors:
+			bot.send(xmpp.Message(room,ads[id],'groupchat'))
 	id += 1
 
 class AD():

@@ -2,8 +2,8 @@
 import xmpp
 
 
-def init():
-	return {'status':0,'descr':'Vote yes','gc':1}
+def init(bot):
+	return {'status':0,'descr':bot.phrases['DESCR_YES'],'gc':1}
 
 def rungc(bot,mess):
 	user = unicode(mess.getFrom()).split('/')[1]

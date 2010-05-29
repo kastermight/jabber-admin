@@ -4,8 +4,8 @@ import re
 import time
 
 
-def init():
-	return {'status':1,'usage':'add|del <name>[:<level> <body>]','descr':'Making aliases','gc':0}
+def init(bot):
+	return {'status':1,'usage':'add <name>:<level> <body>|del <name>','descr':bot.phrases['DESCR_ALIAS'],'gc':0}
 
 def run(bot,mess):
 	reg = re.match('alias (?:(add) ([^ ]*):([\d]{1,3}) (.*)|(del) (.*))', mess.getBody())
@@ -46,7 +46,7 @@ def run(bot,mess):
 		name = reg[1]
 		al = getattr(bot.plugins['plugins'],name,None)
 		if (al != None):
-			if ('alias',1) in al.init().iteritems():
+			if ('alias',1) in al.init(bot).iteritems():
 				for i in range(bot.get_priv(unicode(mess.getFrom()).split('/')[0])+1):
 					if ('commands_'+unicode(i) in bot.plugins) and (name in bot.plugins['commands_'+unicode(i)]):
 						bot.plugins['commands_'+unicode(i)].remove(name)

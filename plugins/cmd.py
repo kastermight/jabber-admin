@@ -3,8 +3,8 @@ import xmpp
 import os
 
 
-def init():
-	return {'status':10,'usage':'<command>','descr':'System shell','gc':0}
+def init(bot):
+	return {'status':10,'usage':'<command>','descr':bot.phrases['DESCR_CMD'],'gc':0}
 
 def run(bot,mess):
 	cmd = mess.getBody()

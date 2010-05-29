@@ -3,8 +3,8 @@ import xmpp
 import time
 
 
-def init():
-	return {'status':0,'descr':'Time now','gc':2}
+def init(bot):
+	return {'status':0,'descr':bot.phrases['DESCR_THETIME'],'gc':2}
 
 def run(bot,mess,mode='chat'):
 	mon = {
