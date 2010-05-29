@@ -99,12 +99,11 @@ def runPlugin(command,mess,mode):
 
 def message(conn,mess):
 	global bot
-	if mess.getFrom() == bot.config['connect']['login']
 	user=unicode(mess.getFrom())
 	plugins_exec('onMessage',mess)
 	if mess.getType() == 'chat':
 		text = mess.getBody()
-		if ( text == None ):
+		if (text == None):
 			return
 		command = text.split(' ')
 		command = command[0]
@@ -114,7 +113,7 @@ def message(conn,mess):
 			if ((geted != None) and (command in geted)):
 				thread.start_new_thread(runPlugin,(command,mess,'chat'))
 				break
-	elif (mess.getType() == 'groupchat') and (mess.getBody()[0] == '!'):
+	elif (mess.getType() == 'groupchat') and (len(unicode(mess.getBody())) > 0) and (mess.getBody()[0] == '!'):
 		text = mess.getBody()
 		if ( text == None ):
 			return
@@ -122,8 +121,7 @@ def message(conn,mess):
 		mess.setBody(unicode(mess.getBody())[1:])
 		command = text.split(' ')
 		command = command[0]
-		isf = get_priv(user)
-		for i in range(isf,-1,-1):
+		for i in range(bot.config['permissions']['max_level'],-1,-1):
 			geted = bot.plugins.get('commands_'+unicode(i))
 			if ((geted != None) and (command in geted)):
 				thread.start_new_thread(runPlugin,(command,mess,'gc',))
