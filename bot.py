@@ -99,6 +99,7 @@ def runPlugin(command,mess,mode):
 
 def message(conn,mess):
 	global bot
+	if mess.getFrom() == bot.config['connect']['login']
 	user=unicode(mess.getFrom())
 	plugins_exec('onMessage',mess)
 	if mess.getType() == 'chat':
@@ -163,12 +164,14 @@ bot.config = config
 bot.phrases = loadPhrases()
 bot.plugins = loadPlugins()
 bot.get_priv = get_priv
-bot.message = message
+bot.messageHandler = message
 bot.presenseHandler = presenseHandler
 bot.unsubscribeHandler = unsubscribeHandler
 bot.subscribeHandler = subscribeHandler
 bot.runPlugin = runPlugin
 bot.plugins_exec = plugins_exec
+bot.reloadPhrases = loadPhrases
+bot.reloadPlugins = loadPlugins
 c = 0
 while c == 0:
 	try:
@@ -177,6 +180,7 @@ while c == 0:
 		c=1
 	except:
 		print 'There is no network, reconnecting in 5 minutes'
+		plugins_exec('noNetworkPre')
 		time.sleep(300)
 print '# Connected!'
 bot.online = 1
@@ -197,14 +201,11 @@ while bot.online:
 			bot.send(' ')
 		except:
 			print 'There is no network, reconnecting in 5 minutes'
+			plugins_exec('noNetworkPost')
 			time.sleep(300)
 			try:
 				bot.connect()
 				bot.auth(user,password,res)
-				bot.RegisterHandler('message',message)
-				bot.RegisterHandler('presence', subscribeHandler,'subscribe')
-				bot.RegisterHandler('presence', unsubscribeHandler,'unsubscribe')
-				bot.RegisterHandler('presence', presenseHandler)
 			except:
 				continue
 		finally:
