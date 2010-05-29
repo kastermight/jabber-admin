@@ -2,12 +2,12 @@
 import xmpp
 
 
-def init():
-	return {'status':1,'descr':'Admin session closing','gc':0}
+def init(bot):
+	return {'status':1,'descr':bot.phrases['DESCR_EXIT'],'gc':0}
 
 def run(bot,mess):
 	user=unicode(mess.getFrom())
 	priv = bot.get_priv(user)
 	if priv != 0:
-		bot.config['user_no_pass'].remove([user,priv])
+		bot.config['permissions']['private_users'].remove([user,priv])
 		bot.send(xmpp.Message(mess.getFrom(),bot.phrases['SESS_CLOSE']))

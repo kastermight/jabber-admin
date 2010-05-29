@@ -5,8 +5,8 @@ import httplib
 import re
 
 
-def init():
-	return {'status':9,'usage':'<site>','descr':'RSS News reader','gc':0}
+def init(bot):
+	return {'status':9,'usage':'<rss page>','descr':bot.phrases['DESCR_RSS'],'gc':0}
 
 def getTitle(obj):
 	try:

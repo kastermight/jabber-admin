@@ -3,8 +3,8 @@ import xmpp
 import thread
 
 
-def init():
-	return {'status':0,'usage':'<question>','descr':'Voting','gc':1}
+def init(bot):
+	return {'status':0,'usage':'<question>','descr':bot.phrases['DESCR_VOTE'],'gc':1}
 
 def voteResult(bot,theme,room):
 	import time

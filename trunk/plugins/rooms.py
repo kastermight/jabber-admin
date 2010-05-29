@@ -2,12 +2,18 @@
 import xmpp
 import time
 
+def init(bot):
+	return {'status':10,'usage':'<join|leave> <room>','descr':bot.phrases['DESCR_ROOMS'],'gc':0}
+
 def onPluginStart(bot):
+	for i in bot.config['conferences']:
+		if (i != 'autojoin') and (i != 'nick'):
+			bot.config['conferences'][i] = bot.config['conferences'][i].split(',')
 	bot.vote = {}
 	bot.visitors = {}
-	if bot.config['autojoin'] == 1:
-		for room in bot.config['conf_moders']:
-			p=xmpp.Presence(to='%s/%s'%(room,bot.config['conf_nick']))
+	if bot.config['conferences']['autojoin'] == "1":
+		for room in bot.config['conferences']['join']:
+			p=xmpp.Presence(to='%s/%s'%(room,bot.config['conferences']['nick']))
 			p.addChild('x')
 			p.getTag('x').setAttr('xmlns','http://jabber.org/protocol/muc')
 			p.getTag('x').addChild('password')
@@ -17,13 +23,15 @@ def onPluginStart(bot):
 			bot.send(p)
 			bot.vote.update({room:{}})
 			bot.visitors.update({room:{}})
-			time.sleep(0.2)
+			if bot.config['conferences'].get(room,None) == None:
+				bot.config['conferences'][room] = []
+			time.sleep(0.5)
 
 def onConference(bot,pres,x):
 	if x.getTag('item').getAttr('role') == 'visitor':
 		bot.send(xmpp.Message(pres.getFrom(),bot.phrases['VISITOR_HELP'],'chat'))
 	bot.visitors[unicode(pres.getFrom()).split('/')[0]].update({unicode(pres.getFrom()).split('/')[1]:[x.getTag('item').getAttr('jid'),x.getTag('item').getAttr('affiliation')]})
-	if (unicode(pres.getFrom()).split('/')[1] not in bot.config['conf_moders'][unicode(pres.getFrom()).split('/')[0]]) or (x.getTag('item').getAttr('affiliation') == 'owner') or (x.getTag('item').getAttr('affiliation') == 'admin'):
+	if (unicode(pres.getFrom()).split('/')[1] not in bot.config['conferences'][unicode(pres.getFrom()).split('/')[0]]) or (x.getTag('item').getAttr('affiliation') == 'owner') or (x.getTag('item').getAttr('affiliation') == 'admin'):
 		return
 	iq = xmpp.Iq('set')
 	iq.setAttr('to',unicode(pres.getFrom()).split('/')[0])
@@ -37,14 +45,11 @@ def onConference(bot,pres,x):
 	item2.setAttr('jid',x.getTag('item').getAttr('jid'))
 	bot.send(iq)
 
-def init():
-	return {'status':10,'usage':'<join|leave> <room>','descr':'Rooms management','gc':0}
-
 class Rooms():
 	def join(self,bot,mess,args):
 		conf = args[0]
 		if conf not in bot.visitors:
-			p=xmpp.Presence(to='%s/%s'%(conf,bot.config['conf_nick']))
+			p=xmpp.Presence(to='%s/%s'%(conf,bot.config['conferences']['nick']))
 			p.addChild('x')
 			p.getTag('x').setAttr('xmlns','http://jabber.org/protocol/muc')
 			p.getTag('x').addChild('password')
@@ -54,7 +59,7 @@ class Rooms():
 			bot.send(p)
 			bot.vote.update({conf:{}})
 			bot.visitors.update({conf:{}})
-			bot.config['conf_moders'].update({conf:[]})
+			bot.config['conferences'].update({conf:[]})
 			time.sleep(0.2)
 			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['ROOMS_JOINED']%conf))
 		else:
@@ -62,7 +67,7 @@ class Rooms():
 	def leave(self,bot,mess,args):
 		conf = args[0]
 		if conf in bot.visitors:
-			p=xmpp.Presence(to='%s/%s'%(conf,bot.config['conf_nick']))
+			p=xmpp.Presence(to='%s/%s'%(conf,bot.config['conferences_moders']['nick']))
 			p.setAttr('type','unavailable')
 			p.setStatus('JAdmin - mobile life')
 			bot.send(p)

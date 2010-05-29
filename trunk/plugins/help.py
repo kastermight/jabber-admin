@@ -2,8 +2,8 @@
 import xmpp
 
 
-def init():
-	return {'status':0,'descr':'Commands helper','gc':2}
+def init(bot):
+	return {'status':0,'descr':bot.phrases['DESCR_HELP'],'gc':2}
 
 def run(bot,mess):
 	user=unicode(mess.getFrom())
@@ -15,25 +15,25 @@ def run(bot,mess):
 			text += '\n----' + bot.phrases['LEVEL_CMD']%i + '----'
 			for x in geted:
 				plug = getattr(bot.plugins['plugins'],x)
-				if (plug.init().get('gc') == 2) or (plug.init().get('gc') == 0):
-					gets = plug.init().get('usage')
+				if plug.init(bot).get('gc') != 1:
+					gets = plug.init(bot).get('usage')
 					if (gets != None):
-						text += '\n' + x + ' ' + plug.init()['usage'] + ' - ' + plug.init()['descr']
+						text += '\n' + x + ' ' + plug.init(bot)['usage'] + ' - ' + plug.init(bot)['descr']
 					else:
-						text += '\n' + x +  ' - ' + plug.init()['descr']
+						text += '\n' + x +  ' - ' + plug.init(bot)['descr']
 	bot.send(xmpp.Message(mess.getFrom(),text))
 
 def rungc(bot,mess):
 	room=unicode(mess.getFrom()).split('/')[0]
 	text = bot.phrases['AV_COMMANDS'] + ':'
-	geted = bot.plugins.get('commands_0')
-	if ((geted != None)):
-		for x in geted:
-			plug = getattr(bot.plugins['plugins'],x)
-			if plug.init().get('gc') != 0:
-				gets = plug.init().get('usage')
-				if (gets != None):
-					text += '\n' + x + ' ' + plug.init()['usage'] + ' - ' + plug.init()['descr']
-				else:
-					text += '\n' + x +  ' - ' + plug.init()['descr']
+	for cmds in bot.plugins.items():
+		if cmds[0] != 'plugins':
+			for plugname in cmds[1]:
+				plug = getattr(bot.plugins['plugins'],plugname)
+				if plug.init(bot).get('gc') != 0:
+					gets = plug.init(bot).get('usage')
+					if (gets != None):
+						text += '\n' + plugname + ' ' + plug.init(bot)['usage'] + ' - ' + plug.init(bot)['descr']
+					else:
+						text += '\n' + plugname +  ' - ' + plug.init(bot)['descr']
 	bot.send(xmpp.Message(room,text,'groupchat'))

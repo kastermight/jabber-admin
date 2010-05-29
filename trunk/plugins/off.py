@@ -2,8 +2,8 @@
 import xmpp
 
 
-def init():
-	return {'status':10,'descr':'Turns off bot','gc':2}
+def init(bot):
+	return {'status':10,'descr':bot.phrases['DESCR_OFF'],'gc':2}
 
 def run(bot,mess,mode='chat'):
 	bot.send(xmpp.Message(mess.getFrom(),bot.phrases['BOT_SD'],mode))

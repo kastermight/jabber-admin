@@ -1,22 +1,31 @@
 # -*- coding: utf-8 -*-
 import xmpp
 
+def messageEvent(bot,mess):
+	user=unicode(mess.getFrom())
+	if user.split('/')[0] in bot.config['permissions']['banned']:
+		mess.setBody("")
+	if user in bot.config['permissions']['banned']:
+		mess.setBody("")
 
-def init():
-	return {'status':8,'usage':'<jid|nick>','descr':'Ban system plugin','gc':2}
+def onPluginStart(bot):
+	bot.config['permissions']['banned'] = bot.config['permissions']['banned'].split(',')
+
+def init(bot):
+	return {'status':8,'usage':'list|(add|delete <jid|nick>)','descr':bot.phrases['DESCR_BANS'],'gc':2}
 
 class Bans():
 	def add(self,bot,mess,args,mode):
 		jid = args[0]
-		bot.config['bans'].append(jid)
+		bot.config['permissions']['banned'].append(jid)
 		bot.send(xmpp.Message(mess.getFrom(),bot.phrases['BANS_BANNED']%unicode(jid),mode))
 	def delete(self,bot,mess,args,mode):
 		jid = args[0]
-		bot.config['bans'].remove(jid)
+		bot.config['permissions']['banned'].remove(jid)
 		bot.send(xmpp.Message(mess.getFrom(),bot.phrases['BANS_UNBANNED']%jid,mode))
 	def list(self,bot,mess,args,mode):
 		banlist = bot.phrases['BANS_BJIDS'] + ':'
-		for i in bot.config['bans']:
+		for i in bot.config['permissions']['banned']:
 			if i != '':
 				banlist += '\n' + unicode(i)
 		bot.send(xmpp.Message(mess.getFrom(),banlist,mode))

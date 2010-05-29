@@ -7,8 +7,8 @@ import time
 def onPluginStart(bot):
 	bot.words = 0
 
-def init():
-	return {'status':0,'usage':'[add|del] <word>','descr':'Words manage','gc':1}
+def init(bot):
+	return {'status':0,'usage':'[add|del] <word>','descr':bot.phrases['DESCR_WORD'],'gc':1}
 
 class Word():
 	dbs = sqlite3.connect("base.db")

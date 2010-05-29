@@ -2,8 +2,8 @@
 import xmpp
 
 
-def init():
-	return {'status':0,'usage':'<text>','descr':'Echo test plugin','gc':2}
+def init(bot):
+	return {'status':0,'usage':'<text>','descr':bot.phrases['DESCR_ECHO'],'gc':2}
 
 def run(bot,mess,mode='chat'):
 	bot.send(xmpp.Message(mess.getFrom(),mess.getBody()[5:],mode))

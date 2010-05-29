@@ -2,8 +2,8 @@
 import xmpp
 
 
-def init():
-	return {'status':0,'descr':'Makes you participant','gc':0}
+def init(bot):
+	return {'status':0,'descr':bot.phrases['DESCR_VOICE'],'gc':0}
 
 def run(bot,mess):
 	iq = xmpp.Iq('set')
