@@ -45,6 +45,10 @@ def onConference(bot,pres,x):
 	item2.setAttr('jid',x.getTag('item').getAttr('jid'))
 	bot.send(iq)
 
+def onMessage(bot,mess):
+	if (mess.getType() == 'groupchat') and (unicode(mess.getFrom()).split('/')[1] == bot.config['conferences']['nick']):
+		mess.setBody('')
+
 class Rooms():
 	def join(self,bot,mess,args):
 		conf = args[0]
