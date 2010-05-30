@@ -13,7 +13,7 @@ def writeLog(bot,filename,text):
 		os.makedirs(path)
 	text = '[' + unicode(nowtime[3]) + ':' + unicode(nowtime[4]) + ':' + unicode(nowtime[5]) + '] ' + text
 	fl = open(path + "/" + filename + '.txt',"ab+")
-	fl.write(text + "\n")
+	fl.write(text.encode('utf-8') + "\n")
 	fl.close()
 
 def onMessage(bot,mess):
@@ -21,11 +21,14 @@ def onMessage(bot,mess):
 		if mess.getType() == 'chat':
 			writeLog(bot,unicode(mess.getFrom()).split('/')[0],"%s: %s"%(unicode(mess.getFrom()).split('@')[0],unicode(mess.getBody())))
 		elif mess.getType() == 'groupchat':
-			writeLog(bot,unicode(mess.getFrom()).split('/')[0],"%s: %s"%(unicode(mess.getFrom()).split('/')[1],mess.getBody()))
+			if len(unicode(mess.getFrom()).split('/')) > 1:
+				writeLog(bot,unicode(mess.getFrom()).split('/')[0],"%s: %s"%(unicode(mess.getFrom()).split('/')[1],unicode(mess.getBody())))
+			else:
+				writeLog(bot,unicode(mess.getFrom()),"The topic is %s"%unicode(mess.getBody()))
 
 def onConference(bot,pres,x):
 	if log == 1:
-		writeLog(bot,unicode(pres.getFrom()).split('/')[0],"%s changed role to %s and affiliation to %s"%(unicode(pres.getFrom()).split('/')[1],x.getTag('item').getAttr('role'),x.getTag('item').getAttr('affiliation')))
+		writeLog(bot,unicode(pres.getFrom()).split('/')[0],"%s changed role to %s and affiliation to %s"%(unicode(pres.getFrom()).split('/')[1],unicode(x.getTag('item').getAttr('role')),unicode(x.getTag('item').getAttr('affiliation'))))
 
 def onSubscribe(bot,pres):
 	if log == 1:
