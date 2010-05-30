@@ -113,7 +113,9 @@ def message(conn,mess):
 			if ((geted != None) and (command in geted)):
 				thread.start_new_thread(runPlugin,(command,mess,'chat'))
 				break
-	elif (mess.getType() == 'groupchat') and (len(unicode(mess.getBody())) > 0) and (mess.getBody()[0] == '!'):
+	elif (mess.getType() == 'groupchat') and (len(unicode(mess.getBody())) > 0):
+		if unicode(mess.getBody())[0] != u'!':
+			return
 		text = mess.getBody()
 		if ( text == None ):
 			return

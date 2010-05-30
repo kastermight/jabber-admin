@@ -8,82 +8,93 @@ def onPluginStart(bot):
 	bot.words = 0
 
 def init(bot):
-	return {'status':0,'usage':'[add|del] <word>','descr':bot.phrases['DESCR_WORD'],'gc':1}
+	return {'status':8,'usage':'[add|del] <word>','descr':bot.phrases['DESCR_WORD'],'gc':1}
 
 class Word():
-	dbs = sqlite3.connect("base.db")
-	db = dbs.cursor()
+	def __init__(self,mode):
+		self.dbs = sqlite3.connect("base.db")
+		self.db = self.dbs.cursor()
+		self.mode = mode
 	def add(self,bot,mess,args):
 		word = args[0]
 		descr = u' '.join(args[1:])
-		obj = db.execute("SELECT word,stat FROM words WHERE word=?",(word,)).fetchone()
+		obj = self.db.execute("SELECT word,stat FROM words WHERE word=?",(word,)).fetchone()
 		if obj != None:
-			db.execute("DELETE FROM words WHERE word=?",(word,))
-			db.execute("INSERT INTO words VALUES (?,?)",(word,descr))
+			self.db.execute("DELETE FROM words WHERE word=?",(word,))
+			self.db.execute("INSERT INTO words VALUES (?,?)",(word,descr))
 		else:
-			db.execute("INSERT INTO words VALUES (?,?)",(word,descr))
-		bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_ADDED']%word,mode))
-		dbs.commit()
+			self.db.execute("INSERT INTO words VALUES (?,?)",(word,descr))
+		bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_ADDED']%word,self.mode))
+		self.dbs.commit()
 	def delete(self,bot,mess,args):
 		word = args[0]
-		dl = db.execute("DELETE FROM words WHERE word=?",(word,))
+		dl = self.db.execute("DELETE FROM words WHERE word=?",(word,))
 		if dl.rowcount >= 1:
-			dbs.commit()
-			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_DELETED']%word,mode))
+			self.dbs.commit()
+			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_DELETED']%word,self.mode))
 		else:
-			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_NWORD']%word,mode))
+			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_NWORD']%word,self.mode))
 	def start(self,bot,mess,args):
 		if bot.words==1:
-			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_ARUN'],mode))
+			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_ARUN'],self.mode))
 		else:
 			bot.words=1
-			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_START'],mode))
+			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_START'],self.mode))
 			random.seed = unicode(mess.getFrom())
 			while bot.words==1:
 				time.sleep(1200)
-				db = dbs.cursor()
-				obj = len(db.execute("SELECT word,stat FROM words").fetchall())
+				obj = len(self.db.execute("SELECT word,stat FROM words").fetchall())
 				if obj != 0:
 					rand = random.randint(1,obj)
-					randphrase = db.execute("SELECT word,stat FROM words LIMIT %d,%d"%(rand-1,rand)).fetchone()
-					bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_SAY']%(randphrase[0],randphrase[1]),mode))
+					randphrase = self.db.execute("SELECT word,stat FROM words LIMIT %d,%d"%(rand-1,rand)).fetchone()
+					bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_SAY']%(randphrase[0],randphrase[1]),self.mode))
 				else:
-					bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_NWORDS'],mode))
+					bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_NWORDS'],self.mode))
 				db.close()
 	def stop(self,bot,mess,args):
 		if bot.word==0:
-			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_NRUN'],mode))
+			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_NRUN'],self.mode))
 		else:
 			bot.word=0
-			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_STOP'],mode))
+			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_STOP'],self.mode))
 	def list(self,bot,mess,args):
-		word = args[0]
-		obj = db.execute("SELECT word FROM words",(word,)).fetchall()
+		obj = self.db.execute("SELECT word FROM words").fetchall()
 		if obj != None:
-			bot.send(xmpp.Message(mess.getFrom(),u''.join(obj),mode))
+			a = u''
+			for i in obj:
+				a += unicode(i[0]) + u', '
+			a = a[:-2]
+			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_KNOW']%a,self.mode))
 		else:
-			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_NWORDS'],mode))
-		dbs.commit()
-	def getWord(self,bot,mess,args):
-		word = args[0]
-		obj = db.execute("SELECT word,stat FROM words WHERE word=?",(word,)).fetchone()
+			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_NWORDS'],self.mode))
+	def getWord(self,bot,mess,word):
+		obj = self.db.execute("SELECT word,stat FROM words WHERE word=?",(word,)).fetchone()
 		if obj != None:
-			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_SAY']%(obj[0],obj[1]),mode))
+			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_SAY']%(obj[0],obj[1]),self.mode))
 		else:
-			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_NWORD']%word,mode))
+			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_NWORD']%word,self.mode))
+
+def run(bot,mess):
+	cmd = unicode(mess.getBody()).split(' ')
+	if len(cmd) < 2:
+		return
+	args = cmd[2:]
+	cmd = cmd[1]
+	exec1 = getattr(Word('chat'),cmd,None)
+	if exec1 == None:
+		Word('chat').getWord(bot,mess,cmd)
+	else:
+		exec1(bot,mess,args)
 def rungc(bot,mess):
 	cmd = unicode(mess.getBody()).split(' ')
 	if len(cmd) < 2:
 		return
 	priv = bot.visitors[unicode(mess.getFrom()).split('/')[0]][unicode(mess.getFrom()).split('/')[1]][1]
-	if (priv == 'admin') or (priv == 'owner'):
-		mess.setFrom(unicode(mess.getFrom()).split('/')[0])
-		args = cmd[2:]
-		cmd = cmd[1]
-		exec1 = getattr(Word(),cmd,None)
-		if exec1 == None:
-			Word().getWord(bot,mess,args)
-		else:
-			exec1(bot,mess,args)
+	mess.setFrom(unicode(mess.getFrom()).split('/')[0])
+	args = cmd[2:]
+	cmd = cmd[1]
+	exec1 = getattr(Word('groupchat'),cmd,None)
+	if (exec1 == None) or ((priv != 'admin') and (priv != 'owner')):
+		Word('groupchat').getWord(bot,mess,cmd)
 	else:
-		return
+		exec1(bot,mess,args)

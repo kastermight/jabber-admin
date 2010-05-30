@@ -69,6 +69,7 @@ WORD_NRUN=Words scrolling is not running
 WORD_START=Words scrolling started
 WORD_STOP=Words scrolling stopped
 WORD_NWORDS=There are no phrases in database
+WORD_KNOW=There are these words in database: %s
 ROOMS_AIN=Bot already in conference %s
 ROOMS_NIN=There are no bot in conference %s
 ROOMS_JOINED=Bot joined conference %s

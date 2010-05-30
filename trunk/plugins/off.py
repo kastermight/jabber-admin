@@ -3,7 +3,7 @@ import xmpp
 
 
 def init(bot):
-	return {'status':10,'descr':bot.phrases['DESCR_OFF'],'gc':2}
+	return {'status':10,'descr':bot.phrases['DESCR_OFF'],'gc':0}
 
 def run(bot,mess,mode='chat'):
 	bot.send(xmpp.Message(mess.getFrom(),bot.phrases['BOT_SD'],mode))
