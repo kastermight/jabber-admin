@@ -4,7 +4,7 @@ import time
 
 
 def init(bot):
-	return {'status':0,'usage':'list [<conference>]|(add|delete <jid>)','descr':bot.phrases['DESCR_MODER'],'gc':1}
+	return {'status':0,'usage':'list [<conference>]|(add|delete <nick>)','descr':bot.phrases['DESCR_MODER'],'gc':1}
 
 class Moders():
 	def add(self,bot,mess,args):
