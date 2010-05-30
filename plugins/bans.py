@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 import xmpp
+import re
 
-def messageEvent(bot,mess):
+def onMessage(bot,mess):
 	user=unicode(mess.getFrom())
-	if user.split('/')[0] in bot.config['permissions']['banned']:
-		mess.setBody("")
-	if user in bot.config['permissions']['banned']:
-		mess.setBody("")
+	for i in bot.config['permissions']['banned']:
+		if re.match(i,user,re.IGNORECASE) != None:
+			mess.setBody("")
 
 def onPluginStart(bot):
 	bot.config['permissions']['banned'] = bot.config['permissions']['banned'].split(',')
