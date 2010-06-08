@@ -9,7 +9,7 @@ def init(bot):
 def run(bot,mess):
 	user=unicode(mess.getFrom())
 	priv = bot.get_priv(user)
-	passw = re.match('pass (\d{1,2}) (.*)', mess.getBody())
+	passw = re.match('login (\d{1,2}) (.*)', mess.getBody())
 	level = ''
 	password = ''
 	try:

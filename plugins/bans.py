@@ -5,8 +5,9 @@ import re
 def onMessage(bot,mess):
 	user=unicode(mess.getFrom())
 	for i in bot.config['permissions']['banned']:
-		if re.match(i,user,re.IGNORECASE) != None:
-			mess.setBody("")
+		if i != '':
+			if re.match(i,user,re.IGNORECASE) != None:
+				mess.setBody("-")
 
 def onPluginStart(bot):
 	bot.config['permissions']['banned'] = bot.config['permissions']['banned'].split(',')

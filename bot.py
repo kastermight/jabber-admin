@@ -113,12 +113,7 @@ def message(conn,mess):
 			if ((geted != None) and (command in geted)):
 				thread.start_new_thread(runPlugin,(command,mess,'chat'))
 				break
-	elif mess.getType() == 'groupchat':
-		try:
-			if unicode(mess.getBody())[0] != u'!':
-				return
-		except:
-			return
+	elif (mess.getType() == 'groupchat') and (unicode(mess.getBody())[0] == u'!'):
 		text = mess.getBody()
 		if ( text == None ):
 			return
@@ -183,7 +178,7 @@ while c == 0:
 		c=1
 	except:
 		print 'There is no network, reconnecting in 5 minutes'
-		plugins_exec('noNetworkPre')
+		plugins_exec('noNetwork')
 		time.sleep(300)
 print '# Connected!'
 bot.online = 1
@@ -200,18 +195,7 @@ while bot.online:
 	now = int(time.time())
 	delta = now - last_time
 	if delta > keepalive:
-		try:
-			bot.send(' ')
-		except:
-			print 'There is no network, reconnecting in 5 minutes'
-			plugins_exec('noNetworkPost')
-			time.sleep(300)
-			try:
-				bot.connect()
-				bot.auth(user,password,res)
-			except:
-				continue
-		finally:
-			last_time = now
+		bot.send(' ')
+		last_time = now
 plugins_exec('onPluginEnd')
 bot.disconnect()
