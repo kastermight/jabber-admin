@@ -11,6 +11,9 @@ def writeLog(bot,filename,text):
 	path = bot.config['plugins_settings']['logs_path'] + "/" + unicode(nowtime[0]) + "/" + bot.phrases['MONTH_' + unicode(nowtime[1])] + "/" + unicode(nowtime[2])
 	if not os.path.exists(path):
 		os.makedirs(path)
+	if len(unicode(nowtime[3])) < 2: nowtime[3] = '0' + unicode(nowtime[3])
+	if len(unicode(nowtime[4])) < 2: nowtime[3] = '0' + unicode(nowtime[4])
+	if len(unicode(nowtime[5])) < 2: nowtime[3] = '0' + unicode(nowtime[5])
 	text = '[' + unicode(nowtime[3]) + ':' + unicode(nowtime[4]) + ':' + unicode(nowtime[5]) + '] ' + text
 	fl = open(path + "/" + filename + '.txt',"ab+")
 	fl.write(text.encode('utf-8') + "\n")

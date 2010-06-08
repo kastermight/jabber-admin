@@ -47,7 +47,7 @@ def onConference(bot,pres,x):
 
 def onMessage(bot,mess):
 	if (mess.getType() == 'groupchat') and (len(unicode(mess.getFrom()).split('/')) > 1) and (unicode(mess.getFrom()).split('/')[1] == bot.config['conferences']['nick']):
-		mess.setBody('')
+		mess.setBody('-')
 
 class Rooms():
 	def join(self,bot,mess,args):

@@ -59,7 +59,7 @@ class Word():
 			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_STOP'],self.mode))
 	def list(self,bot,mess,args):
 		obj = self.db.execute("SELECT word FROM words").fetchall()
-		if obj != None:
+		if obj != []:
 			a = u''
 			for i in obj:
 				a += unicode(i[0]) + u', '
