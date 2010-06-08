@@ -7,13 +7,13 @@ import os.path
 log = 0
 
 def writeLog(bot,filename,text):
-	nowtime = time.localtime()
+	nowtime = list(time.localtime())
 	path = bot.config['plugins_settings']['logs_path'] + "/" + unicode(nowtime[0]) + "/" + bot.phrases['MONTH_' + unicode(nowtime[1])] + "/" + unicode(nowtime[2])
 	if not os.path.exists(path):
 		os.makedirs(path)
 	if len(unicode(nowtime[3])) < 2: nowtime[3] = '0' + unicode(nowtime[3])
-	if len(unicode(nowtime[4])) < 2: nowtime[3] = '0' + unicode(nowtime[4])
-	if len(unicode(nowtime[5])) < 2: nowtime[3] = '0' + unicode(nowtime[5])
+	if len(unicode(nowtime[4])) < 2: nowtime[4] = '0' + unicode(nowtime[4])
+	if len(unicode(nowtime[5])) < 2: nowtime[5] = '0' + unicode(nowtime[5])
 	text = '[' + unicode(nowtime[3]) + ':' + unicode(nowtime[4]) + ':' + unicode(nowtime[5]) + '] ' + text
 	fl = open(path + "/" + filename + '.txt',"ab+")
 	fl.write(text.encode('utf-8') + "\n")
@@ -22,7 +22,7 @@ def writeLog(bot,filename,text):
 def onMessage(bot,mess):
 	if log == 1:
 		if mess.getType() == 'chat':
-			writeLog(bot,unicode(mess.getFrom()).split('/')[0],"%s: %s"%(unicode(mess.getFrom()).split('@')[0],unicode(mess.getBody())))
+			writeLog(bot,unicode(mess.getFrom()).replace("/","-"),"%s: %s"%(unicode(mess.getFrom()).split('@')[0],unicode(mess.getBody())))
 		elif mess.getType() == 'groupchat':
 			if len(unicode(mess.getFrom()).split('/')) > 1:
 				writeLog(bot,unicode(mess.getFrom()).split('/')[0],"%s: %s"%(unicode(mess.getFrom()).split('/')[1],unicode(mess.getBody())))

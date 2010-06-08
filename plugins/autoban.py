@@ -17,14 +17,15 @@ def onConference(bot,pres,x):
 		if pres.getJid() != None:
 			jid = pres.getJid()
 			for i in bot.config['plugins_settings']['autoban']:
-				if re.match(i,jid,re.IGNORECASE) != None:
-					iq = xmpp.Iq(to=unicode(pres.getFrom()).split('/')[0],typ='set')
-					query = iq.appendChild('query')
-					query.setAttr('xmlns','http://jabber.org/protocol/muc#admin')
-					item = query.appendChild('item')
-					item.setAttr('affiliation','outcast')
-					item.setAttr('jid',jid)
-					bot.send(iq)
+				if i != '':
+					if re.match(i,jid,re.IGNORECASE) != None:
+						iq = xmpp.Iq(to=unicode(pres.getFrom()).split('/')[0],typ='set')
+						query = iq.appendChild('query')
+						query.setAttr('xmlns','http://jabber.org/protocol/muc#admin')
+						item = query.appendChild('item')
+						item.setAttr('affiliation','outcast')
+						item.setAttr('jid',jid)
+						bot.send(iq)
 
 def rungc(bot,mess):
 	priv = bot.visitors[unicode(mess.getFrom()).split('/')[0]][unicode(mess.getFrom()).split('/')[1]][1]

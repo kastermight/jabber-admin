@@ -190,12 +190,23 @@ bot.RegisterHandler('presence', unsubscribeHandler,'unsubscribe')
 bot.RegisterHandler('presence', presenseHandler)
 bot.sendInitPresence()
 plugins_exec('onPluginStart')
+nonet = 0
 while bot.online:
 	bot.Process(1)
 	now = int(time.time())
 	delta = now - last_time
 	if delta > keepalive:
-		bot.send(' ')
+		try:
+			bot.send(' ')
+		except:
+			print 'No network, trying to restart'
+			nonet = 1
+			bot.online = 0
 		last_time = now
 plugins_exec('onPluginEnd')
-bot.disconnect()
+if nonet == 1:
+	import os
+	import sys
+	os.system(sys.argv[0])
+else:
+	bot.disconnect()
