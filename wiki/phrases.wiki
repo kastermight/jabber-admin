@@ -1,13 +1,10 @@
-#summary phrases.txt explanation
+#summary phrases - что это и зачем оно нужно
 
-= Introduction =
+= Интро =
 
-The phrases.txt file carries out function of storehouse of phrases for bot. You will not to edit plugins, just edit this file.
+В файле phrases.txt содержатся так называемые "фразы" - они используются для вывода некоторых команд в боте и для поддержки мультиязычности.
 
-
-= Details =
-
-Phrase syntax:
+Синтаксис составления фраз:
 {{{
-<in-plugin phrase name>=<phrase (format included)>
+<имя_в_плагине>=<сама фраза>
 }}}
