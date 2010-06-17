@@ -207,6 +207,7 @@ plugins_exec('onPluginEnd')
 if nonet == 1:
 	import os
 	import sys
-	os.system(sys.argv[0])
+	os.system('start ' + sys.argv[0])
+	sys.exit()
 else:
 	bot.disconnect()
