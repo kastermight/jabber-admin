@@ -52,10 +52,10 @@ class Word():
 					bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_NWORDS'],self.mode))
 				db.close()
 	def stop(self,bot,mess,args):
-		if bot.word==0:
+		if bot.words==0:
 			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_NRUN'],self.mode))
 		else:
-			bot.word=0
+			bot.words=0
 			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['WORD_STOP'],self.mode))
 	def list(self,bot,mess,args):
 		obj = self.db.execute("SELECT word FROM words").fetchall()
