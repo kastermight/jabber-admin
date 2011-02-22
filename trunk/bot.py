@@ -70,7 +70,7 @@ def loadPhrases():
 	phrases = open('phrases.txt').read().split('\n')
 	ret = {}
 	for phrase in phrases:
-		if phrase[0:2] != "//":
+		if (not phrase.startswith("//")) and (len(phrase)>=3):
 			i = phrase.split('=')
 			ret.update({i[0]:unicode(i[1],'utf-8')})
 	return ret
@@ -85,9 +85,9 @@ def plugins_exec(func,*args):
 						a = [bot]
 						for b in args:
 							a.append(b)
-						thread.start_new_thread(getattr(getattr(bot.plugins['plugins'],i,None),func,None),tuple(a))
+						thread.start_new_thread(getattr(getattr(bot.plugins['plugins'],i,lambda: None),func,lambda x: None),tuple(a))
 					else:
-						getattr(getattr(bot.plugins['plugins'],i,None),func,None)(bot,*args)
+						getattr(getattr(bot.plugins['plugins'],i,lambda: None),func,lambda x,*args: None)(bot,*args)
 
 def runPlugin(command,mess,mode):
 	global bot
@@ -102,6 +102,8 @@ def message(conn,mess):
 	user=unicode(mess.getFrom())
 	plugins_exec('onMessage',mess)
 	if mess.getType() == 'chat':
+		if mess.getFrom() == bot.config['connect']['login']:
+			return None
 		text = mess.getBody()
 		if (text == None):
 			return
@@ -114,6 +116,8 @@ def message(conn,mess):
 				thread.start_new_thread(runPlugin,(command,mess,'chat'))
 				break
 	elif (mess.getType() == 'groupchat') and (unicode(mess.getBody())[0] == u'!'):
+		if (len(unicode(mess.getFrom()).split('/')) > 1) and (unicode(mess.getFrom()).split('/')[1] == bot.config['conferences']['nick']):
+			return None
 		text = mess.getBody()
 		if ( text == None ):
 			return
@@ -145,7 +149,7 @@ def presenseHandler(conn, pres):
 	if pres.getTags('x') != []:
 		x = 0
 		for i in pres.getTags('x'):
-			if i.getAttr('xmlns').find('http://jabber.org/protocol/muc') != -1:
+			if i.getNamespace().startswith('http://jabber.org/protocol/muc'):
 				x = i
 				break
 		if (x == 0) or (x.getTag('item') == None):
@@ -207,7 +211,7 @@ plugins_exec('onPluginEnd')
 if nonet == 1:
 	import os
 	import sys
-	os.system('start ' + sys.argv[0])
+	os.system('python ' + sys.argv[0])
 	sys.exit()
 else:
 	bot.disconnect()

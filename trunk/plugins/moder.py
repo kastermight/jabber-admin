@@ -23,7 +23,7 @@ class Moders():
 			iq = xmpp.Iq('set')
 			iq.setAttr('to',unicode(mess.getFrom()).split('/')[0])
 			query = iq.addChild('query')
-			query.setAttr('xmlns','http://jabber.org/protocol/muc#admin')
+			query.setNamespace('http://jabber.org/protocol/muc#admin')
 			item = query.addChild('item')
 			item.setAttr('nick',nick)
 			item.setAttr('role','moderator')
@@ -36,7 +36,6 @@ class Moders():
 		if args[0] not in bot.visitors[unicode(mess.getFrom()).split('/')[0]]:
 			return
 		priv = bot.visitors[unicode(mess.getFrom()).split('/')[0]][unicode(mess.getFrom()).split('/')[1]][1]
-		print bot.visitors[unicode(mess.getFrom()).split('/')[0]][unicode(mess.getFrom()).split('/')[1]][1]
 		if (priv == 'owner') or (priv == 'admin'):
 			nick = args[0]
 			if (bot.visitors[unicode(mess.getFrom()).split('/')[0]][nick][1] == 'owner') and (bot.visitors[unicode(mess.getFrom()).split('/')[0]][nick][1] == 'admin'):
@@ -49,7 +48,7 @@ class Moders():
 			iq = xmpp.Iq('set')
 			iq.setAttr('to',unicode(mess.getFrom()).split('/')[0])
 			query = iq.addChild('query')
-			query.setAttr('xmlns','http://jabber.org/protocol/muc#admin')
+			query.setNamespace('http://jabber.org/protocol/muc#admin')
 			item = query.addChild('item')
 			item.setAttr('nick',nick)
 			item.setAttr('role','participant')
@@ -57,7 +56,7 @@ class Moders():
 			item2.setAttr('affiliation','member')
 			item2.setAttr('jid',bot.visitors[unicode(mess.getFrom()).split('/')[0]][nick][0])
 			bot.send(iq)
-			time.sleep(500)
+			time.sleep(1)
 			bot.send(xmpp.Message(unicode(mess.getFrom()).split('/')[0],bot.phrases['MODER_DELETE']%nick,'groupchat'))
 	def list(self,bot,mess,args):
 		if len(args) == 0:

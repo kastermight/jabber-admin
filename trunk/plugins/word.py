@@ -8,7 +8,7 @@ def onPluginStart(bot):
 	bot.words = 0
 
 def init(bot):
-	return {'status':8,'usage':'list|(add|del <word>)','descr':bot.phrases['DESCR_WORD'],'gc':1}
+	return {'status':8,'usage':'list|(add|delete <word>)','descr':bot.phrases['DESCR_WORD'],'gc':1}
 
 class Word():
 	def __init__(self,mode):

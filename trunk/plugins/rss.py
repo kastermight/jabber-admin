@@ -114,7 +114,8 @@ def run(bot,mess):
 		items = xml.getElementsByTagName('channel')[0].getElementsByTagName('item')
 		for i in items:
 				if (fpubdate < getPubDate(i)):
-					bot.send(xmpp.Message(mess.getFrom(),'New post at http://' + site + ':\n\n' + getTitle(i) + '\n\n' + getDescr(i) + '\n\nRead online: ' + getLink(i)))
+					bot.send(xmpp.Message(mess.getFrom(),bot.phrases['RSS_NPOST']%('http://' + site) + ':\n' + getTitle(i) + '\n\n' + getDescr(i) + '\n\n' + bot.phrases['RSS_READONLINE']%(getLink(i))))
+					time.sleep(1)
 				else:
 					break
 		fpubdate = getPubDate(items[0])

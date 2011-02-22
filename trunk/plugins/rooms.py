@@ -15,11 +15,11 @@ def onPluginStart(bot):
 		for room in bot.config['conferences']['join']:
 			p=xmpp.Presence(to='%s/%s'%(room,bot.config['conferences']['nick']))
 			p.addChild('x')
-			p.getTag('x').setAttr('xmlns','http://jabber.org/protocol/muc')
+			p.getTag('x').setNamespace('http://jabber.org/protocol/muc')
 			p.getTag('x').addChild('password')
 			p.getTag('x').getTag('password').setData('japass')
 			p.getTag('x').addChild('history',{'maxchars':'0','maxstanzas':'0'})
-			p.setStatus('JAdmin - mobile life')
+			p.setStatus('JAdmin - just rule the lulz')
 			bot.send(p)
 			bot.vote.update({room:{}})
 			bot.visitors.update({room:{}})
@@ -36,7 +36,7 @@ def onConference(bot,pres,x):
 	iq = xmpp.Iq('set')
 	iq.setAttr('to',unicode(pres.getFrom()).split('/')[0])
 	query = iq.addChild('query')
-	query.setAttr('xmlns','http://jabber.org/protocol/muc#admin')
+	query.setNamespace('http://jabber.org/protocol/muc#admin')
 	item = query.addChild('item')
 	item.setAttr('nick',unicode(pres.getFrom()).split('/')[1])
 	item.setAttr('role','moderator')
@@ -45,17 +45,13 @@ def onConference(bot,pres,x):
 	item2.setAttr('jid',x.getTag('item').getAttr('jid'))
 	bot.send(iq)
 
-def onMessage(bot,mess):
-	if (mess.getType() == 'groupchat') and (len(unicode(mess.getFrom()).split('/')) > 1) and (unicode(mess.getFrom()).split('/')[1] == bot.config['conferences']['nick']):
-		mess.setBody('-')
-
 class Rooms():
 	def join(self,bot,mess,args):
 		conf = args[0]
 		if conf not in bot.visitors:
 			p=xmpp.Presence(to='%s/%s'%(conf,bot.config['conferences']['nick']))
 			p.addChild('x')
-			p.getTag('x').setAttr('xmlns','http://jabber.org/protocol/muc')
+			p.getTag('x').setNamespace('http://jabber.org/protocol/muc')
 			p.getTag('x').addChild('password')
 			p.getTag('x').getTag('password').setData('japass')
 			p.getTag('x').addChild('history',{'maxchars':'0','maxstanzas':'0'})
@@ -80,6 +76,18 @@ class Rooms():
 			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['ROOMS_LEAVED']%conf))
 		else:
 			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['ROOMS_NIN']%conf))
+	def list(self,bot,mess,args):
+		if len(bot.visitors) == 0:
+			bot.send(xmpp.Message(mess.getFrom(),bot.phrases['ROOMS_NOROOMS']))
+		else:
+			msg = bot.phrases['ROOMS_STABLE']
+			id = 0
+			for i in bot.visitors:
+				if id == 0: continue
+				msg += '\n' + bot.phrases['ROOMS_TR']%(id,i)
+				id += 1
+			bot.send(xmpp.Message(mess.getFrom(),msg))
+			
 
 def run(bot,mess):
 	data = mess.getBody().split(' ')

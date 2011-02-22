@@ -9,7 +9,7 @@ def run(bot,mess):
 	iq = xmpp.Iq('set')
 	iq.setAttr('to',unicode(mess.getFrom()).split('/')[0])
 	query = iq.addChild('query')
-	query.setAttr('xmlns','http://jabber.org/protocol/muc#admin')
+	query.setNamespace('http://jabber.org/protocol/muc#admin')
 	item = query.addChild('item')
 	item.setAttr('nick',unicode(mess.getFrom()).split('/')[1])
 	item.setAttr('role','participant')
