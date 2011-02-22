@@ -1,4 +1,4 @@
-# coding: utf-8
+# coding: utf-83
 import xmpp
 import time
 import thread
