@@ -15,7 +15,7 @@ def voteResult(bot,tokick,room):
 		iq = xmpp.Iq('set')
 		iq.setAttr('to',room)
 		iq.addChild('query')
-		iq.getTag('query').setAttr('xmlns','http://jabber.org/protocol/muc#admin')
+		iq.getTag('query').setNamespace('http://jabber.org/protocol/muc#admin')
 		iq.getTag('query').addChild('item')
 		iq.getTag('query').getTag('item').setAttr('nick',tokick)
 		iq.getTag('query').getTag('item').setAttr('role','none')
