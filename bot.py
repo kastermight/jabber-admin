@@ -1,4 +1,4 @@
-# coding: utf-8
+#!/usr/bin/env python2.7
 import xmpp
 import time
 import thread
@@ -157,6 +157,12 @@ def presenseHandler(conn, pres):
 		if unicode(pres.getFrom()).split('/')[1] == bot.config['conferences']['nick']:
 			return
 		bot.plugins_exec('onConference',pres,x)
+
+status = open('status.txt', 'a')
+ltime = time.localtime()
+towrite = 'I was run at %02d:%02d:%02d, on %02d/%02d/%d' % (ltime[3], ltime[4], ltime[5], ltime[2], ltime[1], ltime[0])
+status.write(towrite + '\n')
+status.close()
 
 config = loadConfig()
 jid = xmpp.JID(config['connect']['login'])
