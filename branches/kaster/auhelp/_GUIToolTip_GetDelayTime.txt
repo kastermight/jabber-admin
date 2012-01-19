@@ -1,0 +1,22 @@
+
+_GUIToolTip_GetDelayTime
+
+Retrieves the initial, pop-up or reshow durations
+
+#Include 
+_GUIToolTip_GetDelayTime($hWnd, $iDuration)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iDuration
+	Flag that specifies which duration value will be retrieved:
+		0 - Time it takes for subsequent ToolTip windows to appear as the pointer moves from one tool to another
+		1 - Time the ToolTip window remains visible if the pointer is stationary within a tool's bounding rectangle
+		2 - Time the pointer must remain stationary within a tool's bounding rectangle before the window appears
+
+---  Таблица возвращаемых значений  ---
+Успех: The specified duration, in milliseconds
+
+---  Смотрите также  ---
+_GUIToolTip_SetDelayTime

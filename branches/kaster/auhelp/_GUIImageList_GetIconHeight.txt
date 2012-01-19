@@ -1,0 +1,18 @@
+
+_GUIImageList_GetIconHeight
+
+Возвращает высоту изображений в списке изображений
+
+#Include 
+_GUIImageList_GetIconHeight($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает высоту в пикселях
+Ошибка:	Возвращает 0
+
+---  Смотрите также  ---
+_GUIImageList_GetIconSize, _GUIImageList_GetIconWidth, _GUIImageList_GetIconSizeEx

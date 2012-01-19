@@ -1,0 +1,25 @@
+
+_WinAPI_DefWindowProc
+
+Call the default window procedure to provide default processing
+
+#Include 
+_WinAPI_DefWindowProc($hWnd, $iMsg, $iwParam, $ilParam)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the window procedure that received the message
+$iMsg
+	Specifies the message
+$iwParam
+	Specifies additional message information
+$ilParam
+	Specifies additional message information
+
+---  Таблица возвращаемых значений  ---
+Returns the return value is the result of the message processing and depends on the message
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- DefWindowProc

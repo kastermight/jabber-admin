@@ -1,0 +1,19 @@
+
+_IEErrorHandlerDeRegister
+
+Disable a registered user COM error handler
+
+#include  
+_IEErrorHandlerDeRegister ( )
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns 1
+Ошибка:	None
+
+---  Примечания  ---
+See remarks for _IEErrorHandlerRegister.
+
+---  Смотрите также  ---
+_IEErrorHandlerRegister

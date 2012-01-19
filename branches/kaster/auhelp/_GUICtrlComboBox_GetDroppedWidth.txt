@@ -1,0 +1,21 @@
+
+_GUICtrlComboBox_GetDroppedWidth
+
+Retrieve the minimum allowable width, of the ListBox of a ComboBox
+
+#Include 
+_GUICtrlComboBox_GetDroppedWidth($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: The width, in pixels
+Ошибка: -1
+
+---  Примечания  ---
+The ComboBox must have $CBS_DROPDOWN or $CBS_DROPDOWNLIST style.
+
+---  Смотрите также  ---
+_GUICtrlComboBox_SetDroppedWidth, _GUICtrlComboBoxEx_GetDroppedState

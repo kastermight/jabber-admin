@@ -1,0 +1,31 @@
+
+_GUIScrollBars_GetScrollRange
+
+Retrieves the current minimum and maximum scroll box (thumb) positions for the specified scroll bar
+
+#Include 
+_GUIScrollBars_GetScrollRange($hWnd, $nBar)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the window
+$nBar
+	Specifies the type of scroll bar. This parameter can be one of the following values:
+		  $SB_CTL - Retrieves the positions of a scroll bar control. The $hWnd parameter must be the handle to the scroll bar control.
+		  $SB_HORZ - Retrieves the positions of the window's standard horizontal scroll bar.
+		  $SB_VERT - Retrieves the positions of the window's standard vertical scroll bar.
+
+---  Таблица возвращаемых значений  ---
+Успех:	current minimum and maximum scroll box (thumb) positions for the specified scroll bar, in the following format:
+	[0] - minimum position
+	[1] - maximum position
+Ошибка:	-1
+
+---  Примечания  ---
+Above constants require ScrollBarConstants.au3
+
+---  Смотрите также  ---
+_GUIScrollBars_SetScrollRange
+
+
+---  Таблица  --- GetScrollRange

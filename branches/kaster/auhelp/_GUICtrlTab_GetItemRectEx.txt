@@ -1,0 +1,19 @@
+
+_GUICtrlTab_GetItemRectEx
+
+Retrieves the bounding rectangle for a tab
+
+#Include 
+_GUICtrlTab_GetItemRectEx($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based item item
+
+---  Таблица возвращаемых значений  ---
+Успех: $tagRECT structure that receives the rectangle of the tab, in viewport coordinates
+
+---  Смотрите также  ---
+_GUICtrlTab_GetItemRect, $tagRECT

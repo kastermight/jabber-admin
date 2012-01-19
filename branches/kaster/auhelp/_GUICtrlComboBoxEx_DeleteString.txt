@@ -1,0 +1,19 @@
+
+_GUICtrlComboBoxEx_DeleteString
+
+Removes an item from a ComboBoxEx control
+
+#Include 
+_GUICtrlComboBoxEx_DeleteString($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based index of the Item to delete
+
+---  Таблица возвращаемых значений  ---
+Успех: Number of items remaining in the control
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_AddString

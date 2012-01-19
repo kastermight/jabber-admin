@@ -1,0 +1,23 @@
+
+UDPSend
+
+Sends data on an opened socket
+
+UDPSend ( socketarray, data )
+
+---  Таблица параметров  ---
+socketarray
+	The main socket/array as returned by a UDPOpen function.
+data
+	binary/string to be sent to the connected socket
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns number of bytes sent to the opened socket.
+Ошибка:	Sets @error.
+@error:	-1, -2 or -3 invalid socketarray.
+	1 IPAddr is incorrect.
+	2 port  is incorrect.
+	windows API WSAGetError return value (see MSDN).
+
+---  Смотрите также  ---
+UDPOpen, UDPBind

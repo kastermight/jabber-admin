@@ -1,0 +1,24 @@
+
+_GUICtrlTab_SetCurSel
+
+Selects a tab
+
+#Include 
+_GUICtrlTab_SetCurSel($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based item index
+
+---  Таблица возвращаемых значений  ---
+Успех: The index of the previously selected tab
+Ошибка: -1
+
+---  Примечания  ---
+A tab control does not send a $TCN_SELCHANGING or $TCN_SELCHANGE notification message when
+a tab is selected using this function.
+
+---  Смотрите также  ---
+_GUICtrlTab_GetCurSel, _GUICtrlTab_DeselectAll, _GUICtrlTab_HighlightItem

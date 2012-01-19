@@ -1,0 +1,21 @@
+
+_GUICtrlComboBoxEx_GetItemText
+
+Retrieve a string from the list of a ComboBox
+
+#Include 
+_GUICtrlComboBoxEx_GetItemText($hWnd, $iIndex, ByRef $sText)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Zero based index to Retrieve from
+$sText
+	Variable that will receive the string
+
+---  Таблица возвращаемых значений  ---
+Успех: The length of the string
+Ошибка: -1
+
+---  Смотрите также  ---

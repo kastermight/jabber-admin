@@ -1,0 +1,22 @@
+
+_GUIImageList_Swap
+
+Source image is copied to the destination image's index
+
+#Include 
+_GUIImageList_Swap($hWnd, $iSource, $iDestination)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iSource
+	The zero-based index of the image to be used as the source of the swap operation
+$iDestination
+	The zero-based index of the image to be used as the destination of the swap operation
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUIImageList_Copy

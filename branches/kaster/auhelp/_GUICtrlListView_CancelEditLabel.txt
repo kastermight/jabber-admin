@@ -1,0 +1,17 @@
+
+_GUICtrlListView_CancelEditLabel
+
+Отмена операции редактирования текста пункта
+
+#Include 
+_GUICtrlListView_CancelEditLabel($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Примечания  ---
+Минимальная ОС - Windows XP.
+
+---  Смотрите также  ---
+_GUICtrlListView_EditLabel, _GUICtrlListView_GetEditControl

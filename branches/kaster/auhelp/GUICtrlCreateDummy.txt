@@ -1,0 +1,18 @@
+
+GUICtrlCreateDummy
+
+Создаёт Dummy (имитированный элемент) в GUI.
+
+GUICtrlCreateDummy (  )
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает идентификатор (controlID) нового элемента.
+Ошибка:	Возвращает 0.
+
+---  Примечания  ---
+Этот элемент может получать сообщения через вызов GUICtrlSendToDummy. Элемент получает "уведомления" как обычный элемент и параметры посланные GUISendToDummy могут быть прочитаны GUICtrlRead.
+
+---  Смотрите также  ---
+GUICtrlSendToDummy, GUICtrlSetOnEvent, GUICtrlRead, GUICtrlSetData

@@ -1,0 +1,36 @@
+
+_FTP_Command
+
+Посылает команду FTP серверу.
+
+#Include 
+_FTP_Command($l_FTPSession, $s_FTPCommand [, $l_Flags = 0x00000001 [, $l_ExpectResponse = 0 [, $l_Context = 0]]])
+
+---  Таблица параметров  ---
+$l_FTPSession
+	Указатель возвращённый функцией _FTP_Connect()
+$s_FTPCommand
+	Командная строка посылаемая FTP серверу
+$l_Flags
+	[опционально] $FTP_TRANSFER_TYPE_ASCII or $FTP_TRANSFER_TYPE_BINARY
+$l_ExpectResponse
+	[опционально] Данные сокета для ответа в асинхронном режиме. Смотрите примечания.
+$l_Context
+	[опционально] A variable that contains the application-defined value that associates this search with any application data.
+	This is only used if the application has already called _FTP_SetStatusCallback() to set up a status callback function.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает идентификатор.
+Ошибка:	Возвращает 0 и устанавливает @error.
+
+---  Примечания  ---
+Примеры команд:в зависимости от синтаксиса сервера
+Следующие : бинарная передача, ASCII передача, пассивный режим передачи (используемый с файрволами) 'type I' 'type A'  'pasv'
+
+Если $l_ExpectResponse установлен в TRUE, указатель на дескриптор, который создается, если правильные данные открытого сокета возвращается в @extended.
+
+---  Смотрите также  ---
+_FTP_Connect, _FTP_SetStatusCallback
+
+
+---  Таблица  --- FtpCommand

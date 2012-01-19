@@ -1,0 +1,20 @@
+
+_WinAPI_EnumWindowsPopup
+
+Enumerates popup windows
+
+#Include 
+_WinAPI_EnumWindowsPopup()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Returns an Array with the following format:
+	[0][0] - Number of rows in array (n)
+	[1][0] - Window handle
+	[1][1] - Window class name
+	[n][0] - Window handle
+	[n][1] - Window class name
+
+---  Смотрите также  ---
+_WinAPI_EnumWindows, _WinAPI_EnumWindowsTop

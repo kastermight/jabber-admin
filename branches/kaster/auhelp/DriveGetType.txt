@@ -1,0 +1,20 @@
+
+DriveGetType
+
+Возвращает тип устройства.
+
+DriveGetType ( "path" )
+
+---  Таблица параметров  ---
+path
+	Путь к устройству, информацию о котором необходимо получить.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает тип устройства: "Unknown", "Removable", "Fixed", "Network", "CDROM", "RAMDisk"
+Ошибка:	Возвращает "" и устанавливает значение @error равным 1.
+
+---  Примечания  ---
+Список возвращаемых значений может быть неполным.
+
+---  Смотрите также  ---
+DriveGetDrive, DriveGetFileSystem, DriveGetLabel, DriveGetSerial, DriveSetLabel, DriveSpaceFree, DriveSpaceTotal, DriveStatus, CDTray

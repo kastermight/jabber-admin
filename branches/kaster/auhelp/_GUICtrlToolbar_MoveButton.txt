@@ -1,0 +1,21 @@
+
+_GUICtrlToolbar_MoveButton
+
+Moves a button from one index to another
+
+#Include 
+_GUICtrlToolbar_MoveButton($hWnd, $iOldPos, $iNewPos)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iOldPos
+	Zero based index of the button to be moved
+$iNewPos
+	Zero based index where the button will be moved
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---

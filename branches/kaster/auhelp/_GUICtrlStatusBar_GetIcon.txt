@@ -1,0 +1,21 @@
+
+_GUICtrlStatusBar_GetIcon
+
+Retrieves the icon for a part
+
+#Include 
+_GUICtrlStatusBar_GetIcon($hWnd[, $iIndex = 0])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	[опционально] Zero based index of the part that contains the icon to be retrieved. If this parameter is -1,
+		the status bar is assumed to be a Simple Mode status bar.
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle to the icon
+Ошибка:	0
+
+---  Смотрите также  ---
+_GUICtrlStatusBar_SetIcon

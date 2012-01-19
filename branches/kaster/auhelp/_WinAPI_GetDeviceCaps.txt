@@ -1,0 +1,21 @@
+
+_WinAPI_GetDeviceCaps
+
+Retrieves device specific information about a specified device
+
+#Include 
+_WinAPI_GetDeviceCaps($hDC, $iIndex)
+
+---  Таблица параметров  ---
+$hDC
+	Identifies the device context
+$iIndex
+	Specifies the item to return
+
+---  Таблица возвращаемых значений  ---
+Returns the value of the desired item
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GetDeviceCaps

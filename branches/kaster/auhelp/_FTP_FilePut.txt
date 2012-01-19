@@ -1,0 +1,44 @@
+
+_FTP_FilePut
+
+Передача файла на FTP сервер.
+
+#Include 
+_FTP_FilePut($l_FTPSession, $s_LocalFile, $s_RemoteFile [, $l_Flags = 0 [, $l_Context = 0]])
+
+---  Таблица параметров  ---
+$l_FTPSession
+	Указатель возвращённый функцией _FTP_Connect()
+$s_LocalFile
+	Путь к файлу (локальный).
+$s_RemoteFile
+	Путь к файлу на FTP сервере.
+$l_Flags
+	[опционально] Укажите условия, при которых происходит передача данных. В параметр необходимо выбрать один тип передачи и любой из флагов, указывающий как будет происходить управление кэшированием файла.
+		Тип передачи может быть одним из следующих значений:
+			$FTP_TRANSFER_TYPE_ASCII - Передаёт файл используя FTP's ASCII (Type A). Управляющая и форматирующая информация преобразуется в локальные эквиваленты.
+			$FTP_TRANSFER_TYPE_BINARY - Передаёт файл используя FTP's Image (Type I). Файл передаётся как есть, без изменений. Этот способ передачи по умолчанию.
+			$FTP_TRANSFER_TYPE_UNKNOWN - По умолчанию $FTP_TRANSFER_TYPE_BINARY.
+			$INTERNET_FLAG_TRANSFER_ASCII - Передаёт файл как ASCII.
+			$INTERNET_FLAG_TRANSFER_BINARY - Передаёт файл как бинарный.
+		Следующие значения используются для управления кэшированием файла. Параметр может содержать один или несколько следующих значений:
+			$INTERNET_FLAG_HYPERLINK - Заставляет перегрузить если не было времени истечения (Expires) и времени последней модификации (LastModified) возвращаемое сервером, при определении того, чтобы перезагрузить элемент по сети.
+			$INTERNET_FLAG_NEED_FILE - Создаёт временный файл, если файл не может быть кэширован.
+			$INTERNET_FLAG_RELOAD - Заставляет загрузить файл, объект или список каталогов с сервера, а не из кэша.
+			$INTERNET_FLAG_RESYNCHRONIZE - Перезагружает HTTP ресурсы, если ресурс был изменен с момента последней загрузки. Все ресурсы FTP и Gopher перезагружаются.
+$l_Context
+	[опционально] A variable that contains the application-defined value that associates this search with any application data.
+	This is only used if the application has already called _FTP_SetStatusCallback() to set up a status callback function.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает 1
+Ошибка:	Возвращает 0 и устанавливает @error
+
+---  Примечания  ---
+Оба пути $s_LocalFile и $s_RemoteFile могут быть частичным или полным именем относительно текущего каталога.
+
+---  Смотрите также  ---
+_FTP_Connect, _FTP_FileOpen, _FTP_SetStatusCallback
+
+
+---  Таблица  --- FtpPutFile

@@ -1,0 +1,30 @@
+
+_GUICtrlRichEdit_GetNextUndo
+
+Retrieves the name or type ID of the next possible Undo action
+
+#Include 
+_GUICtrlRichEdit_GetNextUndo($hWnd, $fName = True)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$fName
+	True (return name, default) or False (return ID number)
+
+---  Таблица возвращаемых значений  ---
+Успех:	depends on value of $fName:
+	If $fName is True: "Unknown", "Typing", "Delete", "Drag and drop", "Cut" or "Paste"
+	If $Name is False: the corresponding number (0 to 5)
+Ошибка:	"" and sets @error
+@error:	101 - $hWnd is not a handle
+	102 - $fName is neither True nor False
+
+---  Примечания  ---
+Note that EM_GETUNDONAME does not distinguish between Unknown and Undo queue empty
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_Undo, _GUICtrlRichEdit_Undo
+
+
+---  Таблица  --- EM_GETUNDONAME

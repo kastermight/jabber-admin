@@ -1,0 +1,23 @@
+
+_Date_Time_LocalFileTimeToFileTime
+
+Converts a local file time to a file time based on UTC
+
+#Include 
+_Date_Time_LocalFileTimeToFileTime($pLocalTime)
+
+---  Таблица параметров  ---
+$pLocalTime
+	Pointer to a $tagFILETIME structure that specifies the local file time to be converted into a
+		UTC based file time.
+
+---  Таблица возвращаемых значений  ---
+Returns $tagFILETIME structure with the converted UTC based file time
+
+---  Примечания  ---
+This function uses the current settings for the time zone and daylight saving time. Therefore, if it is
+daylight saving time, this function will take daylight saving time into account, even if the time you are
+converting is in standard time.
+
+---  Смотрите также  ---
+_Date_Time_FileTimeToLocalFileTime, $tagFILETIME

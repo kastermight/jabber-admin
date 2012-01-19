@@ -1,0 +1,21 @@
+
+_GUICtrlListBox_InitStorage
+
+This message allocates memory for storing items
+
+#Include 
+_GUICtrlListBox_InitStorage($hWnd, $iItems, $iBytes)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iItems
+	The total amount of items that you intend to add
+$iBytes
+	The total amount of memory your strings will consume
+
+---  Таблица возвращаемых значений  ---
+Успех: The total number of items for which memory has been pre-allocated
+
+---  Смотрите также  ---
+_GUICtrlListBox_AddFile, _GUICtrlListBox_AddString, _GUICtrlListBox_Dir, _GUICtrlListBox_InsertString

@@ -1,0 +1,17 @@
+
+_GUICtrlMonthCal_GetSelRange
+
+Retrieves the upper and lower limits of the date range currently selected
+
+#Include 
+_GUICtrlMonthCal_GetSelRange($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: $tagMCSELRANGE structure
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_SetSelRange, $tagMCSELRANGE

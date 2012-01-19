@@ -1,0 +1,38 @@
+
+_Security__AdjustTokenPrivileges
+
+Enables or disables privileges in the specified access token
+
+#Include 
+_Security__AdjustTokenPrivileges($hToken, $fDisableAll, $pNewState, $iBufferLen [, $pPrevState = 0 [, $pRequired = 0]])
+
+---  Таблица параметров  ---
+$hToken
+	Handle to the access token that contains privileges to be modified
+$fDisableAll
+	If True, the function disables all privileges and ignores the NewState parameter. If False, the
+		function modifies privileges based on the information pointed to by the $pNewState parameter.
+$pNewState
+	Pointer to a $tagTOKEN_PRIVILEGES structure that contains the privilege and it's attributes
+$iBufferLen
+	Size, in bytes, of the buffer pointed to by $pNewState
+$pPrevState
+	[опционально] Pointer to a $tagTOKEN_PRIVILEGES structure that specifies the previous state of the privilege
+		that the function modified. This can be 0
+$pRequired
+	[опционально] Pointer to a variable that receives the required size, in bytes, of the buffer pointed to by
+		$pPrevState. This parameter can be 0 if $pPrevState is 0.
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+This function cannot add new privileges to an access token. It can only enable or disable the token's existing
+privileges.
+
+---  Смотрите также  ---
+$tagTOKEN_PRIVILEGES
+
+
+---  Таблица  --- AdjustTokenPrivileges

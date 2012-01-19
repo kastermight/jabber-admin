@@ -1,0 +1,18 @@
+
+_GUICtrlStatusBar_GetBordersRect
+
+Retrieves the current width of the rectangle border
+
+#Include 
+_GUICtrlStatusBar_GetBordersRect($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	Width of the rectangle border
+Ошибка:	Set @error
+
+---  Смотрите также  ---
+_GUICtrlStatusBar_GetBorders, _GUICtrlStatusBar_GetBordersHorz, _GUICtrlStatusBar_GetBordersVert

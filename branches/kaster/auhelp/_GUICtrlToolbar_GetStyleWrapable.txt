@@ -1,0 +1,18 @@
+
+_GUICtrlToolbar_GetStyleWrapable
+
+Indicates that the control is wrapable
+
+#Include 
+_GUICtrlToolbar_GetStyleWrapable($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+True: Style is present
+False: Style is not present
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetStyleWrapable

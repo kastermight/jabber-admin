@@ -1,0 +1,20 @@
+
+_GUICtrlListBox_SetLocale
+
+Set the current locale
+
+#Include 
+_GUICtrlListBox_SetLocale($hWnd, $iLocal)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iLocal
+	Specifies the locale identifier that the list box will use for sorting when adding text
+
+---  Таблица возвращаемых значений  ---
+Успех: The previous locale identifier
+Ошибка: -1
+
+---  Смотрите также  ---
+_GUICtrlListBox_GetLocale

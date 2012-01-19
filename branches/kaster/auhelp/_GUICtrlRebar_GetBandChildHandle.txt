@@ -1,0 +1,18 @@
+
+_GUICtrlRebar_GetBandChildHandle
+
+Retrieves the Handle to the child window contained in the band, if any
+
+#Include 
+_GUICtrlRebar_GetBandChildHandle($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band for which the borders will be retrieved
+
+---  Таблица возвращаемых значений  ---
+Returns the Handle to the child window contained in the band
+
+---  Смотрите также  ---

@@ -1,0 +1,22 @@
+
+_GUICtrlTab_SetItemImage
+
+Sets the image of a tab
+
+#Include 
+_GUICtrlTab_SetItemImage($hWnd, $iIndex, $iImage)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based item index
+$iImage
+	Zero based item image
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlTab_GetItemImage

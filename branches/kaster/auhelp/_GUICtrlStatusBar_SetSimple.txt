@@ -1,0 +1,18 @@
+
+_GUICtrlStatusBar_SetSimple
+
+Specifies whether a status window displays simple text or displays all window parts
+
+#Include 
+_GUICtrlStatusBar_SetSimple($hWnd, $fSimple = True)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$fSimple
+	Sets the display of the windows
+		 True - The window displays simple text
+		False - The window displays multiple parts
+
+---  Смотрите также  ---
+_GUICtrlStatusBar_IsSimple

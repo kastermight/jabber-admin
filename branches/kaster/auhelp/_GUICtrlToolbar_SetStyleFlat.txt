@@ -1,0 +1,20 @@
+
+_GUICtrlToolbar_SetStyleFlat
+
+Sets whether the control is flat
+
+#Include 
+_GUICtrlToolbar_SetStyleFlat($hWnd, $fState)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$fState
+	True to set, false to unset
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlToolbar_GetStyleFlat

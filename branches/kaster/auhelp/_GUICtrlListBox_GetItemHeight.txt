@@ -1,0 +1,18 @@
+
+_GUICtrlListBox_GetItemHeight
+
+Возвращает высоту пунктов
+
+#Include 
+_GUICtrlListBox_GetItemHeight($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех: Возвращает высоту пунктов в пикселях
+Ошибка: Возвращает 0
+
+---  Смотрите также  ---
+_GUICtrlListBox_SetItemHeight

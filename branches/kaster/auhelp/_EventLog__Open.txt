@@ -1,0 +1,24 @@
+
+_EventLog__Open
+
+Opens a handle to the event log
+
+#Include 
+_EventLog__Open($sServerName, $sSourceName)
+
+---  Таблица параметров  ---
+$sServerName
+	The UNC name of the server on where the event log will be opened. If blank, the operation is
+		performed on the local computer.
+$sSourceName
+	The name of the log
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle to the event log
+Ошибка:	0
+
+---  Примечания  ---
+To close the handle to the event log, use the _EventLog__Close function
+
+---  Смотрите также  ---
+_EventLog__Close, _EventLog__Clear, _EventLog__Read, _EventLog__Report

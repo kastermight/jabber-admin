@@ -1,0 +1,19 @@
+
+_GUICtrlToolbar_IsButtonEnabled
+
+Indicates whether the specified button is enabled
+
+#Include 
+_GUICtrlToolbar_IsButtonEnabled($hWnd, $iCommandID)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+
+---  Таблица возвращаемых значений  ---
+True: Button is enabled
+False: Button is not enabled
+
+---  Смотрите также  ---

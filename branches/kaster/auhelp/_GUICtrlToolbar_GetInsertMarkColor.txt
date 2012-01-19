@@ -1,0 +1,17 @@
+
+_GUICtrlToolbar_GetInsertMarkColor
+
+Retrieves the color used to draw the insertion mark
+
+#Include 
+_GUICtrlToolbar_GetInsertMarkColor($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Insertion mark color
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetInsertMarkColor

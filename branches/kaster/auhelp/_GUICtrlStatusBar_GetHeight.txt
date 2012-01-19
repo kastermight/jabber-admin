@@ -1,0 +1,17 @@
+
+_GUICtrlStatusBar_GetHeight
+
+Retrieves the height of a part
+
+#Include 
+_GUICtrlStatusBar_GetHeight($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Returns the Height of the parts
+
+---  Смотрите также  ---
+_GUICtrlStatusBar_GetWidth, _GUICtrlStatusBar_SetMinHeight

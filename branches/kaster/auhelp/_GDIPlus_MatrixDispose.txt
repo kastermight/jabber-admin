@@ -1,0 +1,21 @@
+
+_GDIPlus_MatrixDispose
+
+Release a matrix object
+
+#Include 
+_GDIPlus_MatrixDispose($hMatrix)
+
+---  Таблица параметров  ---
+$hMatrix
+	Handle to a Matrix object
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GDIPlus_MatrixCreate
+
+
+---  Таблица  --- GdipDeleteMatrix

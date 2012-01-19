@@ -1,0 +1,19 @@
+
+_GUICtrlHeader_GetItemText
+
+Retrieves the item text
+
+#Include 
+_GUICtrlHeader_GetItemText($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Zero based item index
+
+---  Таблица возвращаемых значений  ---
+Успех: Item text
+
+---  Смотрите также  ---
+_GUICtrlHeader_SetItemText

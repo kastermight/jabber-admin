@@ -1,0 +1,20 @@
+
+_WinAPI_GetParent
+
+Retrieves the handle of the specified child window's parent window
+
+#Include 
+_WinAPI_GetParent($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Window handle of child window
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle of the parent window
+Ошибка:	0
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GetParent

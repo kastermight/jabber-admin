@@ -1,0 +1,16 @@
+
+_GUICtrlRebar_GetBarHeight
+
+Retrieves the height of the rebar control
+
+#Include 
+_GUICtrlRebar_GetBarHeight($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+
+---  Таблица возвращаемых значений  ---
+Returns the Value that represents the height, in pixels, of the control
+
+---  Смотрите также  ---

@@ -1,0 +1,20 @@
+
+_GUICtrlHeader_CreateDragImage
+
+Creates a semi-transparent version of an item's image for use as a dragging image
+
+#Include 
+_GUICtrlHeader_CreateDragImage($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Zero based item index. The image assigned to the item is the basis for the transparent image.
+
+---  Таблица возвращаемых значений  ---
+Успех: Handle to an image list that contains the new image as its only element
+Ошибка: 0
+
+---  Смотрите также  ---
+_GUICtrlHeader_GetImageList

@@ -1,0 +1,16 @@
+
+_GUICtrlTab_GetItemCount
+
+Retrieves the number of tabs
+
+#Include 
+_GUICtrlTab_GetItemCount($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Returns the number of tabs
+
+---  Смотрите также  ---

@@ -1,0 +1,17 @@
+
+_GUICtrlComboBox_GetLocaleCountry
+
+Retrieves the current country code
+
+#Include 
+_GUICtrlComboBox_GetLocaleCountry($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: The country code of the ComboBox
+
+---  Смотрите также  ---
+_GUICtrlComboBox_GetLocale

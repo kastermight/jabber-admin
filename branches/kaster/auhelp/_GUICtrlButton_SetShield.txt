@@ -1,0 +1,25 @@
+
+_GUICtrlButton_SetShield
+
+Sets the elevation required state for a specified button or command link to display an elevated icon
+
+#Include 
+_GUICtrlButton_SetShield($hWnd[, $fRequired = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$fRequired
+	[опционально] True to draw an elevated icon, or False otherwise
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+Minimum Operating Systems: Windows Vista
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- BCM_SETSHIELD

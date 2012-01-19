@@ -1,0 +1,24 @@
+
+_WinNet_GetLastError
+
+Retrieves the most recent extended error
+
+#Include 
+_WinNet_GetLastError(ByRef $iError, ByRef $sError, ByRef $sName)
+
+---  Таблица параметров  ---
+$iError
+	On return, contains the most recent extended error code
+$sError
+	On return, contains the most recent extended error code message
+$sName
+	On return, the network provider that raised the error
+
+---  Таблица возвращаемых значений  ---
+Успех:	The most recent error messages
+Ошибка:	Set @error
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- WNetGetLastError

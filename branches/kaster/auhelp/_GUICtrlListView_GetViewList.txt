@@ -1,0 +1,21 @@
+
+_GUICtrlListView_GetViewList
+
+Определяет, является ли вид отображения как List (Список)
+
+#Include 
+_GUICtrlListView_GetViewList($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Возвращает True:	Вид List (Список)
+Возвращает False:	Вид не List (Список)
+
+---  Примечания  ---
+Минимальная ОС - Windows XP.
+
+---  Смотрите также  ---
+_GUICtrlListView_GetView

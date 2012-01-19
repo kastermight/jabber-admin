@@ -1,0 +1,36 @@
+
+_GUICtrlMonthCal_GetColorArray
+
+Retrieves the color for a given portion of a month calendar control
+
+#Include 
+_GUICtrlMonthCal_GetColorArray($hWnd, $iColor)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iColor
+	Value of type int specifying which month calendar color to retrieve
+		This value can be one of the following:
+		$MCSC_BACKGROUND - Retrieve the background color displayed between months.
+		$MCSC_MONTHBK - Retrieve the background color displayed within the month.
+		$MCSC_TEXT - Retrieve the color used to display text within a month.
+		$MCSC_TITLEBK - Retrieve the background color displayed in the calendar's title.
+		$MCSC_TITLETEXT - Retrieve the color used to display text within the calendar's title.
+		$MCSC_TRAILINGTEXT - Retrieve the color used to display header day and trailing day text.
+
+---  Таблица возвращаемых значений  ---
+Успех: Array in the following format:
+
+	[0] - contains the number returned
+	[1] - contains COLORREF rgbcolor
+	[2] - contains Hex BGR color
+	[3] - contains Hex RGB color
+Ошибка: False
+
+---  Примечания  ---
+Header and trailing days are the days from the previous and following
+months that appear on the current month calendar.
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_Create

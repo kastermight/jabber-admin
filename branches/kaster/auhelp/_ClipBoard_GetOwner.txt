@@ -1,0 +1,23 @@
+
+_ClipBoard_GetOwner
+
+Retrieves the window handle of the current owner of the clipboard
+
+#Include 
+_ClipBoard_GetOwner()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle to the window that owns the clipboard
+Ошибка:	0
+
+---  Примечания  ---
+The clipboard can still contain data even if the clipboard is not currently owned. In general, the clipboard
+owner is the window that last placed data in clipboard. The _ClipBoard_Empty function assigns clipboard ownership.
+
+---  Смотрите также  ---
+_ClipBoard_Empty, _ClipBoard_GetOpenWindow
+
+
+---  Таблица  --- GetClipboardOwner

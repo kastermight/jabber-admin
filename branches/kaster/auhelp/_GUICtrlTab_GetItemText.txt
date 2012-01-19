@@ -1,0 +1,19 @@
+
+_GUICtrlTab_GetItemText
+
+Retrieves the text of a tab
+
+#Include 
+_GUICtrlTab_GetItemText($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based item index
+
+---  Таблица возвращаемых значений  ---
+Успех: Tab text
+
+---  Смотрите также  ---
+_GUICtrlTab_SetItemText

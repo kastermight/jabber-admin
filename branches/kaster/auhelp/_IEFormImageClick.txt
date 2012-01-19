@@ -1,0 +1,44 @@
+
+_IEFormImageClick
+
+Simulate a mouse click on an <input type=image>.  Match by sub-string match of alt text, name or src.
+
+#include  
+_IEFormImageClick ( ByRef $o_object, $s_linkText [, $s_mode = "src" [, $i_index = 0 [, $f_wait = 1]]] )
+
+---  Таблица параметров  ---
+$o_object
+	Object variable of any DOM element (will be converted to the associated document object)
+$s_linkText
+	Value used to match element - treatment based on $s_mode
+$s_mode
+	[опционально] specifies search mode
+	src = (Default) match the url of the image
+	name = match the name of the image
+	alt = match the alternate text of the image
+$i_index
+	[опционально] If the img text occurs more than once, specifies which instance you want by 0-based index
+$f_wait
+	[опционально] specifies whether to wait for page to load before returning
+	0 = Return immediately, not waiting for page to load
+	1 = (Default) Wait for page load to complete before returning
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns -1
+Ошибка:	Returns 0 and sets @ERROR
+@Error:	0 ($_IEStatus_Success) = No Error
+	1 ($_IEStatus_GeneralError) = General Error
+	3 ($_IEStatus_InvalidDataType) = Invalid Data Type
+	4 ($_IEStatus_InvalidObjectType) = Invalid Object Type
+	5 ($_IEStatus_InvalidValue) = Invalid Value
+	6 ($_IEStatus_LoadWaitTimeout) = Load Wait Timeout
+	7 ($_IEStatus_NoMatch) = No Match
+	8 ($_IEStatus_AccessIsDenied) = Access Is Denied
+	9 ($_IEStatus_ClientDisconnected) = Client Disconnected
+@Extended:	Contains invalid parameter number
+
+---  Примечания  ---
+The <input type=image> form element is handled differently from all others. It is not recognized by Internet Explorer as a member of the form element collection and this function therefore gives you other means of getting a reference to it within the document using src, name or alt strings. Regardless of the object passed to this function, it looks for the form element within the full document context.
+
+---  Смотрите также  ---
+_IEImgClick, _IEImgGetCollection, _IELoadWait

@@ -1,0 +1,23 @@
+
+_GUICtrlMenu_GetItemSubMenu
+
+Retrieves a the submenu activated by a specified item
+
+#Include 
+_GUICtrlMenu_GetItemSubMenu($hMenu, $iItem)
+
+---  Таблица параметров  ---
+$hMenu
+	Handle of the menu
+$iItem
+	Zero based position of the menu item
+
+---  Таблица возвращаемых значений  ---
+Успех:	A handle to the drop down menu or submenu activated by the menu item
+Ошибка:	0
+
+---  Смотрите также  ---
+_GUICtrlMenu_SetItemSubMenu, _GUICtrlMenu_RemoveMenu
+
+
+---  Таблица  --- GetSubMenu

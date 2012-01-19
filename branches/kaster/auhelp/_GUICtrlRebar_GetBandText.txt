@@ -1,0 +1,19 @@
+
+_GUICtrlRebar_GetBandText
+
+Retrieves the display text for the band
+
+#Include 
+_GUICtrlRebar_GetBandText($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band for which the information will be retrieved
+
+---  Таблица возвращаемых значений  ---
+Returns the display text for the band
+
+---  Смотрите также  ---
+_GUICtrlRebar_SetBandText

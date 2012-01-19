@@ -1,0 +1,28 @@
+
+_GUICtrlMenu_GetItemState
+
+Retrieves the menu item state
+
+#Include 
+_GUICtrlMenu_GetItemState($hMenu, $iItem[, $fByPos = True])
+
+---  Таблица параметров  ---
+$hMenu
+	Handle of the menu
+$iItem
+	Identifier or position of the menu item
+$fByPos
+	[опционально] Menu identifier flag:
+		 True - $iItem is a zero based item position
+		False - $iItem is a menu item identifier
+
+---  Таблица возвращаемых значений  ---
+Returns the Menu item type. Can be one or more of the following:
+	 1 - Item is checked
+	 2 - Item is the default item
+	 4 - Item is disabled
+	 8 - Item is disabled
+	16 - Item is highlighted
+
+---  Смотрите также  ---
+_GUICtrlMenu_GetItemStateEx, _GUICtrlMenu_SetItemState

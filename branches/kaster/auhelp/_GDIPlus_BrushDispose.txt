@@ -1,0 +1,21 @@
+
+_GDIPlus_BrushDispose
+
+Освобождает объект Кисть
+
+#Include 
+_GDIPlus_BrushDispose($hBrush)
+
+---  Таблица параметров  ---
+$hBrush
+	Дескриптор объекта Кисть
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GDIPlus_BrushCreateSolid, _GDIPlus_BrushClone
+
+
+---  Таблица  --- GdipDeleteBrush

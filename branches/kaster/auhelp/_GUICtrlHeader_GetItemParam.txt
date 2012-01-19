@@ -1,0 +1,19 @@
+
+_GUICtrlHeader_GetItemParam
+
+Retrieves the param value of the item
+
+#Include 
+_GUICtrlHeader_GetItemParam($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Zero based item index
+
+---  Таблица возвращаемых значений  ---
+Успех: Item param value
+
+---  Смотрите также  ---
+_GUICtrlHeader_SetItemParam

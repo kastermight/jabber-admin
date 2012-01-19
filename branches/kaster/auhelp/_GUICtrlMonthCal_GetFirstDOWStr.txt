@@ -1,0 +1,25 @@
+
+_GUICtrlMonthCal_GetFirstDOWStr
+
+Retrieves the first day of the week as a string
+
+#Include 
+_GUICtrlMonthCal_GetFirstDOWStr($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: One of the following values:
+
+	Monday
+	Tuesday
+	Wednesday
+	Thursday
+	Friday
+	Saturday
+	Sunday
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_GetFirstDOW

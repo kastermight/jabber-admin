@@ -1,0 +1,17 @@
+
+_GUICtrlSlider_ClearTics
+
+Removes the current tick marks from a slider
+
+#Include 
+_GUICtrlSlider_ClearTics($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Примечания  ---
+This does not remove the first and last tick marks, which are created automatically
+
+---  Смотрите также  ---
+_GUICtrlSlider_SetTic, _GUICtrlSlider_SetTicFreq

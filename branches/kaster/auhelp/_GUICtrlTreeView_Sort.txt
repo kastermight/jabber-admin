@@ -1,0 +1,13 @@
+
+_GUICtrlTreeView_Sort
+
+Сортирует пункты
+
+#Include 
+_GUICtrlTreeView_Sort($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Смотрите также  ---

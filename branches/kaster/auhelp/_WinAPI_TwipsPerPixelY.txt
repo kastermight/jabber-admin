@@ -1,0 +1,14 @@
+
+_WinAPI_TwipsPerPixelY
+
+Returns the height of a pixel, in twips.
+
+#Include 
+_WinAPI_TwipsPerPixelY()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Returns the height of a pixel, in twips
+
+---  Смотрите также  ---

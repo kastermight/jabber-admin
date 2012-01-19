@@ -1,0 +1,17 @@
+
+_GUICtrlSlider_GetPos
+
+Retrieves the logical position the slider
+
+#Include 
+_GUICtrlSlider_GetPos($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: The current logical position of the slider
+
+---  Смотрите также  ---
+_GUICtrlSlider_SetPos

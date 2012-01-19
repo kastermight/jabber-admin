@@ -1,0 +1,22 @@
+
+_GUICtrlComboBox_GetComboBoxInfo
+
+Gets information about the specified ComboBox
+
+#Include 
+_GUICtrlComboBox_GetComboBoxInfo($hWnd, ByRef $tInfo)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$tInfo
+	infos as defined by $tagCOMBOBOXINFO
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+Minimum OS - Windows XP.
+
+---  Смотрите также  ---

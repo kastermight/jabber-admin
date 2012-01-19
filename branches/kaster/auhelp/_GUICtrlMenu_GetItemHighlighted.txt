@@ -1,0 +1,24 @@
+
+_GUICtrlMenu_GetItemHighlighted
+
+Retrieves the status of the menu item highlighted state
+
+#Include 
+_GUICtrlMenu_GetItemHighlighted($hMenu, $iItem[, $fByPos = True])
+
+---  Таблица параметров  ---
+$hMenu
+	Handle of the menu
+$iItem
+	Identifier or position of the menu item
+$fByPos
+	[опционально] Menu identifier flag:
+		 True - $iItem is a zero based item position
+		False - $iItem is a menu item identifier
+
+---  Таблица возвращаемых значений  ---
+True:	Item is highlighted
+False:	Item is not highlighted
+
+---  Смотрите также  ---
+_GUICtrlMenu_SetItemHighlighted

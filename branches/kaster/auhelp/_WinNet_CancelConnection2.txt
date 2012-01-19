@@ -1,0 +1,30 @@
+
+_WinNet_CancelConnection2
+
+Cancels an existing network connection
+
+#Include 
+_WinNet_CancelConnection2($sName [, $fUpdate = True [, $fForce = True]])
+
+---  Таблица параметров  ---
+$sName
+	Name of either the redirected local device or the remote network resource to disconnect from.
+		When this parameter specifies a redirected local device, the function cancels only the specified device
+		redirection. If the parameter specifies a remote network resource, only the connections to remote networks
+		without devices are canceled.
+$fUpdate
+	[опционально] If True, the users profile is updated with the information that the connection is no longer a
+		persistent one.
+$fForce
+	[опционально] Specifies whether or not the disconnection should occur if there are open files or jobs on the
+		connection. If this parameter is False, the function fails if there are open files or jobs.
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_WinNet_CancelConnection
+
+
+---  Таблица  --- WNetCancelConnection2

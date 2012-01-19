@@ -1,0 +1,22 @@
+
+_WinAPI_FindExecutable
+
+Retrieves the name of the executable file associated with the specified file name
+
+#Include 
+_WinAPI_FindExecutable($sFileName [, $sDirectory = ""])
+
+---  Таблица параметров  ---
+$sFileName
+	Fully qualified path to existing file
+$sDirectory
+	[опционально] Default directory
+
+---  Таблица возвращаемых значений  ---
+Успех:	the Full path to the executable file started when an "open" by association is run on the file specified
+Ошибка:	empty string if no association was found. and set @error
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- FindExecutable

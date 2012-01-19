@@ -1,0 +1,22 @@
+
+_GUICtrlRichEdit_Copy
+
+Копирует текст в буфер обмена
+
+#Include 
+_GUICtrlRichEdit_Copy($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False и устанавливает @error
+@error:	101 - $HWnd не является дескриптором
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_Paste, _GUICtrlRichEdit_Cut, _GUICtrlRichEdit_PasteSpecial
+
+
+---  Таблица  --- WM_COPY

@@ -1,0 +1,17 @@
+
+_GUICtrlSlider_GetRangeMin
+
+Retrieves the minimum position for the slider
+
+#Include 
+_GUICtrlSlider_GetRangeMin($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: The minimum position in the slider's range of minimum to maximum slider positions
+
+---  Смотрите также  ---
+_GUICtrlSlider_SetRangeMin, _GUICtrlSlider_GetRange

@@ -1,0 +1,22 @@
+
+_GDIPlus_BrushSetSolidColor
+
+Set the color of a Solid Brush object
+
+#Include 
+_GDIPlus_BrushSetSolidColor($hBrush, [$iARGB = 0xFF000000])
+
+---  Таблица параметров  ---
+$hBrush
+	Handle to a Brush object
+$iARGB
+	[опционально] Alpha, Red, Green and Blue components of brush
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GdipSetSolidFillColor

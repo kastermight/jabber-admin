@@ -1,0 +1,21 @@
+
+_GUICtrlButton_Enable
+
+Enables or disables mouse and keyboard input to the specified button
+
+#Include 
+_GUICtrlButton_Enable($hWnd[, $fEnable = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$fEnable
+	[опционально] Specifies whether to enable or disable the button:
+		 True - The button is enabled
+		False - The button is disabled
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---

@@ -1,0 +1,19 @@
+
+_GUICtrlComboBoxEx_ReplaceEditSel
+
+Replace text selected in edit box
+
+#Include 
+_GUICtrlComboBoxEx_ReplaceEditSel($hWnd, $sText)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$sText
+	String containing the replacement text
+
+---  Примечания  ---
+If the message is sent to a ComboBox with the $CBS_DROPDOWN or $CBS_DROPDOWNLIST style the Function will fail.
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_SetEditText

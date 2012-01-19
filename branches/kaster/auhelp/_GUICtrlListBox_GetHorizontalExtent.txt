@@ -1,0 +1,20 @@
+
+_GUICtrlListBox_GetHorizontalExtent
+
+Возвращает ширину горизонтального прокручивания в ListBox
+
+#Include 
+_GUICtrlListBox_GetHorizontalExtent($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех: Возвращает ширину прокручивания в пикселях
+
+---  Примечания  ---
+ListBox должен иметь стиль $WS_HSCROLL.
+
+---  Смотрите также  ---
+_GUICtrlListBox_SetHorizontalExtent

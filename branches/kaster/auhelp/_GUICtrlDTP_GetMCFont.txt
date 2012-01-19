@@ -1,0 +1,18 @@
+
+_GUICtrlDTP_GetMCFont
+
+Retrieves the month calendar font handle
+
+#Include 
+_GUICtrlDTP_GetMCFont($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Font handle
+Ошибка: 0
+
+---  Смотрите также  ---
+_GUICtrlDTP_SetMCFont

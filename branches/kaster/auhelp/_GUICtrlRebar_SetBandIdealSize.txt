@@ -1,0 +1,22 @@
+
+_GUICtrlRebar_SetBandIdealSize
+
+Set Ideal width of the band, in pixels.
+
+#Include 
+_GUICtrlRebar_SetBandIdealSize($hWnd, $iIndex, $iNewSize)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+$iNewSize
+	Ideal width of the band, in pixels
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetBandIdealSize

@@ -1,0 +1,18 @@
+
+_EventLog__DeregisterSource
+
+Closes a write handle to the event log
+
+#Include 
+_EventLog__DeregisterSource($hEventLog)
+
+---  Таблица параметров  ---
+$hEventLog
+	A handle to the event log
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_EventLog__RegisterSource, _EventLog__Notify

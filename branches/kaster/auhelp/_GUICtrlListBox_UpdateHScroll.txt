@@ -1,0 +1,13 @@
+
+_GUICtrlListBox_UpdateHScroll
+
+Update the horizontal scroll bar based on the longest string
+
+#Include 
+_GUICtrlListBox_UpdateHScroll($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Смотрите также  ---

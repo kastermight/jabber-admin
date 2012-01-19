@@ -1,0 +1,22 @@
+
+_Net_Share_ResourceStr
+
+Returns the string representation of a resource
+
+#Include 
+_Net_Share_ResourceStr($iResource)
+
+---  Таблица параметров  ---
+$iResource
+	Resource type. Can be a combination of:
+		$STYPE_DISKTREE - Print queue
+		$STYPE_PRINTQ - Disk drive
+		$STYPE_DEVICE - Communication device
+		$STYPE_IPC - IPC
+		$STYPE_SPECIAL - Special share reserved for IPC$ or remote administration of the server
+		$STYPE_TEMPORARY - A temporary share
+
+---  Таблица возвращаемых значений  ---
+Returns a Resource type string
+
+---  Смотрите также  ---

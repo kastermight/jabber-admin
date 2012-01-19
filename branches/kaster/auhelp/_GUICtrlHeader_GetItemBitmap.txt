@@ -1,0 +1,20 @@
+
+_GUICtrlHeader_GetItemBitmap
+
+Retrieves the item bitmap handle
+
+#Include 
+_GUICtrlHeader_GetItemBitmap($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Zero based item index
+
+---  Таблица возвращаемых значений  ---
+Успех: Item bitmap handle
+Ошибка: 0
+
+---  Смотрите также  ---
+_GUICtrlHeader_SetItemBitmap

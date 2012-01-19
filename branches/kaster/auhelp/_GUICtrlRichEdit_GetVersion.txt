@@ -1,0 +1,18 @@
+
+_GUICtrlRichEdit_GetVersion
+
+Возвращает версию Rich Edit
+
+#Include 
+_GUICtrlRichEdit_GetVersion()
+
+None.
+
+---  Примечания  ---
+Версия Rich Edit включенная в версию Windows следующая:
+3.0 - Windows 2000, XP
+3.1 - Windows Vista
+4.0 - Windows XP SP1
+4.1 - Windows Vista
+
+---  Смотрите также  ---

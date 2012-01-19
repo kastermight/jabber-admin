@@ -1,0 +1,22 @@
+
+_GUICtrlListView_SetItemParam
+
+Устанавливает значение ассоциирующееся с пунктом
+
+#Include 
+_GUICtrlListView_SetItemParam($hWnd, $iIndex, $iParam)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта
+$iParam
+	Значение ассоциирующееся с пунктом
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlListView_GetItemParam

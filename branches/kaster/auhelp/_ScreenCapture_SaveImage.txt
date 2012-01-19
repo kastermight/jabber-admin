@@ -1,0 +1,28 @@
+
+_ScreenCapture_SaveImage
+
+Сохраняет изображение в файл
+
+#Include 
+_ScreenCapture_SaveImage($sFileName, $hBitmap [, $fFreeBmp = True])
+
+---  Таблица параметров  ---
+$sFileName
+	Полный путь сохраняемого файла с расширением
+$hBitmap
+	Дескриптор изображения HBITMAP
+$fFreeBmp
+	[опционально] Если True, то HBITMAP будет освобождён при успешном сохранении
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+Эта функция сохраняет изображение в файл, преобразовывая изображение в формат указанный в расширении файла.
+Для Windows XP, доступны расширения BMP, GIF, JPG (JPEG), PNG и TIF (TIFF).
+
+Требования GDI+: GDI+ необходимо распространять для приложений, которые запускаются в операционных системах Microsoft Windows NT 4.0 SP6, Windows 2000, Windows 98, и Windows Me.
+
+---  Смотрите также  ---
+_ScreenCapture_Capture

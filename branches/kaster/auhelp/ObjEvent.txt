@@ -1,0 +1,37 @@
+
+ObjEvent
+
+Handles incoming events from the given Object.
+
+ObjEvent ( $ObjectVar, "functionprefix" [, "interface name"] )
+ObjEvent ( "AutoIt.Error" [, "function name"] )
+
+---  Таблица параметров  ---
+$ObjectVar
+	A variable containing an Object from which you want to receive events
+"functionprefix"
+	The prefix of the functions you define to handle receiving events. 
+	The prefix is appended by the Objects method name.
+"interface name"
+	[опционально] name of an Event interface to use. 
+	Note: It must be a supported as outgoing for the
+	Object AND it must be of type DISPATCH.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns an object or a function name.
+Ошибка:	Returns "" and sets @error to 1.
+
+---  Примечания  ---
+The first format is used to receive Events from the given Object. 
+To receive a specific event, create an AutoIt function name using
+the given prefix appended with the event name.
+
+The second format is used for COM Error Handling. If any COM error
+occurs, the given function is being called.  
+If the second parameter is omitted, it will return the name of the
+current Error handler function, if present.
+
+See the Obj/COM Reference for a detailed explanation.
+
+---  Смотрите также  ---
+ObjGet, IsObj, ObjCreate, GUICtrlCreateObj

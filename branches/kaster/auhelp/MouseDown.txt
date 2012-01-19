@@ -1,0 +1,21 @@
+
+MouseDown
+
+Выполняет нажатие и удерживание кнопки мыши в текущей позиции.
+
+MouseDown ( "button" )
+
+---  Таблица параметров  ---
+button
+	Кнопка для клика: "left", "right", "middle", "main", "menu", "primary", "secondary".
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает 1.
+Ошибка:	Возвращает 0, если параметр button задан неверно.
+
+---  Примечания  ---
+См. примечания для функции MouseClick().
+К ответственности пользователя: для каждого MouseDown в конечном счёте следует соответствующее событие MouseUp.
+
+---  Смотрите также  ---
+MouseUp, MouseClick, MouseClickDrag, MouseGetPos, MouseMove, MouseCoordMode (Option), MouseClickDownDelay (Option)

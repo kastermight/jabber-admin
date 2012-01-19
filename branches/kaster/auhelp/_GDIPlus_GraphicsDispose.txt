@@ -1,0 +1,21 @@
+
+_GDIPlus_GraphicsDispose
+
+Освобождает графический объект
+
+#Include 
+_GDIPlus_GraphicsDispose($hGraphics)
+
+---  Таблица параметров  ---
+$hGraphics
+	Дескриптор графического объекта
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GDIPlus_GraphicsCreateFromHDC, _GDIPlus_GraphicsCreateFromHWND
+
+
+---  Таблица  --- GdipDeleteGraphics

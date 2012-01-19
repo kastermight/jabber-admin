@@ -1,0 +1,21 @@
+
+_GUICtrlListView_SortItems
+
+Запускает сортировку с обратным вызовом, а также устанавливает стрелку направления сортировки в заголовке колонки
+
+#Include 
+_GUICtrlListView_SortItems($hWnd, $iCol)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iCol
+	Номер колонки
+
+---  Примечания  ---
+Используется только с функцией _GUICtrlListView_RegisterSortCallBack
+
+Стрелки направления сортировки вниз/вверх отображаются на выбранных колонках в операционных системах Windows XP и выше, если эта опция установлена вызовом функции _GUICtrlListView_RegisterSortCallBack
+
+---  Смотрите также  ---
+_GUICtrlListView_RegisterSortCallBack

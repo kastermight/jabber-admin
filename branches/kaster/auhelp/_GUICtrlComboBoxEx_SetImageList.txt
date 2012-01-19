@@ -1,0 +1,20 @@
+
+_GUICtrlComboBoxEx_SetImageList
+
+Sets an image list for a ComboBoxEx control
+
+#Include 
+_GUICtrlComboBoxEx_SetImageList($hWnd, $hHandle)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hHandle
+	A handle to the image list to be set for the control
+
+---  Таблица возвращаемых значений  ---
+Успех: handle to the image list previously associated with the control,
+		or returns NULL if no image list was previously set
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_GetImageList

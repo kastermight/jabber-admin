@@ -1,0 +1,22 @@
+
+_GUICtrlHeader_SetItem
+
+Sets information about an item
+
+#Include 
+_GUICtrlHeader_SetItem($hWnd, $iIndex, ByRef $tItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Zero based item index
+$tItem
+	DllStructCreate($tagHDITEM) structure
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlHeader_GetItem, $tagHDITEM

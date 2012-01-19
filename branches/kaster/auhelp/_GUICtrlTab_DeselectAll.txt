@@ -1,0 +1,21 @@
+
+_GUICtrlTab_DeselectAll
+
+Resets tabs, clearing any that were set to the pressed state
+
+#Include 
+_GUICtrlTab_DeselectAll($hWnd[, $fExclude = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$fExclude
+	[опционально] Exclusion flag:
+		 True - All tabs except for the one currently selected will be reset
+		False - All tab items will be reset
+
+---  Примечания  ---
+This only works if $TCS_BUTTONS style flag has been set
+
+---  Смотрите также  ---
+_GUICtrlTab_SetCurSel

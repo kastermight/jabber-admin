@@ -1,0 +1,19 @@
+
+_GUICtrlTreeView_SetTextColor
+
+Устанавливает цвет текста
+
+#Include 
+_GUICtrlTreeView_SetTextColor($hWnd, $vRGBColor)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$vRGBColor
+	Новый шестнадцатеричный цвет текста
+
+---  Таблица возвращаемых значений  ---
+Возвращает предыдущий шестнадцатеричный цвет текста в формате RGB
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetTextColor

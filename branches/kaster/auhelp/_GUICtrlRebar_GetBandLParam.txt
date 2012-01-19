@@ -1,0 +1,19 @@
+
+_GUICtrlRebar_GetBandLParam
+
+Get Application-defined value
+
+#Include 
+_GUICtrlRebar_GetBandLParam($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+
+---  Таблица возвращаемых значений  ---
+Returns the Application-defined value
+
+---  Смотрите также  ---
+_GUICtrlRebar_SetBandLParam

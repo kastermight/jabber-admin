@@ -1,0 +1,22 @@
+
+_GUICtrlListView_SetItemCut
+
+Sets whether the item is marked for a cut-and-paste operation
+
+#Include 
+_GUICtrlListView_SetItemCut($hWnd, $iIndex[, $fEnabled = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based index of the item
+$fEnabled
+	[опционально] If True the item state is set, otherwise it is not set.
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlListView_GetItemCut

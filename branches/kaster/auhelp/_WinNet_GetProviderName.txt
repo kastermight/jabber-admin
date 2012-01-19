@@ -1,0 +1,20 @@
+
+_WinNet_GetProviderName
+
+Obtains the provider name for a specific type of network
+
+#Include 
+_WinNet_GetProviderName($iType)
+
+---  Таблица параметров  ---
+$iType
+	Network type that is unique to the network
+
+---  Таблица возвращаемых значений  ---
+Успех:	Network provider name
+Ошибка:	Set @error
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- WNetGetProviderName

@@ -1,0 +1,20 @@
+
+StringIsAlpha
+
+Проверяет наличие в строке только букв.
+
+StringIsAlpha ( "string" )
+
+---  Таблица параметров  ---
+string
+	Проверяемая строка
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает 1.
+Ошибка:	Возвращает 0, если строка содержит не только буквы.
+
+---  Примечания  ---
+Учитывайте, что любые пробелы в строке при использовании функции StringIsAlpha означают, что функция вернёт 0.
+
+---  Смотрите также  ---
+StringIsAlNum, StringIsASCII, StringIsDigit, StringIsLower, StringIsSpace, StringIsUpper, StringIsXDigit, StringUpper, StringLower

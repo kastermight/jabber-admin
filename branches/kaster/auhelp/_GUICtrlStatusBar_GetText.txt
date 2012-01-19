@@ -1,0 +1,20 @@
+
+_GUICtrlStatusBar_GetText
+
+Retrieves the text from the specified part
+
+#Include 
+_GUICtrlStatusBar_GetText($hWnd, $iPart)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iPart
+	Zero based part index
+
+---  Таблица возвращаемых значений  ---
+Успех:	Part text
+Ошибка:	set @error
+
+---  Смотрите также  ---
+_GUICtrlStatusBar_SetText

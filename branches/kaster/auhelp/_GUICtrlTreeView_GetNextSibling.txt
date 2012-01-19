@@ -1,0 +1,20 @@
+
+_GUICtrlTreeView_GetNextSibling
+
+Возвращает следующий пункт на том же уровне, что и указанный пункт
+
+#Include 
+_GUICtrlTreeView_GetNextSibling($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$hItem
+	Дескриптор пункта
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает дескриптор следующего соседнего пункта
+Ошибка:	Возвращает 0
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetNext, _GUICtrlTreeView_GetPrevSibling

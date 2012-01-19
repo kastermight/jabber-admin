@@ -1,0 +1,23 @@
+
+_GDIPlus_GraphicsReleaseDC
+
+Releases the device context of the Graphics object
+
+#Include 
+_GDIPlus_GraphicsReleaseDC($hGraphics, $hDC)
+
+---  Таблица параметров  ---
+$hGraphics
+	Handle to a Graphics object
+$hDC
+	Handle to the Graphics device context
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GDIPlus_GraphicsGetDC
+
+
+---  Таблица  --- GdipReleaseDC

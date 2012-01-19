@@ -1,0 +1,29 @@
+
+_WinAPI_PathFindOnPath
+
+Searchs for a file in the default system paths
+
+#Include 
+_WinAPI_PathFindOnPath ( $szFile, $aExtraPaths="", $szPathDelimiter=@LF)
+
+---  Таблица параметров  ---
+$szFile
+	Filename to search for
+$aExtraPaths
+	Extra paths to check before any others.
+$szPathDelimiter
+	Delimiter used to split $aExtraPaths if it's an non-empty string (StringSplit with flag 2).
+
+---  Таблица возвращаемых значений  ---
+Успех:	Full path of found file
+Ошибка:	Unchanged filename, @error=1
+
+---  Примечания  ---
+$aExtraPaths can contain a list of paths to be checked before any system defaults.
+It can be an array or a string. If the former, it shall not have a count in it's first element.
+If the latter, it will be split using $szPathDelimiter as the delimiter, that defaults to @LF.
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- PathFindOnpath

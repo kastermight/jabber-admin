@@ -1,0 +1,21 @@
+
+_GUICtrlStatusBar_SetTipText
+
+Sets the ToolTip text for a part
+
+#Include 
+_GUICtrlStatusBar_SetTipText($hWnd, $iPart, $sText)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iPart
+	Zero based part index
+$sText
+	
+
+---  Примечания  ---
+The status bar must have been created with the $SBARS_TOOLTIPS style to enable ToolTips
+
+---  Смотрите также  ---
+_GUICtrlStatusBar_GetTipText

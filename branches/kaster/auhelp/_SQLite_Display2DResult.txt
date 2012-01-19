@@ -1,0 +1,23 @@
+
+_SQLite_Display2DResult
+
+Returns or prints a 2Dimensional array formated to Console
+
+#include 
+_SQLite_Display2DResult ( $aResult [, $iCellWidth = 0 [, $bReturn = 0 ]] )
+
+---  Таблица параметров  ---
+$aResult
+	The array to be displayed
+$iCellWidth
+	[опционально] specifies the size of a data field
+$bReturn
+	[опционально] if True the formated string is returned, not displayed
+	if False formated string send to StdOut
+
+---  Таблица возвращаемых значений  ---
+Успех:	none or formated string
+Ошибка:	@error = 1 - $aResult is no array or has wrong dimension
+
+---  Смотрите также  ---
+_SQLite_GetTable2d

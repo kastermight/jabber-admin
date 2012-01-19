@@ -1,0 +1,18 @@
+
+_GUICtrlTreeView_DeleteAll
+
+Удаляет все пункты TreeView
+
+#Include 
+_GUICtrlTreeView_DeleteAll($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlTreeView_Delete, _GUICtrlTreeView_DeleteChildren

@@ -1,0 +1,20 @@
+
+_Date_Time_SystemTimeToDateStr
+
+Decode a system time to a date string
+
+#Include 
+_Date_Time_SystemTimeToDateStr(ByRef $tSystemTime [, $bFmt = 0])
+
+---  Таблица параметров  ---
+$tSystemTime
+	$tagSYSTEMTIME structure
+$bFmt
+	[опционально] 0 returns mm/dd/yyyy (Default)
+	1 returns yyyy/mm/dd
+
+---  Таблица возвращаемых значений  ---
+Returns Date string formatted according to $bFmt
+
+---  Смотрите также  ---
+_Date_Time_SystemTimeToTimeStr, _Date_Time_SystemTimeToDateTimeStr, $tagSYSTEMTIME

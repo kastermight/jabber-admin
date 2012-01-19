@@ -1,0 +1,20 @@
+
+StringLen
+
+Возвращает количество символов строки. 
+
+StringLen ( "string" ) 
+
+---  Таблица параметров  ---
+string
+	Используемая строка. 
+
+---  Таблица возвращаемых значений  ---
+Возвращает длину строки.
+ 
+
+---  Примечания  ---
+Числовое выражение автоматически преобразуется в строку.
+
+---  Смотрите также  ---
+StringInStr, StringLeft, StringLower, StringMid, StringRight, StringTrimLeft, StringTrimRight, StringUpper, StringCompare, StringReplace, StringSplit

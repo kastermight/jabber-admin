@@ -1,0 +1,21 @@
+
+_GUICtrlTab_SetItemSize
+
+Sets the width and height of tabs in a fixed width or owner drawn control
+
+#Include 
+_GUICtrlTab_SetItemSize($hWnd, $iWidth, $iHeight)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iWidth
+	New width, in pixels
+$iHeight
+	New height, in pixels
+
+---  Таблица возвращаемых значений  ---
+Успех: Returns the old width and height. The width is in the low order word of the return value, and
+		the height is in the high-order word.
+
+---  Смотрите также  ---

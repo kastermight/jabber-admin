@@ -1,0 +1,21 @@
+
+_GUICtrlStatusBar_ShowHide
+
+Show/Hide the StatusBar control
+
+#Include 
+_GUICtrlStatusBar_ShowHide($hWnd, $iState)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iState
+	State of the StatusBar, can be the following values:
+	@SW_SHOW
+	@SW_HIDE
+
+---  Таблица возвращаемых значений  ---
+True:	The control was previously visible
+False:	The control was previously hidden
+
+---  Смотрите также  ---

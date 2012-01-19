@@ -1,0 +1,16 @@
+
+_GUIToolTip_GetToolCount
+
+Retrieves the tool count
+
+#Include 
+_GUIToolTip_GetToolCount($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: Count of tools maintained by the ToolTip
+
+---  Смотрите также  ---

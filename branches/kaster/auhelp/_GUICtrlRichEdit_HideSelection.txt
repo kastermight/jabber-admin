@@ -1,0 +1,26 @@
+
+_GUICtrlRichEdit_HideSelection
+
+Скрыть (или показать) выделение
+
+#Include 
+_GUICtrlRichEdit_HideSelection($hWnd[, $fHide = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$fHide
+	[опционально] True - Скрыть
+	False - Показать
+	Default: Скрыть
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False и устанавливает @error
+@error:	101 - $HWnd не является дескриптором
+	102 - $fHide не является True или False
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- EM_HIDESELECTION

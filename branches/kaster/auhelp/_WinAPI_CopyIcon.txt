@@ -1,0 +1,26 @@
+
+_WinAPI_CopyIcon
+
+Copies the specified icon from another module
+
+#Include 
+_WinAPI_CopyIcon($hIcon)
+
+---  Таблица параметров  ---
+$hIcon
+	Handle to the icon to be copied
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle to the duplicate icon
+Ошибка:	0
+
+---  Примечания  ---
+The CopyIcon function enables an application or DLL to get its own handle to an icon owned by another module.
+If the other module is freed, the application icon will still be able to use the icon. Before closing, call
+the _WinAPI_DestroyIcon function to free any system resources associated with the icon.
+
+---  Смотрите также  ---
+_WinAPI_DestroyIcon
+
+
+---  Таблица  --- CopyIcon

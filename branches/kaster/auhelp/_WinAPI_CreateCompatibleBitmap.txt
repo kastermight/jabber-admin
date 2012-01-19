@@ -1,0 +1,28 @@
+
+_WinAPI_CreateCompatibleBitmap
+
+Creates a bitmap compatible with the specified device context
+
+#Include 
+_WinAPI_CreateCompatibleBitmap($hDC, $iWidth, $iHeight)
+
+---  Таблица параметров  ---
+$hDC
+	Identifies a device context
+$iWidth
+	Specifies the bitmap width, in pixels
+$iHeight
+	Specifies the bitmap height, in pixels
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle to the bitmap
+Ошибка:	0
+
+---  Примечания  ---
+When you no longer need the bitmap, call the _WinAPI_DeleteObject function to delete it
+
+---  Смотрите также  ---
+_WinAPI_DeleteObject, _WinAPI_CreateSolidBitmap
+
+
+---  Таблица  --- CreateCompatibleBitmap

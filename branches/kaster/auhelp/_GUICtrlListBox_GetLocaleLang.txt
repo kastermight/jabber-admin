@@ -1,0 +1,17 @@
+
+_GUICtrlListBox_GetLocaleLang
+
+Retrieves the current language identifier
+
+#Include 
+_GUICtrlListBox_GetLocaleLang($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: The language identifier of the list box
+
+---  Смотрите также  ---
+_GUICtrlListBox_GetLocale

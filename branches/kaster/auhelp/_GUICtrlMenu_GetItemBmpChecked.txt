@@ -1,0 +1,23 @@
+
+_GUICtrlMenu_GetItemBmpChecked
+
+Retrieves the bitmap displayed if the item is selected
+
+#Include 
+_GUICtrlMenu_GetItemBmpChecked($hMenu, $iItem[, $fByPos = True])
+
+---  Таблица параметров  ---
+$hMenu
+	Handle of the menu
+$iItem
+	Identifier or position of the menu item
+$fByPos
+	[опционально] Menu identifier flag:
+		 True - $iItem is a zero based item position
+		False - $iItem is a menu item identifier
+
+---  Таблица возвращаемых значений  ---
+Returns the Handle to the bitmap to display next to the item if it is selected
+
+---  Смотрите также  ---
+_GUICtrlMenu_SetItemBmpChecked

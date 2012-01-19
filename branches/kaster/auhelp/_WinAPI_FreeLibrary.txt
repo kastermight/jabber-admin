@@ -1,0 +1,21 @@
+
+_WinAPI_FreeLibrary
+
+Decrements the reference count of the loaded dynamic-link library (DLL) module
+
+#Include 
+_WinAPI_FreeLibrary($hModule)
+
+---  Таблица параметров  ---
+$hModule
+	Identifies the loaded library module
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_WinAPI_LoadLibrary, _WinAPI_LoadLibraryEx, _WinAPI_LoadString
+
+
+---  Таблица  --- FreeLibrary

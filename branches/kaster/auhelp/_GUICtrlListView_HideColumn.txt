@@ -1,0 +1,20 @@
+
+_GUICtrlListView_HideColumn
+
+Скрывает колонку "устанавливает ширину колонки в нуль"
+
+#Include 
+_GUICtrlListView_HideColumn($hWnd, $iCol)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iCol
+	Индекс скрываемой колонки
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlListView_SetColumnWidth

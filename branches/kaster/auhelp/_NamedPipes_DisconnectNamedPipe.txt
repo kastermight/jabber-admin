@@ -1,0 +1,25 @@
+
+_NamedPipes_DisconnectNamedPipe
+
+Disconnects the server end of a named pipe instance from a client process
+
+#Include 
+_NamedPipes_DisconnectNamedPipe($hNamedPipe)
+
+---  Таблица параметров  ---
+$hNamedPipe
+	Handle to the server end of a named pipe instance.
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+If the client end of the named pipe is open, the DisconnectNamedPipe function forces that end of the named
+pipe closed. The client receives an error the next time it attempts to access the pipe. A client that is
+forced off a pipe must still use the CloseHandle function to close its end of the pipe.
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- DisconnectNamedPipe

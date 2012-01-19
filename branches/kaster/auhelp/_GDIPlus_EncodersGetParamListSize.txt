@@ -1,0 +1,23 @@
+
+_GDIPlus_EncodersGetParamListSize
+
+Get the size of the parameter list for a specified image encoder
+
+#Include 
+_GDIPlus_EncodersGetParamListSize($hImage, $sEncoder)
+
+---  Таблица параметров  ---
+$hImage
+	Handle to an image object
+$sEncoder
+	GUID string of encoder to be used
+
+---  Таблица возвращаемых значений  ---
+Успех:	Size, in bytes, of the parameter list
+Ошибка:	0
+
+---  Смотрите также  ---
+_GDIPlus_EncodersGetParamList
+
+
+---  Таблица  --- GdipGetEncoderParameterListSize

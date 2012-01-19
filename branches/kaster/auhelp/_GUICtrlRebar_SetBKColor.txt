@@ -1,0 +1,19 @@
+
+_GUICtrlRebar_SetBKColor
+
+Retrieves a rebar control's default background color
+
+#Include 
+_GUICtrlRebar_SetBKColor($hWnd, $iColor)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iColor
+	COLORREF value that represents the new default background color
+
+---  Таблица возвращаемых значений  ---
+Returns A COLORREF value that represents the previous default background color
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetBKColor

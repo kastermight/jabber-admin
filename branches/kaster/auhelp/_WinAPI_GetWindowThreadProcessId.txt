@@ -1,0 +1,22 @@
+
+_WinAPI_GetWindowThreadProcessId
+
+Retrieves the identifier of the thread that created the specified window
+
+#Include 
+_WinAPI_GetWindowThreadProcessId($hWnd, ByRef $iPID)
+
+---  Таблица параметров  ---
+$hWnd
+	Window handle
+$iPID
+	Returns the Process ID of the specified window
+
+---  Таблица возвращаемых значений  ---
+Returns the Thread ID of the specified window
+
+---  Смотрите также  ---
+_WinAPI_GetCurrentProcessID
+
+
+---  Таблица  --- GetWindowThreadProcessId

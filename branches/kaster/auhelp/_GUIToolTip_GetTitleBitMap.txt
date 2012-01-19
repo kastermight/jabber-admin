@@ -1,0 +1,19 @@
+
+_GUIToolTip_GetTitleBitMap
+
+Retrieves the title bitmap icon
+
+#Include 
+_GUIToolTip_GetTitleBitMap($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Returns the Handle to the ToolTip icon
+
+---  Примечания  ---
+Minimum OS - Windows XP.
+
+---  Смотрите также  ---

@@ -1,0 +1,24 @@
+
+_GUICtrlMonthCal_SetCurSel
+
+Sets the currently selected date
+
+#Include 
+_GUICtrlMonthCal_SetCurSel($hWnd, $iYear, $iMonth, $iDay)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iYear
+	Year value
+$iMonth
+	Month value
+$iDay
+	Day value
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_GetCurSel

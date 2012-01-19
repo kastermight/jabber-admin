@@ -1,0 +1,24 @@
+
+_WinAPI_GetDC
+
+Retrieves a handle of a display device context for the client area a window
+
+#Include 
+_WinAPI_GetDC($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle of window
+
+---  Таблица возвращаемых значений  ---
+Успех:	The device context for the given window's client area
+Ошибка:	0
+
+---  Примечания  ---
+After painting with a common device context, the _WinAPI_ReleaseDC function must be called to release the DC
+
+---  Смотрите также  ---
+_WinAPI_DeleteDC, _WinAPI_ReleaseDC
+
+
+---  Таблица  --- GetDC

@@ -1,0 +1,21 @@
+
+_GUICtrlToolbar_GetHotItem
+
+Retrieves the index of the hot item
+
+#Include 
+_GUICtrlToolbar_GetHotItem($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: The zero based index of the hot item
+Ошибка: -1
+
+---  Примечания  ---
+A button is considered hot when the cursor is over it
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetHotItem

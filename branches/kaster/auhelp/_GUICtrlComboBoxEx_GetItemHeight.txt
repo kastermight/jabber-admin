@@ -1,0 +1,22 @@
+
+_GUICtrlComboBoxEx_GetItemHeight
+
+Determines the height of list items or the selection field in a ComboBox
+
+#Include 
+_GUICtrlComboBoxEx_GetItemHeight($hWnd, $iComponent = -1)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iComponent
+	Use the following values:
+		–1 - Get the height of the selection field
+		 0 - Get the height of list items
+
+---  Таблица возвращаемых значений  ---
+Успех: The height, in pixels
+Ошибка: -1
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_SetItemHeight

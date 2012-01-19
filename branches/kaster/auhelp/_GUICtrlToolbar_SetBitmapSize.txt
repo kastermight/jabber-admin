@@ -1,0 +1,25 @@
+
+_GUICtrlToolbar_SetBitmapSize
+
+Sets the size of the bitmapped images to be added to a toolbar
+
+#Include 
+_GUICtrlToolbar_SetBitmapSize($hWnd, $iWidth, $iHeight)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iWidth
+	Width, in pixels, of the bitmapped images
+$iHeight
+	Height, in pixels, of the bitmapped images
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Примечания  ---
+The size can be set only before adding any bitmaps to the toolbar. If an application does not explicitly set
+the bitmap size, the size defaults to 16 by 15 pixels.
+
+---  Смотрите также  ---

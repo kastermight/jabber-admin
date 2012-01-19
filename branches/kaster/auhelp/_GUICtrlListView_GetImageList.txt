@@ -1,0 +1,23 @@
+
+_GUICtrlListView_GetImageList
+
+Retrieves the handle to an image list used for drawing listview items
+
+#Include 
+_GUICtrlListView_GetImageList($hWnd, $iImageList)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iImageList
+	Image list to retrieve:
+		0 - Image list with large icons
+		1 - Image list with small icons
+		2 - Image list with state images
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle to the specified image list
+Ошибка:	0
+
+---  Смотрите также  ---
+_GUICtrlListView_SetImageList

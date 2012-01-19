@@ -1,0 +1,28 @@
+
+_GUIImageList_GetIcon
+
+Создаёт иконку из изображения и маски в списке изображений
+
+#Include 
+_GUIImageList_GetIcon($hWnd, $iIndex[, $iStyle = 0])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс изображения, отсчёт от 0
+$iStyle
+	[опционально] Drawing style and overlay image:
+		1 - Draws the image transparently using the mask, regardless of the background color
+		2 - Draws the image, blending 25 percent with the system highlight color
+		4 - Draws the image, blending 50 percent with the system highlight color
+		8 - Draws the mask
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает дескриптор иконки
+Ошибка:	Возвращает 0
+
+---  Примечания  ---
+Ответственность за удаление иконки, возвращённой этой функцией, ложится на приложение её вызывавшее. Используйте _GUIImageList_DestroyIcon для удаления иконки.
+
+---  Смотрите также  ---

@@ -1,0 +1,20 @@
+
+StringIsDigit
+
+Проверяет наличие в строке только цифр (0-9).
+
+StringIsDigit ( "string" )
+
+---  Таблица параметров  ---
+string
+	Проверяемая строка
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает 1.
+Ошибка:	Возвращает 0, если строка содержит не только цифры.
+
+---  Примечания  ---
+Смотрите примеры.
+
+---  Смотрите также  ---
+StringIsAlNum, StringIsAlpha, StringIsASCII, StringIsLower, StringIsSpace, StringIsUpper, StringIsXDigit, StringIsInt

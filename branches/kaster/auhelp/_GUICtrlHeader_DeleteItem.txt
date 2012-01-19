@@ -1,0 +1,20 @@
+
+_GUICtrlHeader_DeleteItem
+
+Deletes a header item
+
+#Include 
+_GUICtrlHeader_DeleteItem($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Zero based item index
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlHeader_AddItem, _GUICtrlHeader_InsertItem

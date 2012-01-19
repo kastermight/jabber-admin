@@ -1,0 +1,37 @@
+
+_FTP_ListToArrayEx
+
+Возвращает имена, размеры, атрибуты и время файла/каталога текущего удалённого каталога.
+
+#Include 
+_FTP_ListToArrayEx($l_FTPSession [, $Return_Type = 0 [, $l_Flags = 0 [, $b_Fmt = 1 [, $l_Context]]]])
+
+---  Таблица параметров  ---
+$l_FTPSession
+	Указатель возвращённый функцией _FTP_Connect().
+$Return_type
+	[опционально] 0 = файлы и каталоги, 1 = каталоги, 2 = файлы.
+$l_Flags
+	[опционально] Смотрите _FTP_FindFileFirst().
+$b_Fmt
+	[опционально] Формат даты : 1 = yyyy/mm/dd (год/месяц/день), 0 = mm/dd/yyyy (месяц/день/год).
+$l_Context
+	[опционально] A variable that contains the application-defined value that associates this search with any application data.
+	This is only used if the application has already called _FTP_SetStatusCallback() to set up a status callback function.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает двумерный массив, смотрите примечания.
+Ошибка:	Array[0][0] = 0.
+
+---  Примечания  ---
+Array[0][0] = количество найденных элементов
+
+Array[x][0] Имя файла
+Array[x][1] Размер файла
+Array[x][2] Атрибуты файла
+Array[x][3] Дата и время изменения файла
+Array[x][4] Дата и время создания файла
+Array[x][5] Дата и время доступа к файлу
+
+---  Смотрите также  ---
+_FTP_Connect, _FTP_SetStatusCallback

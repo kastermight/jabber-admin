@@ -1,0 +1,20 @@
+
+_GUICtrlRebar_GetBandStyleNoGripper
+
+Determine if flag is set
+
+#Include 
+_GUICtrlRebar_GetBandStyleNoGripper($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+
+---  Таблица возвращаемых значений  ---
+True: Flag is set (The band will never have a sizing grip, even if there is more than one band in the rebar)
+False: Flag not set
+
+---  Смотрите также  ---
+_GUICtrlRebar_SetBandStyleNoGripper, _GUICtrlRebar_GetBandStyle

@@ -1,0 +1,16 @@
+
+_GUIToolTip_SetTipTextColor
+
+Sets the text color
+
+#Include 
+_GUIToolTip_SetTipTextColor($hWnd, $iColor)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iColor
+	New text color
+
+---  Смотрите также  ---
+_GUIToolTip_GetTipTextColor

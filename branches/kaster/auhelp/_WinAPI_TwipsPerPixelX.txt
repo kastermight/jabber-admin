@@ -1,0 +1,14 @@
+
+_WinAPI_TwipsPerPixelX
+
+Returns the width of a pixel, in twips.
+
+#Include 
+_WinAPI_TwipsPerPixelX()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Returns the width of a pixel, in twips
+
+---  Смотрите также  ---

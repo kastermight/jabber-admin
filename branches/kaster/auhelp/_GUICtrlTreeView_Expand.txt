@@ -1,0 +1,20 @@
+
+_GUICtrlTreeView_Expand
+
+Разворачивает или сворачивает список вложенных пунктов, если имеются.
+
+#Include 
+_GUICtrlTreeView_Expand($hWnd[, $hItem = 0[, $fExpand = True]])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$hItem
+	[опционально] Handle to the item
+$fExpand
+	[опционально] Для разворачивания или сворачивания используются следующие значения:
+		 True - Развернуть пункты
+		False - Свернуть пункты
+
+---  Смотрите также  ---
+_GUICtrlTreeView_ExpandedOnce, _GUICtrlTreeView_GetExpanded

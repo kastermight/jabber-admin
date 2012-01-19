@@ -1,0 +1,19 @@
+
+_GUICtrlTab_GetItemImage
+
+Retrieves the image index for a tab
+
+#Include 
+_GUICtrlTab_GetItemImage($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based item index
+
+---  Таблица возвращаемых значений  ---
+Успех: Zero based image index of the tab
+
+---  Смотрите также  ---
+_GUICtrlTab_SetItemImage

@@ -1,0 +1,33 @@
+
+ObjGet
+
+Retrieves a reference to a COM object from an existing process or filename.
+
+ObjGet ( "filename" [, "classname"] )
+
+---  Таблица параметров  ---
+filename
+	The full path and name to the file containing the object (See remarks).
+classname
+	[опционально] The class of the object in the following format:
+	"appname.objectype"
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns an object.
+Ошибка:	Returns 0 and sets @error to 1.
+
+---  Примечания  ---
+The filename is optional if you want to use only the class name, but the parameter
+can't be omitted. Use an empty string if you only want to use the classname. 
+Like: $Object = ObjGet("","Excel.Application")
+
+If you want to use a filename, the classname is optional. It's only required when 
+multiple classes are defined to the same file type and you want to access a
+specific class.
+
+Keep in mind that not all computers have the same set of Objects. So always check for errors after calling ObjGet().
+
+See the Obj/COM Reference for more information about Objects.
+
+---  Смотрите также  ---
+GUICtrlCreateObj, IsObj, ObjCreate, ObjEvent, ObjName

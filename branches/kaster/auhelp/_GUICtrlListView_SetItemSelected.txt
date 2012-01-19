@@ -1,0 +1,24 @@
+
+_GUICtrlListView_SetItemSelected
+
+Делает пункт выделенным
+
+#Include 
+_GUICtrlListView_SetItemSelected($hWnd, $iIndex[, $fSelected = True[, $fFocused = False]])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта, -1 делает выделенными все пункты при отсутствии стиля $LVS_SINGLESEL
+$fSelected
+	[опционально] Если True, то пункт(ы) выделяются, иначе выделение убирается.
+$fFocused
+	[опционально] Если True, то находится в фокусе, иначе нет.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlListView_GetItemSelected

@@ -1,0 +1,20 @@
+
+_WinAPI_IsWindow
+
+Determines whether the specified window handle identifies an existing window
+
+#Include 
+_WinAPI_IsWindow($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to be tested
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle is a window
+Ошибка:	Handle is not a window
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- IsWindow

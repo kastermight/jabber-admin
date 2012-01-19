@@ -1,0 +1,19 @@
+
+_GUICtrlListBox_GetListBoxInfo
+
+Retrieve the number of items per column in a specified list box
+
+#Include 
+_GUICtrlListBox_GetListBoxInfo($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Returns the number of items per column
+
+---  Примечания  ---
+Minimum OS - Windows XP.
+
+---  Смотрите также  ---

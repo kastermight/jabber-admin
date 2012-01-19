@@ -1,0 +1,21 @@
+
+_GUICtrlTab_DeleteAllItems
+
+Deletes all tabs
+
+#Include 
+_GUICtrlTab_DeleteAllItems($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Примечания  ---
+This does not delete the controls on the tabitems
+
+---  Смотрите также  ---
+_GUICtrlTab_DeleteItem

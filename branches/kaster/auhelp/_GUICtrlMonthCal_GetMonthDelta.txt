@@ -1,0 +1,17 @@
+
+_GUICtrlMonthCal_GetMonthDelta
+
+Retrieves the scroll rate for a month calendar control
+
+#Include 
+_GUICtrlMonthCal_GetMonthDelta($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: If the month delta was previously set using the _GUICtrlMonthCal_SetMonthDelta,
+	returns an INT value that represents the month calendar's current scroll rate.	If the month delta was not previously set using the _GUICtrlMonthCal_SetMonthDelta,	or the month delta was reset to the default, returns an INT value that represents the current	number of months visible.
+
+---  Смотрите также  ---

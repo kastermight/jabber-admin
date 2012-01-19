@@ -1,0 +1,28 @@
+
+_NamedPipes_CreatePipe
+
+Creates an anonymous pipe
+
+#Include 
+_NamedPipes_CreatePipe(ByRef $hReadPipe, ByRef $hWritePipe [, $tSecurity = 0 [, $iSize = 0]])
+
+---  Таблица параметров  ---
+$hReadPipe
+	Variable that receives the read handle for the pipe
+$hWritePipe
+	Variable that receives the write handle for the pipe
+$tSecurity
+	[опционально] tagSECURITY_ATTRIBUTES structure that determines if the returned handle can be inherited by
+		child processes. If 0, the handles cannot be inherited.
+$iSize
+	[опционально] The size of the buffer for the pipe, in bytes. If 0, the system uses the default buffer size.
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_NamedPipes_CreateNamedPipe
+
+
+---  Таблица  --- CreatePipe

@@ -1,0 +1,26 @@
+
+_GDIPlus_BitmapCreateFromHBITMAP
+
+Create a Bitmap object from a bitmap handle
+
+#Include 
+_GDIPlus_BitmapCreateFromHBITMAP($hBmp[, $hPal = 0])
+
+---  Таблица параметров  ---
+$hBmp
+	Handle to a HBITMAP
+$hPal
+	[опционально] Handle to a HPALETTE
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to a Bitmap object
+Ошибка:	0
+
+---  Примечания  ---
+When you are done with the Bitmap object, call _GDIPlus_BitmapDispose to release the resources
+
+---  Смотрите также  ---
+_WinAPI_DeleteObject
+
+
+---  Таблица  --- GdipCreateBitmapFromHBITMAP

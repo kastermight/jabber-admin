@@ -1,0 +1,21 @@
+
+_GUICtrlStatusBar_SetUnicodeFormat
+
+Sets the Unicode character format flag
+
+#Include 
+_GUICtrlStatusBar_SetUnicodeFormat($hWnd[, $fUnicode = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$fUnicode
+	[опционально] Unicode character format flag:
+		 True - Control uses Unicode characters
+		False - Control uses ANSI characters
+
+---  Таблица возвращаемых значений  ---
+Returns the Previous character format flag setting
+
+---  Смотрите также  ---
+_GUICtrlStatusBar_GetUnicodeFormat

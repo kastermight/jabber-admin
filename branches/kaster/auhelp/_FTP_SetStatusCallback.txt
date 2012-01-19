@@ -1,0 +1,27 @@
+
+_FTP_SetStatusCallback
+
+Регистрирует callback функцию, это WinINet функция может вызываться как прогресс сделанный в ходе операции.
+
+#Include 
+_FTP_SetStatusCallback ( $l_InternetSession, $sFunctionName)
+
+---  Таблица параметров  ---
+$l_InternetSession
+	Указатель возвращённый функцией _FTP_Open()
+$sFunctionName
+	Имя вызываемой пользовательской функции.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Указатель callback функции
+Ошибка:	Возвращает 0 и устанавливает @error не равно 0
+
+---  Примечания  ---
+Функция callback вызывается со следующими параметрами (смотрите InternetStatusCallback Windows API):
+$hInternet, $dwContent, $dwInternetStatus, $lpvStatusInformation, $dwStatusInformationLength
+
+---  Смотрите также  ---
+_FTP_Open, _FTP_FileOpen, _FTP_Command, _FTP_Connect, _FTP_DirPutContents, _FTP_FileGet, _FTP_FilePut, _FTP_FindFileFirst, _FTP_ListToArray, _FTP_ListToArray2D, _FTP_ListToArrayEx, _FTP_DecodeInternetStatus
+
+
+---  Таблица  --- InternetSetStatusCallback

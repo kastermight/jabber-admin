@@ -1,0 +1,15 @@
+
+_GUICtrlRebar_MinimizeBand
+
+Resizes a band in a rebar control to its smallest size
+
+#Include 
+_GUICtrlRebar_MinimizeBand($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+
+---  Смотрите также  ---

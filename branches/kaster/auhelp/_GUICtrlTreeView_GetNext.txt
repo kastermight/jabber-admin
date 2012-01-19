@@ -1,0 +1,23 @@
+
+_GUICtrlTreeView_GetNext
+
+Возвращает следующий пункт после указанного пункта
+
+#Include 
+_GUICtrlTreeView_GetNext($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$hItem
+	Дескриптор пункта
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает дескриптор следующего пункта
+Ошибка:	Возвращает 0
+
+---  Примечания  ---
+Если указанный пункт является последним, то _GUICtrlTreeView_GetNext возвращает 0, иначе возвращается следующий пункт включая невидимые и дочерние пункты. Чтобы получить следующий пункт на том же уровне, что и указанный используйте _GUICtrlTreeView_GetNextSibling. Чтобы получить следующий видимый пункт, используйте _GUICtrlTreeView_GetNextVisible.
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetNextVisible, _GUICtrlTreeView_GetNextSibling, _GUICtrlTreeView_GetPrev

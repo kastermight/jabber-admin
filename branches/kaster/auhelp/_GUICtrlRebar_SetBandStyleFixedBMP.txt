@@ -1,0 +1,22 @@
+
+_GUICtrlRebar_SetBandStyleFixedBMP
+
+Set whether the band background bitmap does not move when the band is resized
+
+#Include 
+_GUICtrlRebar_SetBandStyleFixedBMP($hWnd, $iIndex[, $fEnabled = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+$fEnabled
+	[опционально] If True the item state is set, otherwise it is not set
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetBandStyleFixedBMP, _GUICtrlRebar_SetBandStyle

@@ -1,0 +1,22 @@
+
+_GUICtrlToolbar_SetButtonParam
+
+Sets the button param value
+
+#Include 
+_GUICtrlToolbar_SetButtonParam($hWnd, $iCommandID, $iParam)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+$iParam
+	Application-defined value
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlToolbar_GetButtonParam

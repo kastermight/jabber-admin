@@ -1,0 +1,29 @@
+
+_WinAPI_FrameRect
+
+Draws a border around the specified rectangle by using the specified brush
+
+#Include 
+_WinAPI_FrameRect($hDC, $ptrRect, $hBrush)
+
+---  Таблица параметров  ---
+$hDC
+	Handle to the device context in which the border is drawn
+$ptrRect
+	Pointer to a $tagRECT structure that contains the logical coordinates of the upper-left and lower-right corners of the rectangle
+$hBrush
+	Handle to the brush used to draw the border
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+The brush identified by the $hBrush parameter must have been created by using the _WinAPI_CreateSolidBrush function,
+or retrieved by using the _WinAPI_GetStockObject function
+
+---  Смотрите также  ---
+$tagRECT
+
+
+---  Таблица  --- FrameRect

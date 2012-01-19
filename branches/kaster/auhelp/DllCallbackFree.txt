@@ -1,0 +1,16 @@
+
+DllCallbackFree
+
+Освобождает ранее созданной дескриптор функцией DllCallbackRegister.
+
+DllCallbackFree ( handle )
+
+---  Таблица параметров  ---
+handle
+	Дескриптор DllCallback, возвращаемый предыдущим вызовом функции DllCallbackRegister.
+
+---  Примечания  ---
+По окончании, AutoIt автоматически закрывает все открытые дескрипторы, но вызов DllCallbackFree всё же рекомендуется.
+
+---  Смотрите также  ---
+DllCall, DllCallbackGetPtr, DllCallbackRegister

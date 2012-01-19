@@ -1,0 +1,26 @@
+
+_GUICtrlComboBoxEx_GetItem
+
+Retrieves an item's attributes
+
+#Include 
+_GUICtrlComboBoxEx_GetItem($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based item index
+
+---  Таблица возвращаемых значений  ---
+Успех: Array with the following format:
+		[0] - Item text
+		[1] - Length of Item text
+		[2] - Number of image widths to indent the item
+		[3] - Zero based item image index
+		[4] - Zero based item state image index
+		[5] - Zero based item image overlay index
+		[6] - Item application defined value
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_SetItem, _GUICtrlComboBoxEx_GetItemEx

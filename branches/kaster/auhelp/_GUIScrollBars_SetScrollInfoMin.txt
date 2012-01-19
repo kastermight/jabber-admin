@@ -1,0 +1,28 @@
+
+_GUIScrollBars_SetScrollInfoMin
+
+Sets the minimum scrolling position
+
+#Include 
+_GUIScrollBars_SetScrollInfoMin($hWnd, $fnBar, $nMin)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the window
+$fnBar
+	Specifies the type of scroll bar. This parameter can be one of the following values:
+		  $SB_CTL - Sets the parameters of a scroll bar control. The $hWnd parameter must be the handle to the scroll bar control.
+		  $SB_HORZ - Sets the parameters of the window's standard horizontal scroll bar.
+		  $SB_VERT - Sets the parameters of the window's standard vertical scroll bar.
+$nMin
+	Minimum scrolling position
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+Above constants require ScrollBarConstants.au3
+
+---  Смотрите также  ---
+_GUIScrollBars_SetScrollInfo, _GUIScrollBars_SetScrollRange

@@ -1,0 +1,19 @@
+
+_GUICtrlToolbar_SetIndent
+
+Sets the indentation for the first button control
+
+#Include 
+_GUICtrlToolbar_SetIndent($hWnd, $iIndent)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndent
+	Indentation in pixels
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---

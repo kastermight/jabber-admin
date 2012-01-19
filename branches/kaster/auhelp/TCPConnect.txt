@@ -1,0 +1,25 @@
+
+TCPConnect
+
+Create a socket connected to an existing server.
+
+TCPConnect ( IPAddr, port )
+
+---  Таблица параметров  ---
+IPAddr
+	Internet Protocol dotted address(IpV4) as "192.162.1.1".
+port
+	port on which the created socket will be connected.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns main socket identifier.
+Ошибка:	Returns -1 or 0 and set @error.
+@error:	1 IPAddr is incorrect.
+	2 port  is incorrect.
+	windows API WSAGetError return value (see MSDN).
+
+---  Примечания  ---
+This function is used by a client to communicate with the server.
+
+---  Смотрите также  ---
+TCPStartup, TCPListen, TCPTimeout (Option), TCPRecv, TCPSend

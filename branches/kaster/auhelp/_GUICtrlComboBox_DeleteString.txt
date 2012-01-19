@@ -1,0 +1,20 @@
+
+_GUICtrlComboBox_DeleteString
+
+Delete a string
+
+#Include 
+_GUICtrlComboBox_DeleteString($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Zero based index of string
+
+---  Таблица возвращаемых значений  ---
+Успех: Count of the strings remaining
+Ошибка: -1
+
+---  Смотрите также  ---
+_GUICtrlComboBox_AddString, _GUICtrlComboBox_ResetContent

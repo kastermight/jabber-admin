@@ -1,0 +1,17 @@
+
+_GUICtrlSlider_GetRangeMax
+
+Retrieves the maximum position for the slider
+
+#Include 
+_GUICtrlSlider_GetRangeMax($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: The maximum position in the slider's range of minimum to maximum slider positions
+
+---  Смотрите также  ---
+_GUICtrlSlider_SetRangeMax, _GUICtrlSlider_GetRange

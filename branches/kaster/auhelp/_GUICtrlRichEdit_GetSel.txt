@@ -1,0 +1,26 @@
+
+_GUICtrlRichEdit_GetSel
+
+Возвращает начальную и конечную позицию выделенного текста
+
+#Include 
+_GUICtrlRichEdit_GetSel($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает массив в формате [, ]
+Ошибка:	устанавливает @error
+@error:	101 - $HWnd не является дескриптором
+
+---  Примечания  ---
+Первый символ текста в элементе имеет позицию 0
+Если начальная и конечная позиции равны, значит текст не выделен
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_SetSel, _GUICtrlRichEdit_GetSelText, _GUICtrlRichEdit_GetSelAA, _GUICtrlRichEdit_GetTextInLine, _GUICtrlRichEdit_Deselect, _GUICtrlRichEdit_IsTextSelected
+
+
+---  Таблица  --- EM_EXGETSEL

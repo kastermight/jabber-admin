@@ -1,0 +1,26 @@
+
+_GUIScrollBars_GetScrollBarXYThumbBottom
+
+Retrieves the Position of the bottom or right of the thumb
+
+#Include 
+_GUIScrollBars_GetScrollBarXYThumbBottom($hWnd, $idObject)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the window
+$idObject
+	Specifies the scroll bar object. This parameter can be one of the following values:
+		  $OBJID_CLIENT - The $hWnd parameter is a handle to a scroll bar control.
+		  $OBJID_HSCROLL - The horizontal scroll bar of the $hWnd window.
+		  $OBJID_VSCROLL - The vertical scroll bar of the $hWnd window.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Position of the bottom or right of the thumb
+Ошибка:	-1, and set @error
+
+---  Примечания  ---
+Above constants require ScrollBarConstants.au3
+
+---  Смотрите также  ---
+_GUIScrollBars_GetScrollBarInfoEx

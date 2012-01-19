@@ -1,0 +1,26 @@
+
+_GUICtrlToolbar_ClickButton
+
+Clicks a specific button
+
+#Include 
+_GUICtrlToolbar_ClickButton($hWnd, $iCommandID[, $sButton = "left"[, $fMove = False[, $iClicks = 1[, $iSpeed = 1]]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+$sButton
+	[опционально] Button to click
+$fMove
+	[опционально] Mouse movement flag:
+		 True - Mouse will be moved
+		False - Mouse will not be moved
+$iClicks
+	[опционально] Number of clicks
+$iSpeed
+	[опционально] Mouse movement speed
+
+---  Смотрите также  ---
+_GUICtrlToolbar_ClickAccel, _GUICtrlToolbar_ClickIndex

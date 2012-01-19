@@ -1,0 +1,23 @@
+
+_Security__GetAccountSid
+
+Retrieves the security identifier (SID) for an account
+
+#Include 
+_Security__GetAccountSid($sAccount [, $sSystem = ""])
+
+---  Таблица параметров  ---
+$sAccount
+	Specifies the account name. Use a fully qualified string in the domain_name\user_name format to
+		ensure that the function finds the account in the desired domain.
+$sSystem
+	[опционально] Name of the system. This string can be the name of a remote computer. If this string is blank,
+		the account name translation begins on the local system. If the name cannot be resolved on the local system,
+		this function will try to resolve the name using domain controllers trusted by the local system.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns a binary SID in a byte strucutre
+Ошибка:	0
+
+---  Смотрите также  ---
+_Security__LookupAccountSid

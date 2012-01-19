@@ -1,0 +1,17 @@
+
+_Date_Time_SystemTimeToTimeStr
+
+Decode a system time to a time string
+
+#Include 
+_Date_Time_SystemTimeToTimeStr(ByRef $tSystemTime)
+
+---  Таблица параметров  ---
+$tSystemTime
+	$tagSYSTEMTIME structure
+
+---  Таблица возвращаемых значений  ---
+Returns a Time string formatted as hh:mm:ss
+
+---  Смотрите также  ---
+_Date_Time_SystemTimeToDateStr, _Date_Time_SystemTimeToDateTimeStr, $tagSYSTEMTIME

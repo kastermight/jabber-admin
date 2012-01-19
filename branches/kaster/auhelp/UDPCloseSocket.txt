@@ -1,0 +1,19 @@
+
+UDPCloseSocket
+
+Close a UDP socket.
+
+UDPCloseSocket ( socketarray )
+
+---  Таблица параметров  ---
+socketarray
+	The socket/array as returned by a UDPBind or UDPOpen functions.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns 1.
+Ошибка:	Returns 0 and set @error.
+@error:	-1, -2 or -3 invalid socketarray.
+	windows API WSAGetError return value (see MSDN).
+
+---  Смотрите также  ---
+UDPBind, UDPOpen, TCPShutdown, TCPStartup

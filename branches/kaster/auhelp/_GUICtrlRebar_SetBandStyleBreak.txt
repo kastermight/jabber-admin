@@ -1,0 +1,22 @@
+
+_GUICtrlRebar_SetBandStyleBreak
+
+Set whether the band is on a new line
+
+#Include 
+_GUICtrlRebar_SetBandStyleBreak($hWnd, $iIndex[, $fEnabled = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+$fEnabled
+	[опционально] If True the item state is set, otherwise it is not set
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetBandStyleBreak, _GUICtrlRebar_SetBandStyle

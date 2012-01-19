@@ -1,0 +1,25 @@
+
+_FTP_ListToArray
+
+Возвращает имена файлов и/или каталогов текущего удалённого каталога.
+
+#Include 
+_Ftp_ListToArray($l_FTPSession [, $Return_Type = 0 [, $l_Flags = 0 [, $l_Context]]])
+
+---  Таблица параметров  ---
+$l_FTPSession
+	Указатель возвращённый функцией _FTP_Connect().
+$Return_type
+	[опционально] 0 = файлы и каталоги, 1 = каталоги, 2 = файлы.
+$l_Flags
+	[опционально] Смотрите _FTP_FindFileFirst().
+$l_Context
+	[опционально] A variable that contains the application-defined value that associates this search with any application data.
+	This is only used if the application has already called _FTP_SetStatusCallback() to set up a status callback function.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает массив, содержащий имена. Array[0] содержит количество найденных элементов.
+Ошибка:	Array[0] = 0
+
+---  Смотрите также  ---
+_FTP_Connect, _FTP_SetStatusCallback

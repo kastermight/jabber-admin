@@ -1,0 +1,23 @@
+
+_WinAPI_LoadString
+
+loads a string resource from the executable file associated with a specified module
+
+#Include 
+_WinAPI_LoadString($hInstance, $iStringId)
+
+---  Таблица параметров  ---
+$hInstance
+	Handle to an instance of the module whose executable file contains the string resource
+$iStringId
+	Specifies the integer identifier of the string to be loaded
+
+---  Таблица возвращаемых значений  ---
+Успех:	The string requested, @extended is the number of TCHARS copied
+Ошибка:	Empty string and @error is set
+
+---  Смотрите также  ---
+_WinAPI_LoadLibraryEx, _WinAPI_FreeLibrary
+
+
+---  Таблица  --- LoadString

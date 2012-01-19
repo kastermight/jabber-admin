@@ -1,0 +1,25 @@
+
+_GUICtrlTab_GetItem
+
+Retrieves information about a tab
+
+#Include 
+_GUICtrlTab_GetItem($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based item index
+
+---  Таблица возвращаемых значений  ---
+Успех: Array with the following format:
+		[0] - Item state flags:
+		 $TCIS_BUTTONPRESSED - The tab control item is selected
+		 $TCIS_HIGHLIGHTED - The tab control item is highlighted
+		[1] - Item text
+		[2] - Zero based item image index or -1 if item has no image
+		[3] - Application-defined data
+
+---  Смотрите также  ---
+_GUICtrlTab_SetItem

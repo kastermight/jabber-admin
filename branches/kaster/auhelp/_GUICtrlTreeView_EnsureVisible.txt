@@ -1,0 +1,20 @@
+
+_GUICtrlTreeView_EnsureVisible
+
+Ensures that a item is visible, expanding the parent item or scrolling the control if necessary
+
+#Include 
+_GUICtrlTreeView_EnsureVisible($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hItem
+	Handle to the item
+
+---  Таблица возвращаемых значений  ---
+True:	if the system scrolled the items in the tree-view control and no items were expanded
+False:	otherwise
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetVisible

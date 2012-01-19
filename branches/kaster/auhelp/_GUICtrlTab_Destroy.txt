@@ -1,0 +1,21 @@
+
+_GUICtrlTab_Destroy
+
+Delete the control
+
+#Include 
+_GUICtrlTab_Destroy(ByRef $hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: True, Handle is set to 0
+Ошибка: False
+
+---  Примечания  ---
+Restricted to only be used on Tab created with _GUICtrlTab_Create
+
+---  Смотрите также  ---
+_GUICtrlTab_Create

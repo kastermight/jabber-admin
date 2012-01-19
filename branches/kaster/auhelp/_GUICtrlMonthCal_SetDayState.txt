@@ -1,0 +1,22 @@
+
+_GUICtrlMonthCal_SetDayState
+
+Sets the day states for all months that are currently visible
+
+#Include 
+_GUICtrlMonthCal_SetDayState($hWnd, $aMasks)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$aMasks
+	An array of integers that corresponds to the months that are visible in the calendar
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Примечания  ---
+You must create the calendar control with the $MCS_DAYSTATE style if you want to use this function
+
+---  Смотрите также  ---

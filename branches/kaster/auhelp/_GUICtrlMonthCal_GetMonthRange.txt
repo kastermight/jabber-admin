@@ -1,0 +1,21 @@
+
+_GUICtrlMonthCal_GetMonthRange
+
+Retrieves date information that represents the high and low display limits
+
+#Include 
+_GUICtrlMonthCal_GetMonthRange($hWnd[, $fPartial = False])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$fPartial
+	[опционально] Specifies the scope of the range limits to be retrieved:
+		 True - Preceding and trailing months are included
+		False - Only months that are entirely displayed are included
+
+---  Таблица возвращаемых значений  ---
+Успех: $tagMCMONTHRANGE structure
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_GetMonthRangeMax, _GUICtrlMonthCal_GetMonthRangeMin, $tagMCMONTHRANGE

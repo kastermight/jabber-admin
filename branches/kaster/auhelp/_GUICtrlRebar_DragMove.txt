@@ -1,0 +1,18 @@
+
+_GUICtrlRebar_DragMove
+
+Updates the drag position in the rebar control after a previous _GUICtrlRebar_BeginDrag message
+
+#Include 
+_GUICtrlRebar_DragMove($hWnd[, $dwPos = -1])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$dwPos
+	[опционально] DWORD value that contains the new mouse coordinates.
+		The horizontal coordinate is contained in the LOWORD and the vertical coordinate is contained in the HIWORD
+		If you pass (DWORD)-1, the rebar control will use the position of the mouse the last time the control's thread called GetMessage or PeekMessage
+
+---  Смотрите также  ---
+_GUICtrlRebar_BeginDrag

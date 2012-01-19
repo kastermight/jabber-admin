@@ -1,0 +1,18 @@
+
+_GUICtrlTab_GetCurSel
+
+Determines the currently selected tab
+
+#Include 
+_GUICtrlTab_GetCurSel($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: The zero based index of the selected tab
+Ошибка: -1
+
+---  Смотрите также  ---
+_GUICtrlTab_SetCurSel

@@ -1,0 +1,20 @@
+
+_GUICtrlTreeView_GetLastChild
+
+Возвращает последний дочерний пункт указанного пункта
+
+#Include 
+_GUICtrlTreeView_GetLastChild($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$hItem
+	Дескриптор пункта
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает дескриптор последнего дочернего пункта
+Ошибка:	Возвращает 0
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetFirstChild, _GUICtrlTreeView_GetNextChild, _GUICtrlTreeView_GetPrevChild

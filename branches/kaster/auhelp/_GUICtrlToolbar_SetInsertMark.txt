@@ -1,0 +1,21 @@
+
+_GUICtrlToolbar_SetInsertMark
+
+Sets the current insertion mark for the toolbar
+
+#Include 
+_GUICtrlToolbar_SetInsertMark($hWnd, $iButton[, $iFlags = 0])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iButton
+	Zero based index of the insertion mark. If -1, there is no mark.
+$iFlags
+	[опционально] Defines where the insertion mark is in relation to iButton:
+		0 - Left of the specified button
+		1 - Right of the specified button
+		2 - Background of the toolbar
+
+---  Смотрите также  ---
+_GUICtrlToolbar_GetInsertMark

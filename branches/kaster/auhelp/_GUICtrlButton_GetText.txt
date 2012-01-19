@@ -1,0 +1,18 @@
+
+_GUICtrlButton_GetText
+
+Retrieve the text of the button
+
+#Include 
+_GUICtrlButton_GetText($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: The text of the button
+Ошибка: Empty string ""
+
+---  Смотрите также  ---
+_GUICtrlButton_SetText

@@ -1,0 +1,17 @@
+
+StringIsASCII
+
+Проверяет наличие в строке только ASCII символы в диапазоне 0x00 - 0x7f (0 - 127).
+
+StringIsASCII ( "string" )
+
+---  Таблица параметров  ---
+string
+	Проверяемая строка
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает 1.
+Ошибка:	Возвращает 0, если строка содержит расширенные ASCII символы.
+
+---  Смотрите также  ---
+StringIsAlNum, StringIsAlpha, StringIsDigit, StringIsLower, StringIsSpace, StringIsUpper, StringIsXDigit, StringUpper, StringLower

@@ -1,0 +1,19 @@
+
+_GUICtrlStatusBar_GetWidth
+
+Retrieves the width of a part
+
+#Include 
+_GUICtrlStatusBar_GetWidth($hWnd, $iPart)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iPart
+	Zero based part index
+
+---  Таблица возвращаемых значений  ---
+Returns the Width of the parts
+
+---  Смотрите также  ---
+_GUICtrlStatusBar_GetHeight

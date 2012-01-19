@@ -1,0 +1,28 @@
+
+_viOpen
+
+Opens a VISA connection to an Instrument/Device
+
+#include 
+_viOpen ( $s_visa_address [, $s_visa_secondary_address = 0] )
+
+---  Таблица параметров  ---
+$s_visa_address
+	A VISA resource descriptor STRING (see the NOTES of _viExecCommand above for more info)
+	As as shortcut you can also directly pass a GPIB address as an integer
+$s_visa_secondary_address
+	[опционально] The "secondary GPIB address". Only used if the primary address is passed as an integer.
+	Only some GPIB instruments have secondary addresses. In those cases this optional parameter can be used to specify it.
+	This parameter is ZERO by default, which means NO SECONDARY ADDRESS
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns a (POSITIVE) VISA Instrument Handle
+Ошибка:	Returns -1 and SETS @error to 1
+
+---  Примечания  ---
+As for all the VISA functions the VISA libraries must be installed (you can check whether visa32.dll is in {WINDOWS}\system32) and a GPIB card (such as a National Instruments NI PCI-GPIB card or an Agilent 82350B PCI High-Performance GPIB card) must be installed
+
+* For a detailed description of the most common VISA DESCRIPTORS look at the Remarks of the help on the _viExecCommand function
+
+---  Смотрите также  ---
+_viClose, _viExecCommand, _viFindGpib, _viGpibBusReset, _viGTL, _viSetAttribute, _viSetTimeout

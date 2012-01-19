@@ -1,0 +1,21 @@
+
+_Security__StringSidToSid
+
+Converts a String SID to a binary SID
+
+#Include 
+_Security__StringSidToSid($sSID)
+
+---  Таблица параметров  ---
+$sSID
+	String SID to be converted
+
+---  Таблица возвращаемых значений  ---
+Успех:	SID in a byte structure
+Ошибка:	0
+
+---  Смотрите также  ---
+_Security__SidToStringSid
+
+
+---  Таблица  --- ConvertStringSidToSid

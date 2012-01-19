@@ -1,0 +1,30 @@
+
+_GUICtrlRichEdit_GetCharPosFromXY
+
+Gets inter-character position closest to a specified point in the client area
+
+#Include 
+_GUICtrlRichEdit_GetCharPosFromXY($hWnd, $iX, $iY)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iX
+	horizontal screen coordinate relative to left side of control
+$iY
+	vertical screen coordinate relative to top of control
+
+---  Таблица возвращаемых значений  ---
+Успех:	one-based character index of the character nearest the specified point
+	(index of last character in the control if the specified point is beyond text)
+Ошибка:	0 and sets @error
+@error:	101 - $hWnd is not a handle
+	102 - $iX is not a number
+	103 - $iY is not a number
+	-1 - ($iX,$iY) outside client area
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_GetXYFromCharPos
+
+
+---  Таблица  --- EM_CHARFROMPOS

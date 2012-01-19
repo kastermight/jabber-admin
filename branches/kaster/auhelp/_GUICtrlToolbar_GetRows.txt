@@ -1,0 +1,17 @@
+
+_GUICtrlToolbar_GetRows
+
+Retrieves the number of rows of buttons
+
+#Include 
+_GUICtrlToolbar_GetRows($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Number of rows
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetRows

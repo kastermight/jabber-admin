@@ -1,0 +1,19 @@
+
+_WordErrorHandlerDeRegister
+
+Disable a registered user COM error handler
+
+#include  
+_WordErrorHandlerDeRegister ( )
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns 1
+Ошибка:	None
+
+---  Примечания  ---
+See remarks for _WordErrorHandlerRegister.
+
+---  Смотрите также  ---
+_WordErrorHandlerRegister

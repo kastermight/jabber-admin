@@ -1,0 +1,19 @@
+
+_GUICtrlListView_DrawDragImage
+
+Draw the Drage Image
+
+#Include 
+_GUICtrlListView_DrawDragImage(ByRef $hWnd, ByRef $aDrag)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$aDrag
+	Массив следующего формата:
+		[0] - Дескриптор перетаскиваемого списка рисунков
+		[1] - X координата верхнего левого угла рисунка
+		[2] - Y координата верхнего левого угла рисунка
+
+---  Смотрите также  ---
+_GUICtrlListView_CreateDragImage

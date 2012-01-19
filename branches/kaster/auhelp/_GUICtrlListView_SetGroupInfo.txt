@@ -1,0 +1,41 @@
+
+_GUICtrlListView_SetGroupInfo
+
+Устанавливает параметры группы
+
+#Include 
+_GUICtrlListView_SetGroupInfo($hWnd, $iGroupID, $sHeader[, $iAlign = 0[, $iState = $LVGS_NORMAL]])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iGroupID
+	Идентификатор группы (ID)
+$sHeader
+	Текст заголовка
+$iAlign
+	[опционально] Выравнивание текста заголовка группы:
+		  0 - Влево
+		  1 - По центру
+		  2 - Вправо
+$iState
+	[опционально] Vista и выше, могут иметь одно из следующих значений:
+		  $LVGS_NORMAL - Группы раскрыты, имена групп отображаются, и все пункты в группах отображаются.
+		  $LVGS_COLLAPSED - Группы свёрнуты.
+		  $LVGS_HIDDEN - Группы скрыты.
+		  $LVGS_NOHEADER - Группы не отображают заголовок.
+		  $LVGS_COLLAPSIBLE - Группы могут быть свернуты.
+		  $LVGS_FOCUSED - The group has keyboard focus.
+		  $LVGS_SELECTED - Группа выбрана.
+		  $LVGS_SUBSETED - The group displays only a portion of its items.
+		  $LVGS_SUBSETLINKFOCUSED - The subset link of the group has keyboard focus
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Примечания  ---
+Минимальная ОС - Windows XP.
+
+---  Смотрите также  ---
+_GUICtrlListView_GetGroupInfo, _GUICtrlListView_GetGroupInfoByIndex

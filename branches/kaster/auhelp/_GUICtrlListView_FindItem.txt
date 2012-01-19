@@ -1,0 +1,24 @@
+
+_GUICtrlListView_FindItem
+
+Поиск пункта с указанными характеристиками
+
+#Include 
+_GUICtrlListView_FindItem($hWnd, $iStart, ByRef $tFindInfo[, $sText = ""])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iStart
+	Индекс, от которого начинать поиск или -1, чтобы искать с самого начала. Указанный элемент исключается из поиска.
+$tFindInfo
+	Структура $tagLVFINDINFO, содержащая искомую информацию
+$sText
+	[опционально] Строка для сравнения с текстом пункта. Это справедливо, если $LVFI_STRING или $LVFI_PARTIAL установлены в Flags member
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает индекс пункта
+Ошибка:	Возвращает -1
+
+---  Смотрите также  ---
+_GUICtrlListView_FindParam, _GUICtrlListView_FindNearest, $tagLVFINDINFO

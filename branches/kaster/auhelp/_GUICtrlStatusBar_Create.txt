@@ -1,0 +1,39 @@
+
+_GUICtrlStatusBar_Create
+
+Create a statusbar
+
+#Include 
+_GUICtrlStatusBar_Create($hWnd[, $vPartEdge = -1[, $vPartText = ""[, $iStyles = -1[, $iExStyles = 0x00000000]]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to parent window
+$vPartEdge
+	[опционально] Width of part or parts, for more than 1 part pass in zero based array in the following format:
+		$vPartEdge[0] - Right edge of part #1
+		$vPartEdge[1] - Right edge of part #2
+		$vPartEdge[n] - Right edeg of part n
+$vPartText
+	[опционально] Text of part or parts, for more than 1 part pass in zero based array in the following format:
+		$vPartText[0] - First part
+		$vPartText[1] - Second part
+		$vPartText[n] - Last part
+$iStyles
+	[опционально] Control styles:
+		$SBARS_SIZEGRIP - The status bar control will include a sizing grip at the right end of the status bar
+		$SBARS_TOOLTIPS - The status bar will have tooltips
+
+		Forced: $WS_CHILD, $WS_VISIBLE
+$iExStyles
+	[опционально] Control extended style
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to the control
+Ошибка:	0
+
+---  Примечания  ---
+If using GUICtrlCreateMenu then use _GUICtrlStatusBar_Create after GUICtrlCreateMenu
+
+---  Смотрите также  ---
+_GUICtrlStatusBar_Destroy

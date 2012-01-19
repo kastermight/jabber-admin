@@ -1,0 +1,23 @@
+
+_GUICtrlMonthCal_SetCalendarBorder
+
+Sets the size of the border, in pixels
+
+#Include 
+_GUICtrlMonthCal_SetCalendarBorder($hWnd[, $iBorderSize = 4[, $fSetBorder = True]])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iBorderSize
+	[опционально] Number of pixels of the border size
+$fSetBorder
+	[опционально] One of the Following:
+		   True - The border size is set to the number of pixels that $iBorderSize specifies
+		  False - The border size is reset to the default value specified by the theme, or zero if themes are not being used
+
+---  Примечания  ---
+Minimum Operating Systems: Windows Vista
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_GetCalendarBorder

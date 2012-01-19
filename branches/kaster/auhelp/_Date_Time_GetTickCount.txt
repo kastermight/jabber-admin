@@ -1,0 +1,17 @@
+
+_Date_Time_GetTickCount
+
+Retrieves the number of milliseconds that have elapsed since Windows was started
+
+#Include 
+_Date_Time_GetTickCount()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Returns a Number of milliseconds that have elapsed since Windows was started
+
+---  Примечания  ---
+The elapsed time is stored as a DWORD value. The time will wrap around to zero if Windows is run continuously for 49.7 days.
+
+---  Смотрите также  ---

@@ -1,0 +1,29 @@
+
+_GUICtrlComboBoxEx_InitStorage
+
+Allocates memory for storing ListBox items
+
+#Include 
+_GUICtrlComboBoxEx_InitStorage($hWnd, $iNum, $iBytes)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iNum
+	Number of items to add
+$iBytes
+	The amount of memory to allocate for item strings, in bytes
+
+---  Таблица возвращаемых значений  ---
+Успех: The total number of items for which memory has been pre-allocated
+Ошибка: $CB_ERRSPACE
+
+---  Примечания  ---
+Helps speed up the initialization of ComboBoxes that have a large number of items (over 100).
+
+You can use estimates for the $iNum and $iBytes parameters.
+If you overestimate, the extra memory is allocated.
+If you underestimate, the normal allocation is used for items that exceed the requested amount.
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_AddDir, _GUICtrlComboBoxEx_AddString, _GUICtrlComboBoxEx_InsertString

@@ -1,0 +1,30 @@
+
+_GUICtrlRichEdit_StreamFromVar
+
+Вставляет форматированный текст в Rich Edit из переменной
+
+#Include 
+_GUICtrlRichEdit_StreamFromVar($hWnd, $sVar)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$sVar
+	Переменная
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False и устанавливает @error
+@error:	101 - $HWnd не является дескриптором
+	700 - attempt to stream in too many characters
+
+---  Примечания  ---
+Если текст выделен, то заменяется выделенное, иначе заменяется весь текст в элементе Rich Edit
+
+Используя функцию _GUICtrlRichEdit_SetLimitonText, чтобы увеличить количество символов, которое может содержать элемент Rich Edit
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_SetLimitOnText, _GUICtrlRichEdit_StreamFromFile, _GUICtrlRichEdit_StreamToVar, _GUICtrlRichEdit_StreamToFile
+
+
+---  Таблица  --- EM_STREAMIN

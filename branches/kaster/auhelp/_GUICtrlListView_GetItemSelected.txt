@@ -1,0 +1,20 @@
+
+_GUICtrlListView_GetItemSelected
+
+Определяет, выделен ли пункт
+
+#Include 
+_GUICtrlListView_GetItemSelected($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlListView_SetItemSelected

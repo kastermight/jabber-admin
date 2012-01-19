@@ -1,0 +1,21 @@
+
+ControlGetText
+
+Возвращает текст из элемента.
+
+ControlGetText ( "title", "text", controlID )
+
+---  Таблица параметров  ---
+title
+	Заголовок окна.
+text
+	Текст окна.
+controlID
+	Идентификатор элемента управления.  Смотрите Controls.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает текст из элемента.
+Ошибка:	Устанавливает @error = 1 и возвращает пустую строку "".
+
+---  Смотрите также  ---
+WinGetText, StatusbarGetText, ControlSetText, ControlCommand

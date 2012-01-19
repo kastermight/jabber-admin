@@ -1,0 +1,33 @@
+
+_GUICtrlRichEdit_GetTextInRange
+
+Возвращает текст между указанными позициями
+
+#Include 
+_GUICtrlRichEdit_GetTextInRange($hWnd, $iStart, $iEnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iStart
+	Позиция начала
+$iEnd
+	Позиция конца
+		Специальное значение: -1 - конец текста
+
+---  Таблица возвращаемых значений  ---
+Успех:	the text
+Ошибка:	Возвращает False и устанавливает @error
+@error:	101 - $HWnd не является дескриптором
+	102 - $iStart is neither positive nor zero
+	1031 - $iEnd is neither positive nor zero nor -1
+	1032 - $iStart < $iEnd and $iEnd &l;> -1
+
+---  Примечания  ---
+Первый символ текста в элементе имеет позицию 0
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_GetTextinLine
+
+
+---  Таблица  --- EM_GETTEXTRANGE

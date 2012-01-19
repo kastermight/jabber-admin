@@ -1,0 +1,17 @@
+
+_GUICtrlListView_GetOriginY
+
+Возвращает текущую вертикальную координату начала в ListView
+
+#Include 
+_GUICtrlListView_GetOriginY($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Возвращает Y-координату
+
+---  Смотрите также  ---
+_GUICtrlListView_GetOrigin

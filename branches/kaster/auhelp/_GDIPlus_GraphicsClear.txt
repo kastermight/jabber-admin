@@ -1,0 +1,22 @@
+
+_GDIPlus_GraphicsClear
+
+Clears a Graphics object to a specified color
+
+#Include 
+_GDIPlus_GraphicsClear($hGraphics[, $iARGB = 0xFF000000])
+
+---  Таблица параметров  ---
+$hGraphics
+	Handle to a Graphics object
+$iARGB
+	[опционально] Alpha, Red, Green and Blue components of color
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GdipGraphicsClear

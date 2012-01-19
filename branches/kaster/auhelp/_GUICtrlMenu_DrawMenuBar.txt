@@ -1,0 +1,23 @@
+
+_GUICtrlMenu_DrawMenuBar
+
+Redraws the menu bar of the specified window
+
+#Include 
+_GUICtrlMenu_DrawMenuBar($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the window whose menu bar needs redrawing
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+If the menu bar changes after Windows has created the window, this function must be called to draw the menu bar.
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- DrawMenuBar

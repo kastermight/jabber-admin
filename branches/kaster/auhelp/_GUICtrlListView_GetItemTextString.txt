@@ -1,0 +1,23 @@
+
+_GUICtrlListView_GetItemTextString
+
+Возвращает весь текст строки пункта ListView
+
+#Include 
+_GUICtrlListView_GetItemTextString($hWnd[, $iItem = -1])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iItem
+	[опционально] Zero based index of item to retrieve
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает строку с разделителем '|'
+Ошибка:	Возвращает пустую строку
+
+---  Примечания  ---
+Если $iItem = -1, то попытка получить текущий выделенный пункт.
+
+---  Смотрите также  ---
+_GUICtrlListView_SetItemText, _GUICtrlListView_GetItemText, _GUICtrlListView_GetItemTextArray

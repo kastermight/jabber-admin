@@ -1,0 +1,19 @@
+
+_GUICtrlListBox_GetItemRectEx
+
+Возвращает прямоугольник, ограничивающий пункт
+
+#Include 
+_GUICtrlListBox_GetItemRectEx($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта, отсчёт от 0
+
+---  Таблица возвращаемых значений  ---
+Успех: Возвращает структуру $tagRECT, которая содержит клиентские координаты пункта
+
+---  Смотрите также  ---
+_GUICtrlListBox_GetItemRect, $tagRECT

@@ -1,0 +1,22 @@
+
+_INetMail
+
+Opens default user's mail client with given address, subject, and body.
+
+#include 
+_INetMail ( $s_MailTo, $s_MailSubject, $s_MailBody )
+
+---  Таблица параметров  ---
+$s_MailTo
+	Address for the E-Mail
+$s_MailSubject
+	Subject for the E-Mail
+$s_MailBody
+	Body for the E-Mail
+
+---  Таблица возвращаемых значений  ---
+Успех:	Process identifier for the E-Mail client
+Ошибка:	Returns 0 and sets @error to non-zero.
+
+---  Смотрите также  ---
+_INetSmtpMail

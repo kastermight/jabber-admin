@@ -1,0 +1,14 @@
+
+_GUICtrlListBox_ResetContent
+
+Удалить все пункты из списка
+
+#Include 
+_GUICtrlListBox_ResetContent($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Смотрите также  ---
+_GUICtrlListBox_DeleteString

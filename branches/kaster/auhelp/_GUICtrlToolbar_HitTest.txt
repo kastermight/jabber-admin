@@ -1,0 +1,25 @@
+
+_GUICtrlToolbar_HitTest
+
+Determines where a point lies within the control
+
+#Include 
+_GUICtrlToolbar_HitTest($hWnd, $iX, $iY)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iX
+	X position to test
+$iY
+	Y position to test
+
+---  Таблица возвращаемых значений  ---
+Успех: If the value is zero or a positive value, it is the zero based index of the nonseparator item
+		in which the point lies.
+Ошибка: If the value is negative, the point does not lie within a button
+
+---  Примечания  ---
+The absolute value of the return value is the index of a separator item or the nearest nonseparator item.
+
+---  Смотрите также  ---

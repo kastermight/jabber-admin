@@ -1,0 +1,26 @@
+
+UDPOpen
+
+Open a socket connected to an existing server .
+
+UDPOpen ( IPAddr, port [, flag] )
+
+---  Таблица параметров  ---
+IPAddr
+	Internet Protocol dotted address(IpV4) as "192.162.1.1".
+port
+	port on which the created socket will be connected.
+flag
+	[опционально] 0 (Default) - No additional options are set.
+	1 - Allow the broadcasting on the address "255.255.255.255".
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns an array : $array[1] contains the real socket, $array[2] contains the specified IP address and $array[3] contains the port. We need this information in subsequent calls to UDPSend(), where we pass this socket structure/array.
+Ошибка:	Returns $array[0]=0 and set @error.
+@error:	windows API WSAGetError return value (see MSDN).
+
+---  Примечания  ---
+This function is used by a client to communicate with the server.
+
+---  Смотрите также  ---
+UDPBind, UDPSend, UDPCloseSocket, UDPRecv

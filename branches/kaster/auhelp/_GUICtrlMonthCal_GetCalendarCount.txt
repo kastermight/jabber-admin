@@ -1,0 +1,19 @@
+
+_GUICtrlMonthCal_GetCalendarCount
+
+Gets the number of calendars currently displayed in the calendar control
+
+#Include 
+_GUICtrlMonthCal_GetCalendarCount($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: Number of calendars currently displayed in the calendar control. The maximum number of allowed calendars is 12
+
+---  Примечания  ---
+Minimum Operating Systems: Windows Vista
+
+---  Смотрите также  ---

@@ -1,0 +1,24 @@
+
+_GDIPlus_GraphicsGetSmoothingMode
+
+Gets the graphics object rendering quality
+
+#Include 
+_GDIPlus_GraphicsGetSmoothingMode($hGraphics)
+
+---  Таблица параметров  ---
+$hGraphics
+	Handle to a Graphics object
+
+---  Таблица возвращаемых значений  ---
+Успех:	Smoothing mode. Can be one of the following:
+	0 - Smoothing is not applied
+	1 - Smoothing is applied using an 8 X 4 box filter
+	2 - Smoothing is applied using an 8 X 8 box filter
+Ошибка:	-1 and @error is set
+
+---  Смотрите также  ---
+_GDIPlus_GraphicsSetSmoothingMode
+
+
+---  Таблица  --- GdipGetSmoothingMode

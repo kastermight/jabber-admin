@@ -1,0 +1,25 @@
+
+_GUICtrlMenu_GetMenu
+
+Retrieves the handle of the menu assigned to the given window
+
+#Include 
+_GUICtrlMenu_GetMenu($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Identifies the window whose menu handle is retrieved
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle of the menu
+Ошибка:	0
+
+---  Примечания  ---
+_GUICtrlMenu_GetMenu does not work on floating menu bars. Floating menu bars are custom controls that mimic standard
+menus, but are not menus.
+
+---  Смотрите также  ---
+_GUICtrlMenu_SetMenu, _GUICtrlMenu_FindParent
+
+
+---  Таблица  --- GetMenu

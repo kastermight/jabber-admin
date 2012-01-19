@@ -1,0 +1,24 @@
+
+_GUICtrlRichEdit_GetNumberOfFirstVisibleLine
+
+Gets number of the first line which is visible in the control
+
+#Include 
+_GUICtrlRichEdit_GetNumberOfFirstVisibleLine($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	line number (one-based)
+Ошибка:	0 and sets @error
+@error:	101 - $hWnd is not a handle
+
+---  Примечания  ---
+The first line is numbered 1
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- EM_GETFIRSTVISIBLELINE

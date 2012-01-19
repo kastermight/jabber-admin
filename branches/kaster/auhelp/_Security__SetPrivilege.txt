@@ -1,0 +1,23 @@
+
+_Security__SetPrivilege
+
+Enables or disables a local token privilege
+
+#Include 
+_Security__SetPrivilege($hToken, $sPrivilege, $fEnable)
+
+---  Таблица параметров  ---
+$hToken
+	Handle to a token
+$sPrivilege
+	Privilege name
+$fEnable
+	Privilege setting:
+		 True - Enable privilege
+		False - Disable privilege
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---

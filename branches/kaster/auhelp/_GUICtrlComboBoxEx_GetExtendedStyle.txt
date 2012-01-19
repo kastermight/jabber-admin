@@ -1,0 +1,17 @@
+
+_GUICtrlComboBoxEx_GetExtendedStyle
+
+Gets the extended styles that are in use for a ComboBoxEx control
+
+#Include 
+_GUICtrlComboBoxEx_GetExtendedStyle($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: DWORD value that contains the ComboBoxEx control extended styles in use for the control
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_SetExtendedStyle

@@ -1,0 +1,22 @@
+
+_GUICtrlListView_GetGroupViewEnabled
+
+Проверяет, включено ли отображение групп в ListView или нет
+
+#Include 
+_GUICtrlListView_GetGroupViewEnabled($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Returns the Group view setting:
+		 True - Отображение групп включено
+		False - Отображение групп отключено
+
+---  Примечания  ---
+Минимальная ОС - Windows XP.
+
+---  Смотрите также  ---
+_GUICtrlListView_EnableGroupView

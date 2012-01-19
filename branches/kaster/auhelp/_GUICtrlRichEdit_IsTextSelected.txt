@@ -1,0 +1,22 @@
+
+_GUICtrlRichEdit_IsTextSelected
+
+Является ли текст, выделенный?
+
+#Include 
+_GUICtrlRichEdit_IsTextSelected($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True или False
+Ошибка:	Возвращает False и устанавливает @error
+@error:	101 - $HWnd не является дескриптором
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_GetSel, _GUICtrlRichEdit_SetSel, _GUICtrlRichEdit_Deselect
+
+
+---  Таблица  --- EM_EXGETSEL

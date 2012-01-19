@@ -1,0 +1,28 @@
+
+_GUICtrlRichEdit_GetCharPosOfNextWord
+
+Gets inter-character position before the next word
+
+#Include 
+_GUICtrlRichEdit_GetCharPosOfNextWord($hWnd, $iCpStart)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCPStart
+	inter-character position to start from
+
+---  Таблица возвращаемых значений  ---
+Успех:	inter-character position before next word
+Ошибка:	0 and sets @error
+@error:	101 - $hWnd is not a handle
+	102 - $iCpStart is not a number
+
+---  Примечания  ---
+"Word" is defined broadly; it includes punctuation, parentheses and hyphens.
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_GetCharPosOfPreviousWord, _GUICtrlRichEdit_GetCharWordBreakInfo
+
+
+---  Таблица  --- EM_FINDWORDBREAK

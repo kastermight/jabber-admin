@@ -1,0 +1,18 @@
+
+_GUICtrlHeader_GetUnicodeFormat
+
+Retrieves the Unicode character format flag for the control
+
+#Include 
+_GUICtrlHeader_GetUnicodeFormat($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+True: Control uses Unicode characters
+False: Control uses ANSI characters
+
+---  Смотрите также  ---
+_GUICtrlHeader_SetUnicodeFormat

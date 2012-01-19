@@ -1,0 +1,29 @@
+
+_Net_Share_ShareDel
+
+Deletes a share name from a server's list of shared resources
+
+#Include 
+_Net_Share_ShareDel($sServer, $sShare)
+
+---  Таблица параметров  ---
+$sServer
+	Specifies the DNS or NetBIOS name of the remote server on which the function is to execute. If
+		this parameter is blank, the local computer is used.
+$sShare
+	Specifies the name of the share to delete
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+Only members of the Administrators, Server Operators, or Power Users local group, or those with Server
+Operator group membership, can successfully delete file shares with this function. The Print Operator can
+delete printer shares.
+
+---  Смотрите также  ---
+_Net_Share_ShareAdd, _Net_Share_ShareCheck, _Net_Share_SessionDel
+
+
+---  Таблица  --- NetShareDel

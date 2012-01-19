@@ -1,0 +1,17 @@
+
+_GUICtrlComboBox_GetHorizontalExtent
+
+Gets the width, in pixels, that the ListBox of a ComboBox control can be scrolled horizontally
+
+#Include 
+_GUICtrlComboBox_GetHorizontalExtent($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: The scrollable width, in pixels
+
+---  Смотрите также  ---
+_GUICtrlComboBox_SetHorizontalExtent

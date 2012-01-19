@@ -1,0 +1,38 @@
+
+_WordCreate
+
+Create a Microsoft Office Word Object
+
+#include  
+_WordCreate ( [ $s_FilePath = "" [, $b_tryAttach = 0 [, $b_visible = 1 [, $b_takeFocus = 1]]]] )
+
+---  Таблица параметров  ---
+$s_FilePath
+	[опционально] specifies the file to open upon creation (See Remarks)
+$b_tryAttach
+	[опционально] specifies whether to try to attach to an existing window
+	0 = (Default) do not try to attach
+	1 = Try to attach to an existing window
+$b_visible
+	[опционально] specifies whether the window will be visible
+	0 = Window is hidden
+	1 = (Default) Window is visible
+$b_takeFocus
+	[опционально] specifies whether to bring the attached window to focus
+	0 =  Do Not Bring window into focus
+	1 = (Default) bring window into focus
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns an object variable pointing to a Word.Application object
+Ошибка:	Returns 0 and sets @ERROR
+@Error:	$_WordStatus_Success = No Error
+	$_WordStatus_GeneralError = General Error
+	$_WordStatus_InvalidDataType = Invalid Data Type
+	$_WordStatus_InvalidObjectType = Invalid Object Type
+@Extended:	Set to true (1) or false (0) depending on the success of $f_tryAttach
+
+---  Примечания  ---
+File will be created if it does not exist.
+
+---  Смотрите также  ---
+_WordAttach, _WordQuit

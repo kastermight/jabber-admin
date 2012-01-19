@@ -1,0 +1,18 @@
+
+_GUICtrlToolbar_GetStyleAltDrag
+
+Indicates that the control allows buttons to be dragged
+
+#Include 
+_GUICtrlToolbar_GetStyleAltDrag($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+True: Style is present
+False: Style is not present
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetStyleAltDrag

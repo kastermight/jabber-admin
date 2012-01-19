@@ -1,0 +1,21 @@
+
+_WinAPI_StringFromGUID
+
+Converts a binary GUID to string form
+
+#Include 
+_WinAPI_StringFromGUID($pGUID)
+
+---  Таблица параметров  ---
+$pGUID
+	Pointer to a $tagGUID structure
+
+---  Таблица возвращаемых значений  ---
+Успех:	GUID in string form
+Ошибка:	empty string
+
+---  Смотрите также  ---
+_WinAPI_GUIDFromString, _WinAPI_GUIDFromStringEx, $tagGUID
+
+
+---  Таблица  --- StringFromGUID2

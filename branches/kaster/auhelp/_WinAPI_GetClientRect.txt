@@ -1,0 +1,21 @@
+
+_WinAPI_GetClientRect
+
+Retrieves the coordinates of a window's client area
+
+#Include 
+_WinAPI_GetClientRect($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle of window
+
+---  Таблица возвращаемых значений  ---
+Успех:	$tagRECT structure that receives the client coordinates
+Ошибка:	set @error
+
+---  Смотрите также  ---
+$tagRECT
+
+
+---  Таблица  --- GetClientRect

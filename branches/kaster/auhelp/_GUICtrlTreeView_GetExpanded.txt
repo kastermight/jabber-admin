@@ -1,0 +1,20 @@
+
+_GUICtrlTreeView_GetExpanded
+
+Указывает, является ли пункт развёрнутым
+
+#Include 
+_GUICtrlTreeView_GetExpanded($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$hItem
+	Дескриптор пункта
+
+---  Таблица возвращаемых значений  ---
+True:	Пункт развёрнут
+False:	Пункт свёрнут
+
+---  Смотрите также  ---
+_GUICtrlTreeView_Expand

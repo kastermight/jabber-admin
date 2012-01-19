@@ -1,0 +1,20 @@
+
+_GUIImageList_GetIconSize
+
+Retrieves the dimensions of images in an image list
+
+#Include 
+_GUIImageList_GetIconSize($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Returns an Array with the following format:
+
+	[0] - Width, in pixels, of each image
+	[1] - Height, in pixels, of each image
+
+---  Смотрите также  ---
+_GUIImageList_GetIconHeight, _GUIImageList_GetIconSizeEx, _GUIImageList_GetIconWidth, _GUIImageList_SetIconSize

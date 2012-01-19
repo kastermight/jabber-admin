@@ -1,0 +1,27 @@
+
+_GUICtrlButton_GetTextMargin
+
+Gets the margins used to draw text in a button control
+
+#Include 
+_GUICtrlButton_GetTextMargin($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Returns an Array with the following format:
+		  [0] - Left margin to use for drawing text
+		  [1] - Top margin to use for drawing text
+		  [2] - Right margin to use for drawing text
+		  [3] - Bottom margin to use for drawing text
+
+---  Примечания  ---
+Minimum OS - Windows XP.
+
+---  Смотрите также  ---
+_GUICtrlButton_SetTextMargin
+
+
+---  Таблица  --- BCM_GETTEXTMARGIN

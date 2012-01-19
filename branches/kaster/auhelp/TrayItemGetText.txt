@@ -1,0 +1,17 @@
+
+TrayItemGetText
+
+Возвращает текст элемента меню или пункта трея.
+
+TrayItemGetText ( controlID )
+
+---  Таблица параметров  ---
+controlID
+	Идентификатор элемента (controlID), возвращаемый функциями TrayCreateItem or TrayCreateMenu.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает 1.
+Ошибка:	Возвращает 0.
+
+---  Смотрите также  ---
+TrayItemSetText, TrayItemGetHandle

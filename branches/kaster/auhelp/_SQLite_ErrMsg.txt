@@ -1,0 +1,19 @@
+
+_SQLite_ErrMsg
+
+Returns a string describing in english the error condition for the most recent sqlite3_* API call
+
+#include 
+_SQLite_ErrMsg ( [ $hDB ] )
+
+---  Таблица параметров  ---
+$hDB
+	[опционально] An open database, default is the last opened database
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns error message
+Ошибка:	@error = 1 - error calling SQLite API 'sqlite3_errmsg16'
+	2 - Call Prevented by SafeMode
+
+---  Смотрите также  ---
+_SQLite_ErrCode

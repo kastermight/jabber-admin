@@ -1,0 +1,17 @@
+
+_GUICtrlMonthCal_GetSelRangeMax
+
+Retrieves the upper date range currently selected by the user
+
+#Include 
+_GUICtrlMonthCal_GetSelRangeMax($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: $tagSYSTEMTIME
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_GetSelRangeMin, $tagSYSTEMTIME

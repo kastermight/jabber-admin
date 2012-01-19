@@ -1,0 +1,29 @@
+
+_WinAPI_WriteFile
+
+Writes data to a file at the position specified by the file pointer
+
+#Include 
+_WinAPI_WriteFile($hFile, $pBuffer, $iToWrite, ByRef $iWritten [, $pOverlapped = 0])
+
+---  Таблица параметров  ---
+$hFile
+	Handle to the file to be written
+$pBuffer
+	Pointer to the buffer containing the data to be written
+$iToWrite
+	Number of bytes to be written to the file
+$iWritten
+	The number of bytes written
+$pOverlapped
+	[опционально] Pointer to a $tagOVERLAPPED structure
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+$tagOVERLAPPED, _WinAPI_CloseHandle, _WinAPI_CreateFile, _WinAPI_FlushFileBuffers, _WinAPI_GetFileSizeEx, _WinAPI_ReadFile, _WinAPI_SetEndOfFile, _WinAPI_SetFilePointer
+
+
+---  Таблица  --- WriteFile

@@ -1,0 +1,17 @@
+
+_GUICtrlMonthCal_GetRangeMin
+
+Retrieves the lower limit date range
+
+#Include 
+_GUICtrlMonthCal_GetRangeMin($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: $tagSYSTEMTIME
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_GetRange, _GUICtrlMonthCal_GetRangeMax, _GUICtrlMonthCal_GetRangeMinStr, $tagSYSTEMTIME

@@ -1,0 +1,19 @@
+
+_GUICtrlToolbar_IsButtonChecked
+
+Indicates whether the specified button is checked
+
+#Include 
+_GUICtrlToolbar_IsButtonChecked($hWnd, $iCommandID)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+
+---  Таблица возвращаемых значений  ---
+True: Button is checked
+False: Button is not checked
+
+---  Смотрите также  ---

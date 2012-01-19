@@ -1,0 +1,16 @@
+
+_GUICtrlToolbar_GetTextRows
+
+Retrieves the maximum number of text rows that can be displayed on a button
+
+#Include 
+_GUICtrlToolbar_GetTextRows($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Maximum number of text rows that can be displayed on a button
+
+---  Смотрите также  ---

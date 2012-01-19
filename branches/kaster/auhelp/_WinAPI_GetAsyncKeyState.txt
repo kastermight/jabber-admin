@@ -1,0 +1,21 @@
+
+_WinAPI_GetAsyncKeyState
+
+Determines whether a key is up or down at the time the function is called
+
+#Include 
+_WinAPI_GetAsyncKeyState($iKey)
+
+---  Таблица параметров  ---
+$iKey
+	Key to test for
+
+---  Таблица возвращаемых значений  ---
+Успех:	If the most significant bit is set the key is down, and if the least significant bit is set,
+	the key was pressed after the previous call to GetAsyncKeyState.
+Ошибка:	0, if a window in another thread or process currently has the keyboard focus.
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GetAsyncKeyState

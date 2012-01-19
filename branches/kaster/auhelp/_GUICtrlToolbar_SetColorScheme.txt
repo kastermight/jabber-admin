@@ -1,0 +1,21 @@
+
+_GUICtrlToolbar_SetColorScheme
+
+Sets the color scheme information
+
+#Include 
+_GUICtrlToolbar_SetColorScheme($hWnd, $iHighlight, $iShadow)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iHighlight
+	Highlight color
+$iShadow
+	Shadow color
+
+---  Примечания  ---
+The control uses the color scheme information when drawing the 3-D elements in the control
+
+---  Смотрите также  ---
+_GUICtrlToolbar_GetColorScheme

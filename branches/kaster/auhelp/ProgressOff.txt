@@ -1,0 +1,11 @@
+
+ProgressOff
+
+Убирает ранее созданное окно прогресса.
+
+ProgressOff (  )
+
+None.
+
+---  Смотрите также  ---
+ProgressSet, ProgressOn

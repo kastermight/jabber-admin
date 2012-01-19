@@ -1,0 +1,23 @@
+
+_GDIPlus_PenSetCustomEndCap
+
+Sets the custom end cap for the pen
+
+#Include 
+_GDIPlus_PenSetCustomEndCap($hPen, $hEndCap)
+
+---  Таблица параметров  ---
+$hPen
+	Handle to a pen object
+$hEndCap
+	Handle to a CustomLineCap object that specifies the pen custom end cap
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GDIPlus_PenGetCustomEndCap
+
+
+---  Таблица  --- GdipSetPenCustomEndCap

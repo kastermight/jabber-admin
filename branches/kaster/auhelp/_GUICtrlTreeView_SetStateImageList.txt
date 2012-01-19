@@ -1,0 +1,23 @@
+
+_GUICtrlTreeView_SetStateImageList
+
+Sets the state image list for the control
+
+#Include 
+_GUICtrlTreeView_SetStateImageList($hWnd, $hImageList)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hImageList
+	Handle to the image list. If 0, all images are removed
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle to the previous image list
+Ошибка:	0
+
+---  Примечания  ---
+This is a 1 based index list
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetStateImageList

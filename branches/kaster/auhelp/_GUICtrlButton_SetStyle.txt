@@ -1,0 +1,18 @@
+
+_GUICtrlButton_SetStyle
+
+Sets the style of a button
+
+#Include 
+_GUICtrlButton_SetStyle($hWnd, $iStyle)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iStyle
+	Can be a combination of button styles
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- BM_SETSTYLE

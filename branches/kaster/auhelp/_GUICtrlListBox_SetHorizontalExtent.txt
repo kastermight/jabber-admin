@@ -1,0 +1,21 @@
+
+_GUICtrlListBox_SetHorizontalExtent
+
+Устанавливает ширину, в пикселях, в которой ListBox может быть прокручен горизонтально
+
+#Include 
+_GUICtrlListBox_SetHorizontalExtent($hWnd, $iWidth)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iWidth
+	Ширина в пикселях
+
+---  Примечания  ---
+Microsoft Windows 95/Windows 98/Windows Millennium Edition (Windows Me) : Параметр $iWidth ограничен 16-битным значением.
+
+Для реакции на _GUICtrlListBox_SetHorizontalExtent, ListBox должен иметь стиль $WS_HSCROLL.
+
+---  Смотрите также  ---
+_GUICtrlListBox_GetHorizontalExtent

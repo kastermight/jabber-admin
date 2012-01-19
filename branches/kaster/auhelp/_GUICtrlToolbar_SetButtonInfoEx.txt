@@ -1,0 +1,22 @@
+
+_GUICtrlToolbar_SetButtonInfoEx
+
+Sets extended information for a button
+
+#Include 
+_GUICtrlToolbar_SetButtonInfoEx($hWnd, $iCommandID, $tButton)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+$tButton
+	$tagBUTTONINFO structure
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlToolbar_GetButtonInfoEx, $tagTBBUTTONINFO

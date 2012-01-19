@@ -1,0 +1,27 @@
+
+_ClipBoard_GetPriorityFormat
+
+Retrieves the first available clipboard format in the specified list
+
+#Include 
+_ClipBoard_GetPriorityFormat($aFormats)
+
+---  Таблица параметров  ---
+$aFormats
+	Array with the following format:
+		[0] - Number of formats (n)
+		[1] - Format 1
+		[2] - Format 2
+		[n] - Format n
+
+---  Таблица возвращаемых значений  ---
+Успех:	The first clipboard format in the list for which data is available
+Ошибка:	Format not found due to:
+	-1 - Clipboard has data, but not in any of the formats requested
+	0 - Clipboard is empty
+
+---  Смотрите также  ---
+_ClipBoard_CountFormats, _ClipBoard_EnumFormats
+
+
+---  Таблица  --- GetPriorityClipboardFormat

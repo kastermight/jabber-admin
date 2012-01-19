@@ -1,0 +1,31 @@
+
+_WinAPI_FlashWindow
+
+Flashes the specified window one time
+
+#Include 
+_WinAPI_FlashWindow($hWnd [, $fInvert = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the window to be flashed. The window can be either open or minimized.
+$fInvert
+	[опционально] If True, the window is flashed from one state to the other. If False the window is returned to
+		its original state. When an application is minimized and this parameter is True, the taskbar window button
+		flashes active/inactive. If it is False, the taskbar window button flashes inactive, meaning that it does
+		not change colors. It flashes as if it were being redrawn, but it does not provide the visual invert clue to
+		the user.
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+This function does not change the active state of the window. To flash the window a specified number of times,
+use the FlashWindowEx function.
+
+---  Смотрите также  ---
+_WinAPI_FlashWindowEx
+
+
+---  Таблица  --- FlashWindow

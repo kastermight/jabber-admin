@@ -1,0 +1,23 @@
+
+_WordErrorNotify
+
+Specifies whether Word.au3 automatically notifies of Warnings and Errors (to the console)
+
+#include  
+_WordErrorNotify ( [$f_notify = -1] )
+
+---  Таблица параметров  ---
+$f_notify
+	[опционально] specifies whether notification should be on or off
+	-1 = (Default) return current setting
+	True = Turn On
+	False = Turn Off
+
+---  Таблица возвращаемых значений  ---
+Успех:	If $f_notify = -1, returns the current notification setting, else returns 1
+Ошибка:	Returns 0
+
+---  Примечания  ---
+Word.au3 writes diagnostic information, warnings and errors to the console by default.  This information can readily be seen when using the SciTe editor to run your scripts.
+
+This function allows you to turn this functionality on or off.

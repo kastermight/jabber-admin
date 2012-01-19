@@ -1,0 +1,20 @@
+
+_GUICtrlComboBoxEx_GetItemImage
+
+Retrieves the index of the item's icon
+
+#Include 
+_GUICtrlComboBoxEx_GetItemImage($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based item index
+
+---  Таблица возвращаемых значений  ---
+Успех:	Zero based item image index
+Ошибка:	-1
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_SetItemImage

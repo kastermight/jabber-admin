@@ -1,0 +1,23 @@
+
+_GDIPlus_ParamInit
+
+Initialize an encoder parameter list
+
+#Include 
+_GDIPlus_ParamInit($iCount)
+
+---  Таблица параметров  ---
+$iCount
+	The total number of parameters that the list will contain
+
+---  Таблица возвращаемых значений  ---
+Успех:	$tagGDIPPENCODERPARAMS structure
+Ошибка:	0
+
+---  Примечания  ---
+In order to pass parameters to any of the encoder functions, you must use an encoder parameter list. This
+function is used to initialize an encoder parameter list that can then be passed to _GDIPlus_Param add to add the
+actual parameters.
+
+---  Смотрите также  ---
+_GDIPlus_ParamAdd, $tagGDIPPENCODERPARAMS

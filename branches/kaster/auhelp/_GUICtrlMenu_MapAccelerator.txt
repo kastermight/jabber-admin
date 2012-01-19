@@ -1,0 +1,19 @@
+
+_GUICtrlMenu_MapAccelerator
+
+Maps a menu accelerator key to it's position in the menu
+
+#Include 
+_GUICtrlMenu_MapAccelerator($hMenu, $cAccel)
+
+---  Таблица параметров  ---
+$hMenu
+	Handle to menu
+$cAccel
+	Accelerator key
+
+---  Таблица возвращаемых значений  ---
+Успех:	The zero based position of the item in the menu
+Ошибка:	-1
+
+---  Смотрите также  ---

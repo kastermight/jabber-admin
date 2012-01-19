@@ -1,0 +1,27 @@
+
+_GUICtrlRichEdit_SetBkColor
+
+Устанавливает цвет фона элемента
+
+#Include 
+_GUICtrlRichEdit_SetBkColor($hWnd [, $iColor = Default])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iColor
+	[опционально] один из следующих:
+		число COLORREF
+		Ключевое слово Default - системный цвет (по умолчанию)
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False и устанавливает @error
+@error:	101 - $HWnd не является дескриптором
+	1022 - $iColor не верно указан
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_GetBkColor
+
+
+---  Таблица  --- EM_SETBKGNDCOLOR

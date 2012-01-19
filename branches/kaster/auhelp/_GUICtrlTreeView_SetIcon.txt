@@ -1,0 +1,25 @@
+
+_GUICtrlTreeView_SetIcon
+
+Устанавливает иконку пункту
+
+#Include 
+_GUICtrlTreeView_SetIcon($hWnd[, $hItem = 0[, $sIconFile =""[, $iIconID = 0[, $iImageMode = 6]]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$hItem
+	[опционально] Идентификатор (ID) или дескриптор пункта
+$sIconFile
+	[опционально] Файл, в котором находится иконка
+$iIconID
+	[опционально] Индекс иконки в файле
+$iImageMode
+	[опционально] 2=normal image / 4=selected image to set
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---

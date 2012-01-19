@@ -1,0 +1,18 @@
+
+_GUICtrlToolbar_GetStyleToolTips
+
+Indicates that the control has tooltips
+
+#Include 
+_GUICtrlToolbar_GetStyleToolTips($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+True: Style is present
+False: Style is not present
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetStyleToolTips

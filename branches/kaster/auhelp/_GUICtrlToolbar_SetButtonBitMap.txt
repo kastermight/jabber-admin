@@ -1,0 +1,22 @@
+
+_GUICtrlToolbar_SetButtonBitMap
+
+Sets the index of the bitmap associated with a button
+
+#Include 
+_GUICtrlToolbar_SetButtonBitMap($hWnd, $iCommandID, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+$iIndex
+	Zero based index of an images image list
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlToolbar_GetButtonBitmap

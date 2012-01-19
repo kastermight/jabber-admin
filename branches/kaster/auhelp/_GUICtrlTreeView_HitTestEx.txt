@@ -1,0 +1,21 @@
+
+_GUICtrlTreeView_HitTestEx
+
+Возвращает информацию о пункте находящегося в указанных координатах относительно TreeView
+
+#Include 
+_GUICtrlTreeView_HitTestEx($hWnd, $iX, $iY)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iX
+	X-координата для теста
+$iY
+	Y-координата для теста
+
+---  Таблица возвращаемых значений  ---
+Возвращает структуру $tagTVHITTESTINFO
+
+---  Смотрите также  ---
+_GUICtrlTreeView_HitTest, _GUICtrlTreeView_HitTestItem, $tagTVHITTESTINFO

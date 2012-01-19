@@ -1,0 +1,17 @@
+
+_GUICtrlListView_GetNumberOfWorkAreas
+
+Retrieves the number of working areas in the control
+
+#Include 
+_GUICtrlListView_GetNumberOfWorkAreas($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Returns the Number of working areas
+
+---  Смотрите также  ---
+_GUICtrlListView_SetWorkAreas

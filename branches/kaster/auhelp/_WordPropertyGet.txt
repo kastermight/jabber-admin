@@ -1,0 +1,70 @@
+
+_WordPropertyGet
+
+Returns a select property of the Word Application.
+
+#include  
+_WordPropertyGet ( ByRef $o_object, $s_property )
+
+---  Таблица параметров  ---
+$o_object
+	Object variable of a Word.Application
+$s_property
+	Property selection (see remarks)
+
+---  Таблица возвращаемых значений  ---
+Успех:	Value of selected Property
+Ошибка:	Returns 0 and sets @ERROR
+@Error:	$_WordStatus_Success = No Error
+	$_WordStatus_InvalidDataType = Invalid Data Type
+	$_WordStatus_InvalidObjectType = Invalid Object Type
+	$_WordStatus_InvalidValue = Invalid Value
+@Extended:	Contains invalid parameter number
+
+---  Примечания  ---
+Further information can be found at MSDN.
+
+The following tables provide a description of each property available for use.
+
+Word Application Properties
+
+---  Таблица параметров  ---
+Property
+	Description
+"activeprinter"
+	Returns the name of the active printer.
+"capslock"
+	Returns a Boolean value indicating whether the CAPS LOCK key is turned on.
+"screentips"
+	Returns a Boolean value indicating whether comments, footnotes, endnotes, and hyperlinks are displayed as tips.
+"scrollbars"
+	Returns a Boolean value indicating whether Word displays a scroll bar in at least one document window.
+"statusbar"
+	Returns a Boolean value indicating whether the status bar is displayed.
+"height"
+	Returns the height of the active document window.
+"language"
+	Returns an MsoLanguageID constant that represents the language selected for the Microsoft Word user interface.
+"left"
+	Returns an Integer that represents the horizontal position of the active document.
+"numlock"
+	Returns the state of the NUM LOCK key. Returns True if the keys on the numeric keypad insert numbers, and False if the keys move the insertion point.
+"path"
+	Returns the disk or Web path to the specified object.
+"screenupdating"
+	Returns a Boolean value indicating whether screen updating is turned on.
+"startuppath"
+	Returns the complete path of the startup folder, excluding the final separator.
+"top"
+	Returns the vertical position of the active document, in points.
+"version"
+	Returns the Microsoft Word version number.
+"visible"
+	Returns a Boolean value indicating whether the specified object is visible.
+"width"
+	Returns the width of the specified object, in points.
+"windowstate"
+	Returns the state of the specified document window or task window.
+
+---  Смотрите также  ---
+_WordPropertySet

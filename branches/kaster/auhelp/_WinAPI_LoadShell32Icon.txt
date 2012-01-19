@@ -1,0 +1,21 @@
+
+_WinAPI_LoadShell32Icon
+
+Extracts an icon from the Shell32.dll file
+
+#Include 
+_WinAPI_LoadShell32Icon($iIconID)
+
+---  Таблица параметров  ---
+$iIconID
+	ID of the icon to extract
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to the specified icon
+Ошибка:	0
+
+---  Примечания  ---
+When you are done with the icon, call _WinAPI_DestroyIcon to release the icon handle
+
+---  Смотрите также  ---
+_WinAPI_DestroyIcon

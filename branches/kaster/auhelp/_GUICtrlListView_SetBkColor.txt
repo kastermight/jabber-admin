@@ -1,0 +1,20 @@
+
+_GUICtrlListView_SetBkColor
+
+Устанавливает цвет фона ListView
+
+#Include 
+_GUICtrlListView_SetBkColor($hWnd, $iColor)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iColor
+	Устанавливаемый цвет фона или CLR_NONE - без фонового цвета
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlListView_GetBkColor

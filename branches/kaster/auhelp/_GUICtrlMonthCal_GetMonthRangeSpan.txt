@@ -1,0 +1,20 @@
+
+_GUICtrlMonthCal_GetMonthRangeSpan
+
+Returns a value that represents the range, in months, spanned
+
+#Include 
+_GUICtrlMonthCal_GetMonthRangeSpan($hWnd[, $fPartial = False])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$fPartial
+	[опционально] Specifies the scope of the range limits to be retrieved:
+		 True - Preceding and trailing months are included
+		False - Only months that are entirely displayed are included
+
+---  Таблица возвращаемых значений  ---
+Успех: Spanned months
+
+---  Смотрите также  ---

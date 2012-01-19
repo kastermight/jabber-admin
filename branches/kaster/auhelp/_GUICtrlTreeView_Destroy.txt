@@ -1,0 +1,21 @@
+
+_GUICtrlTreeView_Destroy
+
+Удаляет TreeView
+
+#Include 
+_GUICtrlTreeView_Destroy(ByRef $hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True, устанавливает дескриптор в 0
+Ошибка:	Возвращает False
+
+---  Примечания  ---
+Ограничение, используется только для TreeView созданного функцией _GUICtrlTreeView_Create
+
+---  Смотрите также  ---
+_GUICtrlTreeView_Create

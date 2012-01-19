@@ -1,0 +1,34 @@
+
+_GUICtrlRichEdit_ScrollLineOrPage
+
+Scrolls the text down or up a line or a page
+
+#Include 
+_GUICtrlRichEdit_ScrollLineOrPage($hWnd, $sAction)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$sAction
+	one of the following:
+		"ld" - line down
+		"lu" - line up
+		"pd" - page down
+		"pu" - page up
+
+---  Таблица возвращаемых значений  ---
+Успех:	the number of lines actually scrolled (positive if down)
+Ошибка:	0 and sets @error
+@error:	101 - $hWnd is not a handle
+	1021 - $sAction is not two characters
+	1022 - first character must be l or p
+	1023 - second character must be d or u
+
+---  Примечания  ---
+This function is well behaved: it never scrolls such that lines beyond the last one are shown.
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_ScrollLines, _GUICtrlRichEdit_ScrollToCaret
+
+
+---  Таблица  --- EM_SCROLL

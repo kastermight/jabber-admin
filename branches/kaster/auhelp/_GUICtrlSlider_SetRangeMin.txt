@@ -1,0 +1,20 @@
+
+_GUICtrlSlider_SetRangeMin
+
+Sets the minimum logical position for the slider
+
+#Include 
+_GUICtrlSlider_SetRangeMin($hWnd, $iMinimum)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iMinimum
+	Minimum position for the slider
+
+---  Примечания  ---
+If the current slider position is less than the new minimum, the _GUICtrlSlider_SetRangeMin function
+sets the slider position to the new minimum value.
+
+---  Смотрите также  ---
+_GUICtrlSlider_GetRangeMin, _GUICtrlSlider_SetRange, _GUICtrlSlider_SetRangeMax

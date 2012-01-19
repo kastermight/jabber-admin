@@ -1,0 +1,26 @@
+
+_GUICtrlToolbar_CheckButton
+
+Checks or unchecks a given button
+
+#Include 
+_GUICtrlToolbar_CheckButton($hWnd, $iCommandID[, $fCheck = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+$fCheck
+	[опционально] Check state:
+		 True - Button will be checked
+		False - Button will be unchecked
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+When a button is checked, it is displayed in the pressed state
+
+---  Смотрите также  ---

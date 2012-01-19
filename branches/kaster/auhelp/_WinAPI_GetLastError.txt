@@ -1,0 +1,18 @@
+
+_WinAPI_GetLastError
+
+Returns the calling thread's lasterror code value
+
+#Include 
+_WinAPI_GetLastError()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Returns the Last error code
+
+---  Смотрите также  ---
+_WinAPI_GetLastErrorMessage
+
+
+---  Таблица  --- GetLastError

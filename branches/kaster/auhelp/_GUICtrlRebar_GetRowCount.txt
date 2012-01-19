@@ -1,0 +1,16 @@
+
+_GUICtrlRebar_GetRowCount
+
+Retrieves the number of rows of bands in a rebar control
+
+#Include 
+_GUICtrlRebar_GetRowCount($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+
+---  Таблица возвращаемых значений  ---
+Returns A value that represents the number of band rows in the control
+
+---  Смотрите также  ---

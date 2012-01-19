@@ -1,0 +1,23 @@
+
+_GUICtrlEdit_LineFromChar
+
+Retrieves the index of the line that contains the specified character index
+
+#Include 
+_GUICtrlEdit_LineFromChar($hWnd[, $iIndex = -1])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	[опционально] The character index of the character contained in the line whose number is to be retrieved
+
+---  Таблица возвращаемых значений  ---
+Успех: Zero-based line number of the line containing the character index specified by $iIndex
+
+---  Примечания  ---
+If $iIndex is –1, _GUICtrlEdit_LineFromChar retrieves either the line number of the current line
+(the line containing the caret) or, if there is a selection, the line number of the line containing
+the beginning of the selection.
+
+---  Смотрите также  ---

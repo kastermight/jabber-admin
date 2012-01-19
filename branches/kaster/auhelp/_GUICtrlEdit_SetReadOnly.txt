@@ -1,0 +1,21 @@
+
+_GUICtrlEdit_SetReadOnly
+
+Устанавливает или удаляет стиль "только чтение" ($ES_READONLY)
+
+#Include 
+_GUICtrlEdit_SetReadOnly($hWnd, $fReadOnly)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$fReadOnly
+	Followin values:
+		 True - Устанавливает стиль $ES_READONLY
+		False - Удаляет стиль $ES_READONLY
+
+---  Таблица возвращаемых значений  ---
+Успех: Возвращает True
+Ошибка: Возвращает False
+
+---  Смотрите также  ---

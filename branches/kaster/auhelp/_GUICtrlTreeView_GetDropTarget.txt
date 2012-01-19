@@ -1,0 +1,20 @@
+
+_GUICtrlTreeView_GetDropTarget
+
+Indicates whether the item is drawn as a drag and drop target
+
+#Include 
+_GUICtrlTreeView_GetDropTarget($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hItem
+	Handle to the item
+
+---  Таблица возвращаемых значений  ---
+True:	Item is drawn as a drop target
+False:	Item is not drawn as a drop target
+
+---  Смотрите также  ---
+_GUICtrlTreeView_SetDropTarget

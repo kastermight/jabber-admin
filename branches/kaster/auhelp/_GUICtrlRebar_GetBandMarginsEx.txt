@@ -1,0 +1,20 @@
+
+_GUICtrlRebar_GetBandMarginsEx
+
+Get Length of the band, in pixels
+
+#Include 
+_GUICtrlRebar_GetBandMarginsEx($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+
+---  Таблица возвращаемых значений  ---
+Returns a $tagMargins structure
+
+---  Примечания  ---
+Minimum OS - Windows XP.
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetBandMargins, $tagMargins

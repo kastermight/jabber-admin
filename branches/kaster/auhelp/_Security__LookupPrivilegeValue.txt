@@ -1,0 +1,23 @@
+
+_Security__LookupPrivilegeValue
+
+Retrieves the locally unique identifier (LUID) for a privilege value
+
+#Include 
+_Security__LookupPrivilegeValue($sSystem, $sName)
+
+---  Таблица параметров  ---
+$sSystem
+	Specifies the name of the system on which the privilege name is retrieved. If blank, the
+		function attempts to find the privilege name on the local system.
+$sName
+	Specifies the name of the privilege
+
+---  Таблица возвращаемых значений  ---
+Успех:	LUID by which the privilege is known
+Ошибка:	0
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- LookupPrivilegeValue

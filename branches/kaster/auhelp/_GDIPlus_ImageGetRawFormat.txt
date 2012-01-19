@@ -1,0 +1,28 @@
+
+_GDIPlus_ImageGetRawFormat
+
+Returns file format GUID and image format name of an image
+
+#Include 
+_GDIPlus_ImageGetRawFormat($hImage)
+
+---  Таблица параметров  ---
+$hImage
+	Handle to an image object
+
+---  Таблица возвращаемых значений  ---
+Успех:	Array with the following format
+	[0] - - String of file format GUID
+	[1] - - String of image format name
+Ошибка:	Returns empty array and @error is set, @extended set to error location
+@error:	0 - No error.
+	10 - Invalid image handle
+
+---  Примечания  ---
+@error 4 relies on GDI+ UDF return of -1 or 0 instead of image handle for errors
+
+---  Смотрите также  ---
+_GDIPlus_ImageGetType
+
+
+---  Таблица  --- GdipGetImageRawFormat

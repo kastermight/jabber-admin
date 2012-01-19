@@ -1,0 +1,19 @@
+
+_GUICtrlListView_SetToolTips
+
+Sets the ToolTip control that the control will use to display ToolTips
+
+#Include 
+_GUICtrlListView_SetToolTips($hWnd, $hToolTip)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hToolTip
+	Handle to the ToolTip control to be set
+
+---  Таблица возвращаемых значений  ---
+Returns the handle to the previous ToolTip control
+
+---  Смотрите также  ---
+_GUICtrlListView_GetToolTips

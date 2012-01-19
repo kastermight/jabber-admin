@@ -1,0 +1,15 @@
+
+_GUICtrlToolbar_AddButtonSep
+
+Adds a separator
+
+#Include 
+_GUICtrlToolbar_AddButtonSep($hWnd[, $iWidth = 6])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to toolbar
+$iWidth
+	[опционально] Separator width
+
+---  Смотрите также  ---

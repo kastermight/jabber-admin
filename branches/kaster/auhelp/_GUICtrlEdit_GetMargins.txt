@@ -1,0 +1,20 @@
+
+_GUICtrlEdit_GetMargins
+
+Retrieves the widths of the left and right margins
+
+#Include 
+_GUICtrlEdit_GetMargins($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Array in the following format:
+
+	[0] - The width of the left margin
+	[1] - The width of the right margin
+
+---  Смотрите также  ---
+_GUICtrlEdit_SetMargins

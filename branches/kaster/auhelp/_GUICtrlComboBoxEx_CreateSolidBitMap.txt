@@ -1,0 +1,22 @@
+
+_GUICtrlComboBoxEx_CreateSolidBitMap
+
+Creates a solid color bitmap
+
+#Include 
+_GUICtrlComboBoxEx_CreateSolidBitMap($hWnd, $iColor, $iWidth, $iHeight)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the window where the bitmap will be displayed
+$iColor
+	The color of the bitmap, stated in RGB
+$iWidth
+	The width of the bitmap
+$iHeight
+	The height of the bitmap
+
+---  Таблица возвращаемых значений  ---
+Успех: Handle to the bitmap
+
+---  Смотрите также  ---

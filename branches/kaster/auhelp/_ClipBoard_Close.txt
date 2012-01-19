@@ -1,0 +1,24 @@
+
+_ClipBoard_Close
+
+Closes the clipboard
+
+#Include 
+_ClipBoard_Close()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+When the window has finished examining or changing the clipboard close the clipboard by calling this function.
+This enables other windows to access the clipboard. Do not place an object on the clipboard after calling
+this function.
+
+---  Смотрите также  ---
+_ClipBoard_Open
+
+
+---  Таблица  --- CloseClipboard

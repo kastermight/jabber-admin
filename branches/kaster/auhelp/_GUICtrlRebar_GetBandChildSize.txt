@@ -1,0 +1,23 @@
+
+_GUICtrlRebar_GetBandChildSize
+
+Retrieves the Child size settings
+
+#Include 
+_GUICtrlRebar_GetBandChildSize($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+
+---  Таблица возвращаемых значений  ---
+Returns an Array with the following format:
+	[0] - Minimum width of the child window, in pixels.
+	[1] - Minimum height of the child window, in pixels.
+	[2] - Initial height of the band, in pixels.
+	[3] - Maximum height of the band, in pixels.
+	[4] - Step value by which the band can grow or shrink, in pixels.
+
+---  Смотрите также  ---

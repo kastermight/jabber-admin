@@ -1,0 +1,19 @@
+
+_GUICtrlToolbar_IsButtonHighlighted
+
+Indicates whether the specified button is hilighted
+
+#Include 
+_GUICtrlToolbar_IsButtonHighlighted($hWnd, $iCommandID)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+
+---  Таблица возвращаемых значений  ---
+True: Button is hilighted
+False: Button is not hilighted
+
+---  Смотрите также  ---

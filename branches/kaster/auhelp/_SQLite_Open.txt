@@ -1,0 +1,32 @@
+
+_SQLite_Open
+
+Opens/creates a SQLite database.
+
+#include 
+_SQLite_Open ( [ $sDatabase_Filename = ":memory:" [,$iAccessMode [,$iEncoding ]]] )
+
+---  Таблица параметров  ---
+$sDatabase_Filename
+	[опционально] Database filename, by default will opens an in memory database.
+$iAccessMode
+	[опционально] access mode flags. Defaults to $SQLITE_OPEN_READWRITE + $SQLITE_OPEN_CREATE  
+$iEncoding
+	[опционально] encoding mode flag, only used at creation time. Defaults to $SQLITE_ENCODING_UTF8
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns database handle.
+Ошибка:	Returns 0.
+@error:	-1 - SQLite Reported an Error (Check @extended Value)
+     1 - Error Calling SQLite API 'sqlite3_open_v2'
+     2 - Error while converting filename to UTF-8
+@extended:	value can be compared against $SQLITE_* constants
+
+---  Примечания  ---
+There is no need to store the database handle.
+Functions that use the handle are using the last opened by default.
+
+To create a database encoded in UFT16 just create it with $iEncoding=$SQLITE_ENCODING_UTF16.
+
+---  Смотрите также  ---
+_SQLite_Close

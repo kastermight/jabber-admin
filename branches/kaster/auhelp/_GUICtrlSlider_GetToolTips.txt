@@ -1,0 +1,21 @@
+
+_GUICtrlSlider_GetToolTips
+
+Retrieves the handle to the ToolTip control assigned to the slider, if any.
+
+#Include 
+_GUICtrlSlider_GetToolTips($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: the handle to the ToolTip control assigned to the slider
+Ошибка: 0
+
+---  Примечания  ---
+If the slider control does not use the $TBS_TOOLTIPS style, the return value is 0.
+
+---  Смотрите также  ---
+_GUICtrlSlider_SetToolTips

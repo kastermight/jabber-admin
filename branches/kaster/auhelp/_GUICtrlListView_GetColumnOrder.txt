@@ -1,0 +1,18 @@
+
+_GUICtrlListView_GetColumnOrder
+
+Возвращает текущий порядок колонок слева-направо
+
+#Include 
+_GUICtrlListView_GetColumnOrder($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает строку с разделителями
+Ошибка:	Возвращает $LV_ERR
+
+---  Смотрите также  ---
+_GUICtrlListView_SetColumnOrder, _GUICtrlListView_SetColumnOrderArray

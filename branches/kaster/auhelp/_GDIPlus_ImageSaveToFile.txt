@@ -1,0 +1,23 @@
+
+_GDIPlus_ImageSaveToFile
+
+Save an image to file
+
+#Include 
+_GDIPlus_ImageSaveToFile($hImage, $sFileName)
+
+---  Таблица параметров  ---
+$hImage
+	Handle to an image object
+$sFileName
+	Fully qualified image file name
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GDIPlus_ImageLoadFromFile, _GDIPlus_ImageSaveToFileEx
+
+
+---  Таблица  --- GdipSaveImageToFile

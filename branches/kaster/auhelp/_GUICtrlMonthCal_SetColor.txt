@@ -1,0 +1,28 @@
+
+_GUICtrlMonthCal_SetColor
+
+Sets the color for a given portion of the month calendar
+
+#Include 
+_GUICtrlMonthCal_SetColor($hWnd, $iIndex, $iColor)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Indicates which month calendar color to set:
+		$MCSC_BACKGROUND - Background color displayed between months
+		$MCSC_TEXT - Color used to display text within a month
+		$MCSC_TITLEBK - Background color displayed in the calendar title
+		$MCSC_TITLETEXT - Color used to display text within the calendar title
+		$MCSC_MONTHBK - Background color displayed within the month
+		$MCSC_TRAILINGTEXT - Color used to display header day and trailing day text
+$iColor
+	Color value
+
+---  Таблица возвращаемых значений  ---
+Успех: The previous color setting for the specified portion of the control
+Ошибка: -1
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_GetColor

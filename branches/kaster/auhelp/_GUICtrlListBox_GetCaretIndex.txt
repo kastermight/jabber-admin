@@ -1,0 +1,18 @@
+
+_GUICtrlListBox_GetCaretIndex
+
+Return index of item that has the focus rectangle
+
+#Include 
+_GUICtrlListBox_GetCaretIndex($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: Zero based index of the selected item
+Ошибка: -1 if nothing is selected
+
+---  Смотрите также  ---
+_GUICtrlListBox_SetCaretIndex

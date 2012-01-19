@@ -1,0 +1,19 @@
+
+_GUIToolTip_TrackActivate
+
+Activates or deactivates a tracking ToolTip
+
+#Include 
+_GUIToolTip_TrackActivate($hWnd[, $fActivate = True[, $hTool = 0[, $iID = 0]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$fActivate
+	[опционально] True to activate, False to deactivate
+$hTool
+	[опционально] Handle to the window that contains the tool
+$iID
+	[опционально] Application-defined identifier of the tool
+
+---  Смотрите также  ---

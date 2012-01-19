@@ -1,0 +1,19 @@
+
+_GUICtrlMonthCal_GetSelRangeMaxStr
+
+Retrieves the upper date range currently selected by the user in string form
+
+#Include 
+_GUICtrlMonthCal_GetSelRangeMaxStr($hWnd[, $sFormat = "%02d/%02d/%04d"])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$sFormat
+	[опционально] StringFormat string used to format the date
+
+---  Таблица возвращаемых значений  ---
+Успех: Date in the specified format
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_GetSelRangeMinStr

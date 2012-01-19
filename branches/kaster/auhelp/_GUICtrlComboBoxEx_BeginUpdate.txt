@@ -1,0 +1,18 @@
+
+_GUICtrlComboBoxEx_BeginUpdate
+
+Предотвращает обновление ComboBox, пока не будет вызвана функция EndUpdate
+
+#Include 
+_GUICtrlComboBoxEx_BeginUpdate($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех: Возвращает True
+Ошибка: Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_EndUpdate

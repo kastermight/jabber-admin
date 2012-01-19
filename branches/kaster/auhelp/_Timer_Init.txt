@@ -1,0 +1,15 @@
+
+_Timer_Init
+
+Returns a timestamp (in milliseconds).
+
+#Include 
+_Timer_Init()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Returns a timestamp number (in milliseconds).
+
+---  Смотрите также  ---
+_Timer_Diff

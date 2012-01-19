@@ -1,0 +1,29 @@
+
+_GUICtrlMenu_InsertMenuItem
+
+Inserts a new menu item at the specified position
+
+#Include 
+_GUICtrlMenu_InsertMenuItem($hMenu, $iIndex, $sText[, $iCmdID = 0[, $hSubMenu = 0]])
+
+---  Таблица параметров  ---
+$hMenu
+	Handle of the menu
+$iIndex
+	Zero based position of the menu item before which to insert the new item
+$sText
+	Menu item text. If blank, a separator will be inserted.
+$iCmdID
+	[опционально] Command ID to assign to the item
+$hSubMenu
+	[опционально] Handle to the submenu associated with the menu item
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlMenu_InsertMenuItemEx, _GUICtrlMenu_AddMenuItem, _GUICtrlMenu_AppendMenu
+
+
+---  Таблица  --- InsertMenuItem

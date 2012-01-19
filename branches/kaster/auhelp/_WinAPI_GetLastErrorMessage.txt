@@ -1,0 +1,16 @@
+
+_WinAPI_GetLastErrorMessage
+
+Returns the calling threads last error message
+
+#Include 
+_WinAPI_GetLastErrorMessage()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Last error message
+Ошибка:	set @error
+
+---  Смотрите также  ---
+_WinAPI_GetLastError

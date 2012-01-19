@@ -1,0 +1,21 @@
+
+_GUICtrlListView_GetSelectedColumn
+
+Возвращает индекс выделенной колонки
+
+#Include 
+_GUICtrlListView_GetSelectedColumn($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает индекс выделенной колонки
+Ошибка:	Возвращает -1
+
+---  Примечания  ---
+Минимальная ОС - Windows XP.
+
+---  Смотрите также  ---
+_GUICtrlListView_SetSelectedColumn

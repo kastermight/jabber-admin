@@ -1,0 +1,21 @@
+
+_GUICtrlListView_Destroy
+
+Удаляет ListView
+
+#Include 
+_GUICtrlListView_Destroy(ByRef $hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True, устанавливает дескриптор в 0
+Ошибка:	Возвращает False
+
+---  Примечания  ---
+Ограничение, используется только для ListView созданного функцией _GUICtrlListView_Create
+
+---  Смотрите также  ---
+_GUICtrlListView_Create

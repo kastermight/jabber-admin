@@ -1,0 +1,23 @@
+
+_GUICtrlToolbar_SetExtendedStyle
+
+Sets the extended styles control
+
+#Include 
+_GUICtrlToolbar_SetExtendedStyle($hWnd, $iStyle)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iStyle
+	Control extended styles. Can be one or more of the following:
+		$TBSTYLE_EX_DRAWDDARROWS - Allows buttons to have a separate dropdown arrow
+		$TBSTYLE_EX_MIXEDBUTTONS - Allows mixing buttons with text and images
+		$TBSTYLE_EX_HIDECLIPPEDBUTTONS - Hides partially clipped buttons
+		$TBSTYLE_EX_DOUBLEBUFFER - Requires the toolbar to be double buffered
+
+---  Таблица возвращаемых значений  ---
+Успех: The previous extended styles
+
+---  Смотрите также  ---
+_GUICtrlToolbar_GetExtendedStyle

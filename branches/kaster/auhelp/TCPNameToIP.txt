@@ -1,0 +1,21 @@
+
+TCPNameToIP
+
+Converts an Internet name to IP address.
+
+TCPNameToIP ( name )
+
+---  Таблица параметров  ---
+name
+	String containing an Internet name.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns string containing IP address corresponding to the name.
+Ошибка:	Returns "" and set @error.
+@error:	windows API WSAGetError return value (see MSDN).
+
+---  Примечания  ---
+TCPStartup is needed before this call.
+
+---  Смотрите также  ---
+TCPStartup

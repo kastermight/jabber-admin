@@ -1,0 +1,19 @@
+
+_GUICtrlToolbar_IsButtonPressed
+
+Indicates that the button is being clicked
+
+#Include 
+_GUICtrlToolbar_IsButtonPressed($hWnd, $iCommandID)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+
+---  Таблица возвращаемых значений  ---
+True: Button is pressed
+False: Button is not pressed
+
+---  Смотрите также  ---

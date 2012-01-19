@@ -1,0 +1,22 @@
+
+_GUICtrlComboBoxEx_SetItemParam
+
+Sets the value specific to the item
+
+#Include 
+_GUICtrlComboBoxEx_SetItemParam($hWnd, $iIndex, $iParam)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based index of the item
+$iParam
+	Item specific value
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_GetItemParam

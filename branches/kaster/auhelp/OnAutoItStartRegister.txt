@@ -1,0 +1,10 @@
+
+#OnAutoItStartRegister
+
+Регистрирует функцию для её выполнения при запуске AutoIt.
+
+#OnAutoItStartRegister "function"
+
+---  Таблица параметров  ---
+function
+	Имя вызываемой функции.

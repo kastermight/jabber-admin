@@ -1,0 +1,22 @@
+
+StringToBinary
+
+Преобразует строку в бинарные данные.
+
+StringToBinary ( expression [, flag] )
+
+---  Таблица параметров  ---
+expression
+	Строка для преобразования.
+flag
+	[опционально] тип преобразования:
+	  flag = 1 (по умолчанию), ANSI
+	  flag = 2, UTF16 Little Endian
+	  flag = 3, UTF16 Big Endian
+	  flag = 4, UTF8
+
+---  Таблица возвращаемых значений  ---
+Возвращает бинарный вариант.
+
+---  Смотрите также  ---
+Binary, BinaryToString, IsBinary, String

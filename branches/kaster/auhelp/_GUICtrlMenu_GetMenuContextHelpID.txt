@@ -1,0 +1,17 @@
+
+_GUICtrlMenu_GetMenuContextHelpID
+
+Retrieves the context help identifier
+
+#Include 
+_GUICtrlMenu_GetMenuContextHelpID($hMenu)
+
+---  Таблица параметров  ---
+$hMenu
+	Handle of the menu
+
+---  Таблица возвращаемых значений  ---
+Returns the Context help identifier
+
+---  Смотрите также  ---
+_GUICtrlMenu_SetMenuContextHelpID

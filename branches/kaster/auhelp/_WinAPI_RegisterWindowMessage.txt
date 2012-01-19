@@ -1,0 +1,25 @@
+
+_WinAPI_RegisterWindowMessage
+
+Defines a new window message that is guaranteed to be unique throughout the system
+
+#Include 
+_WinAPI_RegisterWindowMessage($sMessage)
+
+---  Таблица параметров  ---
+$sMessage
+	String that specifies the message to be registered
+
+---  Таблица возвращаемых значений  ---
+Успех:	A message identifier in the range 0xC000 through 0xFFFF
+Ошибка:	0
+
+---  Примечания  ---
+The RegisterWindowMessage function is used to register messages for communicating between two cooperating
+applications. If two different applications register the same message string, the applications return the same
+message value. The message remains registered until the session ends.
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- RegisterWindowMessage

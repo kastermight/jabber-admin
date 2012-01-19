@@ -1,0 +1,22 @@
+
+_GUICtrlStatusBar_SetBkColor
+
+Sets the background color
+
+#Include 
+_GUICtrlStatusBar_SetBkColor($hWnd, $iColor)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iColor
+	New background color. Specify the CLR_DEFAULT value to cause the status bar to use its default
+		background color.
+
+---  Таблица возвращаемых значений  ---
+Returns the previous background color, or CLR_DEFAULT if the background color is the default color
+
+---  Примечания  ---
+Returns RGB COLORREF color, color passed in must be BGR Hex color or RGB COLORREF
+
+---  Смотрите также  ---

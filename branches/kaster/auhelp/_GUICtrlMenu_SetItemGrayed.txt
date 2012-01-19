@@ -1,0 +1,28 @@
+
+_GUICtrlMenu_SetItemGrayed
+
+Sets the grayed state of a menu item
+
+#Include 
+_GUICtrlMenu_SetItemGrayed($hMenu, $iItem[, $fState = True[, $fByPos = True]])
+
+---  Таблица параметров  ---
+$hMenu
+	Menu handle
+$iItem
+	Identifier or position of the menu item
+$fState
+	[опционально] Item state to set:
+		 True - State is enabled
+		False - State is disabled
+$fByPos
+	[опционально] Menu identifier flag:
+		 True - $iItem is a zero based item position
+		False - $iItem is a menu item identifier
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlMenu_GetItemGrayed

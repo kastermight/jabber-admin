@@ -1,0 +1,27 @@
+
+_GUICtrlButton_SetImage
+
+Sets the check state of a radio button or check box
+
+#Include 
+_GUICtrlButton_SetImage($hWnd, $sImageFile[, $nIconId = -1[, $fLarge = False]])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$sImageFile
+	File containing the Image
+$nIconId
+	[опционально] Specifies the zero-based index of the icon to extract
+$fLarge
+	[опционально] Extract Large Icon
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlButton_GetImage
+
+
+---  Таблица  --- BM_SETIMAGE

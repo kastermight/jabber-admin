@@ -1,0 +1,32 @@
+
+_GUICtrlComboBoxEx_SetItem
+
+Sets some or all of a item's attributes
+
+#Include 
+_GUICtrlComboBoxEx_SetItem($hWnd, $sText[, $iIndex = 0[, $iImage = -1[, $iSelectedImage = -1[, $iOverlayImage = -1[, $iIndent = -1[, $iParam = -1]]]]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$sText
+	Item text
+$iIndex
+	[опционально] The zero-based index of the item
+$iImage
+	[опционально] Zero based index of the item's icon in the control's image list
+$iSelectedImage
+	[опционально] Zero based index of the item's icon in the control's image list
+$iOverlayImage
+	[опционально] Zero based index of the item's icon in the control's image list
+$iIndent
+	[опционально] Number of image widths to indent the item. A single indentation equals the width of an image.
+$iParam
+	[опционально] Value specific to the item
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_GetItem, _GUICtrlComboBoxEx_SetItemEx

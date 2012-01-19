@@ -1,0 +1,11 @@
+
+#NoAutoIt3Execute
+
+Указывает, что текущий скомпилированный скрипт не может запускаться с ключами /AutoIt3ExecuteLine и /AutoIt3ExecuteScript.
+
+#NoAutoIt3Execute
+
+None.
+
+---  Примечания  ---
+Запускаемый скомпилированный скрипт завершается с кодом выхода = -1, если был использован ключ /AutoIt3ExecuteLine или /AutoIt3ExecuteScript.

@@ -1,0 +1,27 @@
+
+TCPRecv
+
+Receives data from a connected socket.
+
+TCPRecv ( mainsocket, maxlen [, flag] )
+
+---  Таблица параметров  ---
+mainsocket
+	The connected socket identifier (SocketID) as returned by a TCPAccept or a TCPConnect function.
+maxlen
+	max # of characters to receive.
+flag
+	[опционально] Forces the function to return binary data if set to 1 (default is 0, and will auto detect between binary/string).
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns binary/string sent by the connected socket.
+Ошибка:	Returns "" and set @error
+@error:	-1 Socket error
+	windows API WSAGetError return value (see MSDN).
+
+---  Примечания  ---
+For backwards compatibility reasons this function will try to return strings by default. If null (0x00) characters are received then the return value will be a binary type.
+To force the function to always return binary data (the most sensible option) then use the "flag" parameter set to 1.
+
+---  Смотрите также  ---
+BinaryLen, BinaryMid, TCPStartup, TCPAccept, TCPConnect, TCPTimeout (Option)

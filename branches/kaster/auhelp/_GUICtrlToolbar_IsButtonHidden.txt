@@ -1,0 +1,19 @@
+
+_GUICtrlToolbar_IsButtonHidden
+
+Indicates whether the specified button is hidden
+
+#Include 
+_GUICtrlToolbar_IsButtonHidden($hWnd, $iCommandID)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+
+---  Таблица возвращаемых значений  ---
+True: Button is hidden
+False: Button is not hidden
+
+---  Смотрите также  ---

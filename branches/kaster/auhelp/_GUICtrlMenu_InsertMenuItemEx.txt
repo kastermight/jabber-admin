@@ -1,0 +1,29 @@
+
+_GUICtrlMenu_InsertMenuItemEx
+
+Inserts a new menu item at the specified position in a menu
+
+#Include 
+_GUICtrlMenu_InsertMenuItemEx($hMenu, $iIndex, ByRef $tMenu[, $fByPos = True])
+
+---  Таблица параметров  ---
+$hMenu
+	Handle of the menu
+$iIndex
+	Position of the menu item before which to insert the new item
+$tMenu
+	$tagMENUITEMINFO structure
+$fByPos
+	[опционально] Menu identifier flag:
+		 True - $iIndex is a zero based item position
+		False - $iIndex is a menu item identifier
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlMenu_InsertMenuItem, $tagMENUITEMINFO
+
+
+---  Таблица  --- InsertMenuItem

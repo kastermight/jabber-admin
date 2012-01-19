@@ -1,0 +1,18 @@
+
+_GUICtrlToolbar_SetWindowTheme
+
+Sets the visual style
+
+#Include 
+_GUICtrlToolbar_SetWindowTheme($hWnd, $sTheme)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$sTheme
+	String that contains the toolbar visual style
+
+---  Примечания  ---
+Minimum OS - Windows XP.
+
+---  Смотрите также  ---

@@ -1,0 +1,21 @@
+
+_GUICtrlMenu_DestroyMenu
+
+Destroys the specified menu and frees any memory that the menu occupies
+
+#Include 
+_GUICtrlMenu_DestroyMenu($hMenu)
+
+---  Таблица параметров  ---
+$hMenu
+	Menu handle
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlMenu_DeleteMenu, _GUICtrlMenu_CreateMenu, _GUICtrlMenu_CreatePopup
+
+
+---  Таблица  --- DestroyMenu

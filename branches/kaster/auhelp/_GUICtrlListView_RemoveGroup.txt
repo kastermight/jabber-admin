@@ -1,0 +1,23 @@
+
+_GUICtrlListView_RemoveGroup
+
+Удаляет группу из ListView
+
+#Include 
+_GUICtrlListView_RemoveGroup($hWnd, $iGroupID)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iGroupID
+	ID, который определяет удаляемую группу
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает индекс группы
+Ошибка:	Возвращает -1
+
+---  Примечания  ---
+Минимальная ОС - Windows XP.
+
+---  Смотрите также  ---
+_GUICtrlListView_RemoveAllGroups

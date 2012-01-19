@@ -1,0 +1,22 @@
+
+_GUICtrlRebar_SetBandLength
+
+Set Application-defined value
+
+#Include 
+_GUICtrlRebar_SetBandLength($hWnd, $iIndex, $icx)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+$icx
+	Length of the band, in pixels
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetBandLength

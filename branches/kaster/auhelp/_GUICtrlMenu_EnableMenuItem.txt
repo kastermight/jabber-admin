@@ -1,0 +1,31 @@
+
+_GUICtrlMenu_EnableMenuItem
+
+Enables, disables, or grays the specified menu item
+
+#Include 
+_GUICtrlMenu_EnableMenuItem($hMenu, $iItem[, $iState = 0[, $fByPos = True]])
+
+---  Таблица параметров  ---
+$hMenu
+	Menu handle
+$iItem
+	Identifier or position of the menu item
+$iState
+	[опционально] Indicates whether the menu item is enabled, disabled, or grayed:
+		0 - Enabled
+		1 - Grayed
+		2 - Disabled
+$fByPos
+	[опционально] Menu identifier flag:
+		 True - $iItem is a zero based item position
+		False - $iItem is a menu item identifier
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- EnableMenuItem

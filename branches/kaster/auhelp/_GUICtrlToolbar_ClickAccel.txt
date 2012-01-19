@@ -1,0 +1,26 @@
+
+_GUICtrlToolbar_ClickAccel
+
+Clicks a specific button using it's accelerator
+
+#Include 
+_GUICtrlToolbar_ClickAccel($hWnd, $cAccel[, $sButton = "left"[, $fMove = False[, $iClicks = 1[, $iSpeed = 1]]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$cAccel
+	Button accelerator
+$sButton
+	[опционально] Button to click
+$fMove
+	[опционально] Mouse movement flag:
+		 True - Mouse will be moved
+		False - Mouse will not be moved
+$iClicks
+	[опционально] Number of clicks
+$iSpeed
+	[опционально] Mouse movement speed
+
+---  Смотрите также  ---
+_GUICtrlToolbar_ClickButton, _GUICtrlToolbar_ClickIndex

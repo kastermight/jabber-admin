@@ -1,0 +1,24 @@
+
+TCPListen
+
+Creates a socket listening for an incoming connection.
+
+TCPListen ( IPAddr, port [, MaxPendingConnection] )
+
+---  Таблица параметров  ---
+IPAddr
+	Internet Protocol dotted address(IpV4) as "192.162.1.1".
+port
+	port on which the created socket will be connected.
+MaxPendingConnection
+	[опционально] Maximum length of the queue of pending connections. By default the maximum reasonable value will be set.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns main socket identifier.
+Ошибка:	Returns -1 or 0 and set @error.
+@error:	1 IPAddr is incorrect.
+	2 port  is incorrect.
+	windows API WSAGetError return value (see MSDN).
+
+---  Смотрите также  ---
+TCPStartup, TCPConnect, TCPAccept, TCPTimeout (Option), TCPCloseSocket, TCPSend, TCPShutdown

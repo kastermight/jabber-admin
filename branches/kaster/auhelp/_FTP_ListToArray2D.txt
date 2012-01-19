@@ -1,0 +1,31 @@
+
+_FTP_ListToArray2D
+
+Возвращает имена и размер файлов текущего удалённого каталога.
+
+#Include 
+_Ftp_ListToArray2D($l_FTPSession [, $Return_Type = 0 [, $l_Flags = 0 [, $l_Context]]])
+
+---  Таблица параметров  ---
+$l_FTPSession
+	Указатель возвращённый функцией _FTP_Connect().
+$Return_type
+	[опционально] 0 = файлы и каталоги, 1 = каталоги, 2 = файлы.
+$l_Flags
+	[опционально] Смотрите _FTP_FindFileFirst().
+$l_Context
+	[опционально] A variable that contains the application-defined value that associates this search with any application data.
+	This is only used if the application has already called _FTP_SetStatusCallback() to set up a status callback function.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает двумерный массив с именами и размерами. Array[0][0] содержит количество найденных элементов.
+Ошибка:	Array[0][0] = 0
+
+---  Примечания  ---
+Array[0][0] = количество найденных элементов
+
+Array[x][0] Имя файла
+Array[x][1] Размер файла
+
+---  Смотрите также  ---
+_FTP_Connect, _FTP_SetStatusCallback

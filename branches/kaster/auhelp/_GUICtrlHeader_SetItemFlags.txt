@@ -1,0 +1,26 @@
+
+_GUICtrlHeader_SetItemFlags
+
+Returns the item flag information
+
+#Include 
+_GUICtrlHeader_SetItemFlags($hWnd, $iIndex, $iFlags)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Zero based item index
+$iFlags
+	Item flag information. Can be a combination of the following:
+		1 - Displays an image from an image list
+		2 - Text reads in the opposite direction from the text in the parent window
+		4 - Draws a down arrow on this item
+		8 - Draws a up arrow on this item
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlHeader_GetItemFlags

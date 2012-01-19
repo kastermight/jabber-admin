@@ -1,0 +1,17 @@
+
+_GUICtrlListView_GetExtendedListViewStyle
+
+Возвращает расширенные стили, используемые в настоящий момент
+
+#Include 
+_GUICtrlListView_GetExtendedListViewStyle($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Возвращает DWORD, представляющий стили, используемые в настоящий момент для данного ListView
+
+---  Смотрите также  ---
+_GUICtrlListView_SetExtendedListViewStyle

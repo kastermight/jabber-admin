@@ -1,0 +1,14 @@
+
+_WinAPI_ShowMsg
+
+Отображает информационное окно сообщения
+
+#Include 
+_WinAPI_ShowMsg($sText)
+
+---  Таблица параметров  ---
+$sText
+	Текст информации
+
+---  Смотрите также  ---
+_WinAPI_ShowError, _WinAPI_MsgBox

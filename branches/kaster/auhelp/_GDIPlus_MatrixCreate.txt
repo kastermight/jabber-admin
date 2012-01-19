@@ -1,0 +1,22 @@
+
+_GDIPlus_MatrixCreate
+
+Creates and initializes a Matrix object that represents the identity matrix
+
+#Include 
+_GDIPlus_MatrixCreate()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to a Matrix object
+Ошибка:	0
+
+---  Примечания  ---
+When you are done with the matrix, call _GDIPlus_MatrixDispose to release the resources
+
+---  Смотрите также  ---
+_GDIPlus_MatrixDispose
+
+
+---  Таблица  --- GdipCreateMatrix

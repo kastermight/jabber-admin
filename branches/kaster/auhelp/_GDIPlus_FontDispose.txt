@@ -1,0 +1,21 @@
+
+_GDIPlus_FontDispose
+
+Release a Font object
+
+#Include 
+_GDIPlus_FontDispose($hFont)
+
+---  Таблица параметров  ---
+$hFont
+	Handle to a Font object
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GDIPlus_FontCreate
+
+
+---  Таблица  --- GdipDeleteFont

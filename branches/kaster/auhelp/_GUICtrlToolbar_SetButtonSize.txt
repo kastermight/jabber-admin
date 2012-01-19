@@ -1,0 +1,26 @@
+
+_GUICtrlToolbar_SetButtonSize
+
+Sets the size of the buttons to be added to a toolbar
+
+#Include 
+_GUICtrlToolbar_SetButtonSize($hWnd, $iHeight, $iWidth)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iHeight
+	Height, in pixels, of the buttons
+$iWidth
+	Width, in pixels, of the buttons
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Примечания  ---
+The size can be set only before adding any buttons to the toolbar. If an application does not explicitly set
+the button size, the size defaults to 24 by 22 pixels.
+
+---  Смотрите также  ---
+_GUICtrlToolbar_GetButtonSize

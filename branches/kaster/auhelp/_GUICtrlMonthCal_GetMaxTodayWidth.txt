@@ -1,0 +1,16 @@
+
+_GUICtrlMonthCal_GetMaxTodayWidth
+
+Retrieves the maximum width of the "today" string in a month calendar control
+
+#Include 
+_GUICtrlMonthCal_GetMaxTodayWidth($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: The width of the "today" string, in pixels
+
+---  Смотрите также  ---

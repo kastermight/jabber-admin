@@ -1,0 +1,20 @@
+
+_GUICtrlListBox_GetSel
+
+Возвращает состояние выбора пункта
+
+#Include 
+_GUICtrlListBox_GetSel($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта, отсчёт от 0
+
+---  Таблица возвращаемых значений  ---
+True: пункт выбран
+False: пункт не выбран
+
+---  Смотрите также  ---
+_GUICtrlListBox_SetSel

@@ -1,0 +1,21 @@
+
+_Date_Time_SetLocalTime
+
+Sets the current local date and time
+
+#Include 
+_Date_Time_SetLocalTime($pSystemTime)
+
+---  Таблица параметров  ---
+$pSystemTime
+	Pointer to a $tagSYSTEMTIME structure that contains the new local date and time
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+The SetLocalTime function enables the SE_SYSTEMTIME_NAME privilege before changing the local time.
+
+---  Смотрите также  ---
+_Date_Time_GetLocalTime, $tagSYSTEMTIME

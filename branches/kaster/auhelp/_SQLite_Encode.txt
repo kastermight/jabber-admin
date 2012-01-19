@@ -1,0 +1,23 @@
+
+_SQLite_Encode
+
+Encodes strings or binary data for use in SQLite query's
+
+#include 
+_SQLite_Encode ( $vData )
+
+---  Таблица параметров  ---
+$vData
+	Data To be encoded (String, Number or Binary)
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns encoded string
+Ошибка:	Returns empty string and sets @error to 1
+
+---  Примечания  ---
+The encoded string is already wrapped with single quotes.
+For example chr(0) & chr(1) would look like X'0001'
+The encoded string is decoded by Sqlite which stores the data in binary state.
+
+---  Смотрите также  ---
+_SQLite_Escape

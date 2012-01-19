@@ -1,0 +1,25 @@
+
+_GUICtrlTreeView_SetCheckedByIndex
+
+Sets whether an item has it's checkbox checked or not by it's index
+
+#Include 
+_GUICtrlTreeView_SetCheckedByIndex($hWnd, $hItem, $iIndex[, $fCheck = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hItem
+	Handle to the item
+$iIndex
+	Zero based index into $hItem list of items
+$fCheck
+	[опционально] Value to set checked state to:
+		 True - Checked
+		False - Not checked
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---

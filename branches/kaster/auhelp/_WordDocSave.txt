@@ -1,0 +1,26 @@
+
+_WordDocSave
+
+Saves a previously opened document
+
+#include  
+_WordDocSave ( $o_object )
+
+---  Таблица параметров  ---
+$o_object
+	Object variable of a Word.Application, document object
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns 1
+Ошибка:	Returns 0 and sets @ERROR
+@Error:	$_WordStatus_Success = No Error
+	$_WordStatus_GeneralError = General Error
+	$_WordStatus_InvalidDataType = Invalid Data Type
+	$_WordStatus_InvalidObjectType = Invalid Object Type
+@Extended:	Contains invalid parameter number
+
+---  Примечания  ---
+If a document hasn't been saved before, the Save As dialog box prompts the user for a file name.
+
+---  Смотрите также  ---
+_WordDocAdd, _WordDocClose, _WordDocOpen, _WordDocSaveAs

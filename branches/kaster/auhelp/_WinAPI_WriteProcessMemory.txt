@@ -1,0 +1,31 @@
+
+_WinAPI_WriteProcessMemory
+
+Writes memory in a specified process
+
+#Include 
+_WinAPI_WriteProcessMemory($hProcess, $pBaseAddress, $pBuffer, $iSize, ByRef $iWritten [, $sBuffer = "ptr"])
+
+---  Таблица параметров  ---
+$hProcess
+	Identifies an open handle to a process whose memory is to be written to
+$pBaseAddress
+	Points to the base address in the specified process to be written to
+$pBuffer
+	Points to the buffer that supplies data to be written into the address space
+$iSize
+	Specifies the number of bytes to write into the specified process
+$iWritten
+	The actual number of bytes transferred into the specified process
+$sBuffer
+	[опционально] Contains the data type that $pBuffer represents
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_WinAPI_ReadProcessMemory
+
+
+---  Таблица  --- WriteProcessMemory

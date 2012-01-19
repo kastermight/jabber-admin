@@ -1,0 +1,23 @@
+
+_WinAPI_GetTextExtentPoint32
+
+Computes the width and height of the specified string of text
+
+#Include 
+_WinAPI_GetTextExtentPoint32($hDC, $sText)
+
+---  Таблица параметров  ---
+$hDC
+	Identifies the device contex
+$sText
+	String of text
+
+---  Таблица возвращаемых значений  ---
+Успех:	$tagSIZE structure in which the dimensions of the string are to be returned
+Ошибка:	set @error
+
+---  Смотрите также  ---
+$tagSIZE
+
+
+---  Таблица  --- GetTextExtentPoint32

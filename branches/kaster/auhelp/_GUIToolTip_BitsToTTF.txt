@@ -1,0 +1,17 @@
+
+_GUIToolTip_BitsToTTF
+
+Encode user bit flags to $TTF_ flags
+
+#Include 
+_GUIToolTip_BitsToTTF($iFlags)
+
+---  Таблица параметров  ---
+$iFlags
+	User bit flags
+
+---  Таблица возвращаемых значений  ---
+Успех: $TTF_ flags
+
+---  Смотрите также  ---
+_GUIToolTip_TTFToBits

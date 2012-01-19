@@ -1,0 +1,29 @@
+
+_GUICtrlTreeView_AddChildFirst
+
+Adds a new item
+
+#Include 
+_GUICtrlTreeView_AddChildFirst($hWnd, $hParent, $sText[, $iImage = -1[, $iSelImage = -1]])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hParent
+	Parent item
+$sText
+	Text of the item
+$iImage
+	[опционально] Zero based index of the item's icon in the control's image list
+$iSelImage
+	[опционально] Zero based index of the item's icon in the control's image list
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle to the new item
+Ошибка:	0
+
+---  Примечания  ---
+The item is added as the first child of $hParent. Items that appear after the added item are moved down.
+
+---  Смотрите также  ---
+_GUICtrlTreeView_AddChild

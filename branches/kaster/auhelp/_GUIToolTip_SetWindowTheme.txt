@@ -1,0 +1,15 @@
+
+_GUIToolTip_SetWindowTheme
+
+Sets the visual style
+
+#Include 
+_GUIToolTip_SetWindowTheme($hWnd, $sStyle)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$sStyle
+	String that contains the ToolTip visual style to set
+
+---  Смотрите также  ---

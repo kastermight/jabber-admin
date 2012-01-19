@@ -1,0 +1,20 @@
+
+_GDIPlus_EncodersGetCLSID
+
+Return the encoder CLSID for a specific image file type
+
+#Include 
+_GDIPlus_EncodersGetCLSID($sFileExt)
+
+---  Таблица параметров  ---
+$sFileExt
+	File extension to search for (BMP, JPG, TIF, etc.)
+
+---  Таблица возвращаемых значений  ---
+Успех:	CLSID of the encoder in string format
+Ошибка:	Blank string
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GdipGetImageEncoders

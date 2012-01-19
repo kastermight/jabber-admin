@@ -1,0 +1,41 @@
+
+_FTP_FileOpen
+
+Инициировать доступ к удаленному файлу на FTP сервере для чтения или записи.
+
+#Include 
+_FTP_FileOpen($hConnect, $lpszFileName [, $dwAccess = 0x80000000 [, $dwFlags = 2 [, $dwContext = 0]]])
+
+---  Таблица параметров  ---
+$hConnect
+	Указатель возвращённый функцией _FTP_Connect().
+$lpszFileName
+	Путь к файлу на FTP сервере.
+$dwAccess
+	[опционально] Локальные атрибуты (по умолчанию $GENERIC_READ).
+$dwFlags
+	[опционально] Укажите условия, при которых происходит передача данных. В параметр необходимо выбрать один тип передачи и любой из флагов, указывающий как будет происходить управление кэшированием файла.
+	Тип передачи может быть одним из следующих значений:
+		$FTP_TRANSFER_TYPE_ASCII - Передаёт файл используя FTP's ASCII (Type A). Управляющая и форматирующая информация преобразуется в локальные эквиваленты.
+		$FTP_TRANSFER_TYPE_BINARY - Передаёт файл используя FTP's Image (Type I). Файл передаётся как есть, без изменений. Этот способ передачи по умолчанию.
+		$FTP_TRANSFER_TYPE_UNKNOWN - По умолчанию - $FTP_TRANSFER_TYPE_BINARY.
+		$INTERNET_FLAG_TRANSFER_ASCII - Передаёт файл как ASCII.
+		$INTERNET_FLAG_TRANSFER_BINARY - Передаёт файл как бинарный.
+	Следующие значения используются для управления кэшированием файла. Параметр может содержать один или несколько следующих значений:
+		$INTERNET_FLAG_HYPERLINK - Заставляет перегрузить если не было времени истечения (Expires) и времени последней модификации (LastModified) возвращаемое сервером, при определении того, чтобы перезагрузить элемент по сети.
+		$INTERNET_FLAG_NEED_FILE - Создаёт временный файл, если файл не может быть кэширован.
+		$INTERNET_FLAG_RELOAD - Заставляет загрузить файл, объект или список каталогов с сервера, а не из кэша.
+		$INTERNET_FLAG_RESYNCHRONIZE - Перезагружает HTTP ресурсы, если ресурс был изменен с момента последней загрузки. Все ресурсы FTP и Gopher перезагружаются.
+$dwContext
+	[опционально] A variable that contains the application-defined value that associates this search with any application data.
+	This is only used if the application has already called _FTP_SetStatusCallback() to set up a status callback function.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает указатель файла с FTP сервера для чтения и записи функцией _FTP_FileRead()
+Ошибка:	Возвращает 0 и устанавливает @error не равно 0
+
+---  Смотрите также  ---
+_FTP_FileClose, _FTP_FileRead, _FTP_SetStatusCallback, _FTP_FileGet, _FTP_FilePut
+
+
+---  Таблица  --- FtpOpenFile

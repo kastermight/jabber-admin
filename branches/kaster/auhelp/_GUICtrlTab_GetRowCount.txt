@@ -1,0 +1,19 @@
+
+_GUICtrlTab_GetRowCount
+
+Retrieves the current number of rows of tabs
+
+#Include 
+_GUICtrlTab_GetRowCount($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Number of rows of tabs
+
+---  Примечания  ---
+Only tab controls that have the $TCS_MULTILINE style can have multiple rows of tabs
+
+---  Смотрите также  ---

@@ -1,0 +1,20 @@
+
+_GUICtrlDTP_SetRangeEx
+
+Sets the current minimum and maximum allowable system times
+
+#Include 
+_GUICtrlDTP_SetRangeEx($hWnd, ByRef $tRange)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$tRange
+	$tagDTPRANGE structure
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlDTP_GetRangeEx, $tagDTPRANGE

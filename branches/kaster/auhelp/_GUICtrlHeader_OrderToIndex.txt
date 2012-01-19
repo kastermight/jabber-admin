@@ -1,0 +1,19 @@
+
+_GUICtrlHeader_OrderToIndex
+
+Retrieves an index value for an item based on its order
+
+#Include 
+_GUICtrlHeader_OrderToIndex($hWnd, $iOrder)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iOrder
+	Order in which the item appears within the header control, from left to right
+
+---  Таблица возвращаемых значений  ---
+Успех: Returns the item index
+Ошибка: iOrder
+
+---  Смотрите также  ---

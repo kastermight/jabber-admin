@@ -1,0 +1,23 @@
+
+_WinAPI_LoadBitmap
+
+Loads the specified bitmap resource from a module's executable file
+
+#Include 
+_WinAPI_LoadBitmap($hInstance, $sBitmap)
+
+---  Таблица параметров  ---
+$hInstance
+	Handle to the instance of the module whose executable file contains the bitmap to be loaded
+$sBitmap
+	The name of the bitmap resource to be loaded. Alternatively this can consist of the resource
+		identifier in the low order word and 0 in the high order word.
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle to the specified bitmap
+Ошибка:	0
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- LoadBitmap

@@ -1,0 +1,20 @@
+
+_GUICtrlTreeView_GetFirstChild
+
+Возвращает первый дочерний пункт указанного пункта
+
+#Include 
+_GUICtrlTreeView_GetFirstChild($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$hItem
+	Дескриптор пункта
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает дескриптор первого дочернего пункта
+Ошибка:	Возвращает 0
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetLastChild, _GUICtrlTreeView_GetNextChild, _GUICtrlTreeView_GetPrevChild

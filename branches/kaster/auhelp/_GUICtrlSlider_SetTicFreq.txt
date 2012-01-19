@@ -1,0 +1,19 @@
+
+_GUICtrlSlider_SetTicFreq
+
+Sets the interval frequency for tick marks in a slider
+
+#Include 
+_GUICtrlSlider_SetTicFreq($hWnd, $iFreg)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iFreg
+	Frequency of the tick marks.
+
+---  Примечания  ---
+The slider must have the $TBS_AUTOTICKS style to use this function
+
+---  Смотрите также  ---
+_GUICtrlSlider_GetNumTics, _GUICtrlSlider_ClearTics

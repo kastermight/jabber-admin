@@ -1,0 +1,20 @@
+
+_GUICtrlButton_SetText
+
+Sets the text of the button
+
+#Include 
+_GUICtrlButton_SetText($hWnd, $sText)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$sText
+	New text
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlButton_GetText

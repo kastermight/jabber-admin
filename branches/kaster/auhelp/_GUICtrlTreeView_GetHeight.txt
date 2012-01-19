@@ -1,0 +1,17 @@
+
+_GUICtrlTreeView_GetHeight
+
+Возвращает текущую высоту каждого пункта
+
+#Include 
+_GUICtrlTreeView_GetHeight($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Возвращает высоту пункта в пикселях
+
+---  Смотрите также  ---
+_GUICtrlTreeView_SetHeight

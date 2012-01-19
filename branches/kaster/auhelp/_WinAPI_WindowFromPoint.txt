@@ -1,0 +1,25 @@
+
+_WinAPI_WindowFromPoint
+
+Retrieves the handle of the window that contains the specified point
+
+#Include 
+_WinAPI_WindowFromPoint(ByRef $tPoint)
+
+---  Таблица параметров  ---
+$tPoint
+	$tagPOINT structure that defines the point to be checked
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle of the window that contains the point
+Ошибка:	0
+
+---  Примечания  ---
+The WindowFromPoint function does not retrieve the handle of a hidden or disabled window, even if the point is
+within the window.
+
+---  Смотрите также  ---
+$tagPOINT
+
+
+---  Таблица  --- WindowFromPoint

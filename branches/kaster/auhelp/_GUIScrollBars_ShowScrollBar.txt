@@ -1,0 +1,32 @@
+
+_GUIScrollBars_ShowScrollBar
+
+Shows or hides the specified scroll bar
+
+#Include 
+_GUIScrollBars_ShowScrollBar($hWnd, $nBar[, $fShow = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the window
+$nBar
+	Specifies the type of scroll bar. This parameter can be one of the following values:
+		  $SB_BOTH - Shows or hides a window's standard horizontal and vertical scroll bars.
+		  $SB_CTL - Shows or hides a scroll bar control. The $hWnd parameter must be the handle to the scroll bar control.
+		  $SB_HORZ - Shows or hides a window's standard horizontal scroll bars.
+		  $SB_VERT - Shows or hides a window's standard vertical scroll bar.
+$fShow
+	[опционально] Specifies whether the scroll bar is shown or hidden
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+Above constants require ScrollBarConstants.au3
+
+---  Смотрите также  ---
+_GUIScrollBars_EnableScrollBar
+
+
+---  Таблица  --- ShowScrollBar

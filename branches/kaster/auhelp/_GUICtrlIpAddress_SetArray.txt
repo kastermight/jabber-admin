@@ -1,0 +1,20 @@
+
+_GUICtrlIpAddress_SetArray
+
+Устанавливает адрес в элемент IP address
+
+#Include 
+_GUICtrlIpAddress_SetArray($hWnd, $aAddress)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$aAddress
+	Массив следующего формата:
+		[0] - 1-ое поле адреса
+		[1] - 2-ое поле адреса
+		[2] - 3-е поле адреса
+		[3] - 4-ое поле адреса
+
+---  Смотрите также  ---
+_GUICtrlIpAddress_GetArray

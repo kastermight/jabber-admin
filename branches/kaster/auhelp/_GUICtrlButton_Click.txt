@@ -1,0 +1,21 @@
+
+_GUICtrlButton_Click
+
+Simulates the user clicking a button
+
+#Include 
+_GUICtrlButton_Click($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Примечания  ---
+If the button is in a dialog box and the dialog box is not active, the _GUICtrlButton_Click might fail.
+To ensure success in this situation, call the WinActivate function to activate the dialog box before sending
+the _GUICtrlButton_Click to the button.
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- BM_CLICK

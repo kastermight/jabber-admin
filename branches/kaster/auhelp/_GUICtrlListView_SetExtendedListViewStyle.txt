@@ -1,0 +1,41 @@
+
+_GUICtrlListView_SetExtendedListViewStyle
+
+Устанавливает расширенные стили
+
+#Include 
+_GUICtrlListView_SetExtendedListViewStyle($hWnd, $iExStyle[, $iExMask = 0])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iExStyle
+	Расширенные стили элемента ListView:
+		$LVS_EX_BORDERSELECT - Если этот стиль установлен, то у выбранного элемента изменяется цвет рамки, а не происходит выделение пункта
+		$LVS_EX_CHECKBOXES - Добавляет check-boxes для пунктов в элементе ListView
+		$LVS_EX_DOUBLEBUFFER - Перерисовка с помощью двойной буферизации, которая уменьшает мерцание
+		$LVS_EX_FLATSB - Плоская полоса прокрутки в элементе ListView
+		$LVS_EX_FULLROWSELECT - При клике пункта или подпункта, выделяется сам пункт и все его подпункты
+		$LVS_EX_GRIDLINES - Отображает сетку вокруг пунктов и подпунктов
+		$LVS_EX_HEADERDRAGDROP - Разрешает перетаскивание колонок за заголовок (drag-and-drop) изменяя их порядок
+		$LVS_EX_INFOTIP - Высылается уведомительное сообщение $LVN_GETINFOTIP перед отображением всплывающей подсказки (ToolTip)
+		$LVS_EX_LABELTIP - If not set, the unfolds partly hidden labels only for the large icon mode
+		$LVS_EX_MULTIWORKAREAS - The control will not autoarrange its icons until one or more work areas are defined
+		$LVS_EX_ONECLICKACTIVATE - Элемент высылает сообщение $LVN_ITEMACTIVATE , когда пользователь кликает на пункте
+		$LVS_EX_REGIONAL - Sets the control region to include only the item icons and text
+		$LVS_EX_SIMPLESELECT - In icon view moves the state image of the control to the top right
+		$LVS_EX_SUBITEMIMAGES - Позволяет отображать рисунки в подпунктах.
+		$LVS_EX_TRACKSELECT - Горячий выбор в элементе ListView. Это означает автоматическое выделение пункта при наведении на него курсора мыши и удержание в течение определенного периода времени
+		$LVS_EX_TWOCLICKACTIVATE - Элемент высылает сообщение $LVN_ITEMACTIVATE, когда пользователь выполняет двойной клик на пункте
+		$LVS_EX_UNDERLINECOLD - Causes non-hot items that may be activated to be displayed with underlined text
+		$LVS_EX_UNDERLINEHOT - Causes hot items that may be activated to be displayed with underlined text
+$iExMask
+	[опционально] Specifies which styles in $iExStyle are to be affected. This parameter can be a combination of
+		extended styles. Only the extended styles in $iExMask will be changed. All other styles will be maintained as
+		they are. If this parameter is zero, all of the styles in $iExStyle will be affected.
+
+---  Таблица возвращаемых значений  ---
+Возвращает комбинацию предыдущих расширенных стилей
+
+---  Смотрите также  ---
+_GUICtrlListView_GetExtendedListViewStyle

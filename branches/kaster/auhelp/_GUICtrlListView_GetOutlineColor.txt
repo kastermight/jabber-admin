@@ -1,0 +1,22 @@
+
+_GUICtrlListView_GetOutlineColor
+
+Возвращает цвет рамки пунктов ListView
+
+#Include 
+_GUICtrlListView_GetOutlineColor($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Возвращает цвет рамки пунктов ListView
+
+---  Примечания  ---
+Минимальная ОС - Windows XP.
+
+ListView должен иметь стиль $LVS_EX_BORDERSELECT
+
+---  Смотрите также  ---
+_GUICtrlListView_SetOutlineColor

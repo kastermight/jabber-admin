@@ -1,0 +1,25 @@
+
+_GUICtrlRebar_SetBandStyleUseChevron
+
+Set whether to display drop-down button
+
+#Include 
+_GUICtrlRebar_SetBandStyleUseChevron($hWnd, $iIndex[, $fEnabled = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+$fEnabled
+	[опционально] If True the item state is set, otherwise it is not set
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+Version 5.80. Show a chevron button if the band is smaller than cxIdeal
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetBandStyleUseChevron, _GUICtrlRebar_SetBandStyle

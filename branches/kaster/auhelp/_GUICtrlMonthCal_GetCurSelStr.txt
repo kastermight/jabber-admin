@@ -1,0 +1,19 @@
+
+_GUICtrlMonthCal_GetCurSelStr
+
+Retrieves the currently selected date in string format
+
+#Include 
+_GUICtrlMonthCal_GetCurSelStr($hWnd[, $sFormat = "%02d/%02d/%04d"])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$sFormat
+	[опционально] StringFormat string used to format the date
+
+---  Таблица возвращаемых значений  ---
+Успех: Date in the specified format
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_GetCurSel

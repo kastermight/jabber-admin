@@ -1,0 +1,24 @@
+
+_GUICtrlToolbar_HideButton
+
+Hides or shows the specified button
+
+#Include 
+_GUICtrlToolbar_HideButton($hWnd, $iCommandID[, $fHide = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+$fHide
+	[опционально] State indicator:
+		 True - Button will be hidden
+		False - Button will be made visible
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlToolbar_EnableButton

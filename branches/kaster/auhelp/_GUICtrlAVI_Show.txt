@@ -1,0 +1,19 @@
+
+_GUICtrlAVI_Show
+
+Show/Hide the AVI control
+
+#Include 
+_GUICtrlAVI_Show($hWnd, $iState)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iState
+	State of the AVI, can be the following values:
+
+---  Таблица возвращаемых значений  ---
+True: The control was previously visible
+False: The control was previously hidden
+
+---  Смотрите также  ---

@@ -1,0 +1,18 @@
+
+_GUICtrlComboBoxEx_EndUpdate
+
+Позволяет перерисовку, которая была отключена функцией BeginUpdate
+
+#Include 
+_GUICtrlComboBoxEx_EndUpdate($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех: Возвращает True
+Ошибка: Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_BeginUpdate

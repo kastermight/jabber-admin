@@ -1,0 +1,18 @@
+
+_WinAPI_GetCurrentProcess
+
+Returns the process handle of the calling process
+
+#Include 
+_WinAPI_GetCurrentProcess()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Returns the Process handle of the calling process
+
+---  Смотрите также  ---
+_WinAPI_GetCurrentProcessID
+
+
+---  Таблица  --- GetCurrentProcess

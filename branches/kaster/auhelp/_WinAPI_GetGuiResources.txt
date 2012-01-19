@@ -1,0 +1,23 @@
+
+_WinAPI_GetGuiResources
+
+Retrieves the count of handles to graphical user interface (GUI) objects in use by the specified process
+
+#Include 
+_WinAPI_GetGuiResources([$iflag = 1 [, $hProcess = -1}})
+
+---  Таблица параметров  ---
+$iflag
+	[опционально] 0 (Default) Return the count of GDI objects.
+		1 Return the count of USER objects.
+$hProcess
+	[опционально] A handle to the process. By default the current process.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns the count of handles to GUI objects in use by the process, according to $iFlag
+Ошибка:	Set @error
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GetGuiResources

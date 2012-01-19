@@ -1,0 +1,20 @@
+
+_GUICtrlTreeView_GetChecked
+
+Возвращает состояние Checkbox (галочки в квадрате)
+
+#Include 
+_GUICtrlTreeView_GetChecked($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$hItem
+	Дескриптор пункта
+
+---  Таблица возвращаемых значений  ---
+True:	пункт с галочкой
+False:	пункт без галочки
+
+---  Смотрите также  ---
+_GUICtrlTreeView_SetChecked

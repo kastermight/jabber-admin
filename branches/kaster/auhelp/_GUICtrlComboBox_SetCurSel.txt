@@ -1,0 +1,26 @@
+
+_GUICtrlComboBox_SetCurSel
+
+Select a string in the list of a ComboBox
+
+#Include 
+_GUICtrlComboBox_SetCurSel($hWnd[, $iIndex = -1])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	[опционально] Specifies the zero-based index of the string to select
+
+---  Таблица возвращаемых значений  ---
+Успех: The index of the item selected
+Ошибка: -1
+
+---  Примечания  ---
+If $iIndex is –1, any current selection in the list is removed and the edit control is cleared.
+
+If $iIndex is greater than the number of items in the list or if $iIndex is –1, the return value
+is -1 and the selection is cleared.
+
+---  Смотрите также  ---
+_GUICtrlComboBox_GetCurSel

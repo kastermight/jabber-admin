@@ -1,0 +1,17 @@
+
+_GUICtrlMonthCal_GetRange
+
+Retrieves the minimum and maximum allowable dates
+
+#Include 
+_GUICtrlMonthCal_GetRange($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: $tagMCRANGE structure
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_SetRange, _GUICtrlMonthCal_GetRangeMax, _GUICtrlMonthCal_GetRangeMaxStr, _GUICtrlMonthCal_GetRangeMin, _GUICtrlMonthCal_GetRangeMinStr, $tagMCRANGE

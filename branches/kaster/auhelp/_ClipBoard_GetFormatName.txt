@@ -1,0 +1,23 @@
+
+_ClipBoard_GetFormatName
+
+Retrieves the name of the specified registered format
+
+#Include 
+_ClipBoard_GetFormatName($iFormat)
+
+---  Таблица параметров  ---
+$iFormat
+	Specifies the type of format to be retrieved
+
+---  Таблица возвращаемых значений  ---
+Успех:	Format name
+Ошибка:	Blank string
+
+---  Примечания  ---
+The $iFormat parameter must not specify any of the predefined clipboard formats
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GetClipboardFormatNameA

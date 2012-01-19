@@ -1,0 +1,21 @@
+
+_Date_Time_SetSystemTime
+
+Sets the current system time and date, expressed in UTC
+
+#Include 
+_Date_Time_SetSystemTime($pSystemTime)
+
+---  Таблица параметров  ---
+$pSystemTime
+	Pointer to a $tagSYSTEMTIME structure that contains the new system date and time
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+The SetLocalTime function enables the SE_SYSTEMTIME_NAME privilege before changing the local time
+
+---  Смотрите также  ---
+_Date_Time_GetSystemTime, $tagSYSTEMTIME

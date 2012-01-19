@@ -1,0 +1,24 @@
+
+_WinAPI_GetMousePosY
+
+Returns the current mouse Y position
+
+#Include 
+_WinAPI_GetMousePosY([$fToClient = False [, $hWnd = 0]])
+
+---  Таблица параметров  ---
+$fToClient
+	[опционально] If True, the coordinates will be converted to client coordinates
+$hWnd
+	[опционально] Window handle used to convert coordinates if $fToClient is True
+
+---  Таблица возвращаемых значений  ---
+Успех:	Mouse Y position
+Ошибка:	set @error
+
+---  Примечания  ---
+This function takes into account the current MouseCoordMode setting when obtaining the mouse position. It
+will also convert screen to client coordinates based on the parameters passed.
+
+---  Смотрите также  ---
+_WinAPI_GetMousePos

@@ -1,0 +1,20 @@
+
+_GUICtrlRebar_DeleteBand
+
+Deletes a band from a rebar control
+
+#Include 
+_GUICtrlRebar_DeleteBand($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band to be deleted
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlRebar_AddBand, _GUICtrlRebar_AddToolBarBand

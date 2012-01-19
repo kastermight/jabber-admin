@@ -1,0 +1,17 @@
+
+_GUICtrlListView_GetTextBkColor
+
+Возвращает цвет фона текста элемента ListView
+
+#Include 
+_GUICtrlListView_GetTextBkColor($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Возвращает цвет фона текста элемента ListView
+
+---  Смотрите также  ---
+_GUICtrlListView_SetTextBkColor

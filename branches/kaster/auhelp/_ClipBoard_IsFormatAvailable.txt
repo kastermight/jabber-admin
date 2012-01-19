@@ -1,0 +1,20 @@
+
+_ClipBoard_IsFormatAvailable
+
+Determines whether the clipboard contains data in the specified format
+
+#Include 
+_ClipBoard_IsFormatAvailable($iFormat)
+
+---  Таблица параметров  ---
+$iFormat
+	Specifies a standard or registered clipboard format
+
+---  Таблица возвращаемых значений  ---
+Успех:	True: Clipboard contains data in the specified format
+Ошибка:	False: Clipboard does not contain data in the specified format
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- IsClipboardFormatAvailable

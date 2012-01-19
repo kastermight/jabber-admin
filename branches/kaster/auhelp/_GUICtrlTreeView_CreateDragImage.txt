@@ -1,0 +1,24 @@
+
+_GUICtrlTreeView_CreateDragImage
+
+Creates a dragging bitmap for the specified item
+
+#Include 
+_GUICtrlTreeView_CreateDragImage($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hItem
+	Handle to the item
+
+---  Таблица возвращаемых значений  ---
+Успех:	The image list handle to which the dragging bitmap was added
+Ошибка:	0
+
+---  Примечания  ---
+If you create the control without an associated image list, you cannot use this function to create the image
+to display during a drag operation. You must implement your own method of creating a drag cursor. You are
+responsible for destroying the image list when it is no longer needed.
+
+---  Смотрите также  ---

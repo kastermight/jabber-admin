@@ -1,0 +1,17 @@
+
+_GUICtrlTreeView_GetTextColor
+
+Возвращает цвет текста
+
+#Include 
+_GUICtrlTreeView_GetTextColor($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Возвращает шестнадцатеричный цвет текста в формате RGB
+
+---  Смотрите также  ---
+_GUICtrlTreeView_SetTextColor

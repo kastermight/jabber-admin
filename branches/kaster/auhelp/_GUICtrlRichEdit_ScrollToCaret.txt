@@ -1,0 +1,22 @@
+
+_GUICtrlRichEdit_ScrollToCaret
+
+Scrolls to show line on which caret (insertion point) is
+
+#Include 
+_GUICtrlRichEdit_ScrollToCaret($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False and sets @error
+@error:	101 - $hWnd is not a handle
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_ScrollLineOrPage, _GUICtrlRichEdit_ScrollLines
+
+
+---  Таблица  --- EM_SCROLLCARET

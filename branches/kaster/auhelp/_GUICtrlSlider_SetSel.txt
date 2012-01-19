@@ -1,0 +1,23 @@
+
+_GUICtrlSlider_SetSel
+
+Sets the starting and ending positions for the available selection range
+
+#Include 
+_GUICtrlSlider_SetSel($hWnd, $iMinimum, $iMaximum)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iMinimum
+	Starting logical position for the selection range
+$iMaximum
+	Ending logical position for the selection range
+
+---  Примечания  ---
+This function is ignored if the slider does not have the $TBS_ENABLESELRANGE style.
+_GUICtrlSlider_SetSel allows you to restrict the pointer to only a portion of the range
+available to the slider.
+
+---  Смотрите также  ---
+_GUICtrlSlider_GetSel, _GUICtrlSlider_SetSelEnd, _GUICtrlSlider_SetSelStart, _GUICtrlSlider_ClearSel

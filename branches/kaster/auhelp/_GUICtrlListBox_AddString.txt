@@ -1,0 +1,25 @@
+
+_GUICtrlListBox_AddString
+
+Добавляет пункт
+
+#Include 
+_GUICtrlListBox_AddString($hWnd, $sText)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$sText
+	Добавляемый пункт
+
+---  Таблица возвращаемых значений  ---
+Успех: Возвращает индекс пункта, отсчёт от 0
+Ошибка: Возвращает -1
+
+---  Примечания  ---
+Если недостаточно места для вмещения новой строки, то возвращается значение $LB_ERRSPACE.
+
+Если ListBox не имеет стиль $LBS_SORT, то строка добавляется в конец списка. Иначе, строка добавляется в список и он сортируется.
+
+---  Смотрите также  ---
+_GUICtrlListBox_InsertString, _GUICtrlListBox_DeleteString, _GUICtrlListBox_AddFile, _GUICtrlListBox_InitStorage

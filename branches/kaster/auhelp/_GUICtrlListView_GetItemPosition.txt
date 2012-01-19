@@ -1,0 +1,21 @@
+
+_GUICtrlListView_GetItemPosition
+
+Возвращает координаты пункта в пикселях относительно ListView
+
+#Include 
+_GUICtrlListView_GetItemPosition($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта
+
+---  Таблица возвращаемых значений  ---
+Возвращает массив следующего формата:
+		[0] - X координату пункта
+		[1] - Y координату пункта
+
+---  Смотрите также  ---
+_GUICtrlListView_SetItemPosition, _GUICtrlListView_GetItemPositionX, _GUICtrlListView_GetItemPositionY

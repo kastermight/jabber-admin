@@ -1,0 +1,22 @@
+
+_WinNet_CloseEnum
+
+Ends a network resource enumeration started by a call to WNetOpenEnum
+
+#Include 
+_WinNet_CloseEnum($hEnum)
+
+---  Таблица параметров  ---
+$hEnum
+	Handle that identifies an enumeration instance. The handle is returned by the WNet_OpenEnum
+		function
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_WinNet_OpenEnum
+
+
+---  Таблица  --- WNetCloseEnum

@@ -1,0 +1,25 @@
+
+_GUICtrlRichEdit_Paste
+
+Вставляет RTF или RTF с объектами из буфера обмена
+
+#Include 
+_GUICtrlRichEdit_Paste($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False и устанавливает @error
+@error:	101 - $HWnd не является дескриптором
+
+---  Примечания  ---
+Вставляет с объектами, если доступно, иначе без них
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_CanPaste, _GUICtrlRichEdit_PasteSpecial, _GUICtrlRichEdit_Cut, _GUICtrlRichEdit_Copy
+
+
+---  Таблица  --- WM_PASTE

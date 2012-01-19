@@ -1,0 +1,17 @@
+
+_GUICtrlListBox_GetLocaleCountry
+
+Retrieves the current country code
+
+#Include 
+_GUICtrlListBox_GetLocaleCountry($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: The country code of the list box
+
+---  Смотрите также  ---
+_GUICtrlListBox_GetLocale

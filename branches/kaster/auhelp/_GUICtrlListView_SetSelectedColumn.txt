@@ -1,0 +1,19 @@
+
+_GUICtrlListView_SetSelectedColumn
+
+Выделяет колонку по указанному индексу
+
+#Include 
+_GUICtrlListView_SetSelectedColumn($hWnd, $iCol)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iCol
+	Индекс колонки
+
+---  Примечания  ---
+Индекс колонки отсчитывается с 0
+
+---  Смотрите также  ---
+_GUICtrlListView_GetSelectedColumn

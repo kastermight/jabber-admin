@@ -1,0 +1,51 @@
+
+_GUICtrlToolbar_AddButton
+
+Adds a button
+
+#Include 
+_GUICtrlToolbar_AddButton($hWnd, $iID, $iImage[, $iString = 0[, $iStyle = 0[, $iState = 4[, $iParam = 0]]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iID
+	Command ID
+$iImage
+	Zero based index of the button image. Set this parameter to -1 and the control will send the
+		$TBN_GETDISPINFO notification to retrieve the image index when it is needed. Set this to -2 to indicate that
+		the button does not have an image. The button layout will only include space for the text. If the button is
+		a separator, this is the width of the separator, in pixels.
+$iString
+	[опционально] Zero based index of the button string that was set with AddString
+$iStyle
+	[опционально] Button style. Can be a combination of the following:
+		$BTNS_AUTOSIZE - Элемент Toolbar не должен назначать стандартную ширину кнопок
+		$BTNS_BUTTON - Стандартная кнопка
+		$BTNS_CHECK - Переключает между нажатым и отжатым положением
+		$BTNS_CHECKGROUP - Кнопка остаётся нажатой до тех пор, пока не будет нажата иная кнопка в группе
+		$BTNS_DROPDOWN - Создаёт кнопку со стилем раскрывающегося вниз списка
+		$BTNS_GROUP - Кнопка остаётся нажатой до тех пор, пока не будет нажата иная кнопка в группе
+		$BTNS_NOPREFIX - Текст кнопки не будет иметь accelerator префикс
+		$BTNS_SEP - Создаёт разделитель
+		$BTNS_SHOWTEXT - Указывает, что текст кнопки должен отображаться
+		$BTNS_WHOLEDROPDOWN - указывает, что кнопка будет иметь стрелку раскрывающегося списка
+$iState
+	[опционально] Состояния кнопки. Это значение может быть следующей комбинацией:
+		$TBSTATE_CHECKED - Кнопка имеет стиль $TBSTYLE_CHECK и вид нажатой кнопки
+		$TBSTATE_PRESSED - Нажатая кнопка
+		$TBSTATE_ENABLED - The button accepts user input
+		$TBSTATE_HIDDEN - Кнопка не видна и не может получить действие от пользователя
+		$TBSTATE_INDETERMINATE - Кнопка недоступна, серая
+		$TBSTATE_WRAP - Кнопка сопровождается переносом на новую строку кнопок
+		$TBSTATE_ELLIPSES - The button's text is cut off and an ellipsis is displayed
+		$TBSTATE_MARKED - The button is marked
+$iParam
+	[опционально] Application-defined value
+
+---  Таблица возвращаемых значений  ---
+Успех: Возвращает True
+Ошибка: Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlToolbar_DeleteButton, _GUICtrlToolbar_InsertButton

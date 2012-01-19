@@ -1,0 +1,22 @@
+
+_GDIPlus_GraphicsSetTransform
+
+Sets the world transformation for a graphics object
+
+#Include 
+_GDIPlus_GraphicsSetTransform($hGraphics, $hMatrix)
+
+---  Таблица параметров  ---
+$hGraphics
+	Handle to a Graphics object
+$hMatrix
+	Handle to a Matrix object that specifies the world transformation
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GdipSetWorldTransform

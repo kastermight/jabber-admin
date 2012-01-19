@@ -1,0 +1,26 @@
+
+_GUICtrlMenu_SetItemText
+
+Sets the text for a menu item
+
+#Include 
+_GUICtrlMenu_SetItemText($hMenu, $iItem, $sText[, $fByPos = True])
+
+---  Таблица параметров  ---
+$hMenu
+	Menu handle
+$iItem
+	Identifier or position of the menu item
+$sText
+	Menu item text
+$fByPos
+	[опционально] Menu identifier flag:
+		 True - $iItem is a zero based item position
+		False - $iItem is a menu item identifier
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlMenu_GetItemText

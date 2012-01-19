@@ -1,0 +1,18 @@
+
+_GUICtrlEdit_InsertText
+
+Вставить текст
+
+#Include 
+_GUICtrlEdit_InsertText($hWnd, $sText, $iIndex = -1)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$sText
+	Текст вставки
+$iIndex
+	Позиция символа для вставки
+
+---  Смотрите также  ---
+_GUICtrlEdit_AppendText

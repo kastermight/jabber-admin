@@ -1,0 +1,24 @@
+
+_Security__GetTokenInformation
+
+Retrieves a specified type of information about an access token
+
+#Include 
+_Security__GetTokenInformation($hToken, $iClass)
+
+---  Таблица параметров  ---
+$hToken
+	A handle to an access token from which information is retrieved. If $iClass specifies
+		$sTokenSource, the handle must have $TOKEN_QUERY_SOURCE access. For all other $iClass values, the handle must
+		have $TOKEN_QUERY access.
+$iClass
+	Specifies a value to identify the type of information the function retrieves
+
+---  Таблица возвращаемых значений  ---
+Успех:	A byte structure filled with the requested information
+Ошибка:	0
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GetTokenInformation

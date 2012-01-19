@@ -1,0 +1,21 @@
+
+_GUICtrlHeader_Destroy
+
+Delete the Header control
+
+#Include 
+_GUICtrlHeader_Destroy(ByRef $hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: True, Handle is set to 0
+Ошибка: False
+
+---  Примечания  ---
+Restricted to only be used on Edit created with _GUICtrlHeader_Create
+
+---  Смотрите также  ---
+_GUICtrlHeader_Create

@@ -1,0 +1,26 @@
+
+_GUICtrlButton_GetNote
+
+Gets the text of the note associated with the Command Link button
+
+#Include 
+_GUICtrlButton_GetNote($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Text associated with the Command Link Button
+Ошибка: ""
+
+---  Примечания  ---
+This function works only with the $BS_COMMANDLINK and $BS_DEFCOMMANDLINK button styles
+
+Minimum Operating Systems: Windows Vista
+
+---  Смотрите также  ---
+_GUICtrlButton_SetNote, _GUICtrlButton_GetNoteLength
+
+
+---  Таблица  --- BCM_GETNOTE

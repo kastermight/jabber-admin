@@ -1,0 +1,26 @@
+
+_GUICtrlMenu_SetItemSubMenu
+
+Sets the drop down menu or submenu associated with the menu item
+
+#Include 
+_GUICtrlMenu_SetItemSubMenu($hMenu, $iItem, $hSubMenu[, $fByPos = True])
+
+---  Таблица параметров  ---
+$hMenu
+	Menu handle
+$iItem
+	Identifier or position of the menu item
+$hSubMenu
+	Handle to the drop down menu or submenu
+$fByPos
+	[опционально] Menu identifier flag:
+		 True - $iItem is a zero based item position
+		False - $iItem is a menu item identifier
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlMenu_GetItemSubMenu

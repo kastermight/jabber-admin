@@ -1,0 +1,26 @@
+
+_GUICtrlMenu_SetItemID
+
+Sets the menu item ID
+
+#Include 
+_GUICtrlMenu_SetItemID($hMenu, $iItem, $iID[, $fByPos = True])
+
+---  Таблица параметров  ---
+$hMenu
+	Menu handle
+$iItem
+	Identifier or position of the menu item
+$iID
+	Menu item ID
+$fByPos
+	[опционально] Menu identifier flag:
+		 True - $iItem is a zero based item position
+		False - $iItem is a menu item identifier
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlMenu_GetItemID

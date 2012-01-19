@@ -1,0 +1,22 @@
+
+StringTrimRight
+
+Удаляет указанное количество символов строки справа.
+
+StringTrimRight ( "string", count )
+
+---  Таблица параметров  ---
+string
+	Используемая строка.
+count
+	Количество удаляемых символов.
+
+---  Таблица возвращаемых значений  ---
+Возвращает строку с удалёнными символами справа.
+
+---  Примечания  ---
+Если count выходит за пределы строки, то возвращается пустая строка.
+StringTrimRight($str, $n) по функциональности идентична выражению StringLeft($str, StringLen($str) - $n)
+
+---  Смотрите также  ---
+StringInStr, StringLeft, StringLen, StringLower, StringMid, StringRight, StringTrimLeft, StringUpper, StringCompare, StringReplace, StringSplit

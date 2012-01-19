@@ -1,0 +1,24 @@
+
+_GUICtrlStatusBar_SetIcon
+
+Sets the icon for a part
+
+#Include 
+_GUICtrlStatusBar_SetIcon($hWnd, $iPart[, $hIcon = -1[, $sIconFile = ""]])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iPart
+	Zero based part index. If the control is in simple mode, this field is ignored.
+$hIcon
+	[опционально] Handle to the icon. If this value is -1, the icon is removed.
+$sIconFile
+	[опционально] Icon filename to be used.
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlStatusBar_GetIcon

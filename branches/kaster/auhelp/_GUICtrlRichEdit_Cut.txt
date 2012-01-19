@@ -1,0 +1,22 @@
+
+_GUICtrlRichEdit_Cut
+
+Вырезает текст в буфер обмена
+
+#Include 
+_GUICtrlRichEdit_Cut($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False и устанавливает @error
+@error:	101 - $HWnd не является дескриптором
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_Copy, _GUICtrlRichEdit_Paste, _GUICtrlRichEdit_PasteSpecial
+
+
+---  Таблица  --- WM_CUT

@@ -1,0 +1,20 @@
+
+_GUICtrlListBox_DeleteString
+
+Удаляет пункт
+
+#Include 
+_GUICtrlListBox_DeleteString($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта, отсчёт от 0
+
+---  Таблица возвращаемых значений  ---
+Успех: Возвращает количество оставшихся строк
+Ошибка: Возвращает -1
+
+---  Смотрите также  ---
+_GUICtrlListBox_AddString, _GUICtrlListBox_InsertString, _GUICtrlListBox_AddFile, _GUICtrlListBox_ResetContent

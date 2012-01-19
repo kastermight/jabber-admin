@@ -1,0 +1,17 @@
+
+_GUICtrlHeader_GetItemCount
+
+Retrieves a count of the items
+
+#Include 
+_GUICtrlHeader_GetItemCount($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: The number of items
+Ошибка: -1
+
+---  Смотрите также  ---

@@ -1,0 +1,22 @@
+
+_GUICtrlSlider_GetThumbRect
+
+Retrieves the size and position of the bounding rectangle for the slider
+
+#Include 
+_GUICtrlSlider_GetThumbRect($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Array in the following format:
+
+	[0] - X coordinate of the upper left corner of the rectangle
+	[1] - Y coordinate of the upper left corner of the rectangle
+	[2] - X coordinate of the lower right corner of the rectangle
+	[3] - Y coordinate of the lower right corner of the rectangle
+
+---  Смотрите также  ---
+_GUICtrlSlider_GetThumbRectEx

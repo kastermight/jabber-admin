@@ -1,0 +1,20 @@
+
+_WinAPI_ExpandEnvironmentStrings
+
+Expands environment variable strings and replaces them with their defined values
+
+#Include 
+_WinAPI_ExpandEnvironmentStrings($sString)
+
+---  Таблица параметров  ---
+$sString
+	String to convert for environment variables
+
+---  Таблица возвращаемых значений  ---
+Успех:	Converted string
+Ошибка:	Set @error
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- ExpandEnvironmentStrings

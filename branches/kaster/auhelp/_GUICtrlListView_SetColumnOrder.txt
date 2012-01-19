@@ -1,0 +1,20 @@
+
+_GUICtrlListView_SetColumnOrder
+
+Устанавливает порядок колонок слева направо
+
+#Include 
+_GUICtrlListView_SetColumnOrder($hWnd, $sOrder)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$sOrder
+	Используйте Opt('GUIDataSeparatorChar', param) для установки символа разделителя, разделяющего колонки в передаваемой строке, которая должна иметь следующий вид:
+		"2|0|3|1"
+
+---  Примечания  ---
+Индекс колонки отсчитывается с 0
+
+---  Смотрите также  ---
+_GUICtrlListView_GetColumnOrder, _GUICtrlListView_SetColumnOrderArray

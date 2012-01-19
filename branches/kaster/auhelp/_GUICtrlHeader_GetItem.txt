@@ -1,0 +1,27 @@
+
+_GUICtrlHeader_GetItem
+
+Retrieves information about an item
+
+#Include 
+_GUICtrlHeader_GetItem($hWnd, $iIndex, ByRef $tItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Zero based item index
+$tItem
+	$tagHDITEM structure
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Примечания  ---
+When the message is sent, the mask member indicates the type of information being requested. When the message
+returns, the other members receive the requested information. If the mask member specifies zero, the message
+returns True but copies no information to the structure.
+
+---  Смотрите также  ---
+_GUICtrlHeader_SetItem, $tagHDITEM

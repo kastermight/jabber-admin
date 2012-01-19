@@ -1,0 +1,22 @@
+
+_GUICtrlRebar_SetBandText
+
+Retrieves the display text for the band
+
+#Include 
+_GUICtrlRebar_SetBandText($hWnd, $iIndex, $sText)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band for which the information will be set
+$sText
+	New display text for the band
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetBandText

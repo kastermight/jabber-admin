@@ -1,0 +1,20 @@
+
+_GUICtrlListView_SetTextColor
+
+Устанавливает цвет текста в ListView
+
+#Include 
+_GUICtrlListView_SetTextColor($hWnd, $iColor)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iColor
+	Цвет текста
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlListView_GetTextColor

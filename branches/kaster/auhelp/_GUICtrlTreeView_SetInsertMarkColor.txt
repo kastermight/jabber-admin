@@ -1,0 +1,19 @@
+
+_GUICtrlTreeView_SetInsertMarkColor
+
+Устанавливает цвет маркера вставки
+
+#Include 
+_GUICtrlTreeView_SetInsertMarkColor($hWnd, $iColor)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iColor
+	Цвет маркера вставки
+
+---  Таблица возвращаемых значений  ---
+Возвращает предыдущий цвет маркера вставки
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetInsertMarkColor

@@ -1,0 +1,19 @@
+
+_GUICtrlSlider_SetThumbLength
+
+Sets the length of the slider
+
+#Include 
+_GUICtrlSlider_SetThumbLength($hWnd, $iLength)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iLength
+	Length, in pixels, of the slider
+
+---  Примечания  ---
+This function is ignored if the trackbar does not have the $TBS_FIXEDLENGTH style
+
+---  Смотрите также  ---
+_GUICtrlSlider_GetThumbLength

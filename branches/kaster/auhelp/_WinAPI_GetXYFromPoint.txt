@@ -1,0 +1,20 @@
+
+_WinAPI_GetXYFromPoint
+
+Returns the X/Y values from a $tagPOINT structure
+
+#Include 
+_WinAPI_GetXYFromPoint(ByRef $tPoint, ByRef $iX, ByRef $iY)
+
+---  Таблица параметров  ---
+$tPoint
+	$tagPOINT structure
+$iX
+	Returns X value
+$iY
+	Returns Y value
+
+---  Примечания  ---
+This function extracts the X/Y values from a $tagPOINT structure
+
+---  Смотрите также  ---

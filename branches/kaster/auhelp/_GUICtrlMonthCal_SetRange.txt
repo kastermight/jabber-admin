@@ -1,0 +1,30 @@
+
+_GUICtrlMonthCal_SetRange
+
+Sets date information that represents the high and low limits
+
+#Include 
+_GUICtrlMonthCal_SetRange($hWnd, $iMinYear, $iMinMonth, $iMinDay, $iMaxYear, $iMaxMonth, $iMaxDay)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iMinYear
+	Minimum year
+$iMinMonth
+	Minimum month
+$iMinDay
+	Minimum day
+$iMaxYear
+	Maximum year
+$iMaxMonth
+	Maximum month
+$iMaxDay
+	Maximum day
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_GetRange

@@ -1,0 +1,19 @@
+
+_GUICtrlTreeView_GetStateImageIndex
+
+Retrieves the index of the state image to display for the item
+
+#Include 
+_GUICtrlTreeView_GetStateImageIndex($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hItem
+	Handle to the item
+
+---  Таблица возвращаемых значений  ---
+Returns the State image index
+
+---  Смотрите также  ---
+_GUICtrlTreeView_SetStateImageIndex

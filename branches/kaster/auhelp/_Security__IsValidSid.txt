@@ -1,0 +1,21 @@
+
+_Security__IsValidSid
+
+Validates a SID
+
+#Include 
+_Security__IsValidSid($pSID)
+
+---  Таблица параметров  ---
+$pSID
+	Pointer to a SID
+
+---  Таблица возвращаемых значений  ---
+Успех:	True: SID is valid
+Ошибка:	False: SID is not valid
+
+---  Смотрите также  ---
+_Security__GetLengthSid
+
+
+---  Таблица  --- IsValidSid

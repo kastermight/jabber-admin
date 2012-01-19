@@ -1,0 +1,20 @@
+
+_GUICtrlTreeView_GetPrevChild
+
+Retrieves the previous child item of a specified item
+
+#Include 
+_GUICtrlTreeView_GetPrevChild($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hItem
+	Handle to the item
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to the previous child item
+Ошибка:	0
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetNextChild, _GUICtrlTreeView_GetFirstChild, _GUICtrlTreeView_GetLastChild, _GUICtrlTreeView_GetPrev

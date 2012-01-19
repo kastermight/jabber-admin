@@ -1,0 +1,21 @@
+
+_WinNet_ConnectionDialog
+
+Starts a general browsing dialog box for connecting to network resources
+
+#Include 
+_WinNet_ConnectionDialog($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the owner window for the dialog box
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_WinNet_ConnectionDialog1
+
+
+---  Таблица  --- WNetConnectionDialog

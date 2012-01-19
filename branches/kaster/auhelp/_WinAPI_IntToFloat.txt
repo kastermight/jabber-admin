@@ -1,0 +1,16 @@
+
+_WinAPI_IntToFloat
+
+Returns a 4 byte integer as a float value
+
+#Include 
+_WinAPI_IntToFloat($iInt)
+
+---  Таблица параметров  ---
+$iInt
+	Integer value
+
+---  Таблица возвращаемых значений  ---
+Returns	a 4 byte integer value as a float
+
+---  Смотрите также  ---

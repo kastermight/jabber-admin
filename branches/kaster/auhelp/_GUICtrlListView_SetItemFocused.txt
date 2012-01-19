@@ -1,0 +1,22 @@
+
+_GUICtrlListView_SetItemFocused
+
+Устанавливает фокус на пункт
+
+#Include 
+_GUICtrlListView_SetItemFocused($hWnd, $iIndex[, $fEnabled = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта
+$fEnabled
+	[опционально] Если True, то фокус устанавливается, иначе фокус убирается.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlListView_GetItemFocused

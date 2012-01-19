@@ -1,0 +1,22 @@
+
+_GUICtrlTab_SetItemParam
+
+Sets the param data of a tab
+
+#Include 
+_GUICtrlTab_SetItemParam($hWnd, $iIndex, $iParam)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based item index
+$iParam
+	Application defined data
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlTab_GetItemParam

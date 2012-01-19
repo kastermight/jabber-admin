@@ -1,0 +1,21 @@
+
+_GUICtrlListView_GetViewSmall
+
+Определяет, является ли вид отображения как Small Icon (Значки, Мелкие значки)
+
+#Include 
+_GUICtrlListView_GetViewSmall($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Возвращает True:	Вид Small Icon (Значки, Мелкие значки)
+Возвращает False:	Вид не Small Icon (Значки, Мелкие значки)
+
+---  Примечания  ---
+Минимальная ОС - Windows XP.
+
+---  Смотрите также  ---
+_GUICtrlListView_GetView

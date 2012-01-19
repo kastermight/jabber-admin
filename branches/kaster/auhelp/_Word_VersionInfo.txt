@@ -1,0 +1,19 @@
+
+_Word_VersionInfo
+
+Returns an array of information about the Word.au3 version
+
+#include  
+_Word_VersionInfo ( )
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns an array ($WordAU3VersionInfo)
+	$WordAU3VersionInfo[0] = Release Type (T=Test or V=Production)
+	$WordAU3VersionInfo[1] = Major Version
+	$WordAU3VersionInfo[2] = Minor Version
+	$WordAU3VersionInfo[3] = Sub Version
+	$WordAU3VersionInfo[4] = Release Date (YYYYMMDD)
+	$WordAU3VersionInfo[5] = Display Version (e.g. V1.0-1)
+Ошибка:	None

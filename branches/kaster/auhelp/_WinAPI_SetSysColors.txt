@@ -1,0 +1,26 @@
+
+_WinAPI_SetSysColors
+
+Obtains information about the display devices in a system
+
+#Include 
+_WinAPI_SetSysColors($vElements, $vColors)
+
+---  Таблица параметров  ---
+$vElements
+	Single element or Array of elements
+$vColors
+	Single Color or Array of colors
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+See _WinAPI_GetSysColor for list of Element indexes and requirements.
+
+---  Смотрите также  ---
+_WinAPI_GetSysColor
+
+
+---  Таблица  --- SetSysColors

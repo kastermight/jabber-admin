@@ -1,0 +1,21 @@
+
+_GUICtrlMonthCal_HitTest
+
+Determines which portion of a month calendar control is at a given point
+
+#Include 
+_GUICtrlMonthCal_HitTest($hWnd, $iX, $iY)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iX
+	X position to test
+$iY
+	Y position to test
+
+---  Таблица возвращаемых значений  ---
+Успех: $tagMCHITTESTINFO structure
+
+---  Смотрите также  ---
+$tagMCHITTESTINFO

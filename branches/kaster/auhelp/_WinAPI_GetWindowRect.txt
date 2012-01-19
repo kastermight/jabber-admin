@@ -1,0 +1,21 @@
+
+_WinAPI_GetWindowRect
+
+Retrieves the dimensions of the bounding rectangle of the specified window
+
+#Include 
+_WinAPI_GetWindowRect($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle of the window
+
+---  Таблица возвращаемых значений  ---
+Успех:	$tagRECT structure that receives the screen coordinates
+Ошибка:	set @error
+
+---  Смотрите также  ---
+$tagRECT
+
+
+---  Таблица  --- GetWindowRect

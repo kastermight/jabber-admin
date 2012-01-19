@@ -1,0 +1,19 @@
+
+_GUICtrlMonthCal_GetTodayStr
+
+Retrieves the date information for the date specified as "today" in string format
+
+#Include 
+_GUICtrlMonthCal_GetTodayStr($hWnd[, $sFormat = "%02d/%02d/%04d"])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$sFormat
+	[опционально] StringFormat string used to format the date
+
+---  Таблица возвращаемых значений  ---
+Успех: Date in the specified format
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_GetToday

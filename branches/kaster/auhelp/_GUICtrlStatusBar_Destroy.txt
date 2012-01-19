@@ -1,0 +1,21 @@
+
+_GUICtrlStatusBar_Destroy
+
+Delete the control
+
+#Include 
+_GUICtrlStatusBar_Destroy(ByRef $hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	True, Handle is set to 0
+Ошибка:	False
+
+---  Примечания  ---
+Restricted to only be used on StatusBar created with _GUICtrlStatusBar_Create
+
+---  Смотрите также  ---
+_GUICtrlStatusBar_Create

@@ -1,0 +1,23 @@
+
+_WinNet_GetUniversalName
+
+Converts drived based path to universal form
+
+#Include 
+_WinNet_GetUniversalName($sLocalPath)
+
+---  Таблица параметров  ---
+$sLocalPath
+	Drive based path for a network resource
+
+---  Таблица возвращаемых значений  ---
+Успех:	Array with the following format:
+	$aPath[0] - UNC name string that identifies a network resource
+	$aPath[1] - Name of the network connection
+	$aPath[2] - Remaining path string
+Ошибка:	Set @error
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- WNetGetUniversalName

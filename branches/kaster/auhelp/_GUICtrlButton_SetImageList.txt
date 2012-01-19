@@ -1,0 +1,51 @@
+
+_GUICtrlButton_SetImageList
+
+Assigns an image list to a button control
+
+#Include 
+_GUICtrlButton_SetImageList($hWnd, $hImage[, $nAlign = 0[, $iLeft = 1[, $iTop = 1[, $iRight = 1[, $iBottom = 1]]]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hImage
+	A handle to the image list.
+		  Should contain either a single image to be used for all states or individual images for each state listed in the following:
+		    1 - Normal
+		    2 - Hot
+		    3 - Pressed
+		    4 - Disabled
+		    5 - Defaulted
+		    6 - Stylus Hot (tablet computers only)
+$nAlign
+	[опционально] Specifies the alignment to use. This parameter can be one of the following values:
+		  0 - Align the image with the left margin.
+		  1 - Align the image with the right margin.
+		  2 - Align the image with the top margin.
+		  3 - Align the image with the bottom margin.
+		  4 - Center the image.
+$iLeft
+	[опционально] Left margin of the icon
+$iTop
+	[опционально] Top margin of the icon
+$iRight
+	[опционально] Right margin of the icon
+$iBottom
+	[опционально] Bottom margin of the icon
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+Minimum OS - Windows XP.
+
+Image list with multiple images will only show the images other than the 1st image when
+Themes is being used.
+
+---  Смотрите также  ---
+_GUICtrlButton_GetImageList
+
+
+---  Таблица  --- BCM_SETIMAGELIST

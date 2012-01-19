@@ -1,0 +1,25 @@
+
+_IE_Introduction
+
+Display introductory information about IE.au3 in a new browser window
+
+#include  
+_IE_Introduction ( [$s_module = "basic"] )
+
+---  Таблица параметров  ---
+$s_module
+	[опционально] specifies which module to run
+	basic = (Default) basic introduction
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns an object variable pointing to an InternetExplorer.Application object
+Ошибка:	Returns 0 and sets @ERROR
+@Error:	0 ($_IEStatus_Success) = No Error
+	5 ($_IEStatus_InvalidValue) = Invalid Value
+@Extended:	Contains invalid parameter number
+
+---  Примечания  ---
+The AutoIt Helpfile does not currently allow UDFs to have general documentation that covers a series of functions, but rather UDF documentation is focused on individual functions.  This function is intended to provide that general documentation.  It will grow over time.
+
+---  Смотрите также  ---
+_IE_Example

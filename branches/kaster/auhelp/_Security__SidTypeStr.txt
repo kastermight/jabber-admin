@@ -1,0 +1,16 @@
+
+_Security__SidTypeStr
+
+Converts a Sid type to string form
+
+#Include 
+_Security__SidTypeStr($iType)
+
+---  Таблица параметров  ---
+$iType
+	Sid type
+
+---  Таблица возвращаемых значений  ---
+Returns a Sid type in string form
+
+---  Смотрите также  ---

@@ -1,0 +1,26 @@
+
+_GUICtrlDTP_GetMCColor
+
+Retrieves the specified color
+
+#Include 
+_GUICtrlDTP_GetMCColor($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Indicates which month calendar color to retrieve:
+		0 - Background color displayed between months
+		1 - Color used to display text within a month
+		2 - Background color displayed in the calendar title
+		3 - Color used to display text within the calendar title
+		4 - Background color displayed within the month
+		5 - Color used to display header day and trailing day text
+
+---  Таблица возвращаемых значений  ---
+Успех: The color setting for the specified portion of the control
+Ошибка: -1
+
+---  Смотрите также  ---
+_GUICtrlDTP_SetMCColor

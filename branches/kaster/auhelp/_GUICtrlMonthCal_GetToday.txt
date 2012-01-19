@@ -1,0 +1,17 @@
+
+_GUICtrlMonthCal_GetToday
+
+Retrieves the date information for the date specified as "today"
+
+#Include 
+_GUICtrlMonthCal_GetToday($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: $tagSYSTEMTIME
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_SetToday, _GUICtrlMonthCal_GetTodayStr, $tagSYSTEMTIME

@@ -1,0 +1,14 @@
+
+WinMinimizeAll
+
+Свернуть все окна.
+
+WinMinimizeAll (  )
+
+None.
+
+---  Примечания  ---
+Send("#m") - возможная альтернатива (Win+M, Win+D).
+
+---  Смотрите также  ---
+WinMinimizeAllUndo, WinSetState

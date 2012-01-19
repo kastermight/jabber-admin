@@ -1,0 +1,21 @@
+
+_GUICtrlHeader_GetOrderArray
+
+Retrieves the current left-to-right order of items in a header control
+
+#Include 
+_GUICtrlHeader_GetOrderArray($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: Array with the following format:
+		[0] - Number of items in array
+		[1] - Item index 1
+		[2] - Item index 2
+		[n] - Item index n
+
+---  Смотрите также  ---
+_GUICtrlHeader_SetOrderArray

@@ -1,0 +1,26 @@
+
+_GDIPlus_GraphicsDrawImage
+
+Draw an Image object
+
+#Include 
+_GDIPlus_GraphicsDrawImage($hGraphics, $hImage, $iX, $iY)
+
+---  Таблица параметров  ---
+$hGraphics
+	Handle to a Graphics object
+$hImage
+	Handle to an Image object
+$iX
+	The X coordinate of the upper left corner of the rendered image
+$iY
+	The Y coordinate of the upper left corner of the rendered image
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GdipDrawImageI

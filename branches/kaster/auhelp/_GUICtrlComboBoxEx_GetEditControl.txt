@@ -1,0 +1,16 @@
+
+_GUICtrlComboBoxEx_GetEditControl
+
+Gets the handle to the edit control portion of a ComboBoxEx control
+
+#Include 
+_GUICtrlComboBoxEx_GetEditControl($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: The handle to the edit control within the ComboBoxEx control if it uses the $CBS_DROPDOWN style
+
+---  Смотрите также  ---

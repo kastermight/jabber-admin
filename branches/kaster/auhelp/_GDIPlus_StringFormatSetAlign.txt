@@ -1,0 +1,26 @@
+
+_GDIPlus_StringFormatSetAlign
+
+Sets the text alignment of a string format object
+
+#Include 
+_GDIPlus_StringFormatSetAlign($hStringFormat,$iFlag)
+
+---  Таблица параметров  ---
+$hStringFormat
+	The string format object which is aligned
+$iFlag
+	The alignment can be one of the following:
+		0 - The text is aligned to the left
+		1 - The text is centered
+		2 - The text is aligned to the right
+
+---  Таблица возвращаемых значений  ---
+Успех:	1
+Ошибка:	0 and @error=1
+
+---  Смотрите также  ---
+_GDIPlus_StringFormatCreate
+
+
+---  Таблица  --- GdipSetStringFormatAlign

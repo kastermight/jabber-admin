@@ -1,0 +1,22 @@
+
+_GUICtrlRebar_SetBandBackColor
+
+Set the Band background color
+
+#Include 
+_GUICtrlRebar_SetBandBackColor($hWnd, $iIndex, $iColor)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+$iColor
+	New color for band background
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetBandBackColor

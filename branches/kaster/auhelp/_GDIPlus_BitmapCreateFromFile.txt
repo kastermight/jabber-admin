@@ -1,0 +1,24 @@
+
+_GDIPlus_BitmapCreateFromFile
+
+Create a Bitmap object from file
+
+#Include 
+_GDIPlus_BitmapCreateFromFile($sFileName)
+
+---  Таблица параметров  ---
+$sFileName
+	Path to a bitmap file
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to a Bitmap object
+Ошибка:	0
+
+---  Примечания  ---
+When you are done with the Bitmap object, call _GDIPlus_BitmapDispose to release the resources
+
+---  Смотрите также  ---
+_WinAPI_DeleteObject
+
+
+---  Таблица  --- GdipCreateBitmapFromFile

@@ -1,0 +1,23 @@
+
+_GUICtrlComboBoxEx_GetEditSel
+
+Gets the starting and ending character positions of the current selection in the edit control of a ComboBox
+
+#Include 
+_GUICtrlComboBoxEx_GetEditSel($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: Array in the following format:
+		[0] - Starting position
+		[1] - Ending position
+Ошибка: -1
+
+---  Примечания  ---
+If the message is sent to a ComboBox with the $CBS_DROPDOWN or $CBS_DROPDOWNLIST style the Function will fail.
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_SetEditSel

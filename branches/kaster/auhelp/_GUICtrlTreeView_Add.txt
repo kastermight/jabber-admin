@@ -1,0 +1,29 @@
+
+_GUICtrlTreeView_Add
+
+Добавляет новый пункт
+
+#Include 
+_GUICtrlTreeView_Add($hWnd, $hSibling, $sText[, $iImage = -1[, $iSelImage = -1]])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$hSibling
+	Sibling item
+$sText
+	Текст пункта
+$iImage
+	[опционально] Индекс иконки списка изображений
+$iSelImage
+	[опционально] Индекс иконки списка изображений
+
+---  Таблица возвращаемых значений  ---
+Успех:	Дескриптор нового пункта
+Ошибка:	Возвращает 0
+
+---  Примечания  ---
+The item is added as the last sibling of $hSibling. Если TreeView имеет сортировку, то функция вставляет пункт изменяя позицию согласно сортировки, а не последний пункт в $hSibling.
+
+---  Смотрите также  ---
+_GUICtrlTreeView_AddFirst

@@ -1,0 +1,19 @@
+
+_GUICtrlTreeView_SetLineColor
+
+Устанавливает цвет пунктирной линии связывающей пункты
+
+#Include 
+_GUICtrlTreeView_SetLineColor($hWnd, $vRGBColor)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$vRGBColor
+	Новый шестнадцатеричный RGB цвет линии
+
+---  Таблица возвращаемых значений  ---
+Возвращает предыдущий шестнадцатеричный RGB цвет линии
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetLineColor

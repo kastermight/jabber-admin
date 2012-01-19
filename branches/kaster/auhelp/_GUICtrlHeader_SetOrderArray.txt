@@ -1,0 +1,24 @@
+
+_GUICtrlHeader_SetOrderArray
+
+Sets the current left-to-right order of items
+
+#Include 
+_GUICtrlHeader_SetOrderArray($hWnd, ByRef $aOrder)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$aOrder
+	Array that specifies the index values for items in the header:
+		[0] - Number of items in array
+		[1] - Item index 1
+		[2] - Item index 2
+		[n] - Item index n
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlHeader_GetOrderArray

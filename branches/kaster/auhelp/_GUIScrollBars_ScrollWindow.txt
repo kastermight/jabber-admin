@@ -1,0 +1,24 @@
+
+_GUIScrollBars_ScrollWindow
+
+Scrolls the contents of the specified window's client area
+
+#Include 
+_GUIScrollBars_ScrollWindow($hWnd, $iXAmount, $iYAmount)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the window
+$iXAmount
+	Specifies the amount, in device units, of horizontal scrolling
+$iYAmount
+	Specifies the amount, in device units, of vertical scrolling
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- ScrollWindow

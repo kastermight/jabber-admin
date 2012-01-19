@@ -1,0 +1,17 @@
+
+IsBinary
+
+Проверяет, является ли переменная бинарным типом данных.
+
+IsBinary ( expression )
+
+---  Таблица параметров  ---
+expression
+	Выражение для проверки.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает 1.
+Ошибка:	Возвращает 0, если выражение не является выражением бинарного типа.
+
+---  Смотрите также  ---
+IsArray, IsFloat, IsInt, IsString, IsNumber, IsBool, IsHWnd, Binary, BinaryToString, StringToBinary, VarGetType

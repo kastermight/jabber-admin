@@ -1,0 +1,22 @@
+
+_GUICtrlRichEdit_PauseRedraw
+
+Pauses redrawing of the control
+
+#Include 
+_GUICtrlRichEdit_PauseRedraw($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False and sets @error
+@error:	101 - $hWnd is not a handle
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_ResumeRedraw
+
+
+---  Таблица  --- WM_SETREDRAW

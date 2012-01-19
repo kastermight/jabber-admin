@@ -1,0 +1,20 @@
+
+_GUICtrlToolbar_AddString
+
+Adds a new string to the toolbar's string pool
+
+#Include 
+_GUICtrlToolbar_AddString($hWnd, $sString)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$sString
+	String to add
+
+---  Таблица возвращаемых значений  ---
+Успех: Zero based index of the new string
+Ошибка: -1
+
+---  Смотрите также  ---
+_GUICtrlToolbar_GetString

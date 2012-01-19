@@ -1,0 +1,16 @@
+
+_SQLite_LibVersion
+
+Returns the version number of the library
+
+#include 
+_SQLite_LibVersion ( )
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns SQLite version string
+Ошибка:	@error = 1
+
+---  Примечания  ---
+Requieres SQLite.dll in Current or System directory.

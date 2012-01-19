@@ -1,0 +1,22 @@
+
+_WinAPI_SetTextColor
+
+Sets the current text color to the specified color value
+
+#Include 
+_WinAPI_SetTextColor($hDC, $iColor)
+
+---  Таблица параметров  ---
+$hDC
+	Handle to the device context
+$iColor
+	Specifies the new text color
+
+---  Таблица возвращаемых значений  ---
+Успех:	The previous text color
+Ошибка:	-1
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- SetTextColor

@@ -1,0 +1,29 @@
+
+_GUIImageList_BeginDrag
+
+Begins dragging an image
+
+#Include 
+_GUIImageList_BeginDrag($hWnd, $iTrack, $iXHotSpot, $iYHotSpot)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iTrack
+	Index of the image to drag
+$iXHotSpot
+	X coordinate of the location of the drag position relative to image upper left corner
+$iYHotSpot
+	Y coordinate of the location of the drag position relative to image upper left corner
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+This function creates a temporary image list that is used for dragging. In response to subsequent WM_MOUSEMOVE
+messages, you can move the drag image by using the ImageList_DragMove function. To end the drag operation, you
+can use the ImageList_EndDrag function.
+
+---  Смотрите также  ---
+_GUIImageList_EndDrag, _GUIImageList_DragEnter

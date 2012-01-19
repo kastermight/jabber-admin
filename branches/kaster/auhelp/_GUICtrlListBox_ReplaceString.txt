@@ -1,0 +1,21 @@
+
+_GUICtrlListBox_ReplaceString
+
+Заменяет текст пункта
+
+#Include 
+_GUICtrlListBox_ReplaceString($hWnd, $iIndex, $sText)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта, отсчёт от 0
+$sText
+	Строка, заменяющая старую строку
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---

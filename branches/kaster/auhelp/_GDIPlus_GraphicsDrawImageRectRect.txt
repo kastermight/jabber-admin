@@ -1,0 +1,40 @@
+
+_GDIPlus_GraphicsDrawImageRectRect
+
+Draw an Image object
+
+#Include 
+_GDIPlus_GraphicsDrawImageRectRect($hGraphics, $hImage, $iSrcX, $iSrcY, $iSrcWidth, $iSrcHeight, $iDstX, $iDstY, $iDstWidth, $iDstHeight[, $iUnit = 2])
+
+---  Таблица параметров  ---
+$hGraphics
+	Handle to a Graphics object
+$hImage
+	Handle to an Image object
+$iSrcX
+	The X coordinate of the upper left corner of the source image
+$iSrcY
+	The Y coordinate of the upper left corner of the source image
+$iSrcWidth
+	Width of the source image
+$iSrcHeight
+	Height of the source image
+$iDstX
+	The X coordinate of the upper left corner of the destination image
+$iDstY
+	The Y coordinate of the upper left corner of the destination image
+$iDstWidth
+	Width of the destination image
+$iDstHeight
+	Height of the destination image
+$iUnit
+	[опционально] Specifies the unit of measure for the image
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GdipDrawImageRectRectI

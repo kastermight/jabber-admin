@@ -1,0 +1,29 @@
+
+_WinAPI_ReadProcessMemory
+
+Reads memory in a specified process
+
+#Include 
+_WinAPI_ReadProcessMemory($hProcess, $pBaseAddress, $pBuffer, $iSize, ByRef $iRead)
+
+---  Таблица параметров  ---
+$hProcess
+	Identifies an open handle of a process whose memory is read
+$pBaseAddress
+	Points to the base address in the specified process to be read
+$pBuffer
+	Points to a buffer that receives the contents from the address space
+$iSize
+	Specifies the requested number of bytes to read from the specified process
+$iRead
+	The actual number of bytes transferred into the specified buffer
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_WinAPI_WriteProcessMemory
+
+
+---  Таблица  --- ReadProcessMemory

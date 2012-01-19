@@ -1,0 +1,24 @@
+
+_WeekNumberISO
+
+Calculate the weeknumber of a given date.
+
+#Include 
+_WeekNumberISO([$iYear = @YEAR[, $iMonth = @MON[, $iDay = @MDAY]]])
+
+---  Таблица параметров  ---
+$iYear
+	[опционально] Year value (default = current year)
+$iMonth
+	[опционально] Month value (default = current month)
+$iDay
+	[опционально] Day value (default = current day)
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns week number of given date
+Ошибка:	0
+@Error:	 0 - No error.
+	 1 - faulty parameters values
+	99 - On non-acceptable weekstart value
+
+---  Смотрите также  ---

@@ -1,0 +1,17 @@
+
+_WinAPI_GetCurrentThreadId
+
+Returns the thread identifier of the calling thread
+
+#Include 
+_WinAPI_GetCurrentThreadId()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Returns the Thread identifier of the calling thread
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GetCurrentThreadId

@@ -1,0 +1,23 @@
+
+_GUICtrlListView_SetSelectionMark
+
+Устанавливает метку выбора в ListView
+
+#Include 
+_GUICtrlListView_SetSelectionMark($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта, на который устанавливается новая метка выбора. Если -1, то метка выбора удаляется.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает предыдущую метку выбора
+Ошибка:	Возвращает -1, если нет предыдущей метки выбора
+
+---  Примечания  ---
+The selection mark is the item index from which a multiple selection starts. This message does not affect the selection state of the item.
+
+---  Смотрите также  ---
+_GUICtrlListView_GetSelectionMark

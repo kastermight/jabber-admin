@@ -1,0 +1,23 @@
+
+_GUICtrlMenu_SetMenu
+
+Assigns a new menu to the specified window
+
+#Include 
+_GUICtrlMenu_SetMenu($hWnd, $hMenu)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the window to which the menu is to be assigned
+$hMenu
+	Handle to the new menu. If 0, the window's current menu is removed.
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlMenu_GetMenu
+
+
+---  Таблица  --- SetMenu

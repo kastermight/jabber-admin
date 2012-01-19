@@ -1,0 +1,23 @@
+
+_GUICtrlRichEdit_CanUndo
+
+Can an action be undone?
+
+#Include 
+_GUICtrlRichEdit_CanUndo($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	True - there are action(s) in the undo queue
+Ошибка:	False and may set @error
+@error:	0 - there are no actions in the undo queue
+	101 - $hWnd is not a handle
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_Undo, _GUICtrlRichEdit_SetUndoLimit
+
+
+---  Таблица  --- EM_CANUNDO

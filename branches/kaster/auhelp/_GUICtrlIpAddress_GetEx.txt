@@ -1,0 +1,17 @@
+
+_GUICtrlIpAddress_GetEx
+
+Возвращает адрес из элемента IP address
+
+#Include 
+_GUICtrlIpAddress_GetEx($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех: Возвращает структуру $tagGetIPAddress, которая содержит IP-адрес
+
+---  Смотрите также  ---
+_GUICtrlIpAddress_Get, _GUICtrlIpAddress_GetArray, _GUICtrlIpAddress_SetEx

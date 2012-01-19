@@ -1,0 +1,28 @@
+
+_GUICtrlDTP_GetSystemTime
+
+Retrieves the currently selected date and time
+
+#Include 
+_GUICtrlDTP_GetSystemTime($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Returns an array with the following format:
+
+	[0] - Year
+	[1] - Month
+	[2] - Day
+	[3] - Hour
+	[4] - Minute
+	[5] - Second
+
+---  Примечания  ---
+@Error is set to $GDT_VALID if the time information was successfully returned, $GDT_NONE if the control was
+set to the $DTS_SHOWNONE style and the control check box was not selected or $GDT_ERROR if an error occured.
+
+---  Смотрите также  ---
+_GUICtrlDTP_SetSystemTime, _GUICtrlDTP_GetSystemTimeEx

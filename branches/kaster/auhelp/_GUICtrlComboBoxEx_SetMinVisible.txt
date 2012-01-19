@@ -1,0 +1,26 @@
+
+_GUICtrlComboBoxEx_SetMinVisible
+
+Set the minimum number of visible items in the drop-down list of a ComboBox
+
+#Include 
+_GUICtrlComboBoxEx_SetMinVisible($hWnd, $iMinimum)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iMinimum
+	Specifies the minimum number of visible items
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Примечания  ---
+When the number of items in the drop-down list is greater than the minimum,
+the Combobbox uses a scrollbar. By default, 30 is the minimum number of visible items.
+
+This message is ignored if the combo box control has style $CBS_NOINTEGRALHEIGHT.
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_GetMinVisible

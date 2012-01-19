@@ -1,0 +1,21 @@
+
+_GDIPlus_ImageLoadFromFile
+
+Create an image object based on a file
+
+#Include 
+_GDIPlus_ImageLoadFromFile($sFileName)
+
+---  Таблица параметров  ---
+$sFileName
+	Fully qualified image file name
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to the new image object
+Ошибка:	-1 and @error is set
+
+---  Смотрите также  ---
+_GDIPlus_ImageSaveToFile, _GDIPlus_ImageSaveToFileEx
+
+
+---  Таблица  --- GdipLoadImageFromFile

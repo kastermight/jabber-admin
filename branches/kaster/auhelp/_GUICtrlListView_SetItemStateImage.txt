@@ -1,0 +1,22 @@
+
+_GUICtrlListView_SetItemStateImage
+
+Sets the state image that is displayed
+
+#Include 
+_GUICtrlListView_SetItemStateImage($hWnd, $iIndex, $iImage)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based index of the item
+$iImage
+	One based overlay image index
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlListView_GetItemStateImage

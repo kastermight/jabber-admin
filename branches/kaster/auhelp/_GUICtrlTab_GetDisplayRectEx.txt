@@ -1,0 +1,22 @@
+
+_GUICtrlTab_GetDisplayRectEx
+
+Retrieves the display rectangle of the client area
+
+#Include 
+_GUICtrlTab_GetDisplayRectEx($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: $tagRECT structure that receives the rectangle of the tab, in viewport coordinates
+
+---  Примечания  ---
+Use this function to obtain the coordinates, in pixels, of the portion of the tab control that represents the
+contents of the tab pages. The appearance of this portion of the tab control does not change when different
+tabs are selected.
+
+---  Смотрите также  ---
+_GUICtrlTab_GetDisplayRect, $tagRECT

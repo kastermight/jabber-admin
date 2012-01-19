@@ -1,0 +1,24 @@
+
+_DateToDayOfWeekISO
+
+Returns the ISO weekdaynumber for a given date.
+
+#Include 
+_DateToDayOfWeekISO($iYear, $iMonth, $iDay)
+
+---  Таблица параметров  ---
+$iYear
+	A valid year in format YYYY
+$iMonth
+	A valid month in format MM
+$iDay
+	A valid day in format DD
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns Day of the Week Range is 0 to 6 where 0=Monday.
+Ошибка:	0 and Set @error
+@error:	0 - No error.
+	1 - Invalid Input Date
+
+---  Смотрите также  ---
+_DateToDayOfWeek, _DateDayOfWeek, _DayValueToDate, _DateAdd, _DateDiff

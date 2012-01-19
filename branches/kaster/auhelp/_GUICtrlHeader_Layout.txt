@@ -1,0 +1,19 @@
+
+_GUICtrlHeader_Layout
+
+Retrieves the correct size and position of the control
+
+#Include 
+_GUICtrlHeader_Layout($hWnd, ByRef $tRect)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$tRect
+	$tagRECT structure that contains the rectangle the control will occupy.
+
+---  Таблица возвращаемых значений  ---
+Успех: $tagWINDOWPOS structure that contains the control size and position
+
+---  Смотрите также  ---
+$tagRECT, $tagWINDOWPOS

@@ -1,0 +1,23 @@
+
+_GDIPlus_RectFCreate
+
+Create a $tagGDIPRECTF structure
+
+#Include 
+_GDIPlus_RectFCreate([$nX = 0[, $nY = 0[, $nWidth = 0[, $nHeight = 0]]]])
+
+---  Таблица параметров  ---
+$nX
+	[опционально] X coordinate of upper left hand corner of rectangle
+$nY
+	[опционально] Y coordinate of upper left hand corner of rectangle
+$nWidth
+	[опционально] Rectangle width
+$nHeight
+	[опционально] Rectangle height
+
+---  Таблица возвращаемых значений  ---
+Returns a $tagGDIPRECTF structure
+
+---  Смотрите также  ---
+$tagGDIPRECTF

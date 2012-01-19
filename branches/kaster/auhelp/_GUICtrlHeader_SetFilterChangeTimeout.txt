@@ -1,0 +1,19 @@
+
+_GUICtrlHeader_SetFilterChangeTimeout
+
+Sets the filter change timeout interval
+
+#Include 
+_GUICtrlHeader_SetFilterChangeTimeout($hWnd, $iTimeOut)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iTimeOut
+	Timeout value, in milliseconds
+
+---  Таблица возвращаемых значений  ---
+Успех: The index of the filter control being modified
+Ошибка: 0
+
+---  Смотрите также  ---

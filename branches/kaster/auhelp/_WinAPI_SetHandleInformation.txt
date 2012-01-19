@@ -1,0 +1,24 @@
+
+_WinAPI_SetHandleInformation
+
+Sets certain properties of an object handle
+
+#Include 
+_WinAPI_SetHandleInformation($hObject, $iMask, $iFlags)
+
+---  Таблица параметров  ---
+$hObject
+	Handle to an object
+$iMask
+	Specifies the bit flags to be changed
+$iFlags
+	Specifies properties of the object handle
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- SetHandleInformation

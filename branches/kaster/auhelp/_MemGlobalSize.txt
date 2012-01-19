@@ -1,0 +1,21 @@
+
+_MemGlobalSize
+
+Retrieves the current size of the specified global memory object
+
+#Include 
+_MemGlobalSize($hMem)
+
+---  Таблица параметров  ---
+$hMem
+	Handle to the global memory object
+
+---  Таблица возвращаемых значений  ---
+Успех:	size of the specified global memory object, in bytes
+Ошибка:	0
+
+---  Смотрите также  ---
+_MemGlobalAlloc
+
+
+---  Таблица  --- GlobalSize

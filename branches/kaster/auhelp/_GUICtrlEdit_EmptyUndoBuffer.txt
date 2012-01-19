@@ -1,0 +1,17 @@
+
+_GUICtrlEdit_EmptyUndoBuffer
+
+Resets the undo flag of an edit control
+
+#Include 
+_GUICtrlEdit_EmptyUndoBuffer($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Примечания  ---
+The undo flag is automatically reset whenever the edit control receives a _GUICtrlEdit_SetText
+
+---  Смотрите также  ---
+_GUICtrlEdit_CanUndo, _GUICtrlEdit_Undo

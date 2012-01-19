@@ -1,0 +1,21 @@
+
+_GUICtrlStatusBar_GetParts
+
+Retrieves the number of parts and the part edges
+
+#Include 
+_GUICtrlStatusBar_GetParts($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Returns an Array with the following format:
+		$aParts[0] - Number of parts
+		$aParts[1] - Right edge of part #1
+		$aParts[2] - Right edge of part #2
+		$aParts[n] - Right edge of part n
+
+---  Смотрите также  ---
+_GUICtrlStatusBar_SetParts

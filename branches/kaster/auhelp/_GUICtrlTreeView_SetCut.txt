@@ -1,0 +1,24 @@
+
+_GUICtrlTreeView_SetCut
+
+Sets whether the item is drawn as if selected as part of a cut and paste operation
+
+#Include 
+_GUICtrlTreeView_SetCut($hWnd, $hItem[, $fFlag = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hItem
+	Handle to the item
+$fFlag
+	[опционально] Flag setting:
+		 True - Item is cut
+		False - Item is not
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetCut

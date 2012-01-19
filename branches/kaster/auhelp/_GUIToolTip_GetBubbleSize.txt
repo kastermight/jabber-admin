@@ -1,0 +1,23 @@
+
+_GUIToolTip_GetBubbleSize
+
+Returns the width and height of the control
+
+#Include 
+_GUIToolTip_GetBubbleSize($hWnd, $hTool, $iID[, $iFlags = 0x000000A0])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$hTool
+	Handle to the window that contains the tool
+$iID
+	Identifier of the tool
+$iFlags
+	[опционально] Flags that control the ToolTip display
+
+---  Таблица возвращаемых значений  ---
+Успех: Returns the width of the ToolTip in the low word and the height in the high word
+
+---  Смотрите также  ---
+_GUIToolTip_GetBubbleHeight, _GUIToolTip_GetBubbleWidth

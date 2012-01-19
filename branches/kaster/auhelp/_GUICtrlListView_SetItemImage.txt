@@ -1,0 +1,24 @@
+
+_GUICtrlListView_SetItemImage
+
+Sets the index of the item's icon in the control's image list
+
+#Include 
+_GUICtrlListView_SetItemImage($hWnd, $iIndex, $iImage[, $iSubItem = 0])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based index of the item
+$iImage
+	Zero based index into the control's image list
+$iSubItem
+	[опционально] One based index of the subitem
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlListView_GetItemImage

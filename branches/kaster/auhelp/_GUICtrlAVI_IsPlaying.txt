@@ -1,0 +1,23 @@
+
+_GUICtrlAVI_IsPlaying
+
+Checks whether an Audio-Video Interleaved (AVI) clip is playing
+
+#Include 
+_GUICtrlAVI_IsPlaying($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Примечания  ---
+Minimum OS: Windows Vista
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- ACM_ISPLAYING

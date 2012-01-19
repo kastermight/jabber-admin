@@ -1,0 +1,22 @@
+
+_GUICtrlRebar_SetBandStyleHidden
+
+Set whether the band will not be visible
+
+#Include 
+_GUICtrlRebar_SetBandStyleHidden($hWnd, $iIndex[, $fEnabled = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+$fEnabled
+	[опционально] If True the item state is set, otherwise it is not set
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetBandStyleHidden, _GUICtrlRebar_SetBandStyle, _GUICtrlRebar_ShowBand

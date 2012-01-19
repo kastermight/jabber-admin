@@ -1,0 +1,19 @@
+
+_GDIPlus_DecodersGetSize
+
+Get the total size of the structure that is returned by _GDIPlus_GetImageDecoders
+
+#Include 
+_GDIPlus_DecodersGetSize()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Total size, in bytes
+Ошибка:	-1 and @error is set
+
+---  Смотрите также  ---
+_GDIPlus_DecodersGetCount
+
+
+---  Таблица  --- GdipGetImageDecodersSize

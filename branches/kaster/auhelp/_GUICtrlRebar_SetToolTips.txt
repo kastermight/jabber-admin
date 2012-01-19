@@ -1,0 +1,16 @@
+
+_GUICtrlRebar_SetToolTips
+
+Associates a ToolTip control with the rebar control
+
+#Include 
+_GUICtrlRebar_SetToolTips($hWnd, $hToolTip)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$hToolTip
+	Handle to the ToolTip control to be set
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetToolTips

@@ -1,0 +1,24 @@
+
+_ClipBoard_GetSequenceNumber
+
+Retrieves the clipboard sequence number for the current window station
+
+#Include 
+_ClipBoard_GetSequenceNumber()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	The clipboard sequence number
+Ошибка:	0
+
+---  Примечания  ---
+The system keeps a serial number for the clipboard for each window station. This number is incremented when
+the contents of the clipboard change or the clipboard is emptied. You can track this value to determine if the
+clipboard contents have changed and optimize creating data objects. If clipboard rendering is delayed, the
+sequence number is not incremented until the changes are rendered.
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GetClipboardSequenceNumber

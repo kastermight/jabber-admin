@@ -1,0 +1,21 @@
+
+_GUICtrlToolbar_GetHotImageList
+
+Retrieves the hot button image list
+
+#Include 
+_GUICtrlToolbar_GetHotImageList($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Handle to the hot image list
+Ошибка: 0
+
+---  Примечания  ---
+A button is considered hot when the cursor is over it
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetHotImageList

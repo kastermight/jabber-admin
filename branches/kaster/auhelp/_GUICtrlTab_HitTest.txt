@@ -1,0 +1,25 @@
+
+_GUICtrlTab_HitTest
+
+Determines where a point lies control
+
+#Include 
+_GUICtrlTab_HitTest($hWnd, $iX, $iY)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iX
+	X position to test
+$iY
+	Y position to test
+
+---  Таблица возвращаемых значений  ---
+Успех: Array with the following format:
+		[0] - Zero based index of the tab, or -1 if no tab is at the position
+		[1] - Results of the hit test:
+		 1 - The position is not over a tab
+		 2 - The position is over a tab's icon
+		 4 - The position is over a tab's text
+
+---  Смотрите также  ---

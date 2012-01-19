@@ -1,0 +1,27 @@
+
+_SoundLength
+
+Returns the length of the soundfile.
+
+#include 
+_SoundLength ( $aSnd_id [, $iMode ] )
+
+---  Таблица параметров  ---
+$aSnd_id
+	Sound ID array as returned by _SoundOpen() or a file name
+$iMode
+	[опционально] This flag determines the format of the returned sound length
+	1 = hh:mm:ss where h = hours, m = minutes and s = seconds
+	2 = milliseconds
+
+---  Таблица возвращаемых значений  ---
+Успех:	Sound Length
+Ошибка:	0 and set @error
+@error:	1 = $iMode is invalid
+	3 = Invalid Sound ID. Use return array from _SoundOpen() or valid file name.
+
+---  Примечания  ---
+This function will return the best available value for the length of the file regardless of encoding method or parameter type.
+
+---  Смотрите также  ---
+_SoundPos, _SoundOpen

@@ -1,0 +1,13 @@
+
+_GUIToolTip_Pop
+
+Removes a displayed ToolTip from view
+
+#Include 
+_GUIToolTip_Pop($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Смотрите также  ---

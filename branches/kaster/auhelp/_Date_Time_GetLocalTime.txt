@@ -1,0 +1,15 @@
+
+_Date_Time_GetLocalTime
+
+Retrieves the current local date and time
+
+#Include 
+_Date_Time_GetLocalTime()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Returns $tagSYSTEMTIME structure with the current local date and time
+
+---  Смотрите также  ---
+_Date_Time_SetLocalTime, $tagSYSTEMTIME

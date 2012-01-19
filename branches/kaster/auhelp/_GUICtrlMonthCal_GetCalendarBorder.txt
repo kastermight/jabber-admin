@@ -1,0 +1,20 @@
+
+_GUICtrlMonthCal_GetCalendarBorder
+
+Gets the size of the border, in pixels
+
+#Include 
+_GUICtrlMonthCal_GetCalendarBorder($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: Border size, in pixels
+
+---  Примечания  ---
+Minimum Operating Systems: Windows Vista
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_SetCalendarBorder

@@ -1,0 +1,21 @@
+
+_GUIImageList_DragMove
+
+Moves the image that is being dragged during a drag-and-drop operation
+
+#Include 
+_GUIImageList_DragMove($iX, $iY)
+
+---  Таблица параметров  ---
+$iX
+	The x-coordinate at which to display the drag image.
+		The coordinate is relative to the upper-left corner of the window, not the client area
+$iY
+	The y-coordinate at which to display the drag image.
+		The coordinate is relative to the upper-left corner of the window, not the client area
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---

@@ -1,0 +1,18 @@
+
+_GUICtrlStatusBar_GetBordersHorz
+
+Retrieves the current width of the horizontal border
+
+#Include 
+_GUICtrlStatusBar_GetBordersHorz($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	Width of the horizontal border
+Ошибка:	Set @error
+
+---  Смотрите также  ---
+_GUICtrlStatusBar_GetBorders, _GUICtrlStatusBar_GetBordersRect, _GUICtrlStatusBar_GetBordersVert

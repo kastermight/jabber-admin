@@ -1,0 +1,22 @@
+
+_FTP_FileTimeLoHiToStr
+
+Закрывает сессию _FTP_Open.
+
+#Include 
+_FTP_FileTimeLoHiToStr($LoDWORD, $HiDWORD [, $bFmt = 0])
+
+---  Таблица параметров  ---
+$LoDWORD
+	FileTime Low
+$HiDWORD
+	File Time Hi
+$bFmt
+	[опционально] 0 возвращает mm/dd/yyyy hh:mm:ss (по умолчанию)
+	1 возвращает yyyy/mm/dd hh:mm:ss
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает дату и время в соответствии с форматом $bFmt
+Ошибка:	Возвращает "" (пустую строку)
+
+---  Смотрите также  ---

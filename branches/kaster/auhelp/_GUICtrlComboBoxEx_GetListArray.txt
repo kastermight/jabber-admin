@@ -1,0 +1,21 @@
+
+_GUICtrlComboBoxEx_GetListArray
+
+Retrieves all items from the list portion of a ComboBox control
+
+#Include 
+_GUICtrlComboBoxEx_GetListArray($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: Array in the following format:
+		[0] - Number of items
+		[1] - Item 1
+		[2] - Item 2
+		[n] - Item n
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_GetList

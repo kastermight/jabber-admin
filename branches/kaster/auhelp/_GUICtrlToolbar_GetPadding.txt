@@ -1,0 +1,19 @@
+
+_GUICtrlToolbar_GetPadding
+
+Retrieves the horizontal and vertical padding
+
+#Include 
+_GUICtrlToolbar_GetPadding($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Array with the following format:
+		[0] - Horizontal padding
+		[1] - Vertical padding
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetPadding

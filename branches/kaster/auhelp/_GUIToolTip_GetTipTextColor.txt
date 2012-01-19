@@ -1,0 +1,17 @@
+
+_GUIToolTip_GetTipTextColor
+
+Retrieves the text color
+
+#Include 
+_GUIToolTip_GetTipTextColor($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: The text color
+
+---  Смотрите также  ---
+_GUIToolTip_SetTipTextColor

@@ -1,0 +1,23 @@
+
+_FTP_DirSetCurrent
+
+Установить текущий каталог на FTP сервере.
+
+#Include 
+_FTP_DirSetCurrent($l_FTPSession, $s_Remote)
+
+---  Таблица параметров  ---
+$l_FTPSession
+	Указатель возвращённый функцией _FTP_Connect().
+$s_Remote
+	Каталог.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает имя каталога
+Ошибка:	Возвращает 0 и устанавливает @error
+
+---  Смотрите также  ---
+_FTP_Connect
+
+
+---  Таблица  --- FtpSetCurrentDirectory

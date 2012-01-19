@@ -1,0 +1,22 @@
+
+_GUICtrlTreeView_SetItemParam
+
+Устанавливает ассоциативное значение определённому пункту
+
+#Include 
+_GUICtrlTreeView_SetItemParam($hWnd, $hItem, $iParam)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$hItem
+	Дескриптор пункта
+$iParam
+	Ассоциативное значение, связанное с пунктом
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetItemParam

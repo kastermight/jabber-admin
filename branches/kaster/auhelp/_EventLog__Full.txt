@@ -1,0 +1,18 @@
+
+_EventLog__Full
+
+Retrieves whether the event log is full
+
+#Include 
+_EventLog__Full($hEventLog)
+
+---  Таблица параметров  ---
+$hEventLog
+	A handle to the event log
+
+---  Таблица возвращаемых значений  ---
+Успех:	True: Event log is full
+Ошибка:	False: Event log is not full
+
+---  Смотрите также  ---
+_EventLog__Count, _EventLog__Oldest

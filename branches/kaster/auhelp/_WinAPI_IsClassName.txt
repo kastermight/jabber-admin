@@ -1,0 +1,22 @@
+
+_WinAPI_IsClassName
+
+Wrapper to check ClassName of the control.
+
+#Include 
+_WinAPI_IsClassName($hWnd, $sClassName)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to a control
+$sClassName
+	Class name to check
+
+---  Таблица возвращаемых значений  ---
+True:	$sClassName matches ClassName retrieved from $hWnd
+False:	$sClassName does not match ClassName retrieved from $hWnd
+
+---  Примечания  ---
+Used for checking correct $hWnd is passed into function
+
+---  Смотрите также  ---

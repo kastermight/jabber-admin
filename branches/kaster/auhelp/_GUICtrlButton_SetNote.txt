@@ -1,0 +1,26 @@
+
+_GUICtrlButton_SetNote
+
+Sets the text of the note associated with a command link button
+
+#Include 
+_GUICtrlButton_SetNote($hWnd, $sNote)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$sNote
+	String that contains the note
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Примечания  ---
+Minimum Operating Systems: Windows Vista
+
+---  Смотрите также  ---
+_GUICtrlButton_GetNote, _GUICtrlButton_GetNoteLength
+
+
+---  Таблица  --- BCM_SETNOTE

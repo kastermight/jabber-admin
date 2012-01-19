@@ -1,0 +1,23 @@
+
+_GUICtrlComboBox_SetItemHeight
+
+Set the height of list items or the selection field in a ComboBox
+
+#Include 
+_GUICtrlComboBox_SetItemHeight($hWnd, $iHeight[, $iComponent = -1])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iHeight
+	The height, in pixels, of the combo box component identified by $iComponent
+$iComponent
+	[опционально] Use the following values:
+		–1 - Set the height of the selection field
+		 0 - Set the height of list items
+
+---  Таблица возвращаемых значений  ---
+Ошибка: If height is invalid, the return value is -1.
+
+---  Смотрите также  ---
+_GUICtrlComboBox_GetItemHeight

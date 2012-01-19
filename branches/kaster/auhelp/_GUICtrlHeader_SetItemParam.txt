@@ -1,0 +1,22 @@
+
+_GUICtrlHeader_SetItemParam
+
+Sets the param value of the item
+
+#Include 
+_GUICtrlHeader_SetItemParam($hWnd, $iIndex, $iParam)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Zero based item index
+$iParam
+	Item param value
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlHeader_GetItemParam

@@ -1,0 +1,27 @@
+
+_GUICtrlMonthCal_SetFirstDOW
+
+Sets the first day of the week for a month calendar control
+
+#Include 
+_GUICtrlMonthCal_SetFirstDOW($hWnd, $sDay)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$sDay
+	In the following format:
+		0 or "Monday"
+		1 or "Tuesday"
+		2 or "Wednesday"
+		3 or "Thursday"
+		4 or "Friday"
+		5 or "Saturday"
+		6 or "Sunday"
+
+---  Таблица возвращаемых значений  ---
+Успех: The previous first day of the week
+Ошибка: -1
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_GetFirstDOW

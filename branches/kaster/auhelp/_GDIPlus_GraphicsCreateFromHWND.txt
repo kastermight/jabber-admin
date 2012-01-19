@@ -1,0 +1,24 @@
+
+_GDIPlus_GraphicsCreateFromHWND
+
+Create a Graphics object from a window handle
+
+#Include 
+_GDIPlus_GraphicsCreateFromHWND($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to a window
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to a Graphics object
+Ошибка:	0
+
+---  Примечания  ---
+When you are done with the Graphics object, call _GDIPlus_GraphicsDispose to release the resources
+
+---  Смотрите также  ---
+_GDIPlus_GraphicsDispose
+
+
+---  Таблица  --- GdipCreateFromHWND

@@ -1,0 +1,24 @@
+
+_GDIPlus_GraphicsCreateFromHDC
+
+Create a Graphics object from a device contect (DC)
+
+#Include 
+_GDIPlus_GraphicsCreateFromHDC($hDC)
+
+---  Таблица параметров  ---
+$hDC
+	Device context
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to a Graphics object
+Ошибка:	0
+
+---  Примечания  ---
+When you are done with the Graphics object, call _GDIPlus_GraphicsDispose to release the resources
+
+---  Смотрите также  ---
+_GDIPlus_GraphicsDispose
+
+
+---  Таблица  --- GdipCreateFromHDC

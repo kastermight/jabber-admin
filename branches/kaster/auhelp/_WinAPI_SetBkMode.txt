@@ -1,0 +1,31 @@
+
+_WinAPI_SetBkMode
+
+Sets the background mix mode of the specified device context
+
+#Include 
+_WinAPI_SetBkMode($hDC, $iBkMode)
+
+---  Таблица параметров  ---
+$hDC
+	Handle to device context
+$iBkMode
+	Specifies the background mix mode. This parameter can be one of the following values.
+		OPAQUE - Background is filled with the current background color before the text, hatched brush, or pen is drawn.
+		TRANSPARENT - Background remains untouched.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Value specifies the previous background mix mode.
+Ошибка:	0
+
+---  Примечания  ---
+The background mix mode is used with text, hatched brushes, and pen styles that are not solid lines.
+The SetBkMode function affects the line styles for lines drawn using a pen created by the CreatePen function.
+SetBkMode does not affect lines drawn using a pen created by the ExtCreatePen function.
+The $iBkMode parameter can also be set to driver-specific values. GDI passes such values to the device driver and otherwise ignores them.
+
+---  Смотрите также  ---
+_WinAPI_GetBkMode, _WinAPI_DrawText, _WinAPI_CreatePen, _WinAPI_SelectObject
+
+
+---  Таблица  --- SetBkMode

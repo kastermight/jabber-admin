@@ -1,0 +1,22 @@
+
+_GUICtrlToolbar_SetButtonText
+
+Sets the display text of a button
+
+#Include 
+_GUICtrlToolbar_SetButtonText($hWnd, $iCommandID, $sText)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+$sText
+	Button text
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlToolbar_GetButtonText

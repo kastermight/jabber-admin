@@ -1,0 +1,29 @@
+
+_Date_Time_EncodeSystemTime
+
+Encodes and returns a $tagSYSTEMTIME structure
+
+#Include 
+_Date_Time_EncodeSystemTime($iMonth, $iDay, $iYear [, $iHour = 0 [, $iMinute = 0 [, $iSecond = 0 [, $iMSeconds = 0]]]])
+
+---  Таблица параметров  ---
+$iMonth
+	Month
+$iDay
+	Day
+$iYear
+	Year
+$iHour
+	[опционально] Hour
+$iMinute
+	[опционально] Minute
+$iSecond
+	[опционально] Second
+$iMSeconds
+	[опционально] Milliseconds
+
+---  Таблица возвращаемых значений  ---
+Returns $tagSYSTEMTIME structure
+
+---  Смотрите также  ---
+_Date_Time_EncodeFileTime, $tagSYSTEMTIME

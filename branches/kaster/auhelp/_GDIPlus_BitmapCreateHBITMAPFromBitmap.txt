@@ -1,0 +1,26 @@
+
+_GDIPlus_BitmapCreateHBITMAPFromBitmap
+
+Create a handle to a bitmap from a bitmap object
+
+#Include 
+_GDIPlus_BitmapCreateHBITMAPFromBitmap($hBitmap[, $iARGB = 0xFF000000])
+
+---  Таблица параметров  ---
+$hBitmap
+	Handle to a bitmap object
+$iARGB
+	[опционально] Color object that specifies the background color
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to a HBITMAP
+Ошибка:	0
+
+---  Примечания  ---
+When you are done with the Bitmap object, call _WinAPI_DeleteObject to release the resources
+
+---  Смотрите также  ---
+_WinAPI_DeleteObject
+
+
+---  Таблица  --- GdipCreateHBITMAPFromBitmap

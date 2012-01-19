@@ -1,0 +1,33 @@
+
+_WinAPI_GetLayeredWindowAttributes
+
+Gets Layered Window Attributes
+
+#Include 
+_WinAPI_GetLayeredWindowAttributes($hWnd, ByRef $i_transcolor, ByRef $Transparency [, $asColorRef = False])
+
+---  Таблица параметров  ---
+$hwnd
+	Handle of GUI to work on
+$i_transcolor
+	Returns Transparent color ( dword as 0x00bbggrr or string "0xRRGGBB")
+$Transparency
+	Returns Transparancy of GUI
+$asColorRef
+	[опционально] If True, $i_transcolor will be a COLORREF( 0x00bbggrr ), else an RGB-Color
+
+---  Таблица возвращаемых значений  ---
+Успех:	Usage of LWA_ALPHA and LWA_COLORKEY (use BitAnd)
+Ошибка:	0
+@error:	1 to 3 - Error from DllCall
+	4 - Function did not succeed
+@extended:	contains _WinAPI_GetLastError()
+
+---  Примечания  ---
+Minimum OS - Windows XP.
+
+---  Смотрите также  ---
+_WinAPI_SetLayeredWindowAttributes, _WinAPI_GetLastError
+
+
+---  Таблица  --- GetLayeredWindowAttributes

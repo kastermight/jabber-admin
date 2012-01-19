@@ -1,0 +1,25 @@
+
+_GUICtrlToolbar_InsertMarkHitTest
+
+Retrieves the insertion mark information for a point
+
+#Include 
+_GUICtrlToolbar_InsertMarkHitTest($hWnd, $iX, $iY)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iX
+	X position relative to the client area
+$iY
+	Y position relative to the client area
+
+---  Таблица возвращаемых значений  ---
+Успех: Array with the following format:
+		[0] - Zero based index of the insertion mark or -1 for no insertion mark
+		[1] - Defines the insertion position. This can be one of the following values:
+		 0 - To the left
+		 1 - To the right
+		 2 - On the background of the toolbar
+
+---  Смотрите также  ---

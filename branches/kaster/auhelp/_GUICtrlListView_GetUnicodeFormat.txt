@@ -1,0 +1,20 @@
+
+_GUICtrlListView_GetUnicodeFormat
+
+Возвращает флаг использования формата символов UNICODE
+
+#Include 
+_GUICtrlListView_GetUnicodeFormat($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True: используются символы Unicode
+Ошибка:	Возвращает False: используются символы ANSI
+
+ 
+
+---  Смотрите также  ---
+_GUICtrlListView_SetUnicodeFormat

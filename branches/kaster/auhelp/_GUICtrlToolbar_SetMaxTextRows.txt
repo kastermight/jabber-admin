@@ -1,0 +1,19 @@
+
+_GUICtrlToolbar_SetMaxTextRows
+
+Sets the maximum number of text rows displayed button
+
+#Include 
+_GUICtrlToolbar_SetMaxTextRows($hWnd, $iMaxRows)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iMaxRows
+	Maximum number of rows of text that can be displayed
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---

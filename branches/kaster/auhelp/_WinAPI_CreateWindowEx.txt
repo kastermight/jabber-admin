@@ -1,0 +1,43 @@
+
+_WinAPI_CreateWindowEx
+
+Creates an overlapped, pop-up, or child window
+
+#Include 
+_WinAPI_CreateWindowEx($iExStyle, $sClass, $sName, $iStyle, $iX, $iY, $iWidth, $iHeight, $hParent [, $hMenu = 0 [, $hInstance = 0 [, $pParam = 0]]])
+
+---  Таблица параметров  ---
+$iExStyle
+	Extended window style
+$sClass
+	Registered class name
+$sName
+	Window name
+$iStyle
+	Window style
+$iX
+	Horizontal position of window
+$iY
+	Vertical position of window
+$iWidth
+	Window width
+$iHeight
+	Window height
+$hParent
+	Handle to parent or owner window
+$hMenu
+	[опционально] Handle to menu or child-window identifier
+$hInstance
+	[опционально] Handle to application instance
+$pParam
+	[опционально] Pointer to window-creation data
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle to the new window
+Ошибка:	0
+
+---  Смотрите также  ---
+_WinAPI_DestroyWindow
+
+
+---  Таблица  --- CreateWindowEx

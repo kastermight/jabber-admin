@@ -1,0 +1,16 @@
+
+_GUICtrlStatusBar_SetMinHeight
+
+Sets the minimum height of a status window's drawing area
+
+#Include 
+_GUICtrlStatusBar_SetMinHeight($hWnd, $iMinHeight)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iMinHeight
+	Minimum height, in pixels, of the window
+
+---  Смотрите также  ---
+_GUICtrlStatusBar_GetHeight
