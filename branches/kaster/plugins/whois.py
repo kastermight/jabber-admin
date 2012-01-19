@@ -52,7 +52,7 @@ def run(bot,mess,mode='chat'):
 		else:
 			ip = hostip[2][0]
 			host = hostip[0].split('.')
-		host = host[-2] + '.' + host[-1]
+			host = host[-2] + '.' + host[-1]
 		url = URL % ip
 		mes = getwhois(url)
 		if not mes:
