@@ -1,0 +1,15 @@
+
+_DebugBugReportEnv
+
+Outputs a string containing information for Bug report submission.
+
+#include 
+_DebugBugReportEnv( )
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Returns a string containing all information needed to submit.
+
+---  Примечания  ---
+Must be used to submit a Bug Report.

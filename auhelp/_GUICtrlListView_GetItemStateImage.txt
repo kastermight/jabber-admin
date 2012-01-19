@@ -1,0 +1,19 @@
+
+_GUICtrlListView_GetItemStateImage
+
+Gets the state image that is displayed
+
+#Include 
+_GUICtrlListView_GetItemStateImage($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based index of the item
+
+---  Таблица возвращаемых значений  ---
+Returns the One based overlay image index
+
+---  Смотрите также  ---
+_GUICtrlListView_SetItemStateImage

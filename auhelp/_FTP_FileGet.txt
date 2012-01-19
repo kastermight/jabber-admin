@@ -1,0 +1,34 @@
+
+_FTP_FileGet
+
+Получить файл с FTP сервера.
+
+#Include 
+_FTP_FileGet($l_FTPSession, $s_RemoteFile, $s_LocalFile [, $fFailIfExists = False, [ $dwFlagsAndAttributes = 0 [, $l_Flags = 0 [, $l_Context = 0]]]])
+
+---  Таблица параметров  ---
+$l_FTPSession
+	Указатель возвращённый функцией _FTP_Connect()
+$s_RemoteFile
+	Путь к файлу на FTP сервере.
+$s_LocalFile
+	Путь к файлу (локальный).
+$fFailIfExists
+	[опционально] True: не перезаписывать существующие (по умолчанию = False).
+$dwFlagsAndAttributes 
+	[опционально] Новые атрибуты файла.
+$l_Flags 
+	[опционально] как в _FTP_FileOpen().
+$l_Context
+	[опционально] A variable that contains the application-defined value that associates this search with any application data.
+	This is only used if the application has already called _FTP_SetStatusCallback() to set up a status callback function.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает 1
+Ошибка:	Возвращает 0 и устанавливает @error
+
+---  Смотрите также  ---
+_FTP_Connect, _FTP_FileOpen, _FTP_SetStatusCallback
+
+
+---  Таблица  --- FtpGetFile

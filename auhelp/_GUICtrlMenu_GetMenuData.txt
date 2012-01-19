@@ -1,0 +1,17 @@
+
+_GUICtrlMenu_GetMenuData
+
+Retrieves the application defined value
+
+#Include 
+_GUICtrlMenu_GetMenuData($hMenu)
+
+---  Таблица параметров  ---
+$hMenu
+	Handle of the menu
+
+---  Таблица возвращаемых значений  ---
+Returns the Application defined value
+
+---  Смотрите также  ---
+_GUICtrlMenu_SetMenuData

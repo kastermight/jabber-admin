@@ -1,0 +1,19 @@
+
+_GDIPlus_DecodersGetCount
+
+Get the number of available image decoders
+
+#Include 
+_GDIPlus_DecodersGetCount()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Number of image decoders
+Ошибка:	-1 and @error is set
+
+---  Смотрите также  ---
+_GDIPlus_DecodersGetSize
+
+
+---  Таблица  --- GdipGetImageDecodersSize

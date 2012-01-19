@@ -1,0 +1,19 @@
+
+_GUICtrlHeader_GetItemOrder
+
+Retrieves the order in which the item appears
+
+#Include 
+_GUICtrlHeader_GetItemOrder($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Zero based item index
+
+---  Таблица возвращаемых значений  ---
+Успех: Zero based item order
+
+---  Смотрите также  ---
+_GUICtrlHeader_SetItemOrder

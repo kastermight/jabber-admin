@@ -1,0 +1,16 @@
+
+_GUICtrlToolbar_ButtonCount
+
+Retrieves a count of the buttons
+
+#Include 
+_GUICtrlToolbar_ButtonCount($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Number of buttons on toolbar
+
+---  Смотрите также  ---

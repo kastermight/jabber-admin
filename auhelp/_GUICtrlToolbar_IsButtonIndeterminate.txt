@@ -1,0 +1,19 @@
+
+_GUICtrlToolbar_IsButtonIndeterminate
+
+Indicates whether the specified button is indeterminate
+
+#Include 
+_GUICtrlToolbar_IsButtonIndeterminate($hWnd, $iCommandID)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+
+---  Таблица возвращаемых значений  ---
+True: Button is indeterminate
+False: Button is not indeterminate
+
+---  Смотрите также  ---

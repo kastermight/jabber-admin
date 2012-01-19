@@ -1,0 +1,26 @@
+
+GUICtrlSetColor
+
+Устанавливает цвет текста элемента.
+
+GUICtrlSetColor ( controlID, textcolor )
+
+---  Таблица параметров  ---
+controlID
+	Идентификатор (controlID) элемента возвращаемый функцией GUICtrlCreate....
+textcolor
+	Цвет в формате RGB или десятичного числа.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает 1.
+Ошибка:	Возвращает 0.
+
+---  Примечания  ---
+Устанавливается только для элементов Button, Label, Checkbox, Group, Radio, Edit, Input, List, Listview, ListviewItem, Treeview, TreeviewItem, Graphic, Progress и Combo.
+
+Checkbox, Radio, Group или Progress не могут быть окрашены, если используется стиль "Windows XP/Vista".
+
+Кнопки всегда окрашиваются в классический стиль Windows.
+
+---  Смотрите также  ---
+GUICtrlCreate..., GUICtrlSetBkColor, GUICtrlSetDefColor

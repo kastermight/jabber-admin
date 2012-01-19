@@ -1,0 +1,17 @@
+
+_GUICtrlSlider_GetThumbLength
+
+Retrieves the length of the slider
+
+#Include 
+_GUICtrlSlider_GetThumbLength($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: The length, in pixels, of the slider
+
+---  Смотрите также  ---
+_GUICtrlSlider_SetThumbLength

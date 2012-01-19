@@ -1,0 +1,18 @@
+
+_GUICtrlToolbar_GetDisabledImageList
+
+Retrieves the disabled button image list
+
+#Include 
+_GUICtrlToolbar_GetDisabledImageList($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Handle to the disabled image list
+Ошибка: 0
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetDisabledImageList

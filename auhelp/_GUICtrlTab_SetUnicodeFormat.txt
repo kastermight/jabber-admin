@@ -1,0 +1,21 @@
+
+_GUICtrlTab_SetUnicodeFormat
+
+Sets the Unicode character format flag for the control
+
+#Include 
+_GUICtrlTab_SetUnicodeFormat($hWnd, $fUnicode)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$fUnicode
+	Unicode character flag:
+		True - Control uses Unicode characters
+		False - Control uses ANSI characters
+
+---  Таблица возвращаемых значений  ---
+Успех: Previous character format flag setting
+
+---  Смотрите также  ---
+_GUICtrlTab_GetUnicodeFormat

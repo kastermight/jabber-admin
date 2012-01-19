@@ -1,0 +1,33 @@
+
+_Security__LookupAccountSid
+
+Retrieves the name of the account for a SID
+
+#Include 
+_Security__LookupAccountSid($vSID)
+
+---  Таблица параметров  ---
+$vSID
+	Either a binary SID or a string SID
+
+---  Таблица возвращаемых значений  ---
+Успех:	Array with the following format:
+	$aAcct[0] - Account name
+	$aAcct[1] - Domain name
+	$aAcct[2] - SID type, which can be one of the following values:
+	 1 - Indicates a user SID
+	 2 - Indicates a group SID
+	 3 - Indicates a domain SID
+	 4 - Indicates an alias SID
+	 5 - Indicates a SID for a well-known group
+	 6 - Indicates a SID for a deleted account
+	 7 - Indicates an invalid SID
+	 8 - Indicates an unknown SID type
+	 9 - Indicates a SID for a computer
+Ошибка:	0 and set @error
+
+---  Смотрите также  ---
+_Security__LookupAccountName, _Security__GetAccountSid
+
+
+---  Таблица  --- LookupAccountSid

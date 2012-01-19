@@ -1,0 +1,21 @@
+
+_GDIPlus_PenDispose
+
+Освобождает объект Карандаш
+
+#Include 
+_GDIPlus_PenDispose($hPen)
+
+---  Таблица параметров  ---
+$hPen
+	Дескриптор объекта Карандаш
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GDIPlus_PenCreate
+
+
+---  Таблица  --- GdipDeletePen

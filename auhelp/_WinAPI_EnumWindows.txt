@@ -1,0 +1,26 @@
+
+_WinAPI_EnumWindows
+
+Enumerates all windows
+
+#Include 
+_WinAPI_EnumWindows([$fVisible = True [, $hwnd = Default]])
+
+---  Таблица параметров  ---
+$fVisible
+	[опционально] Window selection flag:
+		True  - Returns only visible windows
+		False - Returns all windows
+$hwnd
+	[опционально] Handle of the starting windows (default Desktop windows)
+
+---  Таблица возвращаемых значений  ---
+Returns an Array with the following format:
+	[0][0] - Number of rows in array (n)
+	[1][0] - Window handle
+	[1][1] - Window class name
+	[n][0] - Window handle
+	[n][1] - Window class name
+
+---  Смотрите также  ---
+_WinAPI_EnumWindowsPopup, _WinAPI_EnumWindowsTop

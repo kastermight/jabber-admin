@@ -1,0 +1,27 @@
+
+_GUICtrlSlider_GetLogicalTics
+
+Retrieves an array that contains the logical positions of the tick marks for a slider
+
+#Include 
+_GUICtrlSlider_GetLogicalTics($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Returns array logical positions
+Ошибка: @error is set
+
+---  Примечания  ---
+The number of elements in the array is two less than the tick count returned by the
+_GUICtrlSlider_GetNumTics function. Note that the values in the array may include duplicate
+positions and may not be in sequential order. The data in the returned array is valid until
+you change the slider's tick marks
+
+The elements of the array specify the logical positions of the sliders's tick marks, not including
+the first and last tick marks created by the slider. The logical positions can be any of the integer
+values in the sliders's range of minimum to maximum slider positions.
+
+---  Смотрите также  ---

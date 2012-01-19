@@ -1,0 +1,13 @@
+
+_GUICtrlStatusBar_Resize
+
+Causes the status bar to resize itself
+
+#Include 
+_GUICtrlStatusBar_Resize($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Смотрите также  ---

@@ -1,0 +1,25 @@
+
+_GUICtrlSlider_SetTic
+
+Sets a tick mark in a slider at the specified logical position
+
+#Include 
+_GUICtrlSlider_SetTic($hWnd, $iPosition)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iPosition
+	Position of the tick mark
+		This parameter can be any of the integer values in the slider's range of minimum to maximum positions
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Примечания  ---
+A slider creates its own first and last tick marks.
+Do not use this message to set the first and last tick marks.
+
+---  Смотрите также  ---
+_GUICtrlSlider_GetTic, _GUICtrlSlider_ClearTics

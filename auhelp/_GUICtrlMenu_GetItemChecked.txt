@@ -1,0 +1,24 @@
+
+_GUICtrlMenu_GetItemChecked
+
+Retrieves the status of the menu item checked state
+
+#Include 
+_GUICtrlMenu_GetItemChecked($hMenu, $iItem[, $fByPos = True])
+
+---  Таблица параметров  ---
+$hMenu
+	Handle of the menu
+$iItem
+	Identifier or position of the menu item
+$fByPos
+	[опционально] Menu identifier flag:
+		 True - $iItem is a zero based item position
+		False - $iItem is a menu item identifier
+
+---  Таблица возвращаемых значений  ---
+True:	Item is checked
+False:	Item is not checked
+
+---  Смотрите также  ---
+_GUICtrlMenu_SetItemChecked

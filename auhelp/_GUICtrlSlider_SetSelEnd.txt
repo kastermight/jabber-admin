@@ -1,0 +1,16 @@
+
+_GUICtrlSlider_SetSelEnd
+
+Sets the ending logical position of the current selection range
+
+#Include 
+_GUICtrlSlider_SetSelEnd($hWnd, $iMaximum)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iMaximum
+	Ending logical position for the selection range
+
+---  Смотрите также  ---
+_GUICtrlSlider_GetSelEnd, _GUICtrlSlider_SetSel, _GUICtrlSlider_SetSelStart, _GUICtrlSlider_ClearSel, _GUICtrlSlider_GetSel

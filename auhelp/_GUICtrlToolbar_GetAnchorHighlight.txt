@@ -1,0 +1,22 @@
+
+_GUICtrlToolbar_GetAnchorHighlight
+
+Retrieves the anchor highlight setting
+
+#Include 
+_GUICtrlToolbar_GetAnchorHighlight($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+True: Anchor highlighting is enabled
+False: Anchor highlighting is not enabled
+
+---  Примечания  ---
+Anchor highlighting means that the last highlighted item will remain highlighted until another item is
+highlighted. This occurs even if the cursor leaves the toolbar control.
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetAnchorHighlight

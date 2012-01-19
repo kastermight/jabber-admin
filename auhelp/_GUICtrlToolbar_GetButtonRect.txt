@@ -1,0 +1,23 @@
+
+_GUICtrlToolbar_GetButtonRect
+
+Retrieves the bounding rectangle for a button
+
+#Include 
+_GUICtrlToolbar_GetButtonRect($hWnd, $iCommandID)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+
+---  Таблица возвращаемых значений  ---
+Успех: Array with the following format:
+		[0] - X coordinate of the upper left corner of the rectangle
+		[1] - Y coordinate of the upper left corner of the rectangle
+		[2] - X coordinate of the lower right corner of the rectangle
+		[3] - Y coordinate of the lower right corner of the rectangle
+
+---  Смотрите также  ---
+_GUICtrlToolbar_GetButtonRectEx

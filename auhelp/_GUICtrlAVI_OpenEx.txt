@@ -1,0 +1,25 @@
+
+_GUICtrlAVI_OpenEx
+
+Opens an AVI clip and displays its first frame in an animation control
+
+#Include 
+_GUICtrlAVI_OpenEx($hWnd, $sFileName, $iResourceID)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$sFileName
+	Fully qualified path to resource file
+$iResourceID
+	AVI resource identifier
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Примечания  ---
+You can only open silent AVI clips
+
+---  Смотрите также  ---
+_GUICtrlAVI_Open

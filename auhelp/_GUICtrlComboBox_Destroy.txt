@@ -1,0 +1,21 @@
+
+_GUICtrlComboBox_Destroy
+
+Удаляет ComboBox
+
+#Include 
+_GUICtrlComboBox_Destroy(ByRef $hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех: Возвращает True, устанавливает дескриптор в 0
+Ошибка: Возвращает False
+
+---  Примечания  ---
+Ограничение: только для применения к элементу ComboBox созданному функцией _GUICtrlComboBox_Create
+
+---  Смотрите также  ---
+_GUICtrlComboBox_Create

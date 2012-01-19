@@ -1,0 +1,20 @@
+
+_GUICtrlTreeView_DeleteChildren
+
+Удаляет все вложенные пункты
+
+#Include 
+_GUICtrlTreeView_DeleteChildren($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$hItem
+	Дескриптор пункта, вложенные пункты которого требуется удалить
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlTreeView_Delete, _GUICtrlTreeView_DeleteAll

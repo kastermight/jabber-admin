@@ -1,0 +1,47 @@
+
+_FTP_FindFileFirst
+
+Найти первый файл на FTP сервере.
+
+#Include 
+_FTP_FindFileFirst($l_FTPSession, $s_RemotePath, ByRef $h_Handle [, $l_Flags = 0 [, $l_Context = 0]])
+
+---  Таблица параметров  ---
+$l_FTPSession
+	Указатель возвращённый функцией _FTP_Connect().
+$s_RemotePath
+	Путь, который будет использоваться при поиске файла.
+$h_Handle
+	Указатель возвращённый функцией _FTP_FindFileNext() или _FTP_FindFileClose().
+$l_Flags
+	[опционально] Смотрите примечания.
+$l_Context
+	[опционально] A variable that contains the application-defined value that associates this search with any application data.
+	This is only used if the application has already called _FTP_SetStatusCallback() to set up a status callback function.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает массив, смотрите примечания.
+Ошибка:	Возвращает 0 и устанавливает @error
+
+---  Примечания  ---
+При успешном возвращении массива:
+[0]  - Количество элементов
+[1]  - Атрибуты файла
+[2]  - Время создания Low
+[3]  - Время создания Hi
+[4]  - Время доступа Low
+[5]  - Время доступа Hi
+[6]  - Последняя запись Low
+[7]  - Последняя запись Hi
+[8]  - Размер файла High
+[9]  - Размер файла Low
+[10] - Имя файла
+[11] - Altername
+
+$l_Flags может быть комбинацией из $INTERNET_FLAG_HYPERLINK, $INTERNET_FLAG_NEED_FILE, $INTERNET_FLAG_NO_CACHE_WRITE, $INTERNET_FLAG_RELOAD, $INTERNET_FLAG_RESYNCHRONIZE
+
+---  Смотрите также  ---
+_FTP_FindFileNext, _FTP_FindFileClose, _FTP_SetStatusCallback
+
+
+---  Таблица  --- FtpFindFirstFile

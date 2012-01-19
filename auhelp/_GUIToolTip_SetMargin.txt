@@ -1,0 +1,22 @@
+
+_GUIToolTip_SetMargin
+
+Sets the top, left, bottom, and right margins
+
+#Include 
+_GUIToolTip_SetMargin($hWnd, $iLeft, $iTop, $iRight, $iBottom)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iLeft
+	Distance between left border and left end of text, in pixels
+$iTop
+	Distance between top border and top of text, in pixels
+$iRight
+	Distance between right border and right end of text, in pixels
+$iBottom
+	Distance between bottom border and bottom of text, in pixels
+
+---  Смотрите также  ---
+_GUIToolTip_GetMargin

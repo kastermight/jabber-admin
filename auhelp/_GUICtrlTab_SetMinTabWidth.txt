@@ -1,0 +1,19 @@
+
+_GUICtrlTab_SetMinTabWidth
+
+Sets the minimum width of items in a tab control
+
+#Include 
+_GUICtrlTab_SetMinTabWidth($hWnd, $iMinWidth)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iMinWidth
+	Minimum width to be set for a tab control item.
+		If -1, the control will use the default width.
+
+---  Таблица возвращаемых значений  ---
+Успех: The previous minimum tab width
+
+---  Смотрите также  ---

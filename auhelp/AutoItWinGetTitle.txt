@@ -1,0 +1,14 @@
+
+AutoItWinGetTitle
+
+Получает заголовок окна AutoIt.
+
+AutoItWinGetTitle (  )
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Возвращает строку, содержащую заголовок окна AutoIt.
+
+---  Смотрите также  ---
+AutoItWinSetTitle, WinGetTitle

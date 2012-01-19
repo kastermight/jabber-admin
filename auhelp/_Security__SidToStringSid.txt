@@ -1,0 +1,21 @@
+
+_Security__SidToStringSid
+
+Converts a binary SID to a string
+
+#Include 
+_Security__SidToStringSid($pSID)
+
+---  Таблица параметров  ---
+$pSID
+	Pointer to a binary SID to be converted
+
+---  Таблица возвращаемых значений  ---
+Успех:	SID in string form
+Ошибка:	Empty string
+
+---  Смотрите также  ---
+_Security__StringSidToSid
+
+
+---  Таблица  --- ConvertSidToStringSid

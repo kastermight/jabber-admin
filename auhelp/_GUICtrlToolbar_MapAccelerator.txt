@@ -1,0 +1,18 @@
+
+_GUICtrlToolbar_MapAccelerator
+
+Determines the ID of the button that corresponds to the specified accelerator
+
+#Include 
+_GUICtrlToolbar_MapAccelerator($hWnd, $cAccel)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$cAccel
+	Accelerator character
+
+---  Таблица возвращаемых значений  ---
+Успех: Command ID of the button that has cAccel as its accelerator character
+
+---  Смотрите также  ---

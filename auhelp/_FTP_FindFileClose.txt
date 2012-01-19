@@ -1,0 +1,21 @@
+
+_FTP_FindFileClose
+
+Удалить указатель FindFile.
+
+#Include 
+_FTP_FindFileClose($h_Handle)
+
+---  Таблица параметров  ---
+$h_Handle
+	Указатель возвращённый функцией _FTP_FindFileFirst()
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает 1
+Ошибка:	Возвращает 0 и устанавливает @error
+
+---  Смотрите также  ---
+_FTP_FindFileFirst, _FTP_FindFileNext
+
+
+---  Таблица  --- InternetCloseHandle

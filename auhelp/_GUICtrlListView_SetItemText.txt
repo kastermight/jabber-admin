@@ -1,0 +1,27 @@
+
+_GUICtrlListView_SetItemText
+
+Изменить текст пункта или подпункта
+
+#Include 
+_GUICtrlListView_SetItemText($hWnd, $iIndex, $sText[, $iSubItem = 0])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта
+$sText
+	Текст пункта или подпункта
+$iSubItem
+	[опционально] Индекс подпункта или 0 для пункта
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Примечания  ---
+If $iSubItem = -1 row is set
+
+---  Смотрите также  ---
+_GUICtrlListView_GetItemText, _GUICtrlListView_GetItemTextArray, _GUICtrlListView_GetItemTextString, _GUICtrlListView_InsertItem

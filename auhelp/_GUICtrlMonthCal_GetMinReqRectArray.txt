@@ -1,0 +1,21 @@
+
+_GUICtrlMonthCal_GetMinReqRectArray
+
+Retrieves the minimum size required to display a full month in a month calendar control
+
+#Include 
+_GUICtrlMonthCal_GetMinReqRectArray($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: True, Handle is set to 0
+Ошибка: False
+
+---  Примечания  ---
+The minimum required window size for a month calendar control depends on the currently selected font,
+control styles, system metrics, and regional settings.
+
+---  Смотрите также  ---

@@ -1,0 +1,16 @@
+
+_GUICtrlStatusBar_GetCount
+
+Retrieves the number of parts
+
+#Include 
+_GUICtrlStatusBar_GetCount($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Returns the Number of status bar parts
+
+---  Смотрите также  ---

@@ -1,0 +1,25 @@
+
+_GUICtrlRichEdit_Undo
+
+Отменяет последнюю операцию редактирования в элементе Rich Edit в очереди отмен
+
+#Include 
+_GUICtrlRichEdit_Undo($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True - операция отменена успешно
+Ошибка:	False -  отменить операцию не удалось. Возможное установление @error:
+	101 - $HWnd не является дескриптором
+
+---  Примечания  ---
+Для одиночной строки, возвращаемое значение всегда True
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_CanUndo, _GUICtrlRichEdit_GetNextUndo, _GUICtrlRichEdit_Redo, _GUICtrlRichEdit_GetNextRedo, _GUICtrlRichEdit_EmptyUndoBuffer, _GUICtrlRichEdit_SetUndoLimit
+
+
+---  Таблица  --- EM_UNDO

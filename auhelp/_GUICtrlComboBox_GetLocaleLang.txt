@@ -1,0 +1,17 @@
+
+_GUICtrlComboBox_GetLocaleLang
+
+Retrieves the current language identifier
+
+#Include 
+_GUICtrlComboBox_GetLocaleLang($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: The language code of the ComboBox
+
+---  Смотрите также  ---
+_GUICtrlComboBox_GetLocale

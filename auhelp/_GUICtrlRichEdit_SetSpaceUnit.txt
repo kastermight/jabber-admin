@@ -1,0 +1,21 @@
+
+_GUICtrlRichEdit_SetSpaceUnit
+
+Gets the unit of measure of horizontal and vertical space used in parameters of various _GUICtrlRichEdit functions
+
+#Include 
+_GUICtrlRichEdit_SetSpaceUnit($sUnit)
+
+---  Таблица параметров  ---
+$sUnit
+	"in", "cm", "mm", "pt" (points), or "tw" (twips, 1/1440 inches, 1/567 centimeters
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False and sets @error to 1
+
+---  Примечания  ---
+Initially, space is measured in inches
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_GetSpaceUnit, _GUICtrlRichEdit_SetParaBorder, _GUICtrlRichEdit_SetParaIndents, _GUICtrlRichEdit_SetParaNumbering, _GUICtrlRichEdit_SetParaSpacing, _GUICtrlRichEdit_SetParaTabStops, _GUICtrlRichEdit_SetTabStops

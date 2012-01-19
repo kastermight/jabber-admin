@@ -1,0 +1,18 @@
+
+_EventLog__Close
+
+Closes a read handle to the event log
+
+#Include 
+_EventLog__Close($hEventLog)
+
+---  Таблица параметров  ---
+$hEventLog
+	Handle to the event log
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_EventLog__Open, _EventLog__Notify, _EventLog__OpenBackup, _EventLog__Read, _EventLog__Report

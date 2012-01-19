@@ -1,0 +1,24 @@
+
+_EventLog__Backup
+
+Saves the event log to a backup file
+
+#Include 
+_EventLog__Backup($hEventLog, $sFileName)
+
+---  Таблица параметров  ---
+$hEventLog
+	Handle to the event log
+$sFileName
+	The name of the backup file
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+The function does not clear the event log. The function fails if the user does not have the SE_BACKUP_NAME
+privilege.
+
+---  Смотрите также  ---
+_EventLog__OpenBackup

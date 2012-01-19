@@ -1,0 +1,22 @@
+
+_GUICtrlToolbar_GetColorScheme
+
+Retrieves the color scheme information
+
+#Include 
+_GUICtrlToolbar_GetColorScheme($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Array with the following format:
+		[0] - The highlight color of the buttons
+		[1] - The shadow color of the buttons
+
+---  Примечания  ---
+The control uses the color scheme information when drawing the 3-D elements in the control
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetColorScheme

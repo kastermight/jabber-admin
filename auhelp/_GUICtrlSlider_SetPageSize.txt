@@ -1,0 +1,19 @@
+
+_GUICtrlSlider_SetPageSize
+
+Sets the number of logical positions the slider moves
+
+#Include 
+_GUICtrlSlider_SetPageSize($hWnd, $iPageSize)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iPageSize
+	New page size
+
+---  Таблица возвращаемых значений  ---
+Успех: The previous page size
+
+---  Смотрите также  ---
+_GUICtrlSlider_GetPageSize

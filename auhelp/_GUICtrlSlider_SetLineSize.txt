@@ -1,0 +1,22 @@
+
+_GUICtrlSlider_SetLineSize
+
+Sets the number of logical positions the slider moves
+
+#Include 
+_GUICtrlSlider_SetLineSize($hWnd, $iLineSize)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iLineSize
+	New line size
+
+---  Таблица возвращаемых значений  ---
+Успех: The previous line size
+
+---  Примечания  ---
+The default setting for the line size is 1
+
+---  Смотрите также  ---
+_GUICtrlSlider_GetLineSize

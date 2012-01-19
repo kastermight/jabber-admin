@@ -1,0 +1,18 @@
+
+_GUICtrlMenu_FindParent
+
+Retrieves the window to which a menu belongs
+
+#Include 
+_GUICtrlMenu_FindParent($hMenu)
+
+---  Таблица параметров  ---
+$hMenu
+	Menu handle
+
+---  Таблица возвращаемых значений  ---
+Успех:	Window handle
+Ошибка:	0
+
+---  Смотрите также  ---
+_GUICtrlMenu_GetMenu

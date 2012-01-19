@@ -1,0 +1,24 @@
+
+_WinAPI_EnableWindow
+
+Enables or disables mouse and keyboard input to the specified window or control
+
+#Include 
+_WinAPI_EnableWindow($hWnd [, $fEnable = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the window to be enabled or disabled
+$fEnable
+	[опционально] Specifies whether to enable or disable the window:
+		 True - The window or control is enabled
+		False - The window or control is disabled
+
+---  Таблица возвращаемых значений  ---
+True:	The window or control was previously disabled
+False:	The window or control was previously enabled
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- EnableWindow

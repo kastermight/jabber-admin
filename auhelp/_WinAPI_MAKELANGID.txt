@@ -1,0 +1,18 @@
+
+_WinAPI_MAKELANGID
+
+Construct language id from a primary language id and a sublanguage id
+
+#Include 
+_WinAPI_MAKELANGID($lgidPrimary, $lgidSub)
+
+---  Таблица параметров  ---
+$lgidPrimary
+	Primary Language id
+$lgidSub
+	Sub-Language id
+
+---  Таблица возвращаемых значений  ---
+Returns the Language identifier
+
+---  Смотрите также  ---

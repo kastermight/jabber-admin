@@ -1,0 +1,18 @@
+
+_GUICtrlListBox_SetColumnWidth
+
+Set the width, in pixels, of all columns
+
+#Include 
+_GUICtrlListBox_SetColumnWidth($hWnd, $iWidth)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iWidth
+	Specifies the width, in pixels, of all columns
+
+---  Примечания  ---
+For use on controls created with the $LBS_MULTICOLUMN style
+
+---  Смотрите также  ---

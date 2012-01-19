@@ -1,0 +1,25 @@
+
+_GDIPlus_GraphicsGetDC
+
+Gets a handle to the device context of the Graphics object
+
+#Include 
+_GDIPlus_GraphicsGetDC($hGraphics)
+
+---  Таблица параметров  ---
+$hGraphics
+	Handle to a Graphics object
+
+---  Таблица возвращаемых значений  ---
+Успех:	DC of the Graphics object
+Ошибка:	0
+
+---  Примечания  ---
+Each call to the _GDIPlus_GraphicsGetDC should be paired with a call to the _GDIPlus_GraphicsReleaseDC. Do not call
+any methods of the Graphics object between the calls.
+
+---  Смотрите также  ---
+_GDIPlus_GraphicsReleaseDC
+
+
+---  Таблица  --- GdipGetDC

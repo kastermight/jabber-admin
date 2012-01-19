@@ -1,0 +1,22 @@
+
+_IEFormReset
+
+Reset a specified Form setting the values back to their loaded defaults.
+
+#include  
+_IEFormReset ( ByRef $o_object )
+
+---  Таблица параметров  ---
+$o_object
+	Object variable of an InternetExplorer.Application, Form object
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns 1
+Ошибка:	Returns 0 and sets @ERROR
+@Error:	0 ($_IEStatus_Success) = No Error
+	3 ($_IEStatus_InvalidDataType) = Invalid Data Type
+	4 ($_IEStatus_InvalidObjectType) = Invalid Object Type
+@Extended:	Contains invalid parameter number
+
+---  Смотрите также  ---
+_IEFormSubmit, _IEFormGetObjByName, _IEFormGetCollection

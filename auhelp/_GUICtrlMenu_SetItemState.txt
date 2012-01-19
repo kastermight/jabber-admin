@@ -1,0 +1,35 @@
+
+_GUICtrlMenu_SetItemState
+
+Sets the state of a menu item
+
+#Include 
+_GUICtrlMenu_SetItemState($hMenu, $iItem, $iState[, $fState = True[, $fByPos = True]])
+
+---  Таблица параметров  ---
+$hMenu
+	Menu handle
+$iItem
+	Identifier or position of the menu item
+$iState
+	Menu item state:
+		$MFS_CHECKED - Item is checked
+		$MFS_DEFAULT - Item is the default item
+		$MFS_DISABLED - Item is disabled
+		$MFS_GRAYED - Item is disabled
+		$MFS_HILITE - Item is highlighted
+$fState
+	[опционально] Item state to set:
+		 True - State is enabled
+		False - State is disabled
+$fByPos
+	[опционально] Menu identifier flag:
+		 True - $iItem is a zero based item position
+		False - $iItem is a menu item identifier
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlMenu_GetItemState, _GUICtrlMenu_GetItemStateEx

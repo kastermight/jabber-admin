@@ -1,0 +1,21 @@
+
+_GUICtrlToolbar_SetIndeterminate
+
+Sets or clears the indeterminate state of the specified button
+
+#Include 
+_GUICtrlToolbar_SetIndeterminate($hWnd, $iCommandID[, $fState = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+$fState
+	[опционально] True if indeterminate, otherwise False
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---

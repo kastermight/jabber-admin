@@ -1,0 +1,18 @@
+
+_GUICtrlListBox_BeginUpdate
+
+Предотвращает обновление ListBox, пока не будет вызвана функция EndUpdate
+
+#Include 
+_GUICtrlListBox_BeginUpdate($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlListBox_EndUpdate

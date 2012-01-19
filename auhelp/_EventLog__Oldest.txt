@@ -1,0 +1,21 @@
+
+_EventLog__Oldest
+
+Retrieves the absolute record number of the oldest record in the event log
+
+#Include 
+_EventLog__Oldest($hEventLog)
+
+---  Таблица параметров  ---
+$hEventLog
+	A handle to the event log
+
+---  Таблица возвращаемых значений  ---
+Успех:	Absolute record number of the oldest record in the event log
+Ошибка:	0
+
+---  Примечания  ---
+The oldest record in an event log is not necessarily record number 1
+
+---  Смотрите также  ---
+_EventLog__Count, _EventLog__Full

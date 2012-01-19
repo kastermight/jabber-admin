@@ -1,0 +1,17 @@
+
+_GUICtrlRebar_GetTextColor
+
+Retrieves a rebar control's default text color
+
+#Include 
+_GUICtrlRebar_GetTextColor($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+
+---  Таблица возвращаемых значений  ---
+Returns A value that represent the current default text color
+
+---  Смотрите также  ---
+_GUICtrlRebar_SetTextColor

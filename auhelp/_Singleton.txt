@@ -1,0 +1,25 @@
+
+_Singleton
+
+Осуществляет условия, при которых только один экземпляр скрипта может быть запущен.
+
+#Include 
+_Singleton($sOccurenceName [, $iFlag = 0])
+
+---  Таблица параметров  ---
+$sOccurenceName
+	Строка идентифицирующая возникновение сценария.  Эта строка не может содержать символ \, если вы помещаете объект в пространстве имен (Смотрите Примечания).
+$iFlag
+	[опционально] Варианты поведения.
+		0 - Выход скрипта с кодом выхода -1, если другой экземпляр уже существует.
+		1 - Не завершает повторно запущенный скрипт.
+		2 - Allow the object to be accessed by anybody in the system. This is useful if specifying a "Global\" object in a multi-user environment.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает указатель объекта, используемый для синхронизации (мьютекс - "взаимное исключение").
+Ошибка:	Возвращает 0
+
+---  Примечания  ---
+You can place the object in a namespace by prefixing your object name with either "Global\" or "Local\". "Global\" objects combined with the flag 2 are useful in multi-user environments.
+
+---  Смотрите также  ---

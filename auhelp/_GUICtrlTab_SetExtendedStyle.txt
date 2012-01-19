@@ -1,0 +1,22 @@
+
+_GUICtrlTab_SetExtendedStyle
+
+Sets the extended styles that are currently in use
+
+#Include 
+_GUICtrlTab_SetExtendedStyle($hWnd, $iStyle)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iStyle
+	Extended styles currently in use:
+		$TCS_EX_FLATSEPARATORS - The control will draw separators between the tab items
+		$TCS_EX_REGISTERDROP - The control generates TCN_GETOBJECT notification messages to request a
+		drop target object when an object is dragged over the tab items.
+
+---  Таблица возвращаемых значений  ---
+Успех: Previous extended styles
+
+---  Смотрите также  ---
+_GUICtrlTab_GetExtendedStyle

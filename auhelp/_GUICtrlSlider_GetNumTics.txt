@@ -1,0 +1,21 @@
+
+_GUICtrlSlider_GetNumTics
+
+Retrieves the number of tick marks from a slider
+
+#Include 
+_GUICtrlSlider_GetNumTics($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: If no tick flag is set, it returns 2 for the beginning and ending ticks.
+
+	If $TBS_NOTICKS is set, it returns zero.
+	Otherwise, it takes the difference between the range minimum and maximum, divides
+	by the tick frequency, and adds 2.
+
+---  Смотрите также  ---
+_GUICtrlSlider_SetTicFreq

@@ -1,0 +1,20 @@
+
+_GUICtrlSlider_GetSel
+
+Retrieves the ending and starting position of the current selection range
+
+#Include 
+_GUICtrlSlider_GetSel($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Array in the following format:
+
+	[0] - The starting position of the current selection range
+	[1] - The ending position of the current selection range
+
+---  Смотрите также  ---
+_GUICtrlSlider_SetSel, _GUICtrlSlider_SetSelEnd, _GUICtrlSlider_SetSelStart

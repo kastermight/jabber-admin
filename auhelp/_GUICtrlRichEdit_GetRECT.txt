@@ -1,0 +1,29 @@
+
+_GUICtrlRichEdit_GetRECT
+
+Retrieves the formatting rectangle of a control
+
+#Include 
+_GUICtrlRichEdit_GetRECT($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	an array consisting of x and y coordinates - [;;;]
+Ошибка:	sets @error
+@error:	101 - $hWnd is not a handle
+
+---  Примечания  ---
+The formatting rectangle is the area in which text is drawn, part of which may not be visible.
+
+All returned values are in dialog units referenced to the control
+
+Per MSDN, the values returned by this function may not be exactly what may be set by _GUICtrlRichEdit_SetRECT()
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_SetRECT
+
+
+---  Таблица  --- EM_GETRECT

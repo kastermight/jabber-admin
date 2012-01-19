@@ -1,0 +1,22 @@
+
+StringLeft
+
+Возвращает указанное число символов строки слева.
+
+StringLeft ( "string", count )
+
+---  Таблица параметров  ---
+string
+	Используемая строка.
+count
+	Количество возвращаемых символов.
+
+---  Таблица возвращаемых значений  ---
+Возвращает строку, содержащую самую левую часть строки по указанному количеству символов.
+
+---  Примечания  ---
+Если count превышает длину строки, то возвращается вся строка.
+Если count отрицательное число, то возвращается пустая строка.
+
+---  Смотрите также  ---
+StringInStr, StringLen, StringLower, StringMid, StringRight, StringTrimLeft, StringTrimRight, StringUpper, StringCompare, StringReplace, StringSplit

@@ -1,0 +1,21 @@
+
+_MemGlobalLock
+
+Locks a global memory object and returns a pointer to the first byte of the object's memory block
+
+#Include 
+_MemGlobalLock($hMem)
+
+---  Таблица параметров  ---
+$hMem
+	Handle to the global memory object
+
+---  Таблица возвращаемых значений  ---
+Успех:	Pointer to the first byte of the memory block
+Ошибка:	0
+
+---  Смотрите также  ---
+_MemGlobalUnlock, _MemGlobalAlloc
+
+
+---  Таблица  --- GlobalLock

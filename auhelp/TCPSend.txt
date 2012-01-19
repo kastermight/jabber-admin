@@ -1,0 +1,20 @@
+
+TCPSend
+
+Sends data on a connected socket.
+
+TCPSend ( mainsocket, data )
+
+---  Таблица параметров  ---
+mainsocket
+	The connected socket identifier (SocketID) as returned by a TCPConnect function.
+data
+	binary/string to be send to the connected socket.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns number of bytes sent to the connected socket.
+Ошибка:	Returns 0 and set @error.
+@error:	windows API WSAGetError return value (see MSDN).
+
+---  Смотрите также  ---
+TCPStartup, TCPConnect, TCPListen, TCPTimeout (Option)

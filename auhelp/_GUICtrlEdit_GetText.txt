@@ -1,0 +1,18 @@
+
+_GUICtrlEdit_GetText
+
+Возвращает текст из окна редактирования
+
+#Include 
+_GUICtrlEdit_GetText($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех: Возвращает текст из окна редактирования
+Ошибка: Возвращает пустую строку
+
+---  Смотрите также  ---
+_GUICtrlEdit_SetText, _GUICtrlEdit_AppendText, _GUICtrlEdit_GetTextLen

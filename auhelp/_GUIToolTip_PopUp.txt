@@ -1,0 +1,16 @@
+
+_GUIToolTip_PopUp
+
+Causes the ToolTip to display at the coordinates of the last mouse message
+
+#Include 
+_GUIToolTip_PopUp($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Примечания  ---
+Minimum OS - Windows XP.
+
+---  Смотрите также  ---

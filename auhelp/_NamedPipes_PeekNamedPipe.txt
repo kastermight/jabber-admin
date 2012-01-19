@@ -1,0 +1,24 @@
+
+_NamedPipes_PeekNamedPipe
+
+Copies data from a pipe into a buffer without removing it from the pipe
+
+#Include 
+_NamedPipes_PeekNamedPipe($hNamedPipe)
+
+---  Таблица параметров  ---
+$hNamedPipe
+	Handle to the pipe
+
+---  Таблица возвращаемых значений  ---
+Успех:	Array with the following format:
+	$aInfo[0] - Data read from the pipe
+	$aInfo[1] - Bytes read from the pipe
+	$aInfo[2] - Total bytes available to be read
+	$aInfo[3] - Bytes remaining to be read for this message
+Ошибка:	Set @error
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- PeekNamedPipe

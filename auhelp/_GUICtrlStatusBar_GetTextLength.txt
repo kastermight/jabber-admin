@@ -1,0 +1,19 @@
+
+_GUICtrlStatusBar_GetTextLength
+
+Retrieves the length of a part text
+
+#Include 
+_GUICtrlStatusBar_GetTextLength($hWnd, $iPart)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iPart
+	Zero based part index
+
+---  Таблица возвращаемых значений  ---
+Returns the Length of part text
+
+---  Смотрите также  ---
+_GUICtrlStatusBar_GetTextLengthEx, _GUICtrlStatusBar_GetTextFlags

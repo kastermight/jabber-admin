@@ -1,0 +1,20 @@
+
+_GUICtrlToolbar_LoadBitmap
+
+Adds a bitmap to the image list from a file
+
+#Include 
+_GUICtrlToolbar_LoadBitmap($hWnd, $sFileName)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to toolbar
+$sFileName
+	Fully qualified path to bitmap file
+
+---  Таблица возвращаемых значений  ---
+Успех: The zero based index of the new image
+Ошибка: -1
+
+---  Смотрите также  ---
+_GUICtrlToolbar_AddBitmap

@@ -1,0 +1,16 @@
+
+_GUICtrlIpAddress_SetEx
+
+Устанавливает адрес в элемент IP address
+
+#Include 
+_GUICtrlIpAddress_SetEx($hWnd, $tIP)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$tIP
+	Структура $tagGetIPAddress, содержащая новый IP-адрес для элемента
+
+---  Смотрите также  ---
+_GUICtrlIpAddress_GetEx, $tagGetIPAddress

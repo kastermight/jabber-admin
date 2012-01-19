@@ -1,0 +1,19 @@
+
+_GUICtrlTreeView_GetSiblingCount
+
+Возвращает количество соседних пунктов на одном уровне с указанным
+
+#Include 
+_GUICtrlTreeView_GetSiblingCount($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$hItem
+	Дескриптор пункта
+
+---  Таблица возвращаемых значений  ---
+Возвращает количество соседних пунктов, включая указанный
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetCount, _GUICtrlTreeView_GetChildCount

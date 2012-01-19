@@ -1,0 +1,22 @@
+
+_GUICtrlRichEdit_GetCharBkColor
+
+Возвращает цвет фона выделенного текста или, если не выделено, то символа справа от курсора
+
+#Include 
+_GUICtrlRichEdit_GetCharBkColor($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает значение COLORREF, @extended равен 1 если цвет is the same throught the selection
+Ошибка:	устанавливает @error
+@error:	101 - $HWnd не является дескриптором
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_SetCharBkColor
+
+
+---  Таблица  --- EM_GETCHARFORMAT

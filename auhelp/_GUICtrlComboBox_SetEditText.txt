@@ -1,0 +1,20 @@
+
+_GUICtrlComboBox_SetEditText
+
+Set the text of the edit control of the ComboBox
+
+#Include 
+_GUICtrlComboBox_SetEditText($hWnd, $sText)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$sText
+	Text to be set
+
+---  Примечания  ---
+Minimum OS - Windows XP.
+If the message is sent to a ComboBox with the $CBS_DROPDOWN or $CBS_DROPDOWNLIST style the Function will fail.
+
+---  Смотрите также  ---
+_GUICtrlComboBox_GetEditText, _GUICtrlComboBox_ReplaceEditSel

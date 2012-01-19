@@ -1,0 +1,17 @@
+
+_GUICtrlMonthCal_GetCurSel
+
+Retrieves the currently selected date
+
+#Include 
+_GUICtrlMonthCal_GetCurSel($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: $tagSYSTEMTIME structure
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_SetCurSel, _GUICtrlMonthCal_GetCurSelStr, $tagSYSTEMTIME

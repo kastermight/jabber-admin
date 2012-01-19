@@ -1,0 +1,32 @@
+
+GUICtrlSetBkColor
+
+Устанавливает фоновый цвет элемента.
+
+GUICtrlSetBkColor ( controlID, backgroundcolor )
+
+---  Таблица параметров  ---
+controlID
+	Идентификатор (controlID) элемента возвращаемый функцией GUICtrlCreate....
+backgroundcolor
+	Цвет в формате RGB или десятичного числа.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает 1.
+Ошибка:	Возвращает 0.
+
+---  Примечания  ---
+Устанавливается только для элементов Button, Label, Checkbox, Group, Radio, Edit, Input, List, Listview, ListviewItem, Treeview, TreeviewItem, Graphic, Progress, Slider и Combo.
+
+Элемент полоски прогресса не может быть окрашен, если используется стиль "Windows XP".
+
+Кнопки всегда окрашиваются в классический стиль Windows. Они не могут иметь стиль $BS_ICON.
+
+Специальный флаг $GUI_BKCOLOR_TRANSPARENT (вместо цвета) может использоваться с элементами Label, Group, Radio, Checkbox, чтобы дать элементам прозрачный фон.
+
+Специальный флаг $GUI_BKCOLOR_LV_ALTERNATE может быть использован с элементом Listview чтобы дать альтернативный фон пунктам ListviewItems.
+Нечётные строки получите установкой цвета GUICtrlSetBkColor для Listview.
+Чётные строки получите установкой цвета GUICtrlSetBkColor для ListviewItem.
+
+---  Смотрите также  ---
+GUICtrlCreate..., GUICtrlSetColor, GUICtrlSetDefBkColor

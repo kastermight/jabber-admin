@@ -1,0 +1,22 @@
+
+_GUICtrlButton_SetSize
+
+Sets the size of the button
+
+#Include 
+_GUICtrlButton_SetSize($hWnd, $iWidth, $iHeight)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iWidth
+	New width of the button
+$iHeight
+	New height of the button
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlButton_GetIdealSize

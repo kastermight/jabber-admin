@@ -1,0 +1,20 @@
+
+_GUICtrlTreeView_GetISearchString
+
+Retrieves the incremental search string
+
+#Include 
+_GUICtrlTreeView_GetISearchString($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	Incremental search string if the control is in incremental search mode
+Ошибка:	otherwise ""
+
+---  Примечания  ---
+The incremental search string is used to select an item based on characters typed by the user
+
+---  Смотрите также  ---

@@ -1,0 +1,25 @@
+
+_GUICtrlRebar_MoveBand
+
+Moves a band from one index to another
+
+#Include 
+_GUICtrlRebar_MoveBand($hWnd, $iIndexFrom, $iIndexTo)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndexFrom
+	Zero-based index of the band to be moved
+$iIndexTo
+	Zero-based index of the new band position
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+This message will most likely change the index of other bands in the rebar control.
+If a band is moved from index 6 to index 0, all of the bands in between will have their index incremented by one.
+
+---  Смотрите также  ---

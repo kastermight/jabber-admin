@@ -1,0 +1,27 @@
+
+_GUICtrlToolbar_PressButton
+
+Presses or releases the specified button
+
+#Include 
+_GUICtrlToolbar_PressButton($hWnd, $iCommandID[, $fPress = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+$fPress
+	[опционально] Pressed state:
+		 True - Button will be set to a pressed state
+		False - Button will be set to an unpressed state
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+This function does not fire the click event on dropdown style buttons. You should use the _GUICtrlToolbar_ClickButton
+function if you want to ensure that the button click event is fired, regardless of the button style.
+
+---  Смотрите также  ---

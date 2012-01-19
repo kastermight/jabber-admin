@@ -1,0 +1,22 @@
+
+_GUICtrlToolbar_SetHotItem
+
+Sets the hot item
+
+#Include 
+_GUICtrlToolbar_SetHotItem($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Index of the item that will be made hot. If this value is -1, none of the items will be hot.
+
+---  Таблица возвращаемых значений  ---
+Успех: The index of the previous hot item, or -1 if there was no hot item
+
+---  Примечания  ---
+A button is considered hot when the cursor is over it
+
+---  Смотрите также  ---
+_GUICtrlToolbar_GetHotItem

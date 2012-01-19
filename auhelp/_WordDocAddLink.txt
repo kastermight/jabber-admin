@@ -1,0 +1,35 @@
+
+_WordDocAddLink
+
+Add a hyperlink to the document
+
+#include  
+_WordDocAddLink ( ByRef $o_object [, $o_Anchor = "" [, $s_Address = "" [, $s_SubAddress = "" [, $s_ScreenTip = "" [, $s_TextToDisplay = "" [, $s_Target = ""]]]]]] )
+
+---  Таблица параметров  ---
+$o_object
+	Object variable of a Word.Application, document object
+$o_Anchor
+	[опционально] The text or graphic that you want turned into a hyperlink.
+	"" = (Default) Uses entire document as range
+$s_Address
+	[опционально] The address for the specified link. The address can be an e-mail address, an Internet address, or a file name.
+	"" = (Default) Link to the specified document is used
+$s_SubAddress
+	[опционально] The name of a location within the destination file, such as a bookmark, named range, or slide number.
+$s_ScreenTip
+	[опционально] The text that appears as a ScreenTip when the mouse pointer is positioned over the specified hyperlink.
+	"" = (Default) Uses value of $s_Address
+$s_TextToDisplay
+	[опционально] The display text of the specified hyperlink. The value of this argument replaces the text or graphic specified by Anchor.
+	"" = (Default) Uses value of $s_Address
+$s_Target
+	[опционально] The name of the frame or window in which you want to load the specified hyperlink.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns 1
+Ошибка:	Returns 0  and sets @ERROR = 1
+@Error:	$_WordStatus_Success = No Error
+	$_WordStatus_InvalidDataType = Invalid Data Type
+	$_WordStatus_InvalidObjectType = Invalid Object Type
+@Extended:	Contains invalid parameter number

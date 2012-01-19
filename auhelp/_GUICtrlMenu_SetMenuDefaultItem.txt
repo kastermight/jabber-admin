@@ -1,0 +1,27 @@
+
+_GUICtrlMenu_SetMenuDefaultItem
+
+Sets the default menu item
+
+#Include 
+_GUICtrlMenu_SetMenuDefaultItem($hMenu, $iItem[, $fByPos = True])
+
+---  Таблица параметров  ---
+$hMenu
+	Menu handle
+$iItem
+	Identifier or position of the default menu item or -1 for no default item
+$fByPos
+	[опционально] Menu identifier flag:
+		 True - $iItem is a zero based item position
+		False - $iItem is a menu item identifier
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlMenu_GetMenuDefaultItem
+
+
+---  Таблица  --- SetMenuDefaultItem

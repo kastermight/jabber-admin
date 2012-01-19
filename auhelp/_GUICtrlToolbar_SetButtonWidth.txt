@@ -1,0 +1,21 @@
+
+_GUICtrlToolbar_SetButtonWidth
+
+Sets the minimum and maximum button widths in the toolbar control
+
+#Include 
+_GUICtrlToolbar_SetButtonWidth($hWnd, $iMin, $iMax)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iMin
+	Minimum button width, in pixels
+$iMax
+	Maximum button width, in pixels
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---

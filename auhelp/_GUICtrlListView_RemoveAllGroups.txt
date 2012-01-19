@@ -1,0 +1,17 @@
+
+_GUICtrlListView_RemoveAllGroups
+
+Удаляет все группы в ListView
+
+#Include 
+_GUICtrlListView_RemoveAllGroups($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Примечания  ---
+Минимальная ОС - Windows XP.
+
+---  Смотрите также  ---
+_GUICtrlListView_RemoveGroup

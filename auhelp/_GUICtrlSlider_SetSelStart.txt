@@ -1,0 +1,16 @@
+
+_GUICtrlSlider_SetSelStart
+
+Sets the starting logical position of the current selection range
+
+#Include 
+_GUICtrlSlider_SetSelStart($hWnd, $iMinimum)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iMinimum
+	Starting logical position for the selection range
+
+---  Смотрите также  ---
+_GUICtrlSlider_GetSelStart, _GUICtrlSlider_SetSel, _GUICtrlSlider_SetSelEnd, _GUICtrlSlider_ClearSel, _GUICtrlSlider_GetSel

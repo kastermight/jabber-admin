@@ -1,0 +1,25 @@
+
+_GUICtrlRichEdit_Deselect
+
+Убирает выделение с текста, делая не выделенным
+
+#Include 
+_GUICtrlRichEdit_Deselect($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	Возвращает False и устанавливает @error
+@error:	101 - $HWnd не является дескриптором
+
+---  Примечания  ---
+При снятии выделения курсор остаётся в позиции отпуска курсора
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_SetSel, _GUICtrlRichEdit_GetSel, _GUICtrlRichEdit_IsTextSelected
+
+
+---  Таблица  --- EM_SETSEL

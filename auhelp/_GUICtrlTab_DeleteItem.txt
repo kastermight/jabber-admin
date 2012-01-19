@@ -1,0 +1,23 @@
+
+_GUICtrlTab_DeleteItem
+
+Deletes a tab
+
+#Include 
+_GUICtrlTab_DeleteItem($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based index of the item
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Примечания  ---
+This does not delete the controls on the tabitems
+
+---  Смотрите также  ---
+_GUICtrlTab_DeleteAllItems

@@ -1,0 +1,40 @@
+
+_GUICtrlRichEdit_GetText
+
+Возвращает весь текст в элементе
+
+#Include 
+_GUICtrlRichEdit_GetText($hWnd [, $fCrToCrLf = False [, $iCodePage = 0 [, $sReplChar = ""]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$fCrToCrLf
+	[опционально] Все CR заменить на CrLf
+		True - выполнить
+		 не выполнять (По умолчанию)
+$iCodePage
+	[опционально] кодовая страница
+		По умолчанию: используется системная по умолчанию.
+		CP_ACP для ANSI, 1200 для Unicode
+$sReplChar
+	[опционально] Используемый символ, если $iCodePage не 1200 и расширенный символ не может быть представлен в указанной кодовой странице
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает текст
+Ошибка:	Возвращает "" (пустую строку) и устанавливает @error:
+@error:	101 - $HWnd не является дескриптором
+	102 - $fCrToCrLf не является True или False
+	103 - $iCodePage не является числом
+	700 - внутренняя ошибка
+
+---  Примечания  ---
+В случае успеха, если установлен параметр $sReplChar, то @extended содержит этот используемый символ
+
+Используйте функцию _GUICtrlRichEdit_IsModified(), чтобы определить, изменился ли текст
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_SetText, _GUICtrlRichEdit_AppendText, _GUICtrlRichEdit_InsertText, _GUICtrlRichEdit_IsModified
+
+
+---  Таблица  --- EM_GETTEXTEX

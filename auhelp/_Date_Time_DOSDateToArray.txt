@@ -1,0 +1,23 @@
+
+_Date_Time_DOSDateToArray
+
+Decode a DOS date to an array
+
+#Include 
+_Date_Time_DOSDateToArray($iDosDate)
+
+---  Таблица параметров  ---
+$iDosDate
+	MS-DOS date, packed as follows:
+		Bits 0- 4 Day of the month (1–31)
+		Bits 5- 8 Month (1 = January, 2 = February, and so on)
+		Bits 9-15 Year offset from 1980 (add 1980 to get actual year)
+
+---  Таблица возвращаемых значений  ---
+Returns an Array with the following format:
+		[0] - Month
+		[1] - Day
+		[2] - Year
+
+---  Смотрите также  ---
+_Date_Time_DOSTimeToArray, _Date_Time_DOSDateTimeToArray

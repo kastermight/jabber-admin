@@ -1,0 +1,17 @@
+
+DriveGetLabel
+
+Возвращает метку устройства (Volume Label), если она у него имеется.
+
+DriveGetLabel ( "path" )
+
+---  Таблица параметров  ---
+path
+	Путь к устройству, информацию о котором необходимо получить.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает метку устройства (Volume Label) в виде строки.
+Ошибка:	Устанавливает значение @error равным 1.
+
+---  Смотрите также  ---
+DriveGetDrive, DriveGetFileSystem, DriveGetSerial, DriveGetType, DriveSetLabel, DriveSpaceFree, DriveSpaceTotal, DriveStatus

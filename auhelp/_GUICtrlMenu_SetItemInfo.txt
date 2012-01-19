@@ -1,0 +1,29 @@
+
+_GUICtrlMenu_SetItemInfo
+
+Changes information about a menu item
+
+#Include 
+_GUICtrlMenu_SetItemInfo($hMenu, $iItem, ByRef $tInfo[, $fByPos = True])
+
+---  Таблица параметров  ---
+$hMenu
+	Menu handle
+$iItem
+	Identifier or position of the menu item
+$tInfo
+	$tagMENUITEMINFO structure
+$fByPos
+	[опционально] Menu identifier flag:
+		 True - $iItem is a zero based item position
+		False - $iItem is a menu item identifier
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlMenu_GetItemInfo, $tagMENUITEMINFO
+
+
+---  Таблица  --- SetMenuItemInfo

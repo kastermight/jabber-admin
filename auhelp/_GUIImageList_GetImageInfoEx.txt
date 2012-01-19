@@ -1,0 +1,20 @@
+
+_GUIImageList_GetImageInfoEx
+
+Retrieves information about an image
+
+#Include 
+_GUIImageList_GetImageInfoEx($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Index of the image
+
+---  Таблица возвращаемых значений  ---
+Успех:	$tagIMAGEINFO structure that receives information about the image
+Ошибка:	Возвращает 0
+
+---  Смотрите также  ---
+$tagIMAGEINFO

@@ -1,0 +1,18 @@
+
+_WinAPI_MAKELCID
+
+Construct locale id from a language id and a sort id
+
+#Include 
+_WinAPI_MAKELCID($lgid, $srtid)
+
+---  Таблица параметров  ---
+$lgid
+	Language id
+$srtid
+	Sort id
+
+---  Таблица возвращаемых значений  ---
+Returns a Locale identifier
+
+---  Смотрите также  ---

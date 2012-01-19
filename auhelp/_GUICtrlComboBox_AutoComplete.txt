@@ -1,0 +1,16 @@
+
+_GUICtrlComboBox_AutoComplete
+
+Авто-заполнение одним из доступных пунктов при вводе текста в поле ComboBox
+
+#Include 
+_GUICtrlComboBox_AutoComplete($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Примечания  ---
+Минимальная ОС - Windows XP.
+
+---  Смотрите также  ---

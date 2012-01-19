@@ -1,0 +1,19 @@
+
+_GUICtrlRebar_GetBandLength
+
+Get Length of the band, in pixels
+
+#Include 
+_GUICtrlRebar_GetBandLength($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+
+---  Таблица возвращаемых значений  ---
+Returns the Length of the band, in pixels
+
+---  Смотрите также  ---
+_GUICtrlRebar_SetBandLength

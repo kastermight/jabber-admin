@@ -1,0 +1,21 @@
+
+_GUICtrlToolbar_GetImageList
+
+Retrieves the default state image list
+
+#Include 
+_GUICtrlToolbar_GetImageList($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Handle to the image list
+Ошибка: 0
+
+---  Примечания  ---
+A toolbar control uses this image list to display buttons when they are not hot or disabled
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetImageList

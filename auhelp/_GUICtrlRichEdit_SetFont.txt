@@ -1,0 +1,51 @@
+
+_GUICtrlRichEdit_SetFont
+
+Устанавливает атрибуты шрифта выделенного текста или, если нет выделенного текста, то для текста в позиции курсора
+
+#Include 
+_GUICtrlRichEdit_SetFont($hWnd [, $iPoints = Default[, $sName = Default[, $iCharset = Default[, $iLcid = Default]]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iPoints
+	[опционально] Размер шрифта
+$sName
+	[опционально] Имя шрифта, например "Courier", но не "Courier Bold"
+$iCharSet
+	[опционально] Кодировка - одна из:
+		$ANSI_CHARSET - 0
+		$BALTIC_CHARSET - 186
+		$CHINESEBIG5_CHARSET - 136
+		$DEFAULT_CHARSET - 1
+		$EASTEUROPE_CHARSET - 238
+		$GB2312_CHARSET - 134
+		$GREEK_CHARSET - 161
+		$HANGEUL_CHARSET - 129
+		$MAC_CHARSET - 77
+		$OEM_CHARSET - 255
+		$RUSSIAN_CHARSET - 204
+		$SHIFTJIS_CHARSET - 128
+		$SYMBOL_CHARSET - 2
+		$TURKISH_CHARSET - 162
+		$VIETNAMESE_CHARSET - 163
+$iLcid
+	[опционально] Смотрите http://www.microsoft.com/globaldev/reference/lcid-all.mspx
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False и устанавливает @error
+@error:	101 - $HWnd не является дескриптором
+	102 - $iPoints не является положительным числом
+	103 - $sName не является алфавитным
+	104 - $iLcid не является числом
+
+---  Примечания  ---
+Если параметр не указан (или указано ключевое слово Default), то его значение не изменяется
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_GetFont, _GUICtrlRichEdit_ChangeFontSize
+
+
+---  Таблица  --- EM_SETCHARFORMAT, ---  Таблица  --- LOGFONT, http://www.hep.wisc.edu/~pinghc/books/apirefeng/l/logfont.html

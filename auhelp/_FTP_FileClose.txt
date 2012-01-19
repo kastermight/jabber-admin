@@ -1,0 +1,21 @@
+
+_FTP_FileClose
+
+Закрыть указатель возвращаемый функцией _FTP_FileOpen.
+
+#Include 
+_FTP_FileClose($l_InternetSession)
+
+---  Таблица параметров  ---
+$l_InternetSession
+	Указатель возвращённый функцией _FTP_FileOpen()
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает 1
+Ошибка:	Возвращает 0 и устанавливает @error не равно 0
+
+---  Смотрите также  ---
+_FTP_FileOpen
+
+
+---  Таблица  --- InternetCloseHandle

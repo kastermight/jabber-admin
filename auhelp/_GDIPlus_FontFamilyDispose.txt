@@ -1,0 +1,21 @@
+
+_GDIPlus_FontFamilyDispose
+
+Release a Font Family object
+
+#Include 
+_GDIPlus_FontFamilyDispose($hFamily)
+
+---  Таблица параметров  ---
+$hFamily
+	Handle to a Font Family object
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GDIPlus_FontFamilyCreate
+
+
+---  Таблица  --- GdipDeleteFontFamily

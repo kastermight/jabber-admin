@@ -1,0 +1,18 @@
+
+_GUICtrlRebar_MaximizeBand
+
+Resizes a band in a rebar control to either its ideal or largest size
+
+#Include 
+_GUICtrlRebar_MaximizeBand($hWnd, $iIndex[, $fIdeal = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+$fIdeal
+	[опционально] Indicates if the ideal width of the band should be used when the band is maximized
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetBandIdealSize

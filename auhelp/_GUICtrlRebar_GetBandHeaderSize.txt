@@ -1,0 +1,19 @@
+
+_GUICtrlRebar_GetBandHeaderSize
+
+Retrieves the size of the band's header, in pixels
+
+#Include 
+_GUICtrlRebar_GetBandHeaderSize($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+
+---  Таблица возвращаемых значений  ---
+Returns the Size of the band's header
+
+---  Смотрите также  ---
+_GUICtrlRebar_SetBandHeaderSize

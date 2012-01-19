@@ -1,0 +1,26 @@
+
+_GUICtrlComboBoxEx_SetDroppedWidth
+
+Set the maximum allowable width, in pixels, of the ListBox of a ComboBox
+
+#Include 
+_GUICtrlComboBoxEx_SetDroppedWidth($hWnd, $iWidth)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iWidth
+	The width of the ListBox, in pixels
+
+---  Таблица возвращаемых значений  ---
+Успех: The new width of the ListBox
+Ошибка: -1
+
+---  Примечания  ---
+By default, the minimum allowable width of the drop-down ListBox is zero.
+The width of the ListBox is either the minimum allowable width or the ComboBox width, whichever is larger.
+
+Use $CBS_DROPDOWN or $CBS_DROPDOWNLIST style.
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_GetDroppedWidth

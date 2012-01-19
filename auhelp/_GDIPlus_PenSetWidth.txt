@@ -1,0 +1,23 @@
+
+_GDIPlus_PenSetWidth
+
+Устанавливает ширину объекта Карандаш
+
+#Include 
+_GDIPlus_PenSetWidth($hPen, $fWidth)
+
+---  Таблица параметров  ---
+$hPen
+	Дескриптор объекта Карандаш
+$fWidth
+	Ширина объекта Карандаш
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GDIPlus_PenGetWidth
+
+
+---  Таблица  --- GdipSetPenWidth

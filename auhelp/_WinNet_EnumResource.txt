@@ -1,0 +1,34 @@
+
+_WinNet_EnumResource
+
+Continues an enumeration of network resources
+
+#Include 
+_WinNet_EnumResource($hEnum, ByRef $iCount, $pBuffer, ByRef $iBufSize)
+
+---  Таблица параметров  ---
+$hEnum
+	Handle that identifies an enumeration instance. The handle is returned by the _WinNet_OpenEnum
+		function.
+$iCount
+	Number of entries requested. If the number requested is –1, the function returns as many
+		entries as possible. If the function succeeds, on return the variable contains the number of entries actually
+		read
+$pBuffer
+	Pointer to the buffer that receives the enumeration results. The results are returned as an
+		array of $tagNETRESOURCE structures. The buffer must be large enough to hold the structures plus the strings
+		to which their members point. The buffer is valid until the next call using the handle specified by hEnum.
+		The order of $tagNETRESOURCE structures in the array is not predictable.
+$iBufSize
+	The size of the buffer, in bytes. If the buffer is too small to receive even one entry, this
+		parameter receives the required size of the buffer.
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_WinNet_OpenEnum, $tagNETRESOURCE
+
+
+---  Таблица  --- WNetEnumResource

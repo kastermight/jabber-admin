@@ -1,0 +1,18 @@
+
+_GUICtrlComboBoxEx_GetUnicode
+
+Retrieves if control is using Unicode
+
+#Include 
+_GUICtrlComboBoxEx_GetUnicode($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+True: Using Unicode
+False: Not using Unicode
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_SetUnicode

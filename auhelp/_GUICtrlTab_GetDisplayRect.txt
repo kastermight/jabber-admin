@@ -1,0 +1,26 @@
+
+_GUICtrlTab_GetDisplayRect
+
+Retrieves the display rectangle of the client area
+
+#Include 
+_GUICtrlTab_GetDisplayRect($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Array with the following format:
+		[0] = X coordinate of the upper left corner of the rectangle
+		[1] = Y coordinate of the upper left corner of the rectangle
+		[2] = X coordinate of the lower right corner of the rectangle
+		[3] = Y coordinate of the lower right corner of the rectangle
+
+---  Примечания  ---
+Use this function to obtain the coordinates, in pixels, of the portion of the tab control that represents the
+contents of the tab pages. The appearance of this portion of the tab control does not change when different
+tabs are selected.
+
+---  Смотрите также  ---
+_GUICtrlTab_GetDisplayRectEx

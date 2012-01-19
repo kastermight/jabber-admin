@@ -1,0 +1,19 @@
+
+_GUICtrlTreeView_SetBkColor
+
+Устанавливает цвета фона TreeView
+
+#Include 
+_GUICtrlTreeView_SetBkColor($hWnd, $vRGBColor)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$vRGBColor
+	Новый шестнадцатеричный цвет RGB
+
+---  Таблица возвращаемых значений  ---
+Возвращает предыдущий шестнадцатеричный цвет RGB
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetBkColor

@@ -1,0 +1,25 @@
+
+_GUICtrlMenu_GetItemRectEx
+
+Retrieves the bounding rectangle for the specified menu item
+
+#Include 
+_GUICtrlMenu_GetItemRectEx($hWnd, $hMenu, $iItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the window containing the menu
+$hMenu
+	Handle of the menu
+$iItem
+	Zero based position of the menu item
+
+---  Таблица возвращаемых значений  ---
+Успех:	tagRECT structure
+Ошибка:	Set @error
+
+---  Смотрите также  ---
+_GUICtrlMenu_GetItemRect
+
+
+---  Таблица  --- GetMenuItemRect

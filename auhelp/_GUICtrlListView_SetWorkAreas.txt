@@ -1,0 +1,22 @@
+
+_GUICtrlListView_SetWorkAreas
+
+Создает рабочую область внутри ListView
+
+#Include 
+_GUICtrlListView_SetWorkAreas($hWnd, $iLeft, $iTop, $iRight, $iBottom)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iLeft
+	X координата верхнего левого угла прямоугольника
+$iTop
+	Y координата верхнего левого угла прямоугольника
+$iRight
+	X координата правого нижнего угла прямоугольника
+$iBottom
+	Y координата правого нижнего угла прямоугольника
+
+---  Смотрите также  ---
+_GUICtrlListView_GetNumberOfWorkAreas

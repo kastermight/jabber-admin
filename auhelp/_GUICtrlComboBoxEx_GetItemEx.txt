@@ -1,0 +1,20 @@
+
+_GUICtrlComboBoxEx_GetItemEx
+
+Retrieves some or all of an item's attributes
+
+#Include 
+_GUICtrlComboBoxEx_GetItemEx($hWnd, ByRef $tItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$tItem
+	$tagCOMBOBOXEXITEM structure that specifies the information to retrieve
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_GetItem, _GUICtrlComboBoxEx_SetItemEx, $tagCOMBOBOXEXITEM

@@ -1,0 +1,25 @@
+
+_GUICtrlTreeView_SetStateImageIndex
+
+Sets the index into image list for the state image
+
+#Include 
+_GUICtrlTreeView_SetStateImageIndex($hWnd, $hItem, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hItem
+	Handle to the item
+$iIndex
+	Image list index
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+This is a 1 based index list
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetStateImageIndex

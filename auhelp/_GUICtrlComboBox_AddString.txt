@@ -1,0 +1,20 @@
+
+_GUICtrlComboBox_AddString
+
+Add a string
+
+#Include 
+_GUICtrlComboBox_AddString($hWnd, $sText)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$sText
+	String to add
+
+---  Таблица возвращаемых значений  ---
+Успех: The index of the new item
+Ошибка: -1
+
+---  Смотрите также  ---
+_GUICtrlComboBox_DeleteString, _GUICtrlComboBox_InsertString, _GUICtrlComboBox_ResetContent, _GUICtrlComboBox_InitStorage

@@ -1,0 +1,17 @@
+
+_GUIToolTip_GetTipBkColor
+
+Retrieves the background color
+
+#Include 
+_GUIToolTip_GetTipBkColor($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: The background color
+
+---  Смотрите также  ---
+_GUIToolTip_SetTipBkColor

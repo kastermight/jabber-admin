@@ -1,0 +1,20 @@
+
+_GUICtrlTreeView_GetPrevVisible
+
+Retrieves the first visible item that precedes the specified item
+
+#Include 
+_GUICtrlTreeView_GetPrevVisible($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hItem
+	Handle to the item
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to the previous visible item
+Ошибка:	0
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetNextVisible, _GUICtrlTreeView_GetPrev

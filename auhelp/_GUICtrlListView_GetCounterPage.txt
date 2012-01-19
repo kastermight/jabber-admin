@@ -1,0 +1,20 @@
+
+_GUICtrlListView_GetCounterPage
+
+Calculates the number of items that can fit vertically in the visible area
+
+#Include 
+_GUICtrlListView_GetCounterPage($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Return the number of fully visible items
+
+---  Примечания  ---
+If the current view is icon or small icon view, the return value is the total number
+of items in the list-view control.
+
+---  Смотрите также  ---

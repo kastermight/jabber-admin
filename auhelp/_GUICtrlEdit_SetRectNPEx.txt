@@ -1,0 +1,19 @@
+
+_GUICtrlEdit_SetRectNPEx
+
+Устанавливает позицию прямоугольника многострочного окна редактирования
+
+#Include 
+_GUICtrlEdit_SetRectNPEx($hWnd, $tRect)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$tRect
+	Структура $tagRECT, содержащая координаты прямоугольника окна редактирования
+
+---  Примечания  ---
+Функция _GUICtrlEdit_SetRECTNPEx идентична функции _GUICtrlEdit_SetRECTEx, отличается только тем, что _GUICtrlEdit_SetRECTNPEx не перерисовывает окно редактирования.
+
+---  Смотрите также  ---
+_GUICtrlEdit_SetRectNP, $tagRECT

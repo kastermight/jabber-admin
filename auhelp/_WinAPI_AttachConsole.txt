@@ -1,0 +1,20 @@
+
+_WinAPI_AttachConsole
+
+Attaches the calling process to the console of the specified process
+
+#Include 
+_WinAPI_AttachConsole([$iProcessID = -1])
+
+---  Таблица параметров  ---
+$iProcessID
+	[опционально] Identifier of the process. Set to -1 to attach to the current process.
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- AttachConsole

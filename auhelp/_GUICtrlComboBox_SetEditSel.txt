@@ -1,0 +1,31 @@
+
+_GUICtrlComboBox_SetEditSel
+
+Select characters in the edit control of a ComboBox
+
+#Include 
+_GUICtrlComboBox_SetEditSel($hWnd, $iStart, $iStop)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iStart
+	Starting position
+$iStop
+	Ending postions
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False If the message is sent to a ComboBox with the $CBS_DROPDOWN or $CBS_DROPDOWNLIST style
+
+---  Примечания  ---
+The positions are zero-based. The first character of the edit control is in the zero position.
+If $iStop is –1, all text from the starting position to the last character in the edit control is selected.
+
+The first character after the last selected character is in the ending position.
+
+For example, to select the first four characters of the edit control, use a starting position
+of 0 and an ending position of 4.
+
+---  Смотрите также  ---
+_GUICtrlComboBox_GetEditSel, _GUICtrlComboBox_ReplaceEditSel

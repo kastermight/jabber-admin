@@ -1,0 +1,22 @@
+
+TCPStartup, UDPStartup
+
+Starts TCP or UDP services.
+
+TCPStartup ( )
+UDPStartup ( )
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns 1.
+Ошибка:	Returns 0 and set @error.
+@error:	windows API WSAStartup return value (see MSDN).
+
+---  Примечания  ---
+There must be a TCPShutdown() call to avoid memory consumption.
+A script must call one TCPShutdown() call for every successful TCPStartup() call.
+UDPStartup() is just an alias of TCPStartup().
+
+---  Смотрите также  ---
+TCPShutdown, TCPListen, TCPCloseSocket, UDPCloseSocket, TCPAccept, TCPConnect, TCPNameToIP, TCPRecv, TCPSend

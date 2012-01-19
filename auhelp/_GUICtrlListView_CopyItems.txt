@@ -1,0 +1,17 @@
+
+_GUICtrlListView_CopyItems
+
+Копирование пунктов между двумя ListView
+
+#Include 
+_GUICtrlListView_CopyItems($hWnd_Source, $hWnd_Destination[, $fDelFlag = False])
+
+---  Таблица параметров  ---
+$hWnd_Source
+	Идентификатор ListView источника
+$hWnd_Destination
+	Идентификатор ListView принимающего
+$fDelFlag
+	[опционально] Удалить из источника после копирования (перемещение), если True
+
+---  Смотрите также  ---

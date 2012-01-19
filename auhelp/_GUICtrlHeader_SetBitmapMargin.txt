@@ -1,0 +1,20 @@
+
+_GUICtrlHeader_SetBitmapMargin
+
+Sets the width of the margin, specified in pixels, of a bitmap
+
+#Include 
+_GUICtrlHeader_SetBitmapMargin($hWnd, $iWidth)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iWidth
+	Width, specified in pixels, of the bitmap margin
+
+---  Таблица возвращаемых значений  ---
+Успех: The previous bitmap margin width
+Ошибка: 0
+
+---  Смотрите также  ---
+_GUICtrlHeader_GetBitmapMargin

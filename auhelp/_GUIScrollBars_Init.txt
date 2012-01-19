@@ -1,0 +1,17 @@
+
+_GUIScrollBars_Init
+
+Initialize the scrollbars for the window
+
+#Include 
+_GUIScrollBars_Init($hWnd[, $iHMax = -1[, $ivMax = -1]])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the window
+$iHMax
+	[опционально] Max size of Horizontal scrollbar
+$ivMax
+	[опционально] Max size of Vertical scrollbar
+
+---  Смотрите также  ---

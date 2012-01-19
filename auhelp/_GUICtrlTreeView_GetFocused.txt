@@ -1,0 +1,20 @@
+
+_GUICtrlTreeView_GetFocused
+
+Указывает, является ли пункт в фокусе
+
+#Include 
+_GUICtrlTreeView_GetFocused($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$hItem
+	Дескриптор пункта
+
+---  Таблица возвращаемых значений  ---
+True:	Пункт в фокусе
+False:	Пункт не в фокусе
+
+---  Смотрите также  ---
+_GUICtrlTreeView_SetFocused

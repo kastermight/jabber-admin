@@ -1,0 +1,28 @@
+
+_GUICtrlDTP_SetMCColor
+
+Sets the color for a given portion of the month calendar
+
+#Include 
+_GUICtrlDTP_SetMCColor($hWnd, $iIndex, $iColor)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Indicates which month calendar color to set:
+		0 - Background color displayed between months
+		1 - Color used to display text within a month
+		2 - Background color displayed in the calendar title
+		3 - Color used to display text within the calendar title
+		4 - Background color displayed within the month
+		5 - Color used to display header day and trailing day text
+$iColor
+	The color that will be set for the specified area
+
+---  Таблица возвращаемых значений  ---
+Успех: The previous color for the given portion
+Ошибка: -1
+
+---  Смотрите также  ---
+_GUICtrlDTP_GetMCColor

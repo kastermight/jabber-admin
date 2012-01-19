@@ -1,0 +1,21 @@
+
+_GUICtrlToolbar_SetCmdID
+
+Sets the command identifier of a toolbar button
+
+#Include 
+_GUICtrlToolbar_SetCmdID($hWnd, $iIndex, $iCommandID)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based index of the button whose command identifier is to be set
+$iCommandID
+	Command identifier
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---

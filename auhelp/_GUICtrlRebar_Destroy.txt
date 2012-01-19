@@ -1,0 +1,21 @@
+
+_GUICtrlRebar_Destroy
+
+Delete the control
+
+#Include 
+_GUICtrlRebar_Destroy(ByRef $hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	True, Handle is set to 0
+Ошибка:	False
+
+---  Примечания  ---
+Restricted to only be used on control created with _GUICtrlRebar_Create
+
+---  Смотрите также  ---
+_GUICtrlRebar_Create

@@ -1,0 +1,19 @@
+
+_GUICtrlComboBoxEx_GetItemTextLen
+
+Gets the length, in characters, of a string in the list of a combo box
+
+#Include 
+_GUICtrlComboBoxEx_GetItemTextLen($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	index item
+
+---  Таблица возвращаемых значений  ---
+Успех: The length of the string
+Ошибка: -1
+
+---  Смотрите также  ---

@@ -1,0 +1,18 @@
+
+_GUICtrlStatusBar_GetBordersVert
+
+Retrieves the current width of the vertical border
+
+#Include 
+_GUICtrlStatusBar_GetBordersVert($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	Width of the vertical border
+Ошибка:	Set @error
+
+---  Смотрите также  ---
+_GUICtrlStatusBar_GetBorders, _GUICtrlStatusBar_GetBordersHorz, _GUICtrlStatusBar_GetBordersRect

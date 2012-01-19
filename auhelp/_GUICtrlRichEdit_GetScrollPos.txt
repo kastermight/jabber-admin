@@ -1,0 +1,25 @@
+
+_GUICtrlRichEdit_GetScrollPos
+
+Gets the Scrolling position of the control
+
+#Include 
+_GUICtrlRichEdit_GetScrollPos($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	an array containing [x, y]
+Ошибка:	sets @error
+@error:	101 - $hWnd is not a handle
+
+---  Примечания  ---
+The scrolling position is the upper left corner of the control
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_SetScrollPos, _GUICtrlRichEdit_GetSelAA
+
+
+---  Таблица  --- EM_GETSCROLLPOS

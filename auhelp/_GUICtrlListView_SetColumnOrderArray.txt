@@ -1,0 +1,24 @@
+
+_GUICtrlListView_SetColumnOrderArray
+
+Устанавливает порядок колонок слева направо
+
+#Include 
+_GUICtrlListView_SetColumnOrderArray($hWnd, $aOrder)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$aOrder
+	Массив целых чисел, который содержит значения индексов колонок в ListView. Массив должен быть следующего формата:
+		[0] - количество элементов в массиве
+		[1] - индекс первой колонки
+		[2] - индекс второй колонки
+		[n] - индекс последней колонки
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlListView_GetColumnOrder, _GUICtrlListView_GetColumnOrderArray, _GUICtrlListView_SetColumnOrder

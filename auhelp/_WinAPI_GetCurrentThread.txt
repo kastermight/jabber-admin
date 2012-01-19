@@ -1,0 +1,21 @@
+
+_WinAPI_GetCurrentThread
+
+Retrieves a pseudo handle for the calling thread.
+
+#Include 
+_WinAPI_GetCurrentThread()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Returns the Pseudo handle for the current thread
+
+---  Примечания  ---
+A pseudo handle is a special constant that is interpreted as the current thread handle. The calling thread can
+use this handle to specify itself whenever a thread handle is required.
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GetCurrentThread

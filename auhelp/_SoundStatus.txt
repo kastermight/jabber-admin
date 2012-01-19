@@ -1,0 +1,24 @@
+
+_SoundStatus
+
+Returns the status of the sound 
+
+#include 
+_SoundStatus ( $aSnd_id )
+
+---  Таблица параметров  ---
+$aSnd_id
+	Sound ID array as returned by _SoundOpen() or a file name
+
+---  Таблица возвращаемых значений  ---
+Успех:	Sound Status
+Ошибка:	0 and set @error
+@error:	3 = Invalid Sound ID. Use return array from _SoundOpen() or a valid file name.
+
+---  Примечания  ---
+From MSDN:
+All devices can return the "not ready", "paused", "playing", and "stopped" values. 
+Some devices can return the additional "open", "parked", "recording", and "seeking" values.
+
+---  Смотрите также  ---
+_SoundOpen

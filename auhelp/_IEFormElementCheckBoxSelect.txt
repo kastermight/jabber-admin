@@ -1,0 +1,46 @@
+
+_IEFormElementCheckBoxSelect
+
+Set the value of a specified form element.
+
+#include  
+_IEFormElementCheckBoxSelect ( ByRef $o_object, $s_string [, $s_name = "" [, $f_select = 1 [, $s_mode = "byValue" [, $f_fireEvent = 1]]]] )
+
+---  Таблица параметров  ---
+$o_object
+	Object variable of an InternetExplorer.Application, Form object
+$s_string
+	Value used to match element - treatment based on $s_mode
+$s_name
+	[опционально] Name or Id of checkbox(es)
+$f_select
+	[опционально] specifies whether element should be checked or unchecked
+	-1 = Return checked state
+	0 = Uncheck the element
+	1 = (Default) Check the element
+$s_mode
+	[опционально] specify search mode
+	byValue = (Default) value of the checkbox you wish to select
+	byIndex = 0-based index of checkbox you wish to select
+$f_fireEvent
+	[опционально] specifies whether to fire OnChange and OnClick events after changing value
+	0 = do not fire OnChange or OnClick event after setting value 
+	1 = (Default) fire OnChange and OnClick events after setting value
+
+---  Таблица возвращаемых значений  ---
+Успех:	If $f_select = -1, returns the current checked state, else returns 1
+Ошибка:	Returns 0 and sets @ERROR
+@Error:	0 ($_IEStatus_Success) = No Error
+	3 ($_IEStatus_InvalidDataType) = Invalid Data Type
+	4 ($_IEStatus_InvalidObjectType) = Invalid Object Type
+	5 ($_IEStatus_InvalidValue) = Invalid Value
+	7 ($_IEStatus_NoMatch) = No Match
+@Extended:	Contains invalid parameter number
+
+---  Примечания  ---
+The $f_fireEvent parameter is significant only if the form element has an onChange event associated with it.
+
+$s_Name is optional for this function.  If it is omitted, the function will operate on a collection of all <input type=checkbox> elements in the form.  If specified, the function will operate on a collection of <input type=checkbox> elements with that name.
+
+---  Смотрите также  ---
+_IEFormElementOptionSelect, _IEFormElementRadioSelect, _IEFormElementGetValue, _IEFormElementSetValue

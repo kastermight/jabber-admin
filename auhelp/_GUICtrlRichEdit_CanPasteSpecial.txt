@@ -1,0 +1,26 @@
+
+_GUICtrlRichEdit_CanPasteSpecial
+
+Can the contents of the clipboard be pasted into the control in both formats?
+
+#Include 
+_GUICtrlRichEdit_CanPasteSpecial($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	True or False
+Ошибка:	False and sets @error
+@error:	101 - $hWnd is not a handle
+
+---  Примечания  ---
+Data in two clipboard formats can be pasted: RTF and RTF with Objects.
+This function determines whether data in both formats is on the clipboard.
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_PasteSpecial
+
+
+---  Таблица  --- EM_CANPASTE

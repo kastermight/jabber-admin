@@ -1,0 +1,24 @@
+
+_GUICtrlMenu_AddMenuItem
+
+Adds a new menu item to the end of the menu
+
+#Include 
+_GUICtrlMenu_AddMenuItem($hMenu, $sText[, $iCmdID = 0[, $hSubMenu = 0]])
+
+---  Таблица параметров  ---
+$hMenu
+	Handle of the menu
+$sText
+	Menu item text. If blank, a separator will be added.
+$iCmdID
+	[опционально] Command ID to assign to the item
+$hSubMenu
+	[опционально] Handle to the submenu associated with the menu item
+
+---  Таблица возвращаемых значений  ---
+Успех:	Zero based menu item index
+Ошибка:	-1
+
+---  Смотрите также  ---
+_GUICtrlMenu_InsertMenuItem

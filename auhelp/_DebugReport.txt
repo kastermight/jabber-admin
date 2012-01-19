@@ -1,0 +1,27 @@
+
+_DebugReport
+
+Writes to a debugging session
+
+#include 
+_DebugReport ( $sData [,$bLastError = False [,$bExit = False]])
+
+---  Таблица параметров  ---
+$sData
+	Data to be reported
+$bLastError
+	[опционально] True if GetLastErrorMessage() must be append to the data being reported
+$bExit
+	[опционально] True if the script must be terminated
+
+---  Таблица возвращаемых значений  ---
+Успех:	1.
+Ошибка:	0.
+
+---  Примечания  ---
+If no _DebugSetup() have been issued the function always returns.
+@error of the caller is preserved.
+@extended can be set to Windows API GetlastError() if  $bLastError = True. Otherwise it is preserved.
+
+---  Смотрите также  ---
+_DebugSetup

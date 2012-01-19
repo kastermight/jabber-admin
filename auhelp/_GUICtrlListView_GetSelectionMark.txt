@@ -1,0 +1,21 @@
+
+_GUICtrlListView_GetSelectionMark
+
+Возвращает индекс пункта с меткой выбора
+
+#Include 
+_GUICtrlListView_GetSelectionMark($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает индекс пункта с меткой выбора
+Ошибка:	Возвращает -1
+
+---  Примечания  ---
+The selection mark is the item index from which a multiple selection starts
+
+---  Смотрите также  ---
+_GUICtrlListView_SetSelectionMark

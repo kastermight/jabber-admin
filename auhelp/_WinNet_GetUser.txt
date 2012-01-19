@@ -1,0 +1,22 @@
+
+_WinNet_GetUser
+
+Retrieves the default user name, or the user name used to establish a connection
+
+#Include 
+_WinNet_GetUser($sName)
+
+---  Таблица параметров  ---
+$sName
+	Either the name of a local device that has been redirected to a network resource, or the remote
+		name of a network resource to which a connection has been made without redirecting a local device. If blank,
+		the system returns the name of the current user for the process.
+
+---  Таблица возвращаемых значений  ---
+Успех:	User name
+Ошибка:	Set @error
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- WNetGetUser

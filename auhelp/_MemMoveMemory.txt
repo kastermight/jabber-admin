@@ -1,0 +1,20 @@
+
+_MemMoveMemory
+
+Moves memory either forward or backward, aligned or unaligned
+
+#Include 
+_MemMoveMemory($pSource, $pDest, $iLength)
+
+---  Таблица параметров  ---
+$pSource
+	Pointer to the source of the move
+$pDest
+	Pointer to the destination of the move
+$iLength
+	Specifies the number of bytes to be copied
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- RtlMoveMemory

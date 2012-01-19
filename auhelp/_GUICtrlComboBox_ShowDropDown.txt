@@ -1,0 +1,21 @@
+
+_GUICtrlComboBox_ShowDropDown
+
+Show or hide the ListBox of a ComboBox
+
+#Include 
+_GUICtrlComboBox_ShowDropDown($hWnd[, $fShow = False])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$fShow
+	[опционально] Specifies whether the drop-down ListBox is to be shown or hidden:
+		 True - Show ListBox
+		False - Hide ListBox
+
+---  Примечания  ---
+This function has no effect on a ComboBox created with the $CBS_SIMPLE style.
+
+---  Смотрите также  ---
+_GUICtrlComboBox_GetDroppedState, _GUICtrlComboBoxEx_GetDroppedState

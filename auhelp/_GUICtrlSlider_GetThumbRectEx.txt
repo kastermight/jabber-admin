@@ -1,0 +1,17 @@
+
+_GUICtrlSlider_GetThumbRectEx
+
+Retrieves the size and position of the bounding rectangle for the slider
+
+#Include 
+_GUICtrlSlider_GetThumbRectEx($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: $tagRECT structure that receives the bounding rectangle of the slider in client coordinates
+
+---  Смотрите также  ---
+_GUICtrlSlider_GetThumbRect, $tagRECT

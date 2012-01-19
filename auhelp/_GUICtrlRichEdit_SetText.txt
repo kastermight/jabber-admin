@@ -1,0 +1,25 @@
+
+_GUICtrlRichEdit_SetText
+
+Устанавливает текст в элемент
+
+#Include 
+_GUICtrlRichEdit_SetText($hWnd, $sText)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$sText
+	Обычный или RTF текст вставляемый в элемент
+
+---  Таблица возвращаемых значений  ---
+Succcess:	Возвращает True
+Ошибка:	Возвращает False, и устанавливает @error:
+@error:	101 - $HWnd не является дескриптором
+
+---  Примечания  ---
+Устанавливает весь текст. Текст может быть простой или RTF.
+Держит стек для отмены.
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_GetText, _GUICtrlRichEdit_AppendText, _GUICtrlRichEdit_InsertText, _GUICtrlRichEdit_ReplaceText, _GUICtrlRichEdit_EmptyUndoBuffer

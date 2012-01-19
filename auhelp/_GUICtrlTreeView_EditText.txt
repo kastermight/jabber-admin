@@ -1,0 +1,20 @@
+
+_GUICtrlTreeView_EditText
+
+Начинает ручное редактирование текста указанного пункта
+
+#Include 
+_GUICtrlTreeView_EditText($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$hItem
+	Дескриптор пункта для редактирования
+
+---  Таблица возвращаемых значений  ---
+Успех:	Дескриптор элемента редактирования
+Ошибка:	Возвращает 0
+
+---  Смотрите также  ---
+_GUICtrlTreeView_EndEdit, _GUICtrlTreeView_GetEditControl

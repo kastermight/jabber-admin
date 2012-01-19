@@ -1,0 +1,18 @@
+
+_GUICtrlIpAddress_IsBlank
+
+Определяет, все ли пустые поля в элементе IP address
+
+#Include 
+_GUICtrlIpAddress_IsBlank($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+True: в элементе IP address все поля пустые
+False: в элементе IP address хотя бы одно поле не пустое
+
+---  Смотрите также  ---
+_GUICtrlIpAddress_ClearAddress

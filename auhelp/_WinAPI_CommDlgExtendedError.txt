@@ -1,0 +1,22 @@
+
+_WinAPI_CommDlgExtendedError
+
+Returns a common dialog box error string. This string indicates the most recent error to occur during the execution of one of the common dialog box functions.
+
+#Include 
+_WinAPI_CommDlgExtendedError()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	error string
+Ошибка:	an hexa string of the extended error
+
+---  Примечания  ---
+Can return general error strings for any of the common dialog box functions.
+
+---  Смотрите также  ---
+_WinAPI_GetOpenFileName, _WinAPI_GetSaveFileName
+
+
+---  Таблица  --- CommDlgExtendedError

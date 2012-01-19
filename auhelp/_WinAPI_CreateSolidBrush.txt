@@ -1,0 +1,23 @@
+
+_WinAPI_CreateSolidBrush
+
+Creates a logical brush that has the specified solid color
+
+#Include 
+_WinAPI_CreateSolidBrush($nColor)
+
+---  Таблица параметров  ---
+$nColor
+	Specifies the color of the brush
+
+---  Таблица возвращаемых значений  ---
+Успех:	HBRUSH Value that identifies a logical brush
+Ошибка:	0
+
+---  Примечания  ---
+When you no longer need the HBRUSH object call the _WinAPI_DeleteObject function to delete it
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- CreateSolidBrush

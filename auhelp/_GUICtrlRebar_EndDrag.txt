@@ -1,0 +1,14 @@
+
+_GUICtrlRebar_EndDrag
+
+Terminates the rebar control's drag-and-drop operation. This message does not cause an $RBN_ENDDRAG notification to be sent
+
+#Include 
+_GUICtrlRebar_EndDrag($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+
+---  Смотрите также  ---
+_GUICtrlRebar_BeginDrag

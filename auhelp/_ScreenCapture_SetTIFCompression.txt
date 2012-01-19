@@ -1,0 +1,20 @@
+
+_ScreenCapture_SetTIFCompression
+
+Устанавливает сжатие TIFF для использования при захвате снимков экрана
+
+#Include 
+_ScreenCapture_SetTIFCompression($iCompress)
+
+---  Таблица параметров  ---
+$iCompress
+	Тип сжатия изображения:
+		0 - Кодирование сжатия по умолчанию
+		1 - Без сжатия
+		2 - LZW сжатие
+
+---  Примечания  ---
+Если сжатие не указано явно, то снимок TIFF по умолчанию имеет LZW сжатие
+
+---  Смотрите также  ---
+_ScreenCapture_SetTIFColorDepth

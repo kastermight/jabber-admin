@@ -1,0 +1,24 @@
+
+_EventLog__Clear
+
+Clears the event log
+
+#Include 
+_EventLog__Clear($hEventLog, $sFileName)
+
+---  Таблица параметров  ---
+$hEventLog
+	Handle to the event log
+$sFileName
+	The name of the backup file. If the name is blank, the current event log is not backed up.
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+This function fails if the event log is empty or a file already exists with the same name as sFileName. After
+this function returns, any handles that reference the cleared event log cannot be used to read the log.
+
+---  Смотрите также  ---
+_EventLog__Open

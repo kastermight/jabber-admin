@@ -1,0 +1,28 @@
+
+_GDIPlus_MatrixTranslate
+
+Updates a matrix with the product of itself and a translation matrix
+
+#Include 
+_GDIPlus_MatrixTranslate($hMatrix, $fOffsetX, $fOffsetY[, $bAppend = False])
+
+---  Таблица параметров  ---
+$hMatrix
+	Handle to a Matrix object
+$fOffsetX
+	Amount of pixels to add along the x-axis
+$fOffsetY
+	Amount of pixels to add along the y-axis
+$bAppend
+	[опционально] Specifies the order of the multiplication:
+		 True - Specifies that the translation matrix is on the left
+		False - Specifies that the translation matrix is on the right
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GdipTranslateMatrix

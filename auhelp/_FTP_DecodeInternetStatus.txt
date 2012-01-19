@@ -1,0 +1,17 @@
+
+_FTP_DecodeInternetStatus
+
+Декодирует полученный интернет статус.
+
+#Include 
+_FTP_DecodeInternetStatus($dwInternetStatus)
+
+---  Таблица параметров  ---
+$dwInternetStatus
+	интернет статус
+
+---  Таблица возвращаемых значений  ---
+Возвращает строку
+
+---  Смотрите также  ---
+_FTP_SetStatusCallback

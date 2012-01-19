@@ -1,0 +1,31 @@
+
+_GUICtrlStatusBar_SetParts
+
+Sets the number of parts and the part edges
+
+#Include 
+_GUICtrlStatusBar_SetParts($hWnd[, $iaParts = -1[, $iaPartWidth = 25]])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iaParts
+	[опционально] Number of parts, can be an zero based array of ints in the following format:
+		$iaParts[0] - Right edge of part #1
+		$iaParts[1] - Right edge of part #2
+		$iaParts[n] - Right edge of part n
+$iaPartWidth
+	[опционально] Size of parts, can be an zero based array of ints in the following format:
+		$iaPartWidth[0] - width part #1
+		$iaPartWidth[1] - width of part #2
+		$iaPartWidth[n] - width of part n
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+If an element is -1, the right edge of the corresponding part extends to the border of the window.
+
+---  Смотрите также  ---
+_GUICtrlStatusBar_GetParts

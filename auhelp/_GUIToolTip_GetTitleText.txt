@@ -1,0 +1,19 @@
+
+_GUIToolTip_GetTitleText
+
+Retrieve the title
+
+#Include 
+_GUIToolTip_GetTitleText($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Returns the ToolTip title
+
+---  Примечания  ---
+Minimum OS - Windows XP.
+
+---  Смотрите также  ---

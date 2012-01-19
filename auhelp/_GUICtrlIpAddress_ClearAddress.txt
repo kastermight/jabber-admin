@@ -1,0 +1,14 @@
+
+_GUICtrlIpAddress_ClearAddress
+
+Очищает содержимое элемента IP address
+
+#Include 
+_GUICtrlIpAddress_ClearAddress($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Смотрите также  ---
+_GUICtrlIpAddress_IsBlank, _GUICtrlIpAddress_Set

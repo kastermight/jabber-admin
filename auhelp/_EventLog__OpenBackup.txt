@@ -1,0 +1,24 @@
+
+_EventLog__OpenBackup
+
+Opens a handle to a backup event log
+
+#Include 
+_EventLog__OpenBackup($sServerName, $sFileName)
+
+---  Таблица параметров  ---
+$sServerName
+	The UNC name of the server on where the event log will be opened. If blank, the operation is
+		performed on the local computer.
+$sFileName
+	The name of the backup file
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle to the backup event log
+Ошибка:	0
+
+---  Примечания  ---
+If the backup filename specifies a remote server, $sServerName must be blank
+
+---  Смотрите также  ---
+_EventLog__Close, _EventLog__Backup

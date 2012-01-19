@@ -1,0 +1,33 @@
+
+_GUICtrlRichEdit_GetLineNumberFromCharPos
+
+Retrieves the line number on which an inter-character position is found
+
+#Include 
+_GUICtrlRichEdit_GetLineNumberFromCharPos($hWnd, $iCharPos)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iCharPos
+	Inter-character position
+
+---  Таблица возвращаемых значений  ---
+Успех:	Line number (one-based)
+Ошибка:	0 and sets @error
+@error:	101 - $hWnd is not a handle
+	102 - $iCharPos is not a positive number
+
+---  Примечания  ---
+A control that contains no text has one line
+The first inter-character position in a control is 0.
+
+The first line is line 1.
+
+If $iCharPos is negative or more than the number of characters in the control,
+returns the number of lines in the control
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- EM_EXLINEFROMCHAR

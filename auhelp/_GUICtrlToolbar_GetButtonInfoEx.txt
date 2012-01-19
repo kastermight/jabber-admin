@@ -1,0 +1,19 @@
+
+_GUICtrlToolbar_GetButtonInfoEx
+
+Retrieves information for a button
+
+#Include 
+_GUICtrlToolbar_GetButtonInfoEx($hWnd, $iCommandID)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+
+---  Таблица возвращаемых значений  ---
+Успех: $tagTBBUTTONINFO structure
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetButtonInfoEx, $tagTBBUTTONINFO

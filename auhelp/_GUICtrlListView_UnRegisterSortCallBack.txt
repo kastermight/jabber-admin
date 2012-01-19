@@ -1,0 +1,14 @@
+
+_GUICtrlListView_UnRegisterSortCallBack
+
+Разрегистрировать функцию обратного вызова сортировки
+
+#Include 
+_GUICtrlListView_UnRegisterSortCallBack($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Смотрите также  ---
+_GUICtrlListView_RegisterSortCallBack

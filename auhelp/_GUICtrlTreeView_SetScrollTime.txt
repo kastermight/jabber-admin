@@ -1,0 +1,24 @@
+
+_GUICtrlTreeView_SetScrollTime
+
+Sets the maximum scroll time
+
+#Include 
+_GUICtrlTreeView_SetScrollTime($hWnd, $iTime)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iTime
+	New maximum scroll time, in milliseconds
+
+---  Таблица возвращаемых значений  ---
+Returns the Previous scroll time, in milliseconds
+
+---  Примечания  ---
+The maximum scroll time is the longest amount of time that a scroll operation can take. Scrolling will be
+adjusted so that the scroll will take place within the maximum scroll time. A scroll operation may take less
+time than the maximum.
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetScrollTime

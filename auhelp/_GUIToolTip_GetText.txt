@@ -1,0 +1,21 @@
+
+_GUIToolTip_GetText
+
+Retrieves the text
+
+#Include 
+_GUIToolTip_GetText($hWnd, $hTool, $iID)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$hTool
+	Handle to the window that contains the tool
+$iID
+	Identifier of the tool
+
+---  Таблица возвращаемых значений  ---
+Успех: ToolTip text
+
+---  Смотрите также  ---
+_GUIToolTip_UpdateTipText

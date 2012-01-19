@@ -1,0 +1,17 @@
+
+_GUICtrlTab_SetPadding
+
+Sets the amount of space around each tab's icon and label
+
+#Include 
+_GUICtrlTab_SetPadding($hWnd, $iHorz, $iVert)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iHorz
+	Amount of horizontal padding, in pixels
+$iVert
+	Amount of vertical padding, in pixels
+
+---  Смотрите также  ---

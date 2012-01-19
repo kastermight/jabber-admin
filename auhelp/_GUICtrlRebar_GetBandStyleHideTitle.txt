@@ -1,0 +1,20 @@
+
+_GUICtrlRebar_GetBandStyleHideTitle
+
+Determine if flag is set
+
+#Include 
+_GUICtrlRebar_GetBandStyleHideTitle($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+
+---  Таблица возвращаемых значений  ---
+True: Flag is set (Keep band title hidden)
+False: Flag not set
+
+---  Смотрите также  ---
+_GUICtrlRebar_SetBandStyleHideTitle, _GUICtrlRebar_GetBandStyle

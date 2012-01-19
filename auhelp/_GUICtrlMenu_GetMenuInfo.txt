@@ -1,0 +1,21 @@
+
+_GUICtrlMenu_GetMenuInfo
+
+Retrieves information about a specified menu
+
+#Include 
+_GUICtrlMenu_GetMenuInfo($hMenu)
+
+---  Таблица параметров  ---
+$hMenu
+	Handle of the menu
+
+---  Таблица возвращаемых значений  ---
+Успех:	$tagMENUINFO structure
+Ошибка:	set @error
+
+---  Смотрите также  ---
+_GUICtrlMenu_SetMenuInfo, $tagMENUINFO
+
+
+---  Таблица  --- GetMenuInfo

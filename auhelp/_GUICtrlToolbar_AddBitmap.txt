@@ -1,0 +1,55 @@
+
+_GUICtrlToolbar_AddBitmap
+
+Adds images to the image list
+
+#Include 
+_GUICtrlToolbar_AddBitmap($hWnd, $iButtons, $hInst, $iID)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iButtons
+	Number of button images in the bitmap
+$hInst
+	Handle to the module instance with the executable file that contains a bitmap resource. To use
+		bitmap handles instead of resource IDs, set this to 0. You can add system defined button bitmaps to the list
+		by specifying -1 as the hInst member and one of the following values as the iID member:
+		$IDB_STD_LARGE_COLOR - Добавляет большие, color standard bitmaps
+		$IDB_STD_SMALL_COLOR - Добавляет маленькие, color standard bitmaps
+		$IDB_VIEW_LARGE_COLOR - Добавляет большие, color view bitmaps
+		$IDB_VIEW_SMALL_COLOR - Добавляет маленькие, color view bitmaps
+$iID
+	If hInst is 0, set this member to the bitmap handle of the bitmap with the button images.
+		Otherwise, set it to the resource identifier of the bitmap with the button images. The following are resource
+		IDs to the standard and view bitmaps:
+		$STD_COPY - иконка "копировать"
+		$STD_CUT - иконка "вырезать"
+		$STD_DELETE - иконка "удалить"
+		$STD_FILENEW - иконка "Создать новый файл"
+		$STD_FILEOPEN - иконка "Открыть файл"
+		$STD_FILESAVE - иконка "Сохранить файл"
+		$STD_FIND - иконка "Найти"
+		$STD_HELP - иконка "Справка"
+		$STD_PASTE - иконка "Вставить"
+		$STD_PRINT - иконка "Печать"
+		$STD_PRINTPRE - иконка "Предварительный просмотр печати"
+		$STD_PROPERTIES - иконка "Свойства"
+		$STD_REDOW - иконка "Повторить"
+		$STD_REPLACE - иконка "Заменить"
+		$STD_UNDO - иконка "Отменить"
+		$VIEW_DETAILS - иконка "Вид Таблица"
+		$VIEW_LARGEICONS - иконка  "Вид Плитка"
+		$VIEW_LIST - иконка  "Вид Список"
+		$VIEW_SMALLICONS - иконка  "Вид Значки"
+		$VIEW_SORTDATE - иконка "Сортировать по дате изменения"
+		$VIEW_SORTNAME - иконка "Сортировать по имени"
+		$VIEW_SORTSIZE - иконка "Сортировать по размеру"
+		$VIEW_SORTTYPE - иконка "Сортировать по типу" (по расширению)
+
+---  Таблица возвращаемых значений  ---
+Успех: The zero based index of the first new image
+Ошибка: -1
+
+---  Смотрите также  ---
+_GUICtrlToolbar_LoadBitmap

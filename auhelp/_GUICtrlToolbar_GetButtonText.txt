@@ -1,0 +1,19 @@
+
+_GUICtrlToolbar_GetButtonText
+
+Retrieves the display text of a button
+
+#Include 
+_GUICtrlToolbar_GetButtonText($hWnd, $iCommandID)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+
+---  Таблица возвращаемых значений  ---
+Успех: Button text
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetButtonText, _GUICtrlToolbar_GetString

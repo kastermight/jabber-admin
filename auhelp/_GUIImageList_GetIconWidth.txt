@@ -1,0 +1,18 @@
+
+_GUIImageList_GetIconWidth
+
+Возвращает ширину изображения в списке изображений
+
+#Include 
+_GUIImageList_GetIconWidth($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает ширину в пикселях
+Ошибка:	Возвращает 0
+
+---  Смотрите также  ---
+_GUIImageList_GetIconHeight, _GUIImageList_GetIconSize, _GUIImageList_GetIconSizeEx

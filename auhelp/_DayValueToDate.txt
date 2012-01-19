@@ -1,0 +1,26 @@
+
+_DayValueToDate
+
+Add the given days since noon 4713 BC January 1 and returns the Gregorian date.
+
+#Include 
+_DayValueToDate($iJulianDate, ByRef $iYear, ByRef $iMonth, ByRef $iDay)
+
+---  Таблица параметров  ---
+$iJulianDate
+	A valid number of days.
+$iYear
+	will return the year in format YYYY
+$iMonth
+	will return the month in format MM
+$iDay
+	will return the day in format DD
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns the date calculated
+Ошибка:	0 and set @error
+@error:	0 - No error.
+	1 - Invalid Input number of days.
+
+---  Смотрите также  ---
+_DateToDayValue, _DateAdd, _DateDiff, _DateTimeSplit, _DateToDayOfWeek, _DateToDayOfWeekISO

@@ -1,0 +1,20 @@
+
+_GUICtrlSlider_SetRangeMax
+
+Sets the maximum logical position for the slider
+
+#Include 
+_GUICtrlSlider_SetRangeMax($hWnd, $iMaximum)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iMaximum
+	Maximum position for the slider
+
+---  Примечания  ---
+If the current slider position is greater than the new maximum, the _GUICtrlSlider_SetRangeMax function
+sets the slider position to the new maximum value.
+
+---  Смотрите также  ---
+_GUICtrlSlider_GetRangeMax, _GUICtrlSlider_SetRange, _GUICtrlSlider_SetRangeMin

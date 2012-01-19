@@ -1,0 +1,18 @@
+
+_GUICtrlTab_GetImageList
+
+Retrieves the tab control image list
+
+#Include 
+_GUICtrlTab_GetImageList($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Handle to the image list
+Ошибка: 0
+
+---  Смотрите также  ---
+_GUICtrlTab_SetImageList

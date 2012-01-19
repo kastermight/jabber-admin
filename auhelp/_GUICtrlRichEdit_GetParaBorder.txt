@@ -1,0 +1,68 @@
+
+_GUICtrlRichEdit_GetParaBorder
+
+Gets the border settings of (first) selected paragraph or (if no selection) of the current paragraph
+
+#Include 
+_GUICtrlRichEdit_GetParaBorder($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	settings of first selected paragraph - a string consisting of values separated by semicolons (:):
+	Value 1	one or more of:
+	   l - left border
+	   r - right border
+	   t - top border
+	   b - bottom border
+	   i - inside border
+	   o - outside border
+	   or empty - no border
+	Value 2 - line style - one of:
+	   none - no line
+	   .75 - 3/4 point
+	   1.5 - 1 1/2 points
+	   2.25 - 2 1/4 points
+	   3 - 3 points
+	   4.5 - 4 1/2 points
+	   6 - 6 points
+	   .75d - 1/2 points, double
+	   1.5d - 1 1/2 points, double
+	   2.25d - 2 1/4 points, double
+	   .75g - 3/4 point grey
+	   .75gd - 3/4 point grey dashed
+	Value 3 - one of:
+	   aut - autocolor
+	   blk - black
+	   blu - blue
+	   cyn - cyan
+	   grn - green
+	   mag - magenta
+	   red - red
+	   yel - yellow
+	   whi - white
+	   dbl - dark blue
+	   dgn - dark green
+	   dmg - dark magenta
+	   drd - dark red
+	   dyl - dark yellow
+	   dgy - dark grey
+	   lgy - light grey
+	Value 4 - space between the border and the text (in space units)
+	Value 5 - scope:
+	   a - all (or only) selected paragraphs have these settings
+	   f - the first selected paragraph has these settings, but other(s) don't
+	   c - the current paragraph has these settings
+Ошибка:	"" and sets @error
+@error:	101 - $hWnd is not a handle
+
+---  Примечания  ---
+Borders do not show in Rich Edit, but borders created here will show in Word
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_SetParaBorder
+
+
+---  Таблица  --- EM_GETPARAFORMAT

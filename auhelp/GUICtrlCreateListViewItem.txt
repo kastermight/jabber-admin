@@ -1,0 +1,29 @@
+
+GUICtrlCreateListViewItem
+
+Создаёт пункт в ListView.
+
+GUICtrlCreateListViewItem ( "text", listviewID )
+
+---  Таблица параметров  ---
+text
+	текст или текст делённый на колонки разделителем Opt("GUIDataSeparatorChar").
+listviewID
+	идентификатор ListView, в который будет добавлен пункт.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает идентификатор (controlID) нового элемента.
+Ошибка:	Возвращает 0.
+
+---  Примечания  ---
+Эта функция создает индивидуальные элементы ListView, которые могут быть выбраны.  Пункты ListView являются обычными элементами и могут быть установлены с помощью GUICtrlSetData.
+Пункты ListView могут быть удалены, как любой другой элемент с помощью GUICtrlDelete.
+Пункты ListView можно перетащить и бросить в элементы Edit или Input со статусом $GUI_DROPACCEPTED.
+Смотрите GUICtrlCreateListView об изменении размера колонок.
+
+Специальный флаг $GUI_BKCOLOR_LV_ALTERNATE может быть использован с элементом Listview чтобы дать альтернативный фон пунктам ListviewItems.
+Нечётные строки получите установкой цвета GUICtrlSetBkColor для Listview.
+Чётные строки получите установкой цвета GUICtrlSetBkColor для ListviewItem.
+
+---  Смотрите также  ---
+GUICtrlCreateListView, GUICtrlSetData, GUICtrlSetState, GUICtrlDelete, GUIGetMsg, GUICtrlRead, GUIDataSeparatorChar (Option)

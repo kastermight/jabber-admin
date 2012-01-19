@@ -1,0 +1,16 @@
+
+_GUICtrlIpAddress_Set
+
+Устанавливает адрес в элемент IP address
+
+#Include 
+_GUICtrlIpAddress_Set($hWnd, $sAddress)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$sAddress
+	Строка IP-адреса
+
+---  Смотрите также  ---
+_GUICtrlIpAddress_Get, _GUICtrlIpAddress_ClearAddress

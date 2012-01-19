@@ -1,0 +1,21 @@
+
+_GUICtrlButton_Destroy
+
+Delete the Button control
+
+#Include 
+_GUICtrlButton_Destroy(ByRef $hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: True, Handle is set to 0
+Ошибка: False
+
+---  Примечания  ---
+Restricted to only be used on Edit created with _GUICtrlButton_Create
+
+---  Смотрите также  ---
+_GUICtrlButton_Create

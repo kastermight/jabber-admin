@@ -1,0 +1,19 @@
+
+_GUICtrlComboBoxEx_GetItemParam
+
+Retrieves the application specific value of the item
+
+#Include 
+_GUICtrlComboBoxEx_GetItemParam($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based item index
+
+---  Таблица возвращаемых значений  ---
+Успех: Application specific value
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_SetItemParam

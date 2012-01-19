@@ -1,0 +1,20 @@
+
+_GUICtrlComboBoxEx_GetItemOverlayImage
+
+Retrieves the index of the item's overlay image icon
+
+#Include 
+_GUICtrlComboBoxEx_GetItemOverlayImage($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based item index
+
+---  Таблица возвращаемых значений  ---
+Успех:	Zero based item overlay image index
+Ошибка:	-1
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_SetItemOverlayImage

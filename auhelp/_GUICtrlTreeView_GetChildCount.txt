@@ -1,0 +1,19 @@
+
+_GUICtrlTreeView_GetChildCount
+
+Возвращает количество вложенных пунктов в родительском
+
+#Include 
+_GUICtrlTreeView_GetChildCount($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$hItem
+	Дескриптор пункта
+
+---  Таблица возвращаемых значений  ---
+Возвращает количество вложенных
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetCount, _GUICtrlTreeView_GetSiblingCount

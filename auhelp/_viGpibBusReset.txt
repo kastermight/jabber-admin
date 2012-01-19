@@ -1,0 +1,21 @@
+
+_viGpibBusReset
+
+GPIB BUS "reset": Use this function when the GPIB BUS gets stuck for some reason. You might be lucky and resolve the problem by calling this function
+
+#include 
+_viGpibBusReset ( )
+
+None
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns 0
+Ошибка:	Returns -1 if the VISA DLL could not be open or a NON ZERO value representing the VISA error code (see the VISA programmer's guide)
+
+This function always sets @error to 1 in case of error
+
+---  Примечания  ---
+As for all the VISA functions the VISA libraries must be installed (you can check whether visa32.dll is in {WINDOWS}\system32) and a GPIB card (such as a National Instruments NI PCI-GPIB card or an Agilent 82350B PCI High-Performance GPIB card) must be installed
+
+---  Смотрите также  ---
+_viGTL, _viExecCommand, _viFindGpib, _viOpen, _viClose

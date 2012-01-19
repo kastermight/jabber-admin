@@ -1,0 +1,18 @@
+
+_GUICtrlHeader_GetImageList
+
+Retrieves the handle to the image list
+
+#Include 
+_GUICtrlHeader_GetImageList($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: A handle to the image list set for the header control
+Ошибка: 0
+
+---  Смотрите также  ---
+_GUICtrlHeader_SetImageList, _GUICtrlHeader_CreateDragImage

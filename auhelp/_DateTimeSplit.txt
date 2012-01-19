@@ -1,0 +1,32 @@
+
+_DateTimeSplit
+
+Делит строку содержащую дату и время на два отдельных массива.
+
+#Include 
+_DateTimeSplit($sDate, ByRef $asDatePart, ByRef $iTimePart)
+
+---  Таблица параметров  ---
+$sDate
+	Любой из этих форматов:
+		"yyyy/mm/dd[ hh:mm[:ss]]"
+		"yyyy/mm/dd[Thh:mm[:ss]]"
+		"yyyy-mm-dd[ hh:mm[:ss]]"
+		"yyyy-mm-dd[Thh:mm[:ss]]"
+		"yyyy.mm.dd[ hh:mm[:ss]]"
+		"yyyy.mm.dd[Thh:mm[:ss]]"
+$asDatePart
+	массив содержащий дату.
+		$asDatePart[0] содержит количество возвращаемых значений
+$iTimePart
+	массив содержащий время.
+		$asTimePart[0] содержит количество возвращаемых значений
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает дату и время в два отдельных массива.
+Ошибка:	Возвращает 0 и устанавливает @error
+@error:	0 - нет ошибок.
+	1 - Неверная исходная дата
+
+---  Смотрите также  ---
+_DayValueToDate, _DateAdd, _DateDiff

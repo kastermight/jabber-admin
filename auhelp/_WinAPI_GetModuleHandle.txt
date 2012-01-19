@@ -1,0 +1,24 @@
+
+_WinAPI_GetModuleHandle
+
+Returns a module handle for the specified module
+
+#Include 
+_WinAPI_GetModuleHandle($sModuleName)
+
+---  Таблица параметров  ---
+$sModuleName
+	Names a Win32 module (either a .DLL or .EXE file). If the filename extension is omitted, the
+		default library extension .DLL is appended. The filename string can include a trailing point character (.) to
+		indicate that the module name has no extension. The string does not have to specify a path. The name is
+		compared (case independently) to the names of modules currently mapped into the address space of the calling
+		process. If this parameter is 0 the function returns a handle of the file used to create the calling process.
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle to the specified module
+Ошибка:	0
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GetModuleHandle

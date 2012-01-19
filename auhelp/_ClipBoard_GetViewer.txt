@@ -1,0 +1,19 @@
+
+_ClipBoard_GetViewer
+
+Retrieves the handle to the first window in the clipboard viewer chain
+
+#Include 
+_ClipBoard_GetViewer()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle to the first window in the clipboard viewer chain
+Ошибка:	Zero if there is no clipboard viewer
+
+---  Смотрите также  ---
+_ClipBoard_SetViewer
+
+
+---  Таблица  --- GetClipboardViewer

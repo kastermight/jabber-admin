@@ -1,0 +1,17 @@
+
+_GUICtrlMonthCal_GetMinReqRect
+
+Retrieves the minimum size required to display a full month
+
+#Include 
+_GUICtrlMonthCal_GetMinReqRect($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: $tagRECT structure
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_GetMinReqHeight, _GUICtrlMonthCal_GetMinReqWidth, $tagRECT

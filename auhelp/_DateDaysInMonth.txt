@@ -1,0 +1,22 @@
+
+_DateDaysInMonth
+
+Returns the number of days in a month, based on the specified month and year.
+
+#Include 
+_DateDaysInMonth($iYear, $iMonthNum)
+
+---  Таблица параметров  ---
+$iYear
+	4-digit year.
+$iMonthNum
+	Month number (1 = January, 12 = December).
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns the number of days in the month.
+Ошибка:	Returns 0 and set @error
+@error:	0 - No error.
+	1 - Invalid month number or year.
+
+---  Смотрите также  ---
+_DateDayOfWeek

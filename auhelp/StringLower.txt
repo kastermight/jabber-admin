@@ -1,0 +1,16 @@
+
+StringLower
+
+Преобразует строку в нижний регистр.
+
+StringLower ( "string" )
+
+---  Таблица параметров  ---
+string
+	Строка для преобразования.
+
+---  Таблица возвращаемых значений  ---
+Возвращает строку, преобразованную в нижний регистр
+
+---  Смотрите также  ---
+StringIsLower, StringIsUpper, StringInStr, StringLeft, StringLen, StringMid, StringRight, StringTrimLeft, StringTrimRight, StringUpper, StringCompare, StringIsAlNum, StringIsAlpha, StringIsASCII, StringIsSpace, StringIsXDigit, StringReplace, StringSplit

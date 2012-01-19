@@ -1,0 +1,28 @@
+
+_GUICtrlTab_SetItem
+
+Sets information about a tab
+
+#Include 
+_GUICtrlTab_SetItem($hWnd, $iIndex[, $sText = -1[, $iState = -1[, $iImage = -1[, $iParam = -1]]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based item index
+$sText
+	[опционально] Item text
+$iState
+	[опционально] Item state
+$iImage
+	[опционально] Zero based item image
+$iParam
+	[опционально] Application defined data
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlTab_GetItem

@@ -1,0 +1,21 @@
+
+MouseUp
+
+Выполняет отжатие кнопки мыши в текущей позиции.
+
+MouseUp ( "button" )
+
+---  Таблица параметров  ---
+button
+	Кнопка для клика: "left", "right", "middle", "main", "menu", "primary", "secondary".
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает 1.
+Ошибка:	Возвращает 0, если параметр button задан неверно.
+
+---  Примечания  ---
+См. примечания для функции MouseClick().
+К ответственности пользователя:  для каждого MouseDown() в конечном счёте следует соответствующее событие MouseUp.
+
+---  Смотрите также  ---
+MouseDown, MouseClick, MouseClickDrag, MouseGetPos, MouseMove, MouseCoordMode (Option)

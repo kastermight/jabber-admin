@@ -1,0 +1,31 @@
+
+_GUICtrlIpAddress_Create
+
+Создаёт элемент GUI IP Address
+
+#Include 
+_GUICtrlIpAddress_Create($hWnd, $iX, $iY[, $iWidth = 125[, $iHeight = 25[, $iStyles = 0x00000000[, $iExstyles = 0x00000000]]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор родительского окна или окна владельца
+$iX
+	X координата элемента
+$iY
+	Y координата элемента
+$iWidth
+	[опционально] Ширина элемента
+$iHeight
+	[опционально] Высота элемента
+$iStyles
+	[опционально] Стиль элемента:
+		Принудительно : $WS_CHILD, $WS_VISIBLE, $WS_TABSTOP
+$iExStyles
+	[опционально] Расширенный стиль элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает дескриптор элемента IP Address
+Ошибка:	0
+
+---  Смотрите также  ---
+_GUICtrlIpAddress_Destroy

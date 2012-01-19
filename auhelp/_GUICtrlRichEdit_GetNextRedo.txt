@@ -1,0 +1,29 @@
+
+_GUICtrlRichEdit_GetNextRedo
+
+Retrieves the name or type ID of the next possible redo action
+
+#Include 
+_GUICtrlRichEdit_GetNextRedo($hWnd, $fName = True)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$fName
+	True (return name, default) or False (return ID number)
+
+---  Таблица возвращаемых значений  ---
+Успех:	depends on value of $fName:
+	If $fName is True: "Unknown", "Typing", "Delete", "Drag and drop", "Cut" or "Paste"
+	If $Name is False: the corresponding number (0 to 5)
+Ошибка:	"" and sets @error
+@error:	101 - $hWnd is not a handle
+	102 - $fName is neither True nor False
+
+---  Примечания  ---
+Note that EM_GETREDONAME does not distinguish between Unknown and redo queue empty
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_Redo, _GUICtrlRichEdit_Undo, _GUICtrlRichEdit_SetUndoLimit
+
+---  Таблица  --- EM_GETREDONAME

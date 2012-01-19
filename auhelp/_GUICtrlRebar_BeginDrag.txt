@@ -1,0 +1,20 @@
+
+_GUICtrlRebar_BeginDrag
+
+Adds a new band in a rebar control
+
+#Include 
+_GUICtrlRebar_BeginDrag($hWnd, $iIndex[, $dwPos = -1])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band that the drag-and-drop operation will affect
+$dwPos
+	[опционально] DWORD value that contains the starting mouse coordinates.
+		The horizontal coordinate is contained in the LOWORD and the vertical coordinate is contained in the HIWORD.
+		If you pass (DWORD)-1, the rebar control will use the position of the mouse the last time the control's thread called GetMessage or PeekMessage
+
+---  Смотрите также  ---
+_GUICtrlRebar_DragMove, _GUICtrlRebar_EndDrag

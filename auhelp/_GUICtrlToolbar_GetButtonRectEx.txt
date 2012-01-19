@@ -1,0 +1,19 @@
+
+_GUICtrlToolbar_GetButtonRectEx
+
+Retrieves the bounding rectangle for a specified toolbar button
+
+#Include 
+_GUICtrlToolbar_GetButtonRectEx($hWnd, $iCommandID)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+
+---  Таблица возвращаемых значений  ---
+Успех: $tagRECT structure
+
+---  Смотрите также  ---
+_GUICtrlToolbar_GetButtonRect, $tagRECT

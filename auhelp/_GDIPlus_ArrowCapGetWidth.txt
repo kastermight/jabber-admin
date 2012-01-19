@@ -1,0 +1,24 @@
+
+_GDIPlus_ArrowCapGetWidth
+
+Gets the width of the arrow cap
+
+#Include 
+_GDIPlus_ArrowCapGetWidth($hArrowCap)
+
+---  Таблица параметров  ---
+$hArrowCap
+	Handle to a ArrowCap object
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns the width of the arrow cap
+Ошибка:	0
+
+---  Примечания  ---
+The width is the distance between the endpoints of the base of the arrow
+
+---  Смотрите также  ---
+_GDIPlus_ArrowCapSetWidth
+
+
+---  Таблица  --- GdipGetAdjustableArrowCapWidth

@@ -1,0 +1,28 @@
+
+_GDIPlus_BitmapCreateFromGraphics
+
+Creates a Bitmap object based on a Graphics object, a width, and a height
+
+#Include 
+_GDIPlus_BitmapCreateFromGraphics($iWidth, $iHeight, $hGraphics)
+
+---  Таблица параметров  ---
+$iWidth
+	Specifies the width, in pixels, of the bitmap
+$iHeight
+	Specifies the height, in pixels, of the bitmap
+$hGraphics
+	Handle to a Graphics object
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to a Bitmap object
+Ошибка:	0
+
+---  Примечания  ---
+When you are done with the Bitmap object, call _GDIPlus_BitmapDispose to release the resources
+
+---  Смотрите также  ---
+_WinAPI_DeleteObject
+
+
+---  Таблица  --- GdipCreateBitmapFromGraphics

@@ -1,0 +1,18 @@
+
+_GUICtrlTreeView_GetImageListIconHandle
+
+Retrieve ImageList handle
+
+#Include 
+_GUICtrlTreeView_GetImageListIconHandle($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	ImageList index to retrieve
+
+---  Таблица возвращаемых значений  ---
+Returns the ImageList handle
+
+---  Смотрите также  ---

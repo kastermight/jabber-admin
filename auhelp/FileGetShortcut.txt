@@ -1,0 +1,27 @@
+
+FileGetShortcut
+
+Получает информацию о ярлыке.
+
+FileGetShortcut ( "lnk" )
+
+---  Таблица параметров  ---
+lnk
+	Полный путь и имя файла ярлыка.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает массив с информацией о ярлыке. См. примечания.
+Ошибка:	Устанавливает значение @error равным 1, если невозможно получить доступ к ярлыку.
+
+---  Примечания  ---
+Возвращаемый массив содержит следующие элементы:
+$array[0] = Объект (Shortcut target path)
+$array[1] = Рабочий папка (Working directory)
+$array[2] = Параметры (Arguments)
+$array[3] = Комментарий (Description)
+$array[4] = Имя файла значка (Icon filename)
+$array[5] = Индекс значка в файле (Icon index)
+$array[6] = Состояние окна при запуске (The shortcut state, @SW_SHOWNORMAL, @SW_SHOWMINNOACTIVE, @SW_SHOWMAXIMIZED)
+
+---  Смотрите также  ---
+FileCreateShortcut

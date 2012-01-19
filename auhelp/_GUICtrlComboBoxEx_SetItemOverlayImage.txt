@@ -1,0 +1,22 @@
+
+_GUICtrlComboBoxEx_SetItemOverlayImage
+
+Sets the index of the item's overlay icon in the control's image list
+
+#Include 
+_GUICtrlComboBoxEx_SetItemOverlayImage($hWnd, $iIndex, $iImage)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based index of the item
+$iImage
+	Zero based index into the control's image list
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_GetItemOverlayImage

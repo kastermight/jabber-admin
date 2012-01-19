@@ -1,0 +1,24 @@
+
+_ClipBoard_Empty
+
+Empties the clipboard and frees handles to data in the clipboard
+
+#Include 
+_ClipBoard_Empty()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+Before calling this function, you must open the clipboard by using the _ClipBoard_Open function. If you specified
+a NULL window handle when opening the clipboard, this function succeeds but sets the clipboard owner to NULL.
+Note that this causes _ClipBoard_SetData to fail.
+
+---  Смотрите также  ---
+_ClipBoard_Open, _ClipBoard_SetData, _ClipBoard_GetOwner, _ClipBoard_SetDataEx
+
+
+---  Таблица  --- EmptyClipboard

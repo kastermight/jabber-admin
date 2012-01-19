@@ -1,0 +1,19 @@
+
+_GUICtrlRebar_GetBandBordersEx
+
+Retrieves the borders of a band. The result of this message can be used to calculate the usable area in a band
+
+#Include 
+_GUICtrlRebar_GetBandBordersEx($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band for which the borders will be retrieved
+
+---  Таблица возвращаемых значений  ---
+Returns a $tagRECT structure
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetBandBorders, _GUICtrlRebar_GetBandRect, _GUICtrlRebar_GetBandRectEx, $tagRECT

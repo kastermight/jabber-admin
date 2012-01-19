@@ -1,0 +1,18 @@
+
+_WinAPI_RectIsEmpty
+
+Determins whether a rectangle is empty
+
+#Include 
+_WinAPI_RectIsEmpty(ByRef $tRect)
+
+---  Таблица параметров  ---
+$tRect
+	$tagRect structure
+
+---  Таблица возвращаемых значений  ---
+True:	Rectangle is empty (all values are zero)
+False:	Rectangle is not empty
+
+---  Смотрите также  ---
+$tagRect

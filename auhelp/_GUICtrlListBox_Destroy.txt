@@ -1,0 +1,21 @@
+
+_GUICtrlListBox_Destroy
+
+Удаляет элемент
+
+#Include 
+_GUICtrlListBox_Destroy(ByRef $hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех: True, дескриптор установлен в 0
+Ошибка: False
+
+---  Примечания  ---
+Ограничение, только для ListBox, созданный функцией _GUICtrlListBox_Create
+
+---  Смотрите также  ---
+_GUICtrlListBox_Create

@@ -1,0 +1,23 @@
+
+_GUICtrlMenu_GetItemBmp
+
+Retrieves the bitmap displayed for the item
+
+#Include 
+_GUICtrlMenu_GetItemBmp($hMenu, $iItem[, $fByPos = True])
+
+---  Таблица параметров  ---
+$hMenu
+	Handle of the menu
+$iItem
+	Identifier or position of the menu item
+$fByPos
+	[опционально] Menu identifier flag:
+		 True - $iItem is a zero based item position
+		False - $iItem is a menu item identifier
+
+---  Таблица возвращаемых значений  ---
+Returns the Handle to the bitmap to be displayed
+
+---  Смотрите также  ---
+_GUICtrlMenu_SetItemBmp

@@ -1,0 +1,23 @@
+
+_GUICtrlListBox_SetCaretIndex
+
+Set the focus rectangle to the item at the specified index in a multiple-selection list box
+
+#Include 
+_GUICtrlListBox_SetCaretIndex($hWnd, $iIndex[, $fPartial = False])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Specifies the zero based index of the item
+$fPartial
+	[опционально] If False, the item is scrolled until it is fully visible; if it is True, the item is scrolled
+		until it is at least partially visible.
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlListBox_GetCaretIndex

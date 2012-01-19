@@ -1,0 +1,18 @@
+
+_GUICtrlToolbar_GetStyleList
+
+Indicates that the control has button text to the right of the bitmap
+
+#Include 
+_GUICtrlToolbar_GetStyleList($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+True: Style is present
+False: Style is not present
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetStyleList

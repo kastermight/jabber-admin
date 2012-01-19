@@ -1,0 +1,41 @@
+
+_TCPIpToName
+
+Возвращает имя хоста указанного IP адреса
+
+#include 
+_TCPIpToName ( $sIp [,$iOption = 0 [, $hDll_Ws2_32 = "Ws2_32.dll" ]] )
+
+---  Таблица параметров  ---
+$sIp
+	IP адрес в формате IPv4
+$iOption
+	[опционально] Default = 0
+	0 = Возвращает строку имени хоста
+	1 = Возвращает массив (смотрите примечание)
+$hDll_Ws2_32
+	[опционально] Handle to Ws2_32.dll
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает имя хоста или массив (смотрите примечание)
+Ошибка:	Возвращает "" пустую строку
+@Error:	0 = нет ошибок.
+	1 = inet_addr DllCall неудачно
+	2 = inet_addr неудачно
+	3 = gethostbyaddr DllCall неудачно
+	4 = gethostbyaddr неудачно, WSAGetLastError = @Extended
+	5 = gethostbyaddr и WSAGetLastError неудачно
+	6 = strlen/sZStringRead неудачно
+	7 = Ошибка чтения массива псевдонимов
+
+---  Примечания  ---
+Требуется WSAStartup (делается функцией TCPStartup).
+Если $iOption = 1, то возвращается массив следующего формата:
+	$aResult[0] = Количество элементов массива
+	$aResult[1] = "Имя хоста"
+	$aResult[2] = "Псевдоним 1"
+	$aResult[3] = "Псевдоним 2"
+	...
+
+---  Смотрите также  ---
+TCPStartup, TCPNameToIP

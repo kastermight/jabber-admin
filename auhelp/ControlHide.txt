@@ -1,0 +1,21 @@
+
+ControlHide
+
+Скрыть элемент.
+
+ControlHide ( "title", "text", controlID )
+
+---  Таблица параметров  ---
+title
+	Заголовок окна.
+text
+	Текст окна.
+controlID
+	Идентификатор элемента управления.  Смотрите Controls.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает 1.
+Ошибка:	Возвращает 0, если окно/элемент не найден.
+
+---  Смотрите также  ---
+ControlShow, ControlCommand, ControlDisable, WinSetState

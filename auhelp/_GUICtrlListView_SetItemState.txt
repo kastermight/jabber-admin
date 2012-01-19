@@ -1,0 +1,24 @@
+
+_GUICtrlListView_SetItemState
+
+Изменяет состояние пункта в ListView
+
+#Include 
+_GUICtrlListView_SetItemState($hWnd, $iIndex, $iState, $iStateMask)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта
+$iState
+	Item state to be changed
+$iStateMask
+	Bits that determine whether state is active or inactive
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlListView_GetItemState

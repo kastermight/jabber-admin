@@ -1,0 +1,25 @@
+
+_GUICtrlTab_InsertItem
+
+Inserts a new tab
+
+#Include 
+_GUICtrlTab_InsertItem($hWnd, $iIndex, $sText[, $iImage = -1[, $iParam = 0]])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Index of the new tab
+$sText
+	Tab text
+$iImage
+	[опционально] Zero based tab image index
+$iParam
+	[опционально] Application defined data
+
+---  Таблица возвращаемых значений  ---
+Успех:	The zero based index of the new tab
+Ошибка:	-1
+
+---  Смотрите также  ---

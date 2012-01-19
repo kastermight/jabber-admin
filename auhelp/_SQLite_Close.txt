@@ -1,0 +1,24 @@
+
+_SQLite_Close
+
+Close a SQLite database.
+
+#include 
+_SQLite_Close ( [ $hDB ] )
+
+---  Таблица параметров  ---
+$hDB
+	[опционально] Database handle.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns $SQLITE_OK.
+Ошибка:	Return value can be compared against $SQLITE_* constants.
+@error:	-1 - SQLite reported an error (Check Return value)
+	1 - Error calling SQLite API 'sqlite3_close'
+	2 - Call prevented by SafeMode
+
+---  Примечания  ---
+If no database handle is given, the last opened database will be closed.
+
+---  Смотрите также  ---
+_SQLite_Open

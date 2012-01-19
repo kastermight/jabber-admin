@@ -1,0 +1,23 @@
+
+_WinAPI_SelectObject
+
+Selects an object into the specified device context
+
+#Include 
+_WinAPI_SelectObject($hDC, $hGDIObj)
+
+---  Таблица параметров  ---
+$hDC
+	Identifies the device context
+$hGDIObj
+	Identifies the object to be selected
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle of the object being replaced
+Ошибка:	<= 0
+
+---  Смотрите также  ---
+_WinAPI_CreatePen, _WinAPI_DrawLine, _WinAPI_GetBkMode, _WinAPI_LineTo, _WinAPI_MoveTo, _WinAPI_SetBkMode
+
+
+---  Таблица  --- SelectObject

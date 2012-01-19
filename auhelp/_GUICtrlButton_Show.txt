@@ -1,0 +1,22 @@
+
+_GUICtrlButton_Show
+
+Show/Hide button
+
+#Include 
+_GUICtrlButton_Show($hWnd[, $fShow = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$fShow
+	[опционально] One of the following:
+		 True - Show button
+		False - Hide button
+
+---  Таблица возвращаемых значений  ---
+Успех: One of the Following:
+		1 - If the button was previously visible
+		0 - If the button was previously hidden
+
+---  Смотрите также  ---

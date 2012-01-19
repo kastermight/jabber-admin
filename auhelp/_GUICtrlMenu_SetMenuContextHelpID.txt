@@ -1,0 +1,20 @@
+
+_GUICtrlMenu_SetMenuContextHelpID
+
+Sets the context help identifier for the menu
+
+#Include 
+_GUICtrlMenu_SetMenuContextHelpID($hMenu, $iHelpID)
+
+---  Таблица параметров  ---
+$hMenu
+	Handle of the menu
+$iHelpID
+	Context help ID
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlMenu_GetMenuContextHelpID

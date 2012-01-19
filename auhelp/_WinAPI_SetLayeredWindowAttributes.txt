@@ -1,0 +1,30 @@
+
+_WinAPI_SetLayeredWindowAttributes
+
+Sets Layered Window Attributes
+
+#Include 
+_WinAPI_SetLayeredWindowAttributes($hWnd, $i_transcolor [, $Transparency = 255 [, $dwFlags = 0x03 [, $isColorRef = False]]])
+
+---  Таблица параметров  ---
+$hwnd
+	Handle of GUI to work on
+$i_transcolor
+	Transparent color
+$Transparency
+	[опционально] Set Transparancy of GUI
+$dwFlags
+	[опционально] Flags.
+$isColorRef
+	[опционально] If True, $i_transcolor is a COLORREF( 0x00bbggrr ), else an RGB-Color
+
+---  Таблица возвращаемых значений  ---
+Успех:	1
+Ошибка:	0
+@error:	4 - Function did not succeed - @extended is set to _WinAPI_GetLastErrorMessage to get more information
+
+---  Смотрите также  ---
+_WinAPI_GetLayeredWindowAttributes, _WinAPI_GetLastError
+
+
+---  Таблица  --- SetLayeredWindowAttributes

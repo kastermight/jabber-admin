@@ -1,0 +1,22 @@
+
+_GUICtrlListBox_SetItemHeight
+
+Устанавливает высоту пунктов в пикселях
+
+#Include 
+_GUICtrlListBox_SetItemHeight($hWnd, $iHeight[, $iIndex = 0])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iHeight
+	Высота пунктов в пикселях
+$iIndex
+	[опционально] Индекс пункта, отсчёт от 0. Используйте этот параметр только, если ListBox имеет стиль LBS_OWNERDRAWVARIABLE (разрешает индивидуальную высоту) иначе установите в 0.
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlListBox_GetItemHeight

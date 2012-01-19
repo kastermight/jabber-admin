@@ -1,0 +1,18 @@
+
+_GUICtrlTab_GetToolTips
+
+Retrieves the handle to the ToolTip control associated with the control
+
+#Include 
+_GUICtrlTab_GetToolTips($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Handle to the ToolTip control
+Ошибка: 0
+
+---  Смотрите также  ---
+_GUICtrlTab_SetToolTips

@@ -1,0 +1,21 @@
+
+_GDIPlus_ArrowCapDispose
+
+Release an adjustable arrow line cap object
+
+#Include 
+_GDIPlus_ArrowCapDispose($hCap)
+
+---  Таблица параметров  ---
+$hCap
+	Handle to a adjustable arrow line cap object
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GDIPlus_ArrowCapCreate
+
+
+---  Таблица  --- GdipDeleteCustomLineCap

@@ -1,0 +1,23 @@
+
+_Assert
+
+Display a message if assertion fails.
+
+#include 
+_Assert($sCondition [,$bExit = True [,$nCode = 0x7FFFFFFF [,$sLine = @ScriptLineNumber]]])
+
+---  Таблица параметров  ---
+$sCondition
+	The condition (expression quoted) that must evaluate to true.
+$bExit
+	[опционально] If true, the script is aborted.
+$nCode
+	[опционально] The exit code to use if the script is aborted.
+$sLine
+	[опционально] Displays the line number where the assertion failed.  If this value is not changed, then the default value will show the correct line.
+
+---  Таблица возвращаемых значений  ---
+The result of the condition (Only valid when not exiting).
+
+---  Примечания  ---
+@error and @extended are not destroyed on return.  

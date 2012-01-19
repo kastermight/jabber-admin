@@ -1,0 +1,30 @@
+
+_GUICtrlRichEdit_SetUndoLimit
+
+Sets the maximum number of actions that can stored in the undo queue
+
+#Include 
+_GUICtrlRichEdit_SetUndoLimit($hWnd, $iLimit)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iLimit
+	the maximum number of actions that can be stored in the undo queue
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False and sets @error
+@error:	101 - $hWnd is not a handle
+	102 - $iLimit is neither a positive number nor zero
+
+---  Примечания  ---
+To disable the Undo feature, set $iLimit to zero
+
+The initial value of $iLimit is 100.
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_Undo, _GUICtrlRichEdit_CanRedo, _GUICtrlRichEdit_CanUndo, _GUICtrlRichEdit_GetNextRedo, _GUICtrlRichEdit_Redo
+
+
+---  Таблица  --- EM_SETUNDOLIMIT

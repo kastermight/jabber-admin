@@ -1,0 +1,32 @@
+
+_GUICtrlButton_SetTextMargin
+
+Sets the margins for drawing text in a button control
+
+#Include 
+_GUICtrlButton_SetTextMargin($hWnd[, $iLeft = 1[, $iTop = 1[, $iRight = 1[, $iBottom = 1]]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iLeft
+	[опционально] Left margin to use for drawing text
+$iTop
+	[опционально] Top margin to use for drawing text
+$iRight
+	[опционально] Right margin to use for drawing text
+$iBottom
+	[опционально] Bottom margin to use for drawing text
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+Minimum OS - Windows XP.
+
+---  Смотрите также  ---
+_GUICtrlButton_GetTextMargin
+
+
+---  Таблица  --- BCM_SETTEXTMARGIN

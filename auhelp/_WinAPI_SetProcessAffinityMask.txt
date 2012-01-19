@@ -1,0 +1,26 @@
+
+_WinAPI_SetProcessAffinityMask
+
+Sets a processor affinity mask for the threads of a specified process
+
+#Include 
+_WinAPI_SetProcessAffinityMask($hProcess, $iMask)
+
+---  Таблица параметров  ---
+$hProcess
+	A handle to the process whose affinity mask the function sets
+$iMask
+	Affinity mask
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+An affinity mask is a bit mask in which each bit represents a processor on which the threads of the process
+are allowed to run. For example, if you pass a mask of 0x05, processors 1 and 3 are allowed to run.
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- SetProcessAffinityMask

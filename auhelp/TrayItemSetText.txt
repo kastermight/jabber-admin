@@ -1,0 +1,22 @@
+
+TrayItemSetText
+
+Устанавливает текст элемента меню или пункта трея.
+
+TrayItemSetText ( controlID, text )
+
+---  Таблица параметров  ---
+controlID
+	Идентификатор элемента (controlID), возвращаемый функциями TrayCreateItem or TrayCreateMenu.
+text
+	Новый текст для элемента меню или пункта трея.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает 1.
+Ошибка:	Возвращает 0.
+
+---  Примечания  ---
+Чтобы изменить текст пунктов по умолчанию ("Script Paused" и "Exit") используйте константы $TRAY_ITEM_EXIT и $TRAY_ITEM_PAUSE в качестве controlID.
+
+---  Смотрите также  ---
+TrayItemGetText, TrayCreateItem, TrayCreateMenu

@@ -1,0 +1,44 @@
+
+_GUIToolTip_AddTool
+
+Registers a tool with the control
+
+#Include 
+_GUIToolTip_AddTool($hTool, $hWnd, $sText[, $iID = 0[, $iLeft = 0[, $iTop = 0[, $iRight = 0[, $iBottom = 0[, $iFlags = 8[, $iParam = 0]]]]]]])
+
+---  Таблица параметров  ---
+$hTool
+	ToolTip handle
+$hWnd
+	Handle to the window that contains the tool
+$sText
+	Text for the ToolTip control
+$iID
+	[опционально] Identifier or window handle of the tool
+$iLeft
+	[опционально] X coordinate of the upper left corner of the rectangle
+$iTop
+	[опционально] Y coordinate of the upper left corner of the rectangle
+$iRight
+	[опционально] X coordinate of the lower right corner of the rectangle
+$iBottom
+	[опционально] Y coordinate of the lower right corner of the rectangle
+$iFlags
+	[опционально] Flags that control the ToolTip display:
+		  1 - Indicates that $iID is the window handle to the tool instead of the ID
+		  2 - Centers the window below the tool specified by $iID
+		  4 - Indicates that text will be displayed in the opposite direction
+		  8 - Indicates that the control should subclass the tool's window
+		 16 - Positions the control next to the tool to which it corresponds
+		 32 - Positions the window at the same coordinates provided by TTM_TRACKPOSITION
+		 64 - Causes the control to forward mouse messages to the parent window
+		128 - Indicates that links in the control text should be parsed
+$iParam
+	[опционально] Application-defined value that is associated with the tool
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUIToolTip_DelTool

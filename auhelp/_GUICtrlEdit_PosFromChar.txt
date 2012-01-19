@@ -1,0 +1,21 @@
+
+_GUICtrlEdit_PosFromChar
+
+Retrieves the client area coordinates of a specified character in an edit control
+
+#Include 
+_GUICtrlEdit_PosFromChar($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	The zero-based index of the character
+
+---  Таблица возвращаемых значений  ---
+Успех: Array in the following format:
+
+	[0] - The horizontal coordinate
+	[1] - The vertical coordinate
+
+---  Смотрите также  ---

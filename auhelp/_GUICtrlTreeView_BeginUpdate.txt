@@ -1,0 +1,18 @@
+
+_GUICtrlTreeView_BeginUpdate
+
+Предотвращает обновление TreeView, пока не будет вызвана функция EndUpdate
+
+#Include 
+_GUICtrlTreeView_BeginUpdate($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlTreeView_EndUpdate

@@ -1,0 +1,21 @@
+
+_GUICtrlComboBoxEx_GetDroppedControlRect
+
+Retrieve the screen coordinates of a combo box in its dropped-down state
+
+#Include 
+_GUICtrlComboBoxEx_GetDroppedControlRect($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: Array with the following format:
+		[0] - X coordinate of the upper left corner of the rectangle
+		[1] - Y coordinate of the upper left corner of the rectangle
+		[2] - X coordinate of the lower right corner of the rectangle
+		[3] - Y coordinate of the lower right corner of the rectangle
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_GetDroppedControlRectEx

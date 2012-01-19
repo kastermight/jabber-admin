@@ -1,0 +1,20 @@
+
+_WinNet_GetConnection
+
+Retrieves the name of the network resource associated with a local device
+
+#Include 
+_WinNet_GetConnection($sLocalName)
+
+---  Таблица параметров  ---
+$sLocalName
+	The name of the local device to get the network name for
+
+---  Таблица возвращаемых значений  ---
+Успех:	The remote name used to make the connection
+Ошибка:	Set @error
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- WNetGetConnection

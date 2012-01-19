@@ -1,0 +1,16 @@
+
+_GUICtrlEdit_SetText
+
+Устанавливает текст
+
+#Include 
+_GUICtrlEdit_SetText($hWnd, $sText)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$sText
+	Текст помещаемый в окно редактирования
+
+---  Смотрите также  ---
+_GUICtrlEdit_GetText, _GUICtrlEdit_AppendText

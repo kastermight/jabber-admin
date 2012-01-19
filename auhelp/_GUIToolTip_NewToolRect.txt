@@ -1,0 +1,25 @@
+
+_GUIToolTip_NewToolRect
+
+Sets a new bounding rectangle for a tool
+
+#Include 
+_GUIToolTip_NewToolRect($hWnd, $hTool, $iID, $iLeft, $iTop, $iRight, $iBottom)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$hTool
+	Handle to the window that contains the tool
+$iID
+	Application-defined identifier of the tool
+$iLeft
+	X coordinate of the upper left corner of the rectangle
+$iTop
+	Y coordinate of the upper left corner of the rectangle
+$iRight
+	X coordinate of the lower right corner of the rectangle
+$iBottom
+	Y coordinate of the lower right corner of the rectangle
+
+---  Смотрите также  ---

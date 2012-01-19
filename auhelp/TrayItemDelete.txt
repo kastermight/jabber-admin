@@ -1,0 +1,17 @@
+
+TrayItemDelete
+
+Удаляет элемент меню / пункт из меню в трее.
+
+TrayItemDelete ( controlID )
+
+---  Таблица параметров  ---
+controlID
+	Идентификатор элемента (controlID), возвращаемый функциями TrayCreateItem или TrayCreateMenu.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает 1.
+Ошибка:	Возвращает 0.
+
+---  Смотрите также  ---
+TrayCreateItem, TrayCreateMenu

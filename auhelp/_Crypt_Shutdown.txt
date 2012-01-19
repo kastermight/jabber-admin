@@ -1,0 +1,18 @@
+
+_Crypt_Shutdown
+
+Выгрузить библиотеки Crypt
+
+#Include 
+_Crypt_Shutdown()
+
+None.
+
+---  Примечания  ---
+Вызов этой функции необходим, только если был вызван _Crypt_Startup
+
+---  Смотрите также  ---
+_Crypt_Startup
+
+
+---  Таблица  --- CryptReleaseContext

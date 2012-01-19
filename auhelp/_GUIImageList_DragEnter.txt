@@ -1,0 +1,24 @@
+
+_GUIImageList_DragEnter
+
+Displays the drag image at the specified position within the window
+
+#Include 
+_GUIImageList_DragEnter($hWnd, $iX, $iY)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iX
+	The x-coordinate at which to display the drag image.
+		The coordinate is relative to the upper-left corner of the window, not the client area
+$iY
+	The y-coordinate at which to display the drag image.
+		The coordinate is relative to the upper-left corner of the window, not the client area
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUIImageList_BeginDrag

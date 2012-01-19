@@ -1,0 +1,21 @@
+
+_GUICtrlListView_GetItemSpacingX
+
+Определяет горизонтальный интервал между пунктами
+
+#Include 
+_GUICtrlListView_GetItemSpacingX($hWnd[, $fSmall = False])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$fSmall
+	[опционально] Вид ListView, для которого определяется интервал:
+		 True - Для "Small icon"
+		False - Для "Icon"
+
+---  Таблица возвращаемых значений  ---
+Возвращает горизонтальный интервал
+
+---  Смотрите также  ---
+_GUICtrlListView_GetItemSpacing

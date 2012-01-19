@@ -1,0 +1,19 @@
+
+_GUICtrlToolbar_GetButtonParam
+
+Retrieves the button param value
+
+#Include 
+_GUICtrlToolbar_GetButtonParam($hWnd, $iCommandID)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+
+---  Таблица возвращаемых значений  ---
+Успех: Application-defined value
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetButtonParam

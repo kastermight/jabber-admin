@@ -1,0 +1,21 @@
+
+_GUICtrlListView_GetViewDetails
+
+Определяет, является ли вид отображения как Detail (Таблица)
+
+#Include 
+_GUICtrlListView_GetViewDetails($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Возвращает True:	Вид Detail (Таблица)
+Возвращает False:	Вид не Detail (Таблица)
+
+---  Примечания  ---
+Минимальная ОС - Windows XP.
+
+---  Смотрите также  ---
+_GUICtrlListView_GetView

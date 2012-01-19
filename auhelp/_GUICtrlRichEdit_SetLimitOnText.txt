@@ -1,0 +1,34 @@
+
+_GUICtrlRichEdit_SetLimitOnText
+
+Изменяет количество символов, которые могут быть введены, вставлены или переданы как Rich Text Format
+
+#Include 
+_GUICtrlRichEdit_SetLimitOnText($hWnd, $iNewLimit)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iNewLimit
+	Новое ограничение
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False и устанавливает @error
+@error:	101 - $HWnd не является дескриптором
+	102 - $iNewLimit  не является положительным числом или 0
+
+---  Примечания  ---
+Эта функция устанавливает ограничение на количество символов, которое пользователь может ввести или вставить в элемент Rich Edit.
+
+Это также ограничивает количество символов текста RTF, которое может передаваться при использовании _GUICtrlRichEdit_StreamFromFile и _GUICtrlRichEdit_StreamFromVar.
+
+Это не ограничивает количество символов простого текста, которое может быть передано.
+
+Начальное ограничение: 32,767 символов.
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_StreamToFile, _GUICtrlRichEdit_StreamToVar, _GUICtrlRichEdit_StreamFromFile, _GUICtrlRichEdit_StreamFromVar
+
+
+---  Таблица  --- EM_EXLIMITTEXT

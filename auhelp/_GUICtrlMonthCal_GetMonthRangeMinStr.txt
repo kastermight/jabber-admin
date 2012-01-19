@@ -1,0 +1,19 @@
+
+_GUICtrlMonthCal_GetMonthRangeMinStr
+
+Retrieves date information that represents the low limit of the controls display in string format
+
+#Include 
+_GUICtrlMonthCal_GetMonthRangeMinStr($hWnd[, $sFormat = "%02d/%02d/%04d"])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$sFormat
+	[опционально] StringFormat string used to format the date
+
+---  Таблица возвращаемых значений  ---
+Успех: Date in the specified format
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_GetMonthRangeMin

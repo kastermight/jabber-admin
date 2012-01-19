@@ -1,0 +1,24 @@
+
+_GUICtrlRichEdit_GetBkColor
+
+Возвращает цвет фона элемента
+
+#Include 
+_GUICtrlRichEdit_GetBkColor($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает цвет COLORREF
+Ошибка:	устанавливает @error
+@error:	101 - $HWnd не является дескриптором
+
+---  Примечания  ---
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_SetBkColor
+
+
+---  Таблица  --- EM_SETBKGNDCOLOR

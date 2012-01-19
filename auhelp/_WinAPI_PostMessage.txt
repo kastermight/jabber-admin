@@ -1,0 +1,28 @@
+
+_WinAPI_PostMessage
+
+Places a message in the message queue and then returns
+
+#Include 
+_WinAPI_PostMessage($hWnd, $iMsg, $iwParam, $ilParam)
+
+---  Таблица параметров  ---
+$hWnd
+	Identifies the window whose window procedure will receive the message. If this parameter is
+		0xFFFF (HWND_BROADCAST), the message is sent to all top-level windows in the system, including disabled or invisible
+		unknowned windows, overlapped windows, and pop-up windows; but the message is not sent to child windows.
+$iMsg
+	Specifies the message to be sent
+$iwParam
+	First message parameter
+$ilParam
+	Second message parameter
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- PostMessage

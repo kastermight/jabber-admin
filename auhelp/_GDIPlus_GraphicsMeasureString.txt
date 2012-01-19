@@ -1,0 +1,32 @@
+
+_GDIPlus_GraphicsMeasureString
+
+Measures the size of a string
+
+#Include 
+_GDIPlus_GraphicsMeasureString($hGraphics, $sString, $hFont, $tLayout, $hFormat)
+
+---  Таблица параметров  ---
+$hGraphics
+	Handle to a Graphics object
+$sString
+	String to be drawn
+$hFont
+	Handle to the font to use to draw the string
+$tLayout
+	$tagGDIPRECTF structure that bounds the string
+$hFormat
+	Handle to the string format to draw the string
+
+---  Таблица возвращаемых значений  ---
+Успех:	Array with the following format
+	[0] - $tagGDIPRECTF structure that receives the rectangle that bounds the string
+	[1] - The number of characters that actually fit into the layout rectangle
+	[2] - The number of lines that fit into the layout rectangle
+Ошибка:	0
+
+---  Смотрите также  ---
+$tagGDIPRECTF
+
+
+---  Таблица  --- GdipMeasureString

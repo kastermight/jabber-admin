@@ -1,0 +1,25 @@
+
+_Date_Time_FileTimeToArray
+
+Decode a file time to an array
+
+#Include 
+_Date_Time_FileTimeToArray(ByRef $tFileTime)
+
+---  Таблица параметров  ---
+$tFileTime
+	$tagFILETIME structure
+
+---  Таблица возвращаемых значений  ---
+Returns an Array with the following format:
+		[0] - Month
+		[1] - Day
+		[2] - Year
+		[3] - Hour
+		[4] - Minutes
+		[5] - Seconds
+		[6] - Milliseconds
+		[7] - Day of week
+
+---  Смотрите также  ---
+$tagFILETIME

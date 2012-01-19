@@ -1,0 +1,37 @@
+
+_WordDocAdd
+
+Returns an object variable representing a new empty document
+
+#include  
+_WordDocAdd ( ByRef $o_object [, $i_DocumentType = 0 [, $s_Template = "" [, $b_NewTemplate = 0]]] )
+
+---  Таблица параметров  ---
+$o_object
+	Object variable of a Word.Application object
+$i_DocumentType
+	[опционально] specifies the new document type
+	0 = (Default) blank document
+	1 = Web page
+	2 = Email Message (Currently this is non functional)
+	3 = Frameset
+	4 = XML Document
+$s_Template
+	[опционально] specifies name of the template to be used for the new document
+	"" = (Default) normal template is used
+$b_NewTemplate
+	[опционально] specifies whether to open the document as a template
+	0 = (Default) do not open as template
+	1 = open as template
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns an object variable pointing to a Word.Application, document object
+Ошибка:	Returns 0 and sets @ERROR
+@Error:	$_WordStatus_Success = No Error
+	$_WordStatus_GeneralError = General Error
+	$_WordStatus_InvalidDataType = Invalid Data Type
+	$_WordStatus_InvalidObjectType = Invalid Object Type
+@Extended:	Contains invalid parameter number
+
+---  Смотрите также  ---
+_WordDocClose, _WordDocOpen, _WordDocSave, _WordDocSaveAs

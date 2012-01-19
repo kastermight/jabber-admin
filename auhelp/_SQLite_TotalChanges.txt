@@ -1,0 +1,17 @@
+
+_SQLite_TotalChanges
+
+Returns number of all changes (including triggers) of all transactions
+
+#include 
+_SQLite_TotalChanges ( [ $hDB ] )
+
+---  Таблица параметров  ---
+$hDB
+	[опционально] An open database, default is the last opened database
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns number of changes
+Ошибка:	Returns 0.
+@error:	1 - Error calling SQLite API 'sqlite3_changes'
+	2 - Call prevented by SafeMode

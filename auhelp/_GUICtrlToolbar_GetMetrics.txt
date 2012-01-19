@@ -1,0 +1,24 @@
+
+_GUICtrlToolbar_GetMetrics
+
+Retrieves the metrics of a toolbar control
+
+#Include 
+_GUICtrlToolbar_GetMetrics($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Returns an Array with the following format:
+		[0] - Width of the padding inside the toolbar buttons
+		[1] - Height of the padding inside the toolbar buttons
+		[2] - Width of the space between toolbar buttons
+		[3] - Height of the space between toolbar buttons
+
+---  Примечания  ---
+Minimum OS - Windows XP.
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetMetrics

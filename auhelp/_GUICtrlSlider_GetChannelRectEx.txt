@@ -1,0 +1,17 @@
+
+_GUICtrlSlider_GetChannelRectEx
+
+Retrieves the size and position of the bounding rectangle for a sliders's channel
+
+#Include 
+_GUICtrlSlider_GetChannelRectEx($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: $tagRECT structure that receives the channel coordinates
+
+---  Смотрите также  ---
+_GUICtrlSlider_GetChannelRect, $tagRECT

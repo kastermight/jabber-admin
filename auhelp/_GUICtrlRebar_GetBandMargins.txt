@@ -1,0 +1,24 @@
+
+_GUICtrlRebar_GetBandMargins
+
+Get Length of the band, in pixels
+
+#Include 
+_GUICtrlRebar_GetBandMargins($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+
+---  Таблица возвращаемых значений  ---
+Returns an Array in the following:
+	[0] - Width of the left border that retains its size
+	[1] - Width of the right border that retains its size
+	[2] - Height of the top border that retains its size
+	[3] - Height of the bottom border that retains its size
+
+---  Примечания  ---
+Minimum OS - Windows XP.
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetBandMarginsEx

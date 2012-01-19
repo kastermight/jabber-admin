@@ -1,0 +1,25 @@
+
+_GDIPlus_PenSetAlignment
+
+Sets the pen alignment
+
+#Include 
+_GDIPlus_PenSetAlignment($hPen[, $iAlignment = 0])
+
+---  Таблица параметров  ---
+$hPen
+	Handle to a pen object
+$iAlignment
+	[опционально] Pen alignment. Can be one of the following:
+		0 - Specifies that the pen is aligned on the center of the line that is drawn
+		1 - Specifies, when drawing a polygon, that the pen is aligned on the inside of the edge of the polygon
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GDIPlus_PenGetAlignment
+
+
+---  Таблица  --- GdipSetPenMode

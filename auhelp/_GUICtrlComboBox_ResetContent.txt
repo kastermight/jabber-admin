@@ -1,0 +1,14 @@
+
+_GUICtrlComboBox_ResetContent
+
+Remove all items from the ListBox and edit control of a ComboBox
+
+#Include 
+_GUICtrlComboBox_ResetContent($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Смотрите также  ---
+_GUICtrlComboBox_DeleteString, _GUICtrlComboBox_AddString

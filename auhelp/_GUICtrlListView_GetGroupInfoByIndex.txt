@@ -1,0 +1,27 @@
+
+_GUICtrlListView_GetGroupInfoByIndex
+
+Возвращает информацию о группе
+
+#Include 
+_GUICtrlListView_GetGroupInfoByIndex($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс группы, информацию которой необходимо извлечь
+
+---  Таблица возвращаемых значений  ---
+Возвращает массив следующего формата:
+		[0] - Текст заголовка
+		[1] - Выравнивание заголовка:
+		 0 - Левое
+		 1 - По центру
+		 2 - Правое
+
+---  Примечания  ---
+Минимальная операционная система: Windows Vista
+
+---  Смотрите также  ---
+_GUICtrlListView_SetGroupInfo, _GUICtrlListView_GetGroupInfo

@@ -1,0 +1,19 @@
+
+_GUICtrlRebar_GetBandID
+
+Get the value that the control uses to identify this band for custom draw notification messages
+
+#Include 
+_GUICtrlRebar_GetBandID($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+
+---  Таблица возвращаемых значений  ---
+Returns the id of the band
+
+---  Смотрите также  ---
+_GUICtrlRebar_SetBandID

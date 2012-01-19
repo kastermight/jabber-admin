@@ -1,0 +1,30 @@
+
+_GUICtrlListView_RegisterSortCallBack
+
+Регистрация функции обратного вызова обычной сортировки
+
+#Include 
+_GUICtrlListView_RegisterSortCallBack($hWnd[, $fNumbers = True[, $fArrows = True]])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$fNumbers
+	[опционально] Рассматривать числа строк как числа
+$fArrows
+	[опционально] Разрешает отображение стрелок направления сортировки вверх/вниз на выбранной колонке (Windows XP и выше)
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Примечания  ---
+Для каждого вызова _GUICtrlListView_RegisterSortCallBack должен быть вызов _GUICtrlListView_UnRegisterSortCallBack, когда операция уже не требуется (перед завершением программы или удалением ListView)
+
+Функция _GUICtrlListView_UnRegisterSortCallBack вызывается для каждого вызова _GUICtrlListView_RegisterSortCallBack.
+
+Это альтернатива функции _GUICtrlListView_SimpleSort.
+Эта функция будет сортировать ListView, которые имеют иконки, пункты с галочками (Checkbox), иконки в подпунктах
+
+---  Смотрите также  ---
+_GUICtrlListView_UnRegisterSortCallBack, _GUICtrlListView_SortItems

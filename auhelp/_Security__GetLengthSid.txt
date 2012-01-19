@@ -1,0 +1,21 @@
+
+_Security__GetLengthSid
+
+Returns the length, in bytes, of a valid SID
+
+#Include 
+_Security__GetLengthSid($pSID)
+
+---  Таблица параметров  ---
+$pSID
+	Pointer to a SID
+
+---  Таблица возвращаемых значений  ---
+Успех:	Length of SID
+Ошибка:	0
+
+---  Смотрите также  ---
+_Security__IsValidSid
+
+
+---  Таблица  --- GetLengthSid

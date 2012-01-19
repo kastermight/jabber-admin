@@ -1,0 +1,20 @@
+
+DllCallbackGetPtr
+
+Возвращает указатель функции обратного вызова callback, который может быть передан Win32 API.
+
+DllCallbackGetPtr ( handle )
+
+---  Таблица параметров  ---
+handle
+	Дескриптор DllCallback возвращаемый функцией DllCallbackRegister.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает указатель функции обратного вызова.
+Ошибка:	Возвращает 0.
+
+---  Примечания  ---
+Используйте DllCallbackGetPtr, чтобы передать адрес функции обратного вызова в Win32 API при использовании DllCall.
+
+---  Смотрите также  ---
+DllCall, DllCallBackRegister, DllCallbackFree

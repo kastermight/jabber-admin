@@ -1,0 +1,34 @@
+
+_Net_Share_ShareCheck
+
+Checks whether or not a server is sharing a device
+
+#Include 
+_Net_Share_ShareCheck($sServer, $sShare)
+
+---  Таблица параметров  ---
+$sServer
+	Specifies the DNS or NetBIOS name of the remote server on which the function is to execute. If
+		this parameter is blank, the local computer is used.
+$sShare
+	Specifies the name of the device to check for shared access
+
+---  Таблица возвращаемых значений  ---
+Succcess:	the Type of the shared device. Can be a combination of:
+
+	$STYPE_DISKTREE - Print queue
+	$STYPE_PRINTQ - Disk drive
+	$STYPE_DEVICE - Communication device
+	$STYPE_IPC - IPC
+	$STYPE_SPECIAL - Special share reserved for IPC$ or remote administration of the server
+	$STYPE_TEMPORARY - A temporary share
+Ошибка:	-1 - Share does not exist
+
+---  Примечания  ---
+No special group membership is required to successfully execute this function
+
+---  Смотрите также  ---
+_Net_Share_ShareAdd, _Net_Share_ShareDel
+
+
+---  Таблица  --- NetShareCheck

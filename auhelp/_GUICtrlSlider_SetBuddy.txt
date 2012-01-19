@@ -1,0 +1,25 @@
+
+_GUICtrlSlider_SetBuddy
+
+Assigns a window as the buddy window for a slider control
+
+#Include 
+_GUICtrlSlider_SetBuddy($hWnd, $fLocation, $hBuddy)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$fLocation
+	Following values:
+		 True - The buddy will appear to the left of the slider if the control uses the $TBS_HORZ style
+		The buddy will appear above the slider if the control uses the $TBS_VERT style
+		False - The buddy will appear to the right of the slider if the control uses the $TBS_HORZ style
+		The buddy will appear below the slider if the control uses the $TBS_VERT style
+$hBuddy
+	Handle to buddy control
+
+---  Таблица возвращаемых значений  ---
+Успех: The handle to the window that was previously assigned to the control at that location
+
+---  Смотрите также  ---
+_GUICtrlSlider_GetBuddy

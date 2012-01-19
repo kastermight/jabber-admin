@@ -1,0 +1,31 @@
+
+_WinAPI_WaitForMultipleObjects
+
+Waits until one or all of the specified objects are in the signaled state
+
+#Include 
+_WinAPI_WaitForMultipleObjects($iCount, $pHandles [, $fWaitAll = False [, $iTimeout = -1]])
+
+---  Таблица параметров  ---
+$iCount
+	The number of object handles in the array pointed to by pHandles
+$pHandles
+	Pointer to an array of object handles
+$fWaitAll
+	[опционально] If True, the function returns when the state of all objects in the pHandles array is signaled.
+		If False, the function returns when the state of any one of the objects is set to signaled. In the latter
+		case, the return value indicates the object whose state caused the function to return.
+$iTimeout
+	[опционально] The time-out interval, in milliseconds. The function returns if the interval elapses, even if
+		the conditions specified by the fWaitAll parameter are not met. If 0, the function tests the states of the
+		specified objects and returns immediately. If -1, the function's time-out interval never elapses.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Indicates the event that caused the function to return
+Ошибка:	-1
+
+---  Смотрите также  ---
+_WinAPI_WaitForSingleObject
+
+
+---  Таблица  --- WaitForMultipleObjects

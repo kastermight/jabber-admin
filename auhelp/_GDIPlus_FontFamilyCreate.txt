@@ -1,0 +1,24 @@
+
+_GDIPlus_FontFamilyCreate
+
+Create a Font Family object
+
+#Include 
+_GDIPlus_FontFamilyCreate($sFamily)
+
+---  Таблица параметров  ---
+$sFamily
+	Name of the Font Family
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to a Font Family object
+Ошибка:	0
+
+---  Примечания  ---
+When you are done with the Font Family object, call _GDIPlus_FontFamilyDispose to release the resources
+
+---  Смотрите также  ---
+_GDIPlus_FontFamilyDispose
+
+
+---  Таблица  --- GdipCreateFontFamilyFromName

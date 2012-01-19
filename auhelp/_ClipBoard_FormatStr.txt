@@ -1,0 +1,16 @@
+
+_ClipBoard_FormatStr
+
+Returns a string representation of a standard clipboard format
+
+#Include 
+_ClipBoard_FormatStr($iFormat)
+
+---  Таблица параметров  ---
+$iFormat
+	Specifies a clipboard format
+
+---  Таблица возвращаемых значений  ---
+Returns a String representation of the clipboard format
+
+---  Смотрите также  ---

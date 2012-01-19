@@ -1,0 +1,16 @@
+
+_GUICtrlTab_SetToolTips
+
+Sets the handle to the ToolTip control associated with the control
+
+#Include 
+_GUICtrlTab_SetToolTips($hWnd, $hToolTip)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hToolTip
+	Handle to the ToolTip control
+
+---  Смотрите также  ---
+_GUICtrlTab_GetToolTips

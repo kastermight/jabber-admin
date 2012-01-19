@@ -1,0 +1,22 @@
+
+_GDIPlus_Startup
+
+Инициализация Microsoft Windows GDI+
+
+#Include 
+_GDIPlus_Startup()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+Перед созданием любого объекта GDI+ необходимо вызвать _GDIPlus_Startup. GDI+ необходимо распространять для приложений, которые запускаются в операционных системах Microsoft Windows NT 4.0 SP6, Windows 2000, Windows 98, и Windows Me.
+
+---  Смотрите также  ---
+_GDIPlus_Shutdown
+
+
+---  Таблица  --- GdiplusStartup

@@ -1,0 +1,20 @@
+
+_SQLite_ErrCode
+
+Returns last error code (numeric)
+
+#include 
+_SQLite_ErrCode ( [ $hDB ] )
+
+---  Таблица параметров  ---
+$hDB
+	[опционально] An open database, default is the last opened database
+
+---  Таблица возвращаемых значений  ---
+Успех:	Return value can be compared against $SQLITE_* constants
+Ошибка:	Returns 0
+@error:	1 - error calling SQLite API 'sqlite3_errcode'
+	2 - Call Prevented by SafeMode
+
+---  Смотрите также  ---
+_SQLite_ErrMsg

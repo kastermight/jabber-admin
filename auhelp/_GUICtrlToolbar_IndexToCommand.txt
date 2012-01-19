@@ -1,0 +1,19 @@
+
+_GUICtrlToolbar_IndexToCommand
+
+Retrieves the command identifier associated with the button
+
+#Include 
+_GUICtrlToolbar_IndexToCommand($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Button index
+
+---  Таблица возвращаемых значений  ---
+Успех: Button command identifier
+
+---  Смотрите также  ---
+_GUICtrlToolbar_CommandToIndex

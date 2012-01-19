@@ -1,0 +1,16 @@
+
+_GUIToolTip_SetTipBkColor
+
+Sets the background color
+
+#Include 
+_GUIToolTip_SetTipBkColor($hWnd, $iColor)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iColor
+	New background color
+
+---  Смотрите также  ---
+_GUIToolTip_GetTipBkColor

@@ -1,0 +1,17 @@
+
+_GUICtrlTreeView_GetInsertMarkColor
+
+Возвращает цвет маркера вставки
+
+#Include 
+_GUICtrlTreeView_GetInsertMarkColor($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Возвращает текущий цвет маркера вставки
+
+---  Смотрите также  ---
+_GUICtrlTreeView_SetInsertMarkColor

@@ -1,0 +1,78 @@
+
+_GUICtrlListView_Create
+
+Создаёт ListView
+
+#Include 
+_GUICtrlListView_Create($hWnd, $sHeaderText, $iX, $iY[, $iWidth = 150[, $iHeight = 150[, $iStyle = 0x0000000D[, $iExStyle = 0x00000000[, $fCoInit = False]]]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор родительского окна или окна владельца
+$sHeaderText
+	Текст  отображаемый в заголовке колонок. Разделитель колонок "|".
+$iX
+	Координата левого края
+$iY
+	Координата верхнего края
+$iWidth
+	[опционально] Ширина элемента
+$iHeight
+	[опционально] Высота элемента
+$iStyle
+	[опционально] Стили элемента ListView:
+		$LVS_ALIGNLEFT - Пункты выравниваются по левому краю в стиле с иконками и маленькими иконками
+		$LVS_ALIGNTOP - Пункты выравниваются по верхнему краю в стиле с иконками и маленькими иконками
+		$LVS_AUTOARRANGE - Icons are automatically kept arranged в стиле с иконками и маленькими иконками
+		$LVS_EDITLABELS - Текст пункта можно редактировать в окне
+		$LVS_ICON - Стиль с отображением иконок
+		$LVS_LIST - Стиль в виде списка (с сеткой)
+		$LVS_NOCOLUMNHEADER - Не отображать заголовки колонок в стиле report
+		$LVS_NOLABELWRAP - Текст пункта отображается в одну строку в стиле с иконками
+		$LVS_NOSCROLL - Отключить прокрутку в ListView
+		$LVS_NOSORTHEADER - Заголовки колонок не работают как кнопки
+		$LVS_OWNERDATA - This style specifies a virtual control
+		$LVS_OWNERDRAWFIXED - The owner window can paint items in report view
+		$LVS_REPORT - Стиль report (в виде отчёта)
+		$LVS_SHAREIMAGELISTS - The image list will not be deleted
+		$LVS_SHOWSELALWAYS - Выделенный пункт, если таковой имеются, всегда отображается выделенным, даже если элемент не имеет фокуса.
+		$LVS_SINGLESEL - Только один пункт может быть выделен
+		$LVS_SMALLICON - Стиль с маленькими иконками
+		$LVS_SORTASCENDING - Пункты сортируются по тексту в пунктах в порядке возрастания
+		$LVS_SORTDESCENDING - Пункты сортируются по тексту в пунктах в порядке убывания
+
+		По умолчанию: $LVS_REPORT, $LVS_SINGLESEL, $LVS_SHOWSELALWAYS
+		Принудительно : $WS_CHILD, $WS_VISIBLE
+$iExStyle
+	[опционально] Расширенные стили элемента ListView. Стиль может быть комбинацией следующих значений:
+		$LVS_EX_BORDERSELECT - Если этот стиль установлен, то у выбранного элемента изменяется цвет рамки, а не происходит выделение пункта
+		$LVS_EX_CHECKBOXES - Добавляет check-boxes для пунктов в элементе ListView
+		$LVS_EX_DOUBLEBUFFER - Перерисовка с помощью двойной буферизации, которая уменьшает мерцание
+		$LVS_EX_FLATSB - Плоская полоса прокрутки в элементе ListView
+		$LVS_EX_FULLROWSELECT - При клике пункта или подпункта, выделяется сам пункт и все его подпункты
+		$LVS_EX_GRIDLINES - Отображает сетку вокруг пунктов и подпунктов
+		$LVS_EX_HEADERDRAGDROP - Разрешает перетаскивание колонок за заголовок (drag-and-drop) изменяя их порядок
+		$LVS_EX_INFOTIP - Высылается уведомительное сообщение $LVN_GETINFOTIP перед отображением всплывающей подсказки (ToolTip)
+		$LVS_EX_LABELTIP - If not set, the unfolds partly hidden labels only for the large icon mode
+		$LVS_EX_MULTIWORKAREAS - The control will not autoarrange its icons until one or more work areas are defined
+		$LVS_EX_ONECLICKACTIVATE - Элемент высылает сообщение $LVN_ITEMACTIVATE , когда пользователь кликает на пункте
+		$LVS_EX_REGIONAL - Sets the control region to include only the item icons and text
+		$LVS_EX_SIMPLESELECT - In icon view moves the state image of the control to the top right
+		$LVS_EX_SUBITEMIMAGES - Позволяет отображать рисунки в подпунктах.
+		$LVS_EX_TRACKSELECT - Горячий выбор в элементе ListView. Это означает автоматическое выделение пункта при наведении на него курсора мыши и удержание в течение определенного периода времени
+		$LVS_EX_TWOCLICKACTIVATE - Элемент высылает сообщение $LVN_ITEMACTIVATE, когда пользователь выполняет двойной клик на пункте
+		$LVS_EX_UNDERLINECOLD - Causes non-hot items that may be activated to be displayed with underlined text
+		$LVS_EX_UNDERLINEHOT - Causes hot items that may be activated to be displayed with underlined text
+
+$fCoInit
+	[опционально] Initializes the COM library for use by the calling thread.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает дескриптор ListView
+Ошибка:	Возвращает 0
+
+---  Примечания  ---
+Эта функция для опытных пользователей и для изучения работы ListView.
+
+---  Смотрите также  ---
+_GUICtrlListView_Destroy, _GUICtrlListView_SetBkImage

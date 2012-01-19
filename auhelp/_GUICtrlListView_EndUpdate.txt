@@ -1,0 +1,18 @@
+
+_GUICtrlListView_EndUpdate
+
+Разрешает перерисовку экрана, которая была отключена с функцией BeginUpdate
+
+#Include 
+_GUICtrlListView_EndUpdate($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlListView_BeginUpdate

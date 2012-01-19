@@ -1,0 +1,21 @@
+
+_GUICtrlIpAddress_SetFont
+
+Устанавливает шрифт элемента
+
+#Include 
+_GUICtrlIpAddress_SetFont($hWnd[, $sFaceName = "Arial"[, $iFontSize = 12[, $iFontWeight = 400[, $fFontItalic = False]]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$sFaceName
+	[опционально] Имя шрифта
+$iFontSize
+	[опционально] Размер шрифта
+$iFontWeight
+	[опционально] Толщина шрифта
+$fFontItalic
+	[опционально] Использование курсива (True, False)
+
+---  Смотрите также  ---

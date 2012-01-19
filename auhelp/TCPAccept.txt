@@ -1,0 +1,20 @@
+
+TCPAccept
+
+Permits an incoming connection attempt on a socket.
+
+TCPAccept ( mainsocket )
+
+---  Таблица параметров  ---
+mainsocket
+	The main socket identifier (SocketID) as returned by a TCPListen function.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns connected socket identifier.
+Ошибка:	Returns -1 and set @error
+@error:	windows API WSAGetError return value (see MSDN).
+
+---  Примечания  ---
+
+---  Смотрите также  ---
+TCPStartup, TCPListen, TCPTimeout (Option), TCPCloseSocket, TCPRecv

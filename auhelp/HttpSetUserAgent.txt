@@ -1,0 +1,13 @@
+
+HttpSetUserAgent
+
+Sets the user-agent string sent with InetGet() and InetRead() requests.
+
+HttpSetUserAgent ( "user agent" )
+
+---  Таблица параметров  ---
+user agent
+	The string to set as the user-agent.  The default user-agent is "AutoIt".  Passing an empty string will reset the user-agent back to the default.
+
+---  Смотрите также  ---
+InetGet, InetGetSize, InetRead

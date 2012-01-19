@@ -1,0 +1,53 @@
+
+GUICtrlCreateListView
+
+Создаёт ListView в GUI.
+
+GUICtrlCreateListView ( "text", left, top [, width [, height [, style [, exStyle]]]] )
+
+---  Таблица параметров  ---
+text
+	Определение заголовка колонок.  Каждый из них разделяются с помощью Opt("GUIDataSeparatorChar").
+left
+	Координата левого края. Если -1 тогда координата в соответствии с GUICoordMode.
+top
+	Координата верхнего края. Если -1 тогда координата в соответствии с GUICoordMode.
+width
+	[опционально] Ширина элемента (по умолчанию предыдущее значение).
+height
+	[опционально] Высота элемента (по умолчанию предыдущее значение).
+style
+	[опционально] Стиль элемента. Смотрите Стили элементов GUI в приложении.
+	
+	по умолчанию (-1) : $LVS_SHOWSELALWAYS, $LVS_SINGLESEL
+	принудительный стиль : $LVS_REPORT
+exStyle
+	[опционально] Расширенный стиль элемента. Смотрите таблицу расширенных стилей or ListView Extended Style Table.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает идентификатор (controlID) нового элемента.
+Ошибка:	Возвращает 0.
+
+---  Примечания  ---
+Чтобы добавить пункты в ListView, используйте GUICtrlCreateListViewItem
+
+По умолчанию ListView отображается как в Explorer вид "Таблица" (LVS_REPORT принудительный стиль).
+Вы можете контролировать ширину колонки, заполняя заголовок колонки пробелами. Колонка может быть расширена с помощью GUICtrlCreateListViewItem в соответствии с размером пункта. Размер колонки будет примерно до 25 символов. Размер не изменяется при использовании GUICtrlSetData.
+
+Чтобы создать ListView с иконками или маленькими иконками или список-стиль просто используйте после создания:
+GUICtrlSetStyle со стилями $LVS_ICON, $LVS_LIST или $LVS_SMALLICON.
+
+Сортировка списка, кликнув на имя колонки (как в Explorer) в настоящее время не осуществляется.
+
+Чтобы вся строка была визуально выделена, используйте расширенный стиль LVS_EX_FULLROWSELECT.
+
+Чтобы объединить стили со стилем по умолчанию используйте BitOr($GUI_SS_DEFAULT_LISTVIEW, новый стиль,...).
+
+Чтобы использовать параметры, указанные выше, вы должны включить в ваш скрипт #include <ListViewConstants.au3>.
+
+Специальный флаг $GUI_BKCOLOR_LV_ALTERNATE может быть использован с элементом Listview чтобы дать альтернативный фон пунктам ListviewItems.
+Нечётные строки получите установкой цвета GUICtrlSetBkColor для Listview.
+Чётные строки получите установкой цвета GUICtrlSetBkColor для ListviewItem.
+
+---  Смотрите также  ---
+GUICtrlCreateListViewItem, GUICtrlRegisterListViewSort, GUICoordMode (Option), GUICtrlSetData, GUIGetMsg, GUIDataSeparatorChar (Option)

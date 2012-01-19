@@ -1,0 +1,27 @@
+
+_WinAPI_DrawIcon
+
+Draws an icon or cursor into the specified device context
+
+#Include 
+_WinAPI_DrawIcon($hDC, $iX, $iY, $hIcon)
+
+---  Таблица параметров  ---
+$hDC
+	Handle to the device context into which the icon or cursor is drawn
+$iX
+	X coordinate of the upper-left corner of the icon
+$iY
+	Y coordinate of the upper-left corner of the icon
+$hIcon
+	Handle to the icon to be drawn
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_WinAPI_DrawIconEx
+
+
+---  Таблица  --- DrawIcon

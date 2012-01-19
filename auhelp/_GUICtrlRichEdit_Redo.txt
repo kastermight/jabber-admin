@@ -1,0 +1,22 @@
+
+_GUICtrlRichEdit_Redo
+
+Повторяет последнее отмененное действие
+
+#Include 
+_GUICtrlRichEdit_Redo($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False и устанавливает @error
+@error:	101 - $HWnd не является дескриптором
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_Undo, _GUICtrlRichEdit_CanRedo, _GUICtrlRichEdit_GetNextRedo, _GUICtrlRichEdit_EmptyUndoBuffer, _GUICtrlRichEdit_SetUndoLimit
+
+
+---  Таблица  --- EM_REDO

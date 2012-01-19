@@ -1,0 +1,22 @@
+
+_IE_VersionInfo
+
+Returns an array of information about the IE.au3 version
+
+#include  
+_IE_VersionInfo ( )
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns an array ($IEAU3VersionInfo)
+	$IEAU3VersionInfo[0] = Release Type (T=Test or V=Production)
+	$IEAU3VersionInfo[1] = Major Version
+	$IEAU3VersionInfo[2] = Minor Version
+	$IEAU3VersionInfo[3] = Sub Version
+	$IEAU3VersionInfo[4] = Release Date (YYYYMMDD)
+	$IEAU3VersionInfo[5] = Display Version (e.g. V2.1-0)
+Ошибка:	None
+
+---  Примечания  ---
+The array contents make it easy to determine of the UDF version is higher or lower than a required version.

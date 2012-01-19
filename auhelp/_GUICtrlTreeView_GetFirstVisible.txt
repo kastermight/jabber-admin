@@ -1,0 +1,18 @@
+
+_GUICtrlTreeView_GetFirstVisible
+
+Возвращает первый видимый пункт в TreeView
+
+#Include 
+_GUICtrlTreeView_GetFirstVisible($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает дескриптор первого видимого пункта
+Ошибка:	Возвращает 0
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetFirstItem

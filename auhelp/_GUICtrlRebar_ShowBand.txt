@@ -1,0 +1,20 @@
+
+_GUICtrlRebar_ShowBand
+
+Shows or hides a given band in a rebar control
+
+#Include 
+_GUICtrlRebar_ShowBand($hWnd, $iIndex[, $fShow = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+$fShow
+	[опционально] indicates if the band should be shown or hidden:
+		 True - Show
+		False - Hide
+
+---  Смотрите также  ---
+_GUICtrlRebar_SetBandStyleHidden

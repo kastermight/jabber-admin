@@ -1,0 +1,23 @@
+
+_GDIPlus_ArrowCapSetWidth
+
+Sets the width of the arrow cap
+
+#Include 
+_GDIPlus_ArrowCapSetWidth($hArrowCap, $fWidth)
+
+---  Таблица параметров  ---
+$hArrowCap
+	Handle to a ArrowCap object
+$fWidth
+	Specifies the width, in units, of the arrow between the endpoints of the base of the arrow
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GDIPlus_ArrowCapGetWidth
+
+
+---  Таблица  --- GdipSetAdjustableArrowCapWidth

@@ -1,0 +1,29 @@
+
+GUICtrlCreateTreeViewItem
+
+Создаёт TreeViewItem (пункт / меню в древовидном меню) в GUI.
+
+GUICtrlCreateTreeViewItem ( "text", treeviewID )
+
+---  Таблица параметров  ---
+text
+	Текст элемента
+treeviewID
+	Идентификатор treeview (основного дерева) или созданного treeviewitem (поддерева).
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает идентификатор (controlID) нового элемента.
+Ошибка:	Возвращает 0.
+
+---  Примечания  ---
+Для дополнительной информации о настройках смотрите GUICtrlUpdate....
+
+Чтобы отображать пункты treeview жирным шрифтом (показать, как по умолчанию) используйте GuiCtrlSetState($treeviewItem, $GUI_DEFBUTTON),
+Чтобы отключить жирный шрифт используйте GUICtrlSetState() с другим значением, не $GUI_DEFBUTTON, например GuiCtrlSetState($treeviewItem, 0).
+
+Чтобы развернуть пункт treeview используйте GuiCtrlSetState($treeviewItem, $GUI_EXPAND).
+
+Чтобы выбрать определенный пункт treeview используйте GuiCtrlSetState($treeviewItem, $GUI_FOCUS).
+
+---  Смотрите также  ---
+GUICtrlCreateTreeView, GUICtrlUpdate..., GUIGetMsg, GUICtrlRead, GUICtrlGetHandle

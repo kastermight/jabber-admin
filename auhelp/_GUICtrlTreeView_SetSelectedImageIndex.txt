@@ -1,0 +1,22 @@
+
+_GUICtrlTreeView_SetSelectedImageIndex
+
+Sets the selected image index
+
+#Include 
+_GUICtrlTreeView_SetSelectedImageIndex($hWnd, $hItem, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hItem
+	Handle to the item
+$iIndex
+	Image list index
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetSelectedImageIndex

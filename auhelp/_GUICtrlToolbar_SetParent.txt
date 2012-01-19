@@ -1,0 +1,24 @@
+
+_GUICtrlToolbar_SetParent
+
+Sets the window to which the control sends notification messages
+
+#Include 
+_GUICtrlToolbar_SetParent($hWnd, $hParent)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hParent
+	Handle to the window to receive notification messages
+
+---  Таблица возвращаемых значений  ---
+Успех: Handle to the previous notification window
+Ошибка: 0
+
+---  Примечания  ---
+The $TB_SETPARENT message does not change the parent window that was specified when the control was created.
+Calling the _WinAPI_GetParent function control will return the actual parent window, not the window specified in
+$TB_SETPARENT. To change the control's parent window, call the _WinAPI_SetParent function.
+
+---  Смотрите также  ---

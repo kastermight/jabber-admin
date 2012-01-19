@@ -1,0 +1,21 @@
+
+_GUICtrlListBox_ItemFromPoint
+
+Retrieves the zero based index of the item nearest the specified point
+
+#Include 
+_GUICtrlListBox_ItemFromPoint($hWnd, $iX, $iY)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iX
+	X coordinate, relative to the upper-left corner of the client area
+$iY
+	Y coordinate, relative to the upper-left corner of the client area
+
+---  Таблица возвращаемых значений  ---
+Успех: The index of the nearest item
+Ошибка: -1 if the point is outside of the client area
+
+---  Смотрите также  ---

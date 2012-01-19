@@ -1,0 +1,27 @@
+
+_WinAPI_GlobalMemoryStatus
+
+Retrieves information about current available memory
+
+#Include 
+_WinAPI_GlobalMemoryStatus()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Returns	an Array with the following format:
+	$aMem[0] - Percent of Mem in use
+	$aMem[1] - Physical Mem: Total
+	$aMem[2] - Physical Mem: Free
+	$aMem[3] - Paging file: Total
+	$aMem[4] - Paging file: Free
+	$aMem[5] - User Mem: Total
+	$aMem[6] - User Mem: Free
+
+---  Примечания  ---
+Unlike the AutoIt MemGetStats() function, this function returns the values in bytes
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GlobalMemoryStatusEx

@@ -1,0 +1,24 @@
+
+_GUICtrlSlider_GetBuddy
+
+Retrieves the handle to a slider control buddy window at a given location
+
+#Include 
+_GUICtrlSlider_GetBuddy($hWnd, $fLocation)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$fLocation
+	Which buddy window handle will be retrieved. This value can be one of the following:
+		 True - Retrieves the handle to the buddy to the left of the slider.
+		If the slider control uses the $TBS_VERT style, the message will retrieve the buddy above the slider.
+		False - Retrieves the handle to the buddy to the right of the slider.
+		If the slider control uses the $TBS_VERT style, the message will retrieve the buddy below the slider.
+
+---  Таблица возвращаемых значений  ---
+Успех: Returns the handle to the buddy window at the location specified by $fLocation
+Ошибка: 0
+
+---  Смотрите также  ---
+_GUICtrlSlider_SetBuddy

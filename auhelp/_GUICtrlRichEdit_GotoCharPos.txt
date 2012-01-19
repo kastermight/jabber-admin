@@ -1,0 +1,31 @@
+
+_GUICtrlRichEdit_GotoCharPos
+
+Moves the insertion point to an inter-character position
+
+#Include 
+_GUICtrlRichEdit_GotoCharPos($hWnd, $iCharPos)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCharPos
+	the inter character position
+		Special value: -1 - end of text
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False and sets @error
+@error:	101 - $hWnd is not a handle
+	102 - $iCharPos is neither a positive number nor zero nor -1
+
+---  Примечания  ---
+The first character of the text in a control is at character position 1
+
+Cancels text selection (if any)
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_SetSel
+
+
+---  Таблица  --- EM_EXSETSEL

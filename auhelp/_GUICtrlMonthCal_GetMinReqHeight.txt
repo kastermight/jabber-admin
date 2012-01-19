@@ -1,0 +1,17 @@
+
+_GUICtrlMonthCal_GetMinReqHeight
+
+Retrieves the minimum height required to display a full month
+
+#Include 
+_GUICtrlMonthCal_GetMinReqHeight($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: Minimum height, in pixels
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_GetMinReqRect, _GUICtrlMonthCal_GetMinReqWidth

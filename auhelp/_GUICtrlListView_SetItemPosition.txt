@@ -1,0 +1,27 @@
+
+_GUICtrlListView_SetItemPosition
+
+Перемещает пункт в указанную позицию внутри ListView
+
+#Include 
+_GUICtrlListView_SetItemPosition($hWnd, $iIndex, $iCX, $iCY)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта
+$iCX
+	Новая x-координата пункта верхнего левого угла
+$iCY
+	Новая y-координата пункта верхнего левого угла
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Примечания  ---
+Если ListView имеет стиль $LVS_AUTOARRANGE, то пункты упорядочиваются после изменения позиции пункта. ListView должен иметь вид "icon" или "small icon".
+
+---  Смотрите также  ---
+_GUICtrlListView_GetItemPosition, _GUICtrlListView_Arrange, _GUICtrlListView_SetItemPosition32

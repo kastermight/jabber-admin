@@ -1,0 +1,22 @@
+
+_GUICtrlTab_HighlightItem
+
+Sets the highlight state of a tab item
+
+#Include 
+_GUICtrlTab_HighlightItem($hWnd, $iIndex[, $fHighlight = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based item index
+$fHighlight
+	[опционально] If True, the tab is highlighted, otherwise the tab is reset
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlTab_SetCurSel

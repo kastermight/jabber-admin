@@ -1,0 +1,20 @@
+
+_SoundClose
+
+Closes a sound previously opened with _SoundOpen.
+
+#include 
+_SoundClose ( $aSnd_id )
+
+---  Таблица параметров  ---
+$aSnd_id
+	Sound ID array as returned by _SoundOpen()
+
+---  Таблица возвращаемых значений  ---
+Успех:	1
+Ошибка:	0 and set @error
+@error:	1 = Failure
+	3 = Invalid Sound ID. Use return array from _SoundOpen().
+
+---  Смотрите также  ---
+_SoundOpen

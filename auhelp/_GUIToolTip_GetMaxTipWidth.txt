@@ -1,0 +1,24 @@
+
+_GUIToolTip_GetMaxTipWidth
+
+Retrieves the maximum width for a ToolTip window
+
+#Include 
+_GUIToolTip_GetMaxTipWidth($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: Returns the maximum ToolTip width, in pixels
+Ошибка: -1
+
+---  Примечания  ---
+The maximum ToolTip width value does not indicate a ToolTip window's actual width. Rather, if a ToolTip string
+exceeds the maximum width, the control breaks the text into multiple lines, using spaces to determine line
+breaks. If the text cannot be segmented into multiple lines, it will be displayed on a single line. The length
+of this line may exceed the maximum ToolTip width.
+
+---  Смотрите также  ---
+_GUIToolTip_SetMaxTipWidth

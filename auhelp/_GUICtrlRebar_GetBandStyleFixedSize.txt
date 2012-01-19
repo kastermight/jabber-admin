@@ -1,0 +1,20 @@
+
+_GUICtrlRebar_GetBandStyleFixedSize
+
+Determine if flag is set
+
+#Include 
+_GUICtrlRebar_GetBandStyleFixedSize($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+
+---  Таблица возвращаемых значений  ---
+True: Flag is set (The band can't be sized. With this style, the sizing grip is not displayed on the band)
+False: Flag not set
+
+---  Смотрите также  ---
+_GUICtrlRebar_SetBandStyleFixedSize, _GUICtrlRebar_GetBandStyle

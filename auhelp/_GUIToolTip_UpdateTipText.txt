@@ -1,0 +1,20 @@
+
+_GUIToolTip_UpdateTipText
+
+Sets the ToolTip text for a tool
+
+#Include 
+_GUIToolTip_UpdateTipText($hWnd, $hTool, $iID, $sText)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$hTool
+	Handle to the window that contains the tool
+$iID
+	Application-defined identifier of the tool
+$sText
+	Text to display in tooltip
+
+---  Смотрите также  ---
+_GUIToolTip_GetText

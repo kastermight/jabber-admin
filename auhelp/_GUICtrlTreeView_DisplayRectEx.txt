@@ -1,0 +1,23 @@
+
+_GUICtrlTreeView_DisplayRectEx
+
+Returns the bounding rectangle for a tree item
+
+#Include 
+_GUICtrlTreeView_DisplayRectEx($hWnd, $hItem[, $fTextOnly = False])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hItem
+	Handle to the item whose rectangle will be returned
+$fTextOnly
+	[опционально] If the True, the bounding rectangle includes only the text of the item. Otherwise, it includes
+		the entire line that the item occupies.
+
+---  Таблица возвращаемых значений  ---
+Успех:	$tagRECT structure that holds the bounding rectangle. The coordinates are relative to the upper left corner of the control.
+Ошибка:	Set @error
+
+---  Смотрите также  ---
+_GUICtrlTreeView_DisplayRect, $tagRECT

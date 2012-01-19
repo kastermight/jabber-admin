@@ -1,0 +1,22 @@
+
+_GUICtrlRebar_SetBandStyleVariableHeight
+
+Set whether the band can be resized by the rebar control
+
+#Include 
+_GUICtrlRebar_SetBandStyleVariableHeight($hWnd, $iIndex[, $fEnabled = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+$fEnabled
+	[опционально] If True the item state is set, otherwise it is not set
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetBandStyleVariableHeight, _GUICtrlRebar_SetBandStyle

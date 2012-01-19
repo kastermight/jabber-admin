@@ -1,0 +1,20 @@
+
+_WinAPI_UpdateWindow
+
+Updates the client area of a window by sending a WM_PAINT message to the window
+
+#Include 
+_WinAPI_UpdateWindow($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle of window to update
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- UpdateWindow

@@ -1,0 +1,24 @@
+
+_IEIsFrameSet
+
+Checks to see if the specified Window contains a FrameSet.
+
+#include  
+_IEIsFrameSet ( ByRef $o_object )
+
+---  Таблица параметров  ---
+$o_object
+	Object variable of an InternetExplorer.Application, Window or Frame object
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns 1 if the object references a FrameSet page
+Ошибка:	Returns 0 and sets @ERROR
+@Error:	0 ($_IEStatus_Success) = No Error
+	3 ($_IEStatus_InvalidDataType) = Invalid Data Type
+@Extended:	Contains invalid parameter number
+
+---  Примечания  ---
+_IEFrameGetCollection does not specify whether the referenced frames are part of a FrameSet or whether they are iFrames.  If frames exist on a page and this function return False, then the frames are iFrames.
+
+---  Смотрите также  ---
+_IEFrameGetCollection

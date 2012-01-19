@@ -1,0 +1,21 @@
+
+TCPShutdown, UDPShutdown
+
+Stops TCP/UDP services.
+
+TCPShutdown ( )
+UDPShutdown ( )
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns 1.
+Ошибка:	Returns 0 and set @error.
+@error:	windows API WSACleanup return value (see MSDN).
+
+---  Примечания  ---
+A script must call one TCPShutdown() call for every successful TCPStartup() call.
+UDPShutdown() is just an alias of TCPShutdown().
+
+---  Смотрите также  ---
+TCPStartup, TCPListen, TCPCloseSocket, UDPCloseSocket

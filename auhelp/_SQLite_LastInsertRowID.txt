@@ -1,0 +1,17 @@
+
+_SQLite_LastInsertRowID
+
+Returns the ROWID of the most recent insert in the database
+
+#include 
+_SQLite_LastInsertRowID ( [ $hDB ] )
+
+---  Таблица параметров  ---
+$hDB
+	[опционально] An open database, use -1 to use last opened database
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns ROWID
+Ошибка:	Returns 0
+@error:	1 - Error calling SQLite API 'sqlite3_last_insert_rowid'
+	2 - Call prevented by SafeMode

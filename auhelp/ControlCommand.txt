@@ -1,0 +1,79 @@
+
+ControlCommand
+
+Высылает команду элементу.
+
+ControlCommand ( "title", "text", controlID, "command" [, "option"] )
+
+---  Таблица параметров  ---
+title
+	Заголовок окна.
+text
+	Текст окна.
+controlID
+	Идентификатор элемента управления.  Смотрите Controls.
+command
+	Команда высылаемая элементу.
+option
+	[опционально] Дополнительный параметр необходимый для некоторых команд.
+
+---  Таблица возвращаемых значений  ---
+Действие зависит от команд указанных ниже в таблице.  В случае ошибки (например, неверная команда или окно/элемент не найден) устанавливается @error = 1.
+
+---  Таблица  ---
+Команда, Параметр
+	Возвращаемое значение
+"IsVisible", ""
+	Возвращает 1, если элемент отображается, иначе 0
+"IsEnabled", ""
+	Возвращает 1, если элемент доступен, иначе 0
+"ShowDropDown", ""
+	Развернуть список ComboBox
+"HideDropDown", ""
+	Свернуть список ComboBox
+"AddString", 'строка'
+	Добавляет строку в конец списка ListBox или ComboBox
+"DelString", индекс
+	Удаляет строку по индексу в ListBox или ComboBox
+"FindString", 'Искомая строка'
+	Возвращает индекс найденной строки в ListBox или ComboBox
+"SetCurrentSelection", индекс
+	Выбрать / выделить по индексу в ListBox или ComboBox
+"SelectString", 'строка'
+	Выбрать / выделить строку в ListBox или ComboBox
+"IsChecked", ""
+	Возвращает 1, если установлена галочка, иначе 0
+"Check", ""
+	Устанавливает галочку в Checkbox или радиокнопку
+"UnCheck", ""
+	Убирает галочку из Checkbox или радиокнопки
+"GetCurrentLine", ""
+	Возвращает номер строки, в котором находится курсор в элементе Edit
+"GetCurrentCol", ""
+	Возвращает номер колонки, в котором находится курсор в элементе Edit
+"GetCurrentSelection", ""
+	Возвращает название текущего выбранного пункта в ListBox или ComboBox
+"GetLineCount", ""
+	Возвращает количество строк в элементе Edit
+"GetLine", номер строки
+	Возвращает текст строки элемента Edit, номер которой указан
+"GetSelected", ""
+	Возвращает выделенный текст в элементе Edit
+"EditPaste", 'строка'
+	Вставляет 'строку' в элемент Edit в позицию курсора
+"CurrentTab", ""
+	Возвращает номер текущей вкладки элемента SysTabControl32
+"TabRight", ""
+	Выбирает следующую вкладку справа в элементе SysTabControl32
+"TabLeft", ""
+	Выбирает следующую вкладку слева в элементе SysTabControl32
+"SendCommandID", Command ID
+	Эмулирует сообщение WM_COMMAND. Обычно используется для элемента ToolbarWindow32. Используйте вкладку ToolBar утилиты Au3Info чтобы получить Command ID.
+
+---  Примечания  ---
+Некоторые элементы противодействуют автоматизации, если окно не активно. Используйте функцию WinActivate(), чтобы сделать окно активным, перед использованием ControlCommand().
+
+Некоторые команды, которые работают на нормальных Combo и ListBoxes не работают на элементах "ComboLBox".
+
+---  Смотрите также  ---
+ControlClick, ControlDisable, ControlEnable, ControlFocus, ControlGetPos, ControlGetText, ControlHide, ControlMove, ControlSetText, ControlShow, StatusbarGetText, WinActivate, WinMenuSelectItem, WinGetClassList, ControlGetFocus, ControlListView, ControlSend, ControlTreeView

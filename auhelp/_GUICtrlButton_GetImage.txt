@@ -1,0 +1,21 @@
+
+_GUICtrlButton_GetImage
+
+Retrieves a handle to the image (icon or bitmap) associated with the button
+
+#Include 
+_GUICtrlButton_GetImage($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Handle to the image
+Ошибка: 0
+
+---  Смотрите также  ---
+_GUICtrlButton_SetImage
+
+
+---  Таблица  --- BM_GETIMAGE

@@ -1,0 +1,23 @@
+
+_GUICtrlComboBoxEx_GetMinVisible
+
+Retrieve the minimum number of visible items in the drop-down list of a ComboBox
+
+#Include 
+_GUICtrlComboBoxEx_GetMinVisible($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Примечания  ---
+When the number of items in the drop-down list is greater than the minimum, the combo box uses a scrollbar.
+
+This Function is ignored if the ComboBox control has style $CBS_NOINTEGRALHEIGHT
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_SetMinVisible

@@ -1,0 +1,20 @@
+
+_GUICtrlMenu_IsMenu
+
+Determines whether a handle is a menu handle
+
+#Include 
+_GUICtrlMenu_IsMenu($hMenu)
+
+---  Таблица параметров  ---
+$hMenu
+	Handle to be tested
+
+---  Таблица возвращаемых значений  ---
+True: Handle is a menu handle
+False: Handle is not a menu handle
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- IsMenu

@@ -1,0 +1,18 @@
+
+_GUICtrlRebar_GetToolTips
+
+Retrieves the handle to any ToolTip control associated with the rebar control
+
+#Include 
+_GUICtrlRebar_GetToolTips($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle to the ToolTip control associated with the rebar control
+Ошибка:	0 if no ToolTip control is associated with the rebar control
+
+---  Смотрите также  ---
+_GUICtrlRebar_SetToolTips

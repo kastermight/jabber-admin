@@ -1,0 +1,26 @@
+
+_Net_Share_FileClose
+
+Forces a resource to close
+
+#Include 
+_Net_Share_FileClose($sServer, $iFileID)
+
+---  Таблица параметров  ---
+$sServer
+	Specifies the DNS or NetBIOS name of the remote server on which the function is to execute. If
+		this parameter is blank, the local computer is used.
+$iFileID
+	Specifies the file identifier of the opened resource instance to close
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+Only members of the Administrators or Server Operators local group can execute this function
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- NetFileClose

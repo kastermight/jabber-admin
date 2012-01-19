@@ -1,0 +1,17 @@
+
+_GUICtrlComboBox_GetDroppedControlRectEx
+
+Retrieve the screen coordinates of a combo box in its dropped-down state
+
+#Include 
+_GUICtrlComboBox_GetDroppedControlRectEx($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: $tagRECT structure that receives the screen coordinates
+
+---  Смотрите также  ---
+_GUICtrlComboBox_GetDroppedControlRect, $tagRECT

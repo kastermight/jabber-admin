@@ -1,0 +1,17 @@
+
+_MemGlobalUnlock
+
+Decrements the lock count associated with a memory object that was allocated with GMEM_MOVEABLE
+
+#Include 
+_MemGlobalUnlock($hMem)
+
+---  Таблица параметров  ---
+$hMem
+	Handle to the global memory object
+
+---  Смотрите также  ---
+_MemGlobalLock
+
+
+---  Таблица  --- GlobalUnlock

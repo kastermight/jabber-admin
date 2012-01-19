@@ -1,0 +1,16 @@
+
+_GUICtrlSlider_SetPos
+
+Sets the current logical position of the slider
+
+#Include 
+_GUICtrlSlider_SetPos($hWnd, $iPosition)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iPosition
+	New logical position of the slider
+
+---  Смотрите также  ---
+_GUICtrlSlider_GetPos

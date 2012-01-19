@@ -1,0 +1,16 @@
+
+AutoItWinSetTitle
+
+Изменяет заголовок окна AutoIt.
+
+AutoItWinSetTitle ( "newtitle" )
+
+---  Таблица параметров  ---
+newtitle
+	Новый заголовок окна.
+
+---  Примечания  ---
+Окно AutoIt обычно скрыто. Смысл изменения состоит в том, чтобы позволить другим программам (или скриптам AutoIt) взаимодействие с AutoIt.
+
+---  Смотрите также  ---
+AutoItWinGetTitle, WinSetTitle

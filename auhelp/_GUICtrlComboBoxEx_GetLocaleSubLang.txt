@@ -1,0 +1,17 @@
+
+_GUICtrlComboBoxEx_GetLocaleSubLang
+
+Extract sublanguage id from a language id
+
+#Include 
+_GUICtrlComboBoxEx_GetLocaleSubLang($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: Sub-Language id
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_GetLocale

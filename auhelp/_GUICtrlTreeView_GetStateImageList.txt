@@ -1,0 +1,18 @@
+
+_GUICtrlTreeView_GetStateImageList
+
+Retrieves the handle to the state image list
+
+#Include 
+_GUICtrlTreeView_GetStateImageList($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to image list on success
+Ошибка:	0
+
+---  Смотрите также  ---
+_GUICtrlTreeView_SetStateImageList

@@ -1,0 +1,23 @@
+
+_WinAPI_SetWindowPlacement
+
+Sets the placement of the window for Min, Max, and normal positions
+
+#Include 
+_WinAPI_SetWindowPlacement($hWnd, $pWindowPlacement)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle of the window
+$pWindowPlacement
+	pointer to $tagWINDOWPLACEMENT structure
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False, @error = 1, @extended = _WinAPI_GetLastError()
+
+---  Смотрите также  ---
+_WinAPI_GetWindowPlacement, $tagWINDOWPLACEMENT
+
+
+---  Таблица  --- SetWindowPlacement

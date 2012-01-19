@@ -1,0 +1,17 @@
+
+_GUICtrlSlider_GetSelStart
+
+Retrieves the starting position of the current selection range
+
+#Include 
+_GUICtrlSlider_GetSelStart($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: The starting position of the current selection range
+
+---  Смотрите также  ---
+_GUICtrlSlider_SetSelStart

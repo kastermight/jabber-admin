@@ -1,0 +1,28 @@
+
+_ClipBoard_Open
+
+Opens the clipboard and prevents other applications from modifying the clipboard
+
+#Include 
+_ClipBoard_Open($hOwner)
+
+---  Таблица параметров  ---
+$hOwner
+	Handle to the window to be associated with the open clipboard. If this parameter is 0, the open
+		clipboard is associated with the current task.
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+This function fails if another window has the clipboard open. Call the _ClipBoard_Close function after every
+successful call to this function. The window identified by the $hOwner parameter does not become the clipboard
+owner unless the _ClipBoard_Empty function is called. If you call _ClipBoard_Open with hwnd set to 0, _ClipBoard_Empty sets
+the clipboard owner to 0 which causes _ClipBoard_SetData to fail.
+
+---  Смотрите также  ---
+_ClipBoard_Close, _ClipBoard_Empty, _ClipBoard_EnumFormats, _ClipBoard_GetOpenWindow, _ClipBoard_SetDataEx
+
+
+---  Таблица  --- OpenClipboard

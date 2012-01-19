@@ -1,0 +1,22 @@
+
+_GUICtrlHeader_SetItemWidth
+
+Sets the item's width
+
+#Include 
+_GUICtrlHeader_SetItemWidth($hWnd, $iIndex, $iWidth)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Zero based item index
+$iWidth
+	New width for item
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlHeader_GetItemWidth

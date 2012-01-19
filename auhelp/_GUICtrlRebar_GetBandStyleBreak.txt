@@ -1,0 +1,20 @@
+
+_GUICtrlRebar_GetBandStyleBreak
+
+Determine if flag is set
+
+#Include 
+_GUICtrlRebar_GetBandStyleBreak($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+
+---  Таблица возвращаемых значений  ---
+True: Flag is set (The band is on a new line)
+False: Flag not set
+
+---  Смотрите также  ---
+_GUICtrlRebar_SetBandStyleBreak, _GUICtrlRebar_GetBandStyle

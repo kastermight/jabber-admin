@@ -1,0 +1,17 @@
+
+_Timer_Diff
+
+Returns the difference in time from a previous call to _Timer_Init
+
+#Include 
+_Timer_Diff($iTimeStamp)
+
+---  Таблица параметров  ---
+$iTimeStamp
+	Timestamp returned from a previous call to _Timer_Init().
+
+---  Таблица возвращаемых значений  ---
+Returns the time difference (in milliseconds) from a previous call to _Timer_Init().
+
+---  Смотрите также  ---
+_Timer_Init

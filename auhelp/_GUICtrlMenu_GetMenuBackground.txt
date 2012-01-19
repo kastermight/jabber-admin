@@ -1,0 +1,17 @@
+
+_GUICtrlMenu_GetMenuBackground
+
+Retrieves the brush to use for the menu's background
+
+#Include 
+_GUICtrlMenu_GetMenuBackground($hMenu)
+
+---  Таблица параметров  ---
+$hMenu
+	Handle of the menu
+
+---  Таблица возвращаемых значений  ---
+Returns the Brush used for the menu's background
+
+---  Смотрите также  ---
+_GUICtrlMenu_SetMenuBackground

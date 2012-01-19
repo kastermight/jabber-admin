@@ -1,0 +1,20 @@
+
+_GDIPlus_ImageGetGraphicsContext
+
+Get the graphics context of the image
+
+#Include 
+_GDIPlus_ImageGetGraphicsContext($hImage)
+
+---  Таблица параметров  ---
+$hImage
+	Handle to an image object
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to a Graphics object
+Ошибка:	-1 and @error is set
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GdipGetImageGraphicsContext

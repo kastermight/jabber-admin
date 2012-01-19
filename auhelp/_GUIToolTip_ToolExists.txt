@@ -1,0 +1,17 @@
+
+_GUIToolTip_ToolExists
+
+Determines whether a current tool exists
+
+#Include 
+_GUIToolTip_ToolExists($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+True: Tool exists
+False: Tool does not exist
+
+---  Смотрите также  ---

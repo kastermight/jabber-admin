@@ -1,0 +1,25 @@
+
+_GUICtrlHeader_SetItemBitmap
+
+Sets the item bitmap handle
+
+#Include 
+_GUICtrlHeader_SetItemBitmap($hWnd, $iIndex, $hBmp)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Zero based item index
+$hBmp
+	Item bitmap handle
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Примечания  ---
+After calling this function, make sure you call _GUICtrlHeader_SetItemDisplay to set the items display information
+
+---  Смотрите также  ---
+_GUICtrlHeader_GetItemBitmap, _GUICtrlHeader_SetItemDisplay

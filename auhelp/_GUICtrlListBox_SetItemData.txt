@@ -1,0 +1,22 @@
+
+_GUICtrlListBox_SetItemData
+
+Устанавливает значение, связанное с указанным пунктом
+
+#Include 
+_GUICtrlListBox_SetItemData($hWnd, $iIndex, $iValue)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта, отсчёт от 0
+$iValue
+	Значение связанное пунктом
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlListBox_GetItemData

@@ -1,0 +1,19 @@
+
+_GUICtrlHeader_GetItemImage
+
+Retrieves the index of an image within the image list
+
+#Include 
+_GUICtrlHeader_GetItemImage($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Zero based item index
+
+---  Таблица возвращаемых значений  ---
+Успех: Zero based index of the image
+
+---  Смотрите также  ---
+_GUICtrlHeader_SetItemImage

@@ -1,0 +1,25 @@
+
+_GUICtrlStatusBar_EmbedControl
+
+Embeds a child control in the control
+
+#Include 
+_GUICtrlStatusBar_EmbedControl($hWnd, $iPart, $hControl[, $iFit = 4])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iPart
+	Zero based part index
+$hControl
+	Handle of control to embed in panel
+$iFit
+	[опционально] Determines how to fit the control. Can be a combination of:
+		1 - Center the control horizontally
+		2 - Center the control vertically
+		4 - Fit the control to the status bar part
+
+---  Примечания  ---
+You can embed ANY control in the status bar, not just the usual Progress Bar
+
+---  Смотрите также  ---

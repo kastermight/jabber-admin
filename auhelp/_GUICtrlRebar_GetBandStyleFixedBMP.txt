@@ -1,0 +1,20 @@
+
+_GUICtrlRebar_GetBandStyleFixedBMP
+
+Determine if flag is set
+
+#Include 
+_GUICtrlRebar_GetBandStyleFixedBMP($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+
+---  Таблица возвращаемых значений  ---
+True: Flag is set (The background bitmap does not move when the band is resized)
+False: Flag not set
+
+---  Смотрите также  ---
+_GUICtrlRebar_SetBandStyleFixedBMP, _GUICtrlRebar_GetBandStyle

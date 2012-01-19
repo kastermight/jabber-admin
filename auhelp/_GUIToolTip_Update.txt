@@ -1,0 +1,13 @@
+
+_GUIToolTip_Update
+
+Forces the current tool to be redrawn
+
+#Include 
+_GUIToolTip_Update($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Смотрите также  ---

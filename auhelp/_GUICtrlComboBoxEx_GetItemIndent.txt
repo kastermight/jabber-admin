@@ -1,0 +1,19 @@
+
+_GUICtrlComboBoxEx_GetItemIndent
+
+Retrieves the number of image widths the item is indented
+
+#Include 
+_GUICtrlComboBoxEx_GetItemIndent($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based item index
+
+---  Таблица возвращаемых значений  ---
+Успех: Item indention
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_SetItemIndent

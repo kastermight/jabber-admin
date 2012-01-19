@@ -1,0 +1,28 @@
+
+_IEFrameGetObjByName
+
+Returns an object reference to a Frame or iFrame by name.
+
+#include  
+_IEFrameGetObjByName ( ByRef $o_object, $s_name )
+
+---  Таблица параметров  ---
+$o_object
+	Object variable of an InternetExplorer.Application, Window or Frame object
+$s_name
+	Name of the Frame you wish to match
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns an object variable pointing to the Window object in a Frame, @EXTENDED = Frame count
+Ошибка:	Returns 0 and sets @ERROR
+@Error:	0 ($_IEStatus_Success) = No Error
+	3 ($_IEStatus_InvalidDataType) = Invalid Data Type
+	4 ($_IEStatus_InvalidObjectType) = Invalid Object Type
+	7 ($_IEStatus_NoMatch) = No Match
+@Extended:	Contains invalid parameter number
+
+---  Примечания  ---
+The object returned by this function is a window object which allows access to the document contained within.  You may also want to access the frame or iframe tag and its properties - to do this, use _IETagNameGetCollection.
+
+---  Смотрите также  ---
+_IEFrameGetCollection

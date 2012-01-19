@@ -1,0 +1,19 @@
+
+_GUICtrlRebar_SetTextColor
+
+Sets a rebar control's default text color
+
+#Include 
+_GUICtrlRebar_SetTextColor($hWnd, $iColor)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iColor
+	COLORREF value that represents the new default text color
+
+---  Таблица возвращаемых значений  ---
+Returns A COLORREF value that represents the previous default text color
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetTextColor

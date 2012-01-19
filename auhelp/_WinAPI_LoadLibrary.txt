@@ -1,0 +1,22 @@
+
+_WinAPI_LoadLibrary
+
+Maps a specified executable module into the address space of the calling process
+
+#Include 
+_WinAPI_LoadLibrary($sFileName)
+
+---  Таблица параметров  ---
+$sFileName
+	Names a Win32 executable module (either a .DLL or an .EXE file). The name specified is the
+		filename of the executable module.
+
+---  Таблица возвращаемых значений  ---
+Успех:	A handle to the executable module
+Ошибка:	0
+
+---  Смотрите также  ---
+_WinAPI_LoadLibraryEx, _WinAPI_FreeLibrary
+
+
+---  Таблица  --- LoadLibrary

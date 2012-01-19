@@ -1,0 +1,20 @@
+
+_GUICtrlMonthCal_SetToday
+
+Sets the date information for the date specified as "today"
+
+#Include 
+_GUICtrlMonthCal_SetToday($hWnd, $iYear, $iMonth, $iDay)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iYear
+	Year
+$iMonth
+	Month
+$iDay
+	Day
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_GetToday

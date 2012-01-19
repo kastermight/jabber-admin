@@ -1,0 +1,22 @@
+
+_GUICtrlButton_SetFocus
+
+Sets the keyboard focus to the specified button
+
+#Include 
+_GUICtrlButton_SetFocus($hWnd[, $fFocus = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$fFocus
+	[опционально] This parameter can be one of the following values:
+		  True - Sets the keyboard focus to the button
+		  False - Removes the keyboard focus from the button
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlButton_GetFocus

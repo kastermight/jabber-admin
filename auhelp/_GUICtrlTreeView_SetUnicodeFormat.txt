@@ -1,0 +1,21 @@
+
+_GUICtrlTreeView_SetUnicodeFormat
+
+Устанавливает формат символов Unicode
+
+#Include 
+_GUICtrlTreeView_SetUnicodeFormat($hWnd[, $iFormat = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iFormat
+	[опционально] Определяет формат символов, который будет использоваться в TreeView.
+		True - Будут использоваться символы Unicode
+		False - Будут использоваться символы ANSI.
+
+---  Таблица возвращаемых значений  ---
+Возвращает предыдущий флаг формата символов
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetUnicodeFormat

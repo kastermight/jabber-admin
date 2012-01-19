@@ -1,0 +1,23 @@
+
+_GDIPlus_ArrowCapSetHeight
+
+Sets the height of the arrow cap
+
+#Include 
+_GDIPlus_ArrowCapSetHeight($hArrowCap, $fHeight)
+
+---  Таблица параметров  ---
+$hArrowCap
+	Handle to a ArrowCap object
+$fHeight
+	Specifies the length, in units, of the arrow from its base to its point
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GDIPlus_ArrowCapGetHeight
+
+
+---  Таблица  --- GdipSetAdjustableArrowCapHeight

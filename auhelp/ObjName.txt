@@ -1,0 +1,26 @@
+
+ObjName
+
+Returns the name or interface description of an Object
+
+ObjName ( $Objectvariable [,Flag] )
+
+---  Таблица параметров  ---
+$Objectvariable
+	A variable containing an Object whose name you want to retrieve
+Flag
+	[опционально] 1 = Name of the dispatch interface being used (default)
+	2 = Description of the (document) Object
+	3 = The ProgID of the Object
+	4 = The DLL file from with the Object was created (if supported)
+	5 = Filename and position of the toolbox icon (if supported)
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns a string representing the name
+Ошибка:	Sets @error and Returns ""
+
+---  Примечания  ---
+Not all Objects support flags 2 to 5. Always test for @error in these cases.
+
+---  Смотрите также  ---
+IsObj, ObjGet, ObjCreate

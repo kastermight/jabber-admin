@@ -1,0 +1,20 @@
+
+_GUICtrlTreeView_GetVisible
+
+Указывает, является ли пункт видимым в данный момент в TreeView
+
+#Include 
+_GUICtrlTreeView_GetVisible($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$hItem
+	Дескриптор пункта
+
+---  Таблица возвращаемых значений  ---
+True:	Пункт является видимым
+False:	Пункт не является видимым
+
+---  Смотрите также  ---
+_GUICtrlTreeView_EnsureVisible

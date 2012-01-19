@@ -1,0 +1,35 @@
+
+_GUICtrlRichEdit_GetParaSpacing
+
+Gets the spacing settings of (first) selected paragraph or (if no selection) of the current paragraph
+
+#Include 
+_GUICtrlRichEdit_GetParaSpacing($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	a string consisting of the settings separated by semicolons (;):
+	value 1 - inter-line spacing:
+	   either a number - in space units
+	   or " lines" - in lines
+	Value 2 - scope of value 1:
+	   a - all (or only) selected paragraph(s) have the above setting
+	   f - the first selected paragraph has this setting, but other(s) don't
+	   c - the current paragraph has this setting
+	value 3 - spacing before paragraphs (in space units)
+	value 4 - scope of value 3 - see above
+	value 5 - spacing after paragraphs (in space units)
+	value 6 - scope of value 5 - see above
+Ошибка:	"" and sets @error
+@error:	101 - $hWnd is not a handle
+
+---  Примечания  ---
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_SetParaSpacing
+
+
+---  Таблица  --- EM_SETPARAFORMAT

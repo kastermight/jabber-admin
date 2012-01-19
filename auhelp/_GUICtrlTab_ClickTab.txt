@@ -1,0 +1,23 @@
+
+_GUICtrlTab_ClickTab
+
+Clicks a tab
+
+#Include 
+_GUICtrlTab_ClickTab($hWnd, $iIndex[, $sButton = "left"[, $fMove = False[, $iClicks = 1[, $iSpeed = 1]]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Specifies the zero based index of the item
+$sButton
+	[опционально] Button to click with
+$fMove
+	[опционально] If True, the mouse will be moved. If False, the mouse does not move.
+$iClicks
+	[опционально] Number of clicks
+$iSpeed
+	[опционально] Mouse movement speed
+
+---  Смотрите также  ---

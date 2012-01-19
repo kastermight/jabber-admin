@@ -1,0 +1,26 @@
+
+_GDIPlus_BitmapUnlockBits
+
+Unlocks a portion of a bitmap that was locked by _GDIPlus_BitmapLockBits
+
+#Include 
+_GDIPlus_BitmapUnlockBits($hBitmap, $tBitmapData)
+
+---  Таблица параметров  ---
+$hBitmap
+	Handle to a bitmap object
+$tBitmapData
+	$tagGDIPBITMAPDATA structure previously passed to _GDIPlus_BitmapLockBits
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+When you are done with the locked portion, call _GDIPlus_BitmapUnlockBits to release the locked region
+
+---  Смотрите также  ---
+_WinAPI_DeleteObject
+
+
+---  Таблица  --- GdipBitmapUnlockBits

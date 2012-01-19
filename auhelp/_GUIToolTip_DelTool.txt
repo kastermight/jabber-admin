@@ -1,0 +1,18 @@
+
+_GUIToolTip_DelTool
+
+Removes a tool
+
+#Include 
+_GUIToolTip_DelTool($hWnd, $hTool[, $iID = 0])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$hTool
+	Handle to the window that contains the tool
+$iID
+	[опционально] Identifier of the tool
+
+---  Смотрите также  ---
+_GUIToolTip_AddTool

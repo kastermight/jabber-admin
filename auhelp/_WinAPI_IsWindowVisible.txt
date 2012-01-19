@@ -1,0 +1,24 @@
+
+_WinAPI_IsWindowVisible
+
+Retrieves the visibility state of the specified window
+
+#Include 
+_WinAPI_IsWindowVisible($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle of window
+
+---  Таблица возвращаемых значений  ---
+True:	Window is visible
+Failse:	Window is not visible
+
+---  Примечания  ---
+The visibility state of a window is indicated by the $WS_VISIBLE style bit. When $WS_VISIBLE is set, the window
+is displayed and subsequent drawing into it is displayed as long as the window has the $WS_VISIBLE style.
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- IsWindowVisible

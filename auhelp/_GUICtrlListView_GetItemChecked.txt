@@ -1,0 +1,20 @@
+
+_GUICtrlListView_GetItemChecked
+
+Возвращает состояние Checkbox (галочки в квадрате) в пункте ListView
+
+#Include 
+_GUICtrlListView_GetItemChecked($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlListView_SetItemChecked

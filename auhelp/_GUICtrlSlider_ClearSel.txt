@@ -1,0 +1,14 @@
+
+_GUICtrlSlider_ClearSel
+
+Clears the current selection range
+
+#Include 
+_GUICtrlSlider_ClearSel($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Смотрите также  ---
+_GUICtrlSlider_SetSel, _GUICtrlSlider_SetSelEnd, _GUICtrlSlider_SetSelStart

@@ -1,0 +1,13 @@
+
+_GUICtrlComboBoxEx_ResetContent
+
+Removes all items
+
+#Include 
+_GUICtrlComboBoxEx_ResetContent($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Смотрите также  ---

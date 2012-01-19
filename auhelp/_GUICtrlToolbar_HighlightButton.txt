@@ -1,0 +1,23 @@
+
+_GUICtrlToolbar_HighlightButton
+
+Sets the highlight state of a given button control
+
+#Include 
+_GUICtrlToolbar_HighlightButton($hWnd, $iCommandID[, $fHighlight = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+$fHighlight
+	[опционально] Highlight state:
+		 True - Button will be highlighted
+		False - Button will be unhighlighted
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---

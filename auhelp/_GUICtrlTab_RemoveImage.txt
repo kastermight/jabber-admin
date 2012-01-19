@@ -1,0 +1,19 @@
+
+_GUICtrlTab_RemoveImage
+
+Removes an image from the control's image list
+
+#Include 
+_GUICtrlTab_RemoveImage($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based index of the image to remove
+
+---  Примечания  ---
+The tab control updates each tab's image index, so each tab remains associated with the same image as before.
+If a tab is using the image being removed, the tab will be set to have no image.
+
+---  Смотрите также  ---

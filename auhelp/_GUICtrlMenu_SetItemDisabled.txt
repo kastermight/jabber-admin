@@ -1,0 +1,26 @@
+
+_GUICtrlMenu_SetItemDisabled
+
+Sets the disabled state of a menu item
+
+#Include 
+_GUICtrlMenu_SetItemDisabled($hMenu, $iItem[, $fState = True[, $fByPos = True]])
+
+---  Таблица параметров  ---
+$hMenu
+	Menu handle
+$iItem
+	Identifier or position of the menu item
+$fState
+	[опционально] True to set state, otherwise False
+$fByPos
+	[опционально] Menu identifier flag:
+		 True - $iItem is a zero based item position
+		False - $iItem is a menu item identifier
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlMenu_GetItemDisabled

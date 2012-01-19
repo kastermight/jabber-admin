@@ -1,0 +1,33 @@
+
+_GUICtrlComboBoxEx_InsertString
+
+Inserts a new item in the control
+
+#Include 
+_GUICtrlComboBoxEx_InsertString($hWnd, $sText[, $iIndex = 0[, $iImage = -1[, $iSelecteImage = -1[, $iOverlayImage = -1[, $iIndent = -1[, $iParam = -1]]]]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$sText
+	Item text. If set to -1, the item set is set via the $CBEN_GETDISPINFO notification message.
+$iIndex
+	[опционально] Zero based index at which the new string should be inserted.
+		To insert an item at the end of the list, set the $iIndex member to -1
+$iImage
+	[опционально] Zero based index of the item's icon in the control's image list
+$iSelecteImage
+	[опционально] Zero based index of the item's icon in the control's image list
+$iOverlayImage
+	[опционально] Zero based index of the item's icon in the control's image list
+$iIndent
+	[опционально] Number of image widths to indent the item. A single indentation equals the width of an image.
+$iParam
+	[опционально] Value specific to the item
+
+---  Таблица возвращаемых значений  ---
+Успех:	The index of the new item
+Ошибка:	-1
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_InitStorage

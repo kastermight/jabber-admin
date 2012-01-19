@@ -1,0 +1,20 @@
+
+_WinAPI_GetWindowText
+
+Retrieves the text of the specified window's title bar
+
+#Include 
+_WinAPI_GetWindowText($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle of the window
+
+---  Таблица возвращаемых значений  ---
+Успех:	Windows title bar
+Ошибка:	set @error
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GetWindowText

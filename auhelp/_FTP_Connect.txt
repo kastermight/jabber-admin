@@ -1,0 +1,38 @@
+
+_FTP_Connect
+
+Подключение к FTP серверу.
+
+#Include 
+_FTP_Connect($l_InternetSession, $s_ServerName, $s_Username, $s_Password [, $i_Passive = 0 [, $i_ServerPort = 0 [, $l_Service = 1 [, $l_Flags = 0 [, $l_Context = 0]]]]])
+
+---  Таблица параметров  ---
+$l_InternetSession
+	Указатель возвращённый функцией _FTP_Open()
+$s_ServerName
+	Имя или IP сервера.
+$s_Username
+	Имя пользователя.
+$s_Password
+	Пароль.
+$i_Passive
+	[опционально] Пассивный режим.
+$i_ServerPort
+	[опционально] Порт сервера ( 0 по умолчанию (21) )
+$l_Service
+	[опционально] Я не разобрался, для чего этот параметр.
+$l_Flags
+	[опционально] Специальные флаги.
+$l_Context
+	[опционально] A variable that contains the application-defined value that associates this search with any application data.
+	This is only used if the application has already called _FTP_SetStatusCallback() to set up a status callback function.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает идентификатор
+Ошибка:	Возвращает 0 и устанавливает @error
+
+---  Смотрите также  ---
+_FTP_Open, _FTP_SetStatusCallback, _FTP_Command, _FTP_DirCreate, _FTP_DirDelete, _FTP_DirGetCurrent, _FTP_DirPutContents, _FTP_DirSetCurrent, _FTP_FileDelete, _FTP_FileGet, _FTP_FileGetSize, _FTP_FilePut, _FTP_FileRename, _FTP_ListToArray, _FTP_ListToArray2D, _FTP_ListToArrayEx
+
+
+---  Таблица  --- InternetConnect

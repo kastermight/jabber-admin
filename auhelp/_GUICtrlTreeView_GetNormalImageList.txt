@@ -1,0 +1,18 @@
+
+_GUICtrlTreeView_GetNormalImageList
+
+Retrieves the normal image list
+
+#Include 
+_GUICtrlTreeView_GetNormalImageList($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to image list
+Ошибка:	0
+
+---  Смотрите также  ---
+_GUICtrlTreeView_SetNormalImageList

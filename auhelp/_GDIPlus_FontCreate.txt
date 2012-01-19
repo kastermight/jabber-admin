@@ -1,0 +1,42 @@
+
+_GDIPlus_FontCreate
+
+Create a Font object
+
+#Include 
+_GDIPlus_FontCreate($hFamily, $fSize[, $iStyle = 0[, $iUnit = 3]])
+
+---  Таблица параметров  ---
+$hFamily
+	Handle to a Font Family object
+$fSize
+	The size of the font measured in the units specified in the $iUnit parameter
+$iStyle
+	[опционально] The style of the typeface. Can be a combination of the following:
+		0 - Normal weight or thickness of the typeface
+		1 - Bold typeface
+		2 - Italic typeface
+		4 - Underline
+		8 - Strikethrough
+$iUnit
+	[опционально] Unit of measurement for the font size:
+		0 - World coordinates, a nonphysical unit
+		1 - Display units
+		2 - A unit is 1 pixel
+		3 - A unit is 1 point or 1/72 inch
+		4 - A unit is 1 inch
+		5 - A unit is 1/300 inch
+		6 - A unit is 1 millimeter
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to a Font object
+Ошибка:	0
+
+---  Примечания  ---
+When you are done with the Font object, call _GDIPlus_FontDispose to release the resources
+
+---  Смотрите также  ---
+_GDIPlus_FontDispose
+
+
+---  Таблица  --- GdipCreateFont

@@ -1,0 +1,27 @@
+
+_ClipBoard_SetViewer
+
+Adds the specified window to the chain of clipboard viewers
+
+#Include 
+_ClipBoard_SetViewer($hViewer)
+
+---  Таблица параметров  ---
+$hViewer
+	Handle to the window to be added to the clipboard chain
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle to the next window in the clipboard viewer chain
+Ошибка:	0 if there is no clipboard viewer
+
+---  Примечания  ---
+The windows that are part of the clipboard viewer chain must process the clipboard messages $WM_CHANGECBCHAIN
+and $WM_DRAWCLIPBOARD. Each clipboard viewer window calls the _SendMessage function to pass these messages
+to the next window in the clipboard viewer chain. A clipboard viewer window must eventually remove itself from
+the clipboard viewer chain by calling the _ClipBoard_ChangeChain function.
+
+---  Смотрите также  ---
+_ClipBoard_ChangeChain, _ClipBoard_GetViewer
+
+
+---  Таблица  --- SetClipboardViewer

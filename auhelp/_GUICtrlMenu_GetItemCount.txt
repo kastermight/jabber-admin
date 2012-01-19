@@ -1,0 +1,20 @@
+
+_GUICtrlMenu_GetItemCount
+
+Retrieves the number of items in the specified menu
+
+#Include 
+_GUICtrlMenu_GetItemCount($hMenu)
+
+---  Таблица параметров  ---
+$hMenu
+	Handle of the menu
+
+---  Таблица возвращаемых значений  ---
+Успех:	The number of items in the menu
+Ошибка:	-1
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GetMenuItemCount

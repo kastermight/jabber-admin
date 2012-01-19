@@ -1,0 +1,21 @@
+
+_WinAPI_SetFocus
+
+Sets the keyboard focus to the specified window
+
+#Include 
+_WinAPI_SetFocus($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Identifies the window that will receive the keyboard input. If this parameter is 0, keystrokes
+		are ignored.
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle of the window that had the keyboard focus
+Ошибка:	0
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- SetFocus

@@ -1,0 +1,24 @@
+
+_GUICtrlComboBox_SetTopIndex
+
+Ensure that a particular item is visible in the ListBox of a ComboBox
+
+#Include 
+_GUICtrlComboBox_SetTopIndex($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Specifies the zero-based index of the list item
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Примечания  ---
+The system scrolls the ListBox contents so that either the specified item appears at the top
+of the list box or the maximum scroll range has been reached.
+
+---  Смотрите также  ---
+_GUICtrlComboBox_GetTopIndex

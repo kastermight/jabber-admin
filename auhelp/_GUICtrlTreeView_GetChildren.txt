@@ -1,0 +1,20 @@
+
+_GUICtrlTreeView_GetChildren
+
+Указывает, установлен ли флаг дочернего пункта
+
+#Include 
+_GUICtrlTreeView_GetChildren($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$hItem
+	Дескриптор пункта
+
+---  Таблица возвращаемых значений  ---
+True:	Установлен флаг дочернего пункта
+False:	Не установлен флаг дочернего пункта
+
+---  Смотрите также  ---
+_GUICtrlTreeView_SetChildren

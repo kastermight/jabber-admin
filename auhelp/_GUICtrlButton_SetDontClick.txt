@@ -1,0 +1,21 @@
+
+_GUICtrlButton_SetDontClick
+
+Sets the state of $BST_DONTCLICK flag on a button
+
+#Include 
+_GUICtrlButton_SetDontClick($hWnd[, $fState = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$fState
+	[опционально] The state. True to set the $BST_DONTCLICK, otherwise False
+
+---  Примечания  ---
+Minimum Operating Systems: Windows Vista
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- BM_SETDONTCLICK

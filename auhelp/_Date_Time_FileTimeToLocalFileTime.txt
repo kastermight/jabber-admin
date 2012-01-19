@@ -1,0 +1,18 @@
+
+_Date_Time_FileTimeToLocalFileTime
+
+Converts a file time based on the Coordinated Universal Time to a local file time
+
+#Include 
+_Date_Time_FileTimeToLocalFileTime($pFileTime)
+
+---  Таблица параметров  ---
+$pFileTime
+	Pointer to a $tagFILETIME structure containing the UTC based file time to be converted into a
+		local file time.
+
+---  Таблица возвращаемых значений  ---
+Returns $tagFILETIME structure that contains the converted local file time
+
+---  Смотрите также  ---
+_Date_Time_FileTimeToDosDateTime, _Date_Time_FileTimeToSystemTime, _Date_Time_LocalFileTimeToFileTime, $tagFILETIME

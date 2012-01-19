@@ -1,0 +1,18 @@
+
+_GUICtrlHeader_ClearFilterAll
+
+Clears all of the filters
+
+#Include 
+_GUICtrlHeader_ClearFilterAll($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlHeader_ClearFilter, _GUICtrlHeader_EditFilter

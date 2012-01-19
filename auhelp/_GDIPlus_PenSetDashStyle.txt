@@ -1,0 +1,29 @@
+
+_GDIPlus_PenSetDashStyle
+
+Sets the pen dash style
+
+#Include 
+_GDIPlus_PenSetDashStyle($hPen[, $iStyle = 0])
+
+---  Таблица параметров  ---
+$hPen
+	Handle to a pen object
+$iStyle
+	[опционально] Dash style. Can be one of the following:
+		$GDIP_DASHSTYLESOLID - A solid line
+		$GDIP_DASHSTYLEDASH - A dashed line
+		$GDIP_DASHSTYLEDOT - A dotted line
+		$GDIP_DASHSTYLEDASHDOT - An alternating dash-dot line
+		$GDIP_DASHSTYLEDASHDOTDOT - An alternating dash-dot-dot line
+		$GDIP_DASHSTYLECUSTOM - A a user-defined, custom dashed line
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GDIPlus_PenGetDashStyle
+
+
+---  Таблица  --- GdipSetPenDashStyle

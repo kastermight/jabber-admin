@@ -1,0 +1,22 @@
+
+_GUICtrlListView_SetItemIndent
+
+Устанавливает отступ пункта по количеству размеров рисунка
+
+#Include 
+_GUICtrlListView_SetItemIndent($hWnd, $iIndex, $iIndent)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта
+$iIndent
+	Величина отступа
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlListView_GetItemIndent

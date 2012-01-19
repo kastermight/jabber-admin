@@ -1,0 +1,18 @@
+
+_GUICtrlButton_GetFocus
+
+Retrieves if the button has keyboard focus
+
+#Include 
+_GUICtrlButton_GetFocus($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+True: Button has focus
+False: Button does not have focus
+
+---  Смотрите также  ---
+_GUICtrlButton_SetFocus

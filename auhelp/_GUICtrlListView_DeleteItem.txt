@@ -1,0 +1,20 @@
+
+_GUICtrlListView_DeleteItem
+
+Удаляет пункт из ListView
+
+#Include 
+_GUICtrlListView_DeleteItem($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Идентификатор или дескриптор ListView
+$iIndex
+	Индекс удаляемого пункта
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlListView_DeleteAllItems, _GUICtrlListView_DeleteItemsSelected

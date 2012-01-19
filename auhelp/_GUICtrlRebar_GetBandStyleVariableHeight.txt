@@ -1,0 +1,20 @@
+
+_GUICtrlRebar_GetBandStyleVariableHeight
+
+Determine if flag is set
+
+#Include 
+_GUICtrlRebar_GetBandStyleVariableHeight($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+
+---  Таблица возвращаемых значений  ---
+True: Flag is set (The band can be resized by the rebar control)
+False: Flag not set
+
+---  Смотрите также  ---
+_GUICtrlRebar_SetBandStyleVariableHeight, _GUICtrlRebar_GetBandStyle

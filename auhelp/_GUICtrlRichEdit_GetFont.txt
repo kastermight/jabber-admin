@@ -1,0 +1,41 @@
+
+_GUICtrlRichEdit_GetFont
+
+Возвращает атрибуты шрифта выделенного или, если нет выделенного, то в позиции курсора
+
+#Include 
+_GUICtrlRichEdit_GetFont($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает массив, содержащий значения:
+	[0] - размер шрифта
+	   Если смешано несколько размеров в выделенном, то возвращается 0
+	[1] - Имя шрифта
+	  Если смешано несколько шрифтов, то возвращается "" (пустая строка)
+	[2] - кодировка
+	   $ANSI_CHARSET - 0
+	   $BALTIC_CHARSET - 186
+	   $CHINESEBIG5_CHARSET - 136
+	   $EASTEUROPE_CHARSET - 238
+	   $GB2312_CHARSET - 134
+	   $GREEK_CHARSET - 161
+	   $HANGEUL_CHARSET - 129
+	   $MAC_CHARSET - 77
+	   $OEM_CHARSET - 255
+	   $RUSSIAN_CHARSET - 204
+	   $SHIFTJIS_CHARSET - 128
+	   $SYMBOL_CHARSET - 2
+	   $TURKISH_CHARSET - 162
+	   $VIETNAMESE_CHARSET - 163
+Ошибка:	устанавливает @error
+@error:	101 - $HWnd не является дескриптором
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_SetFont
+
+
+---  Таблица  --- EM_GETCHARFORMAT, ---  Таблица  --- LOGFONT, http://www.hep.wisc.edu/~pinghc/books/apirefeng/l/logfont.html

@@ -1,0 +1,23 @@
+
+_GUICtrlTab_GetItemRect
+
+Retrieves the bounding rectangle for a tab
+
+#Include 
+_GUICtrlTab_GetItemRect($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based item item
+
+---  Таблица возвращаемых значений  ---
+Успех: Array with the following format:
+		[0] = X coordinate of the upper left corner of the rectangle
+		[1] = Y coordinate of the upper left corner of the rectangle
+		[2] = X coordinate of the lower right corner of the rectangle
+		[3] = Y coordinate of the lower right corner of the rectangle
+
+---  Смотрите также  ---
+_GUICtrlTab_GetItemRectEx

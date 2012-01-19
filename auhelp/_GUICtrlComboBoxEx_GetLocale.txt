@@ -1,0 +1,17 @@
+
+_GUICtrlComboBoxEx_GetLocale
+
+Retrieves the current locale
+
+#Include 
+_GUICtrlComboBoxEx_GetLocale($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: The high order word contains the country code and the low order word contains the language identifier.
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_GetLocaleCountry, _GUICtrlComboBoxEx_GetLocaleLang, _GUICtrlComboBoxEx_GetLocalePrimLang, _GUICtrlComboBoxEx_GetLocaleSubLang

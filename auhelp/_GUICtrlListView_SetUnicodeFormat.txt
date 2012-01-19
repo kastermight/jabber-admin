@@ -1,0 +1,19 @@
+
+_GUICtrlListView_SetUnicodeFormat
+
+Устанавливает формат символов UNICODE в ListView
+
+#Include 
+_GUICtrlListView_SetUnicodeFormat($hWnd, $fUnicode)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$fUnicode
+	Определяет формат символов, который используется в ListView. Если True, то в ListView будут использоваться символы Unicode. Если это значение равно нулю, то в ListView будут использоваться символы ANSI.
+
+---  Таблица возвращаемых значений  ---
+Возвращает предыдущий флаг формата Unicode в ListView
+
+---  Смотрите также  ---
+_GUICtrlListView_GetUnicodeFormat

@@ -1,0 +1,20 @@
+
+_GDIPlus_BitmapDispose
+
+Release a bitmap object
+
+#Include 
+_GDIPlus_BitmapDispose($hBitmap)
+
+---  Таблица параметров  ---
+$hBitmap
+	Handle to a bitmap object
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GdipDisposeImage

@@ -1,0 +1,18 @@
+
+_GUIImageList_DragLeave
+
+Unlocks the specified window and hides the drag image, allowing the window to be updated
+
+#Include 
+_GUIImageList_DragLeave($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUIImageList_EndDrag

@@ -1,0 +1,22 @@
+
+_GUICtrlTreeView_GetToolTips
+
+Retrieves the handle to the child ToolTip control
+
+#Include 
+_GUICtrlTreeView_GetToolTips($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to the child ToolTip control
+Ошибка:	0 if the control is not using ToolTips
+
+---  Примечания  ---
+When created, controls automatically create a ToolTip control. To cause a control not to use ToolTips, create
+the control with the $TVS_NOTOOLTIPS style
+
+---  Смотрите также  ---
+_GUICtrlTreeView_SetToolTips

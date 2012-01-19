@@ -1,0 +1,33 @@
+
+_WinAPI_GetWindowRgn
+
+Obtains a copy of the window region of a window
+
+#Include 
+_WinAPI_GetWindowRgn($hWnd, $hRgn)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the window whose window region is to be obtained.
+$hRgn
+	Handle to the region which will be modified to represent the window region.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Specifies the type of the region that the function obtains. It can be one of the following values
+	$NULLREGION - The region is empty.
+	$SIMPLEREGION - The region is a single rectangle.
+	$COMPLEXREGION - The region is more than one rectangle.
+Ошибка:	0 The specified window does not have a region, or an error occurred while attempting to return the region.
+
+---  Примечания  ---
+The window region of a window is set by calling the SetWindowRgn function.
+The window region determines the area within the window where the system permits drawing.
+The system does not display any portion of a window that lies outside of the window region
+The coordinates of a window's window region are relative to the upper-left corner of the window, not the client area of the window.
+To set the window region of a window, call the SetWindowRgn function.
+
+---  Смотрите также  ---
+_WinAPI_CreateRectRgn, _WinAPI_CreateRoundRectRgn, _WinAPI_CombineRgn, _WinAPI_SetWindowRgn
+
+
+---  Таблица  --- GetWindowRgn

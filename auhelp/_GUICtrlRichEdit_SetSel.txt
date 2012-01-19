@@ -1,0 +1,38 @@
+
+_GUICtrlRichEdit_SetSel
+
+Устанавливает выделение текста в указанных позициях начала и конца
+
+#Include 
+_GUICtrlRichEdit_SetSel($hWnd, $iAnchor, $iActive[, $fHideSel = False])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iAnchor
+	Позиция первого символа выделения
+		Специальное значение: -1 - конец текста
+$iActive
+	Позиция последнего символа выделения
+		Специальное значение: -1 - конец текста
+$fHideSel
+	[опционально] True - скрыть выделение
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False и устанавливает @error
+@error:	101 - $HWnd не является дескриптором
+	102 - $iAnchor не является положительным числом или 0 или -1
+	103 - $iActive не является положительным числом или 0 или -1
+	104 - $fHideSel  не является True или False
+
+---  Примечания  ---
+Первый символ текста в элементе имеет позицию 0
+
+$iActive может быть меньше, чем $iAnchor
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_GetSel, _GUICtrlRichEdit_GetSelAA, _GUICtrlRichEdit_Deselect, _GUICtrlRichEdit_IsTextSelected, _GUICtrlRichEdit_GotoCharPos
+
+
+---  Таблица  --- EM_EXSETSEL

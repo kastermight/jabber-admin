@@ -1,0 +1,26 @@
+
+_GUICtrlButton_GetNoteLength
+
+Gets the length of the note text that may be displayed in the description for a command link button
+
+#Include 
+_GUICtrlButton_GetNoteLength($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: Returns the length of the note text in WCHARs—not including any terminating NULL WCHAR
+Ошибка: 0
+
+---  Примечания  ---
+This function works only with the $BS_COMMANDLINK and $BS_DEFCOMMANDLINK button styles
+
+Minimum Operating Systems: Windows Vista
+
+---  Смотрите также  ---
+_GUICtrlButton_GetNote, _GUICtrlButton_SetNote
+
+
+---  Таблица  --- BCM_GETNOTELENGTH

@@ -1,0 +1,21 @@
+
+_GDIPlus_StringFormatDispose
+
+Release a String Format object
+
+#Include 
+_GDIPlus_StringFormatDispose($hFormat)
+
+---  Таблица параметров  ---
+$hFormat
+	Handle to a String Format object
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GDIPlus_StringFormatCreate
+
+
+---  Таблица  --- GdipDeleteStringFormat

@@ -1,0 +1,33 @@
+
+_GUICtrlEdit_SetMargins
+
+Sets the widths of the left and right margins
+
+#Include 
+_GUICtrlEdit_SetMargins($hWnd[, $iMargin = 0x1[, $iLeft = 0xFFFF[, $iRight = 0xFFFF]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iMargin
+	[опционально] Can be one or more of the following
+		$EC_LEFTMARGIN - Sets the left margin
+		$EC_RIGHTMARGIN - Sets the right margin
+
+		Default: $EC_LEFTMARGIN
+$iLeft
+	[опционально] The new width of the left margin
+
+		Default: $EC_USEFONTINFO
+$iRight
+	[опционально] The new width of the right margin
+
+		Default: $EC_USEFONTINFO
+
+---  Таблица возвращаемых значений  ---
+Returns an array in the following format:
+[0]         - The width of the left margin
+[1]         - The width of the right margin
+
+---  Смотрите также  ---
+_GUICtrlEdit_GetMargins

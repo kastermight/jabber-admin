@@ -1,0 +1,21 @@
+
+_Date_Time_SystemTimeToTzSpecificLocalTime
+
+Converts a UTC time to a specified time zone's corresponding local time
+
+#Include 
+_Date_Time_SystemTimeToTzSpecificLocalTime($pUTC [, $pTimeZone = 0])
+
+---  Таблица параметров  ---
+$pUTC
+	Pointer to a $tagSYSTEMTIME structure that specifies a time, in UTC. The function converts this
+		time to the specified time zone's local time.
+$pTimeZone
+	[опционально] Pointer to a $tagTIME_ZONE_INFORMATION structure that specifies the time zone of interest. If
+		0, the function uses the currently active time zone.
+
+---  Таблица возвращаемых значений  ---
+Returns $tagSYSTEMTIME containing the local time
+
+---  Смотрите также  ---
+$tagSYSTEMTIME, $tagTIME_ZONE_INFORMATION

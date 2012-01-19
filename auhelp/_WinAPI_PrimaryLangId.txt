@@ -1,0 +1,16 @@
+
+_WinAPI_PrimaryLangId
+
+Extract primary language id from a language id
+
+#Include 
+_WinAPI_PrimaryLangId($lgid)
+
+---  Таблица параметров  ---
+$lgid
+	Language id
+
+---  Таблица возвращаемых значений  ---
+Returns an Primary language id
+
+---  Смотрите также  ---

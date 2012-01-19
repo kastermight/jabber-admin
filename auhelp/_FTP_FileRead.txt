@@ -1,0 +1,25 @@
+
+_FTP_FileRead
+
+Читает данные из файла, указатель которого возвращён функцией _FTP_FileOpen()
+
+#Include 
+_FTP_FileRead($h_File, $dwNumberOfBytesToRead)
+
+---  Таблица параметров  ---
+$h_File
+	Указатель файла с FTP, возвращённый функцией _FTP_FileOpen().
+$dwNumberOfBytesToRead
+	Количество байт, которые будут прочитаны.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает the binary/string read.
+Ошибка:	Возвращает 0 и устанавливает @error
+@error:	-1 for end-of-file
+	не равно 0 для других ошибок.
+
+---  Смотрите также  ---
+_FTP_FileOpen
+
+
+---  Таблица  --- InternetReadFile

@@ -1,0 +1,21 @@
+
+_GUICtrlListView_GetViewLarge
+
+Определяет, является ли вид отображения как Large icon (Плитка, Крупные значки)
+
+#Include 
+_GUICtrlListView_GetViewLarge($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Возвращает True:	Вид Large icon (Плитка, Крупные значки)
+Возвращает False:	Вид не Large icon (Плитка, Крупные значки)
+
+---  Примечания  ---
+Минимальная ОС - Windows XP.
+
+---  Смотрите также  ---
+_GUICtrlListView_GetView

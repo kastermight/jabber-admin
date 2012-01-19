@@ -1,0 +1,23 @@
+
+_FTP_FileDelete
+
+Удаляет файл с FTP сервера.
+
+#Include 
+_FTP_FileDelete($l_FTPSession, $s_RemoteFile)
+
+---  Таблица параметров  ---
+$l_FTPSession
+	Указатель возвращённый функцией _FTP_Connect()
+$s_RemoteFile
+	Путь удаляемого файла.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает 1
+Ошибка:	Возвращает 0 и устанавливает @error
+
+---  Смотрите также  ---
+_FTP_Connect
+
+
+---  Таблица  --- FtpDeleteFile

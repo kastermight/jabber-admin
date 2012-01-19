@@ -1,0 +1,25 @@
+
+_NamedPipes_GetNamedPipeInfo
+
+Retrieves information about the specified named pipe
+
+#Include 
+_NamedPipes_GetNamedPipeInfo($hNamedPipe)
+
+---  Таблица параметров  ---
+$hNamedPipe
+	Handle to the named pipe instance. The handle must have GENERIC_READ access to the named pipe
+
+---  Таблица возвращаемых значений  ---
+Успех:	Array with the following format:
+	$aInfo[0] - True if handle refers to server end, otherwise client end
+	$aInfo[1] - True for a message pipe, otherwise byte pipe
+	$aInfo[2] - Size of the buffer for outgoing data, in bytes
+	$aInfo[3] - Size of the buffer for incoming data, in bytes
+	$aInfo[4] - Maximum number of pipe instances that can be created
+Ошибка:	Set @error
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GetNamedPipeInfo

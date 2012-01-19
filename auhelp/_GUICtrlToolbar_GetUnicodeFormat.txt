@@ -1,0 +1,18 @@
+
+_GUICtrlToolbar_GetUnicodeFormat
+
+Retrieves the Unicode character format flag
+
+#Include 
+_GUICtrlToolbar_GetUnicodeFormat($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+True: Control is using Unicode characters
+False: Control is using ANSI characters
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetUnicodeFormat

@@ -1,0 +1,22 @@
+
+GUICtrlSetLimit
+
+Устанавливает пределы для элементов по количеству символов / пикселей.
+
+GUICtrlSetLimit ( controlID, max [, min] )
+
+---  Таблица параметров  ---
+controlID
+	Идентификатор (controlID) элемента возвращаемый функцией GUICtrlCreate....
+max
+	Для элемента List  размер горизонтального ползунка прокрутки в пикселях. 
+	Для элементов Input и Edit  максимальное количество введённых символов.
+min
+	[опционально] Для элементов Slider и UpDown вы можете указать минимальное значение.  По умолчанию = 0
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает 1.
+Ошибка:	Возвращает 0.
+
+---  Смотрите также  ---
+GUICtrlCreateList, GUICtrlCreateInput, GUICtrlCreateEdit, GUICtrlCreateSlider, GUICtrlCreateUpdown

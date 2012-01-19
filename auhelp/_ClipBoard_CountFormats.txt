@@ -1,0 +1,18 @@
+
+_ClipBoard_CountFormats
+
+Retrieves the number of different data formats currently on the clipboard
+
+#Include 
+_ClipBoard_CountFormats()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Reurns the number of different data formats currently on the clipboard
+
+---  Смотрите также  ---
+_ClipBoard_EnumFormats, _ClipBoard_GetPriorityFormat
+
+
+---  Таблица  --- CountClipboardFormats

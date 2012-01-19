@@ -1,0 +1,21 @@
+
+_GDIPlus_PenGetWidth
+
+Retrieve the width of a pen
+
+#Include 
+_GDIPlus_PenGetWidth($hPen)
+
+---  Таблица параметров  ---
+$hPen
+	Handle to a pen object
+
+---  Таблица возвращаемых значений  ---
+Успех:	Width of pen
+Ошибка:	-1 and @error is set
+
+---  Смотрите также  ---
+_GDIPlus_PenSetWidth
+
+
+---  Таблица  --- GdipGetPenWidth

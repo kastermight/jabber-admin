@@ -1,0 +1,25 @@
+
+_WinAPI_CreateCompatibleDC
+
+Creates a memory device context compatible with the specified device
+
+#Include 
+_WinAPI_CreateCompatibleDC($hDC)
+
+---  Таблица параметров  ---
+$hDC
+	Handle to an existing DC. If this handle is 0, the function creates a memory DC compatible with
+		the application's current screen.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to a memory DC
+Ошибка:	0
+
+---  Примечания  ---
+When you no longer need the memory DC, call the _WinAPI_DeleteDC function
+
+---  Смотрите также  ---
+_WinAPI_DeleteDC
+
+
+---  Таблица  --- CreateCompatibleDC

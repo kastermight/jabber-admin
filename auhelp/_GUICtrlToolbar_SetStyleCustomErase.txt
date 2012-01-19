@@ -1,0 +1,20 @@
+
+_GUICtrlToolbar_SetStyleCustomErase
+
+Sets whether the control generates NM_CUSTOMDRAW notification messages
+
+#Include 
+_GUICtrlToolbar_SetStyleCustomErase($hWnd[, $fState = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$fState
+	[опционально] True to set, False to unset
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlToolbar_GetStyleCustomErase

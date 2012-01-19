@@ -1,0 +1,23 @@
+
+_GUICtrlListView_ClickItem
+
+Кликнуть пункт
+
+#Include 
+_GUICtrlListView_ClickItem($hWnd, $iIndex[, $sButton = "left"[, $fMove = False[, $iClicks = 1[, $iSpeed = 1]]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта
+$sButton
+	[опционально] Кликнутая кнопка мыши (left, right)
+$fMove
+	[опционально] Если True, то мышь переместится к пункту. Если False, то мышь не переместится.
+$iClicks
+	[опционально] Количество кликов
+$iSpeed
+	[опционально] Задержка между кликами
+
+---  Смотрите также  ---

@@ -1,0 +1,18 @@
+
+_GUICtrlDTP_SetMCFont
+
+Sets the month calendar font
+
+#Include 
+_GUICtrlDTP_SetMCFont($hWnd, $hFont[, $fRedraw = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hFont
+	Handle to the font that will be set
+$fRedraw
+	[опционально] Specifies whether the control should be redrawn immediately
+
+---  Смотрите также  ---
+_GUICtrlDTP_GetMCFont

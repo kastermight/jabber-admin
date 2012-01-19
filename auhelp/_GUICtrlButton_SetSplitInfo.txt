@@ -1,0 +1,38 @@
+
+_GUICtrlButton_SetSplitInfo
+
+Gets information for a split button control
+
+#Include 
+_GUICtrlButton_SetSplitInfo($hWnd[, $himlGlyph = -1[, $iSplitStyle = $BCSS_ALIGNLEFT[, $iWidth = 0[, $iHeight = 0]]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$himlGlyph
+	[опционально] Handle to the image list
+$iSplitStyle
+	[опционально] The split button style. Value must be one or more of the following flags.
+		  $BCSS_ALIGNLEFT - Align the image or glyph horizontally with the left margin
+		  $BCSS_IMAGE - Draw an icon image as the glyph
+		  $BCSS_NOSPLIT - No split
+		  $BCSS_STRETCH - Stretch glyph, but try to retain aspect ratio
+$iWidth
+	[опционально] Width of the glyph
+$iHeight
+	[опционально] Height of the glyph
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+This function works only with the $BS_SPLITBUTTON and $BS_DEFSPLITBUTTON button styles
+
+Minimum Operating Systems: Windows Vista
+
+---  Смотрите также  ---
+_GUICtrlButton_GetSplitInfo
+
+
+---  Таблица  --- BCM_SETSPLITINFO

@@ -1,0 +1,24 @@
+
+_GUICtrlRichEdit_AppendText
+
+Добавляет текст в конец клиентской области
+
+#Include 
+_GUICtrlRichEdit_AppendText($hWnd, $sText)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$sText
+	Добавляемый текст
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False и устанавливает @error
+@error:	101 - $HWnd не является дескриптором
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_InsertText, _GUICtrlRichEdit_ReplaceText, _GUICtrlRichEdit_SetText, _GUICtrlRichEdit_GetText
+
+
+---  Таблица  --- EM_SETTEXTEX

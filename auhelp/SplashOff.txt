@@ -1,0 +1,11 @@
+
+SplashOff
+
+Убирает всплывающее окно (SplashText или SplashImage).
+
+SplashOff (  )
+
+None.
+
+---  Смотрите также  ---
+SplashImageOn, SplashTextOn

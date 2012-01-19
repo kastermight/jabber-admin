@@ -1,0 +1,22 @@
+
+_GUICtrlRebar_SetBandStyleGripperAlways
+
+Set whether the band will always have a sizing grip, even if it is the only band in the rebar
+
+#Include 
+_GUICtrlRebar_SetBandStyleGripperAlways($hWnd, $iIndex[, $fEnabled = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+$fEnabled
+	[опционально] If True the item state is set, otherwise it is not set
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetBandStyleGripperAlways, _GUICtrlRebar_SetBandStyle

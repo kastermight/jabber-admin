@@ -1,0 +1,27 @@
+
+_Security__OpenProcessToken
+
+Returns the process handle of the calling process
+
+#Include 
+_Security__OpenProcessToken($hProcess, $iAccess)
+
+---  Таблица параметров  ---
+$hProcess
+	A handle to the process whose access token is opened. The process must have been given the
+		$PROCESS_QUERY_INFORMATION access permission.
+$iAccess
+	Specifies an access mask that specifies the requested types of access to the access token.
+
+---  Таблица возвращаемых значений  ---
+Успех:	A pointer to a handle that identifies the newly opened access token when the function returns.
+Ошибка:	0
+
+---  Примечания  ---
+Close the access token handle returned by calling _WinAPI_CloseHandle
+
+---  Смотрите также  ---
+_Security__OpenThreadToken
+
+
+---  Таблица  --- OpenProcessToken

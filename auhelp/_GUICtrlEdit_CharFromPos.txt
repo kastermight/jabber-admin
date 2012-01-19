@@ -1,0 +1,23 @@
+
+_GUICtrlEdit_CharFromPos
+
+Retrieve information about the character closest to a specified point in the client area
+
+#Include 
+_GUICtrlEdit_CharFromPos($hWnd, $iX, $iY)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iX
+	horizontal position
+$iY
+	vertical position
+
+---  Таблица возвращаемых значений  ---
+Успех: Array in the following format:
+
+	[0] - Zero-based index of the character nearest the specified point
+	[1] - Zero-based index of the line that contains the character
+
+---  Смотрите также  ---

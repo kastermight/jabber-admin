@@ -1,0 +1,24 @@
+
+_GUICtrlListView_GetItemText
+
+Возвращает текст пункта или подпункта
+
+#Include 
+_GUICtrlListView_GetItemText($hWnd, $iIndex[, $iSubItem = 0])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта
+$iSubItem
+	[опционально] Индекс подпункта
+
+---  Таблица возвращаемых значений  ---
+Возвращает текст пункта или подпункта
+
+---  Примечания  ---
+Чтобы получить текст пункта, установите iSubItem равным 0. Чтобы получить текст подпункта, установите iSubItem равным индексу подпункта.
+
+---  Смотрите также  ---
+_GUICtrlListView_SetItemText, _GUICtrlListView_GetItemTextArray, _GUICtrlListView_GetItemTextString

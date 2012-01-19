@@ -1,0 +1,17 @@
+
+_GUICtrlToolbar_Customize
+
+Displays the Customize Toolbar dialog box
+
+#Include 
+_GUICtrlToolbar_Customize($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Примечания  ---
+The toolbar must handle the $TBN_QUERYINSERT and $TBN_QUERYDELETE notifications for the Customize Toolbar
+dialog box to appear. If the toolbar does not handle those notifications, $TB_CUSTOMIZE has no effect.
+
+---  Смотрите также  ---

@@ -1,0 +1,23 @@
+
+_SoundResume
+
+Resume a paused sound.
+
+#include 
+_SoundResume ( $aSnd_id )
+
+---  Таблица параметров  ---
+$aSnd_id
+	Sound ID array as returned by _SoundOpen() or a file name
+
+---  Таблица возвращаемых значений  ---
+Успех:	1
+Ошибка:	0 and set @error
+@error:	1 = Pause Failed
+	3 = Invalid Sound ID. Use return array from _SoundOpen() or a valid file name.
+
+---  Примечания  ---
+_SoundPlay() will also resume playing after a sound has been paused in some cases.
+
+---  Смотрите также  ---
+_SoundPause, _SoundPlay, _SoundOpen

@@ -1,0 +1,25 @@
+
+_GUIImageList_SetIconSize
+
+Sets the dimensions of images in an image list and removes all images from the list
+
+#Include 
+_GUIImageList_SetIconSize($hWnd, $iCX, $iCY)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iCX
+	The width, in pixels, of the images in the image list
+$iCY
+	The height, in pixels, of the images in the image list
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+All images in an image list have the same dimensions
+
+---  Смотрите также  ---
+_GUIImageList_GetIconSize

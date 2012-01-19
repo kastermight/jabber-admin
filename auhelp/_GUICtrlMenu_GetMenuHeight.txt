@@ -1,0 +1,20 @@
+
+_GUICtrlMenu_GetMenuHeight
+
+Retrieves the maximum height of a menu
+
+#Include 
+_GUICtrlMenu_GetMenuHeight($hMenu)
+
+---  Таблица параметров  ---
+$hMenu
+	Handle of the menu
+
+---  Таблица возвращаемых значений  ---
+Returns the Maximum height of the menu in pixels
+
+---  Примечания  ---
+When the menu items exceed the space available, scroll bars are automatically used. The default (0) is the screen height.
+
+---  Смотрите также  ---
+_GUICtrlMenu_SetMenuHeight

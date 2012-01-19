@@ -1,0 +1,35 @@
+
+_WinAPI_CreateRoundRectRgn
+
+Создает прямоугольную область с закругленными углами
+
+#Include 
+_WinAPI_CreateRoundRectRgn($iLeftRect, $iTopRect, $iRightRect, $iBottomRect, $iWidthEllipse, $iHeightEllipse)
+
+---  Таблица параметров  ---
+$iLeftRect
+	X-координата левой стороны
+$iTopRect
+	Y-координата верхней стороны
+$iRightRect
+	X-координата правой стороны
+$iBottomRect
+	Y-координата нижней стороны
+$iWidthEllipse
+	Ширина эллипса используется для создания закругленных углов
+$iHeightEllipse
+	Высота эллипса используется для создания закругленных углов
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает дескриптор области
+Ошибка:	0
+
+---  Примечания  ---
+Если вам больше не нужен объект HRGN, то удалите его используя функцию _WinAPI_DeleteObject.
+Координаты областей представлены в виде 27-битных чисел.
+
+---  Смотрите также  ---
+_WinAPI_CreateRectRgn, _WinAPI_SetWindowRgn, _WinAPI_DeleteObject, _WinAPI_CombineRgn, _WinAPI_GetWindowRgn
+
+
+---  Таблица  --- CreateRoundRectRgn

@@ -1,0 +1,22 @@
+
+_GUICtrlRebar_SetBandStyleChildEdge
+
+Set whether the band has an edge at the top and bottom of the child window
+
+#Include 
+_GUICtrlRebar_SetBandStyleChildEdge($hWnd, $iIndex[, $fEnabled = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+$fEnabled
+	[опционально] If True the item state is set, otherwise it is not set
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetBandStyleChildEdge, _GUICtrlRebar_SetBandStyle

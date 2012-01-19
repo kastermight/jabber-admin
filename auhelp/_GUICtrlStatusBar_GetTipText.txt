@@ -1,0 +1,22 @@
+
+_GUICtrlStatusBar_GetTipText
+
+Retrieves the ToolTip text for a part
+
+#Include 
+_GUICtrlStatusBar_GetTipText($hWnd, $iPart)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iPart
+	Zero based part index
+
+---  Таблица возвращаемых значений  ---
+Returns the Part text
+
+---  Примечания  ---
+The status bar must be created with the $SBARS_TOOLTIPS style to enable ToolTips
+
+---  Смотрите также  ---
+_GUICtrlStatusBar_SetTipText

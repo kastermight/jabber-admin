@@ -1,0 +1,20 @@
+
+_WinAPI_SetLastError
+
+Sets the last-error code for the calling thread
+
+#Include 
+_WinAPI_SetLastError($iErrCode)
+
+---  Таблица параметров  ---
+$iErrCode
+	The last error code for the thread
+
+---  Примечания  ---
+The last error code is kept in thread local storage so that multiple threads do not overwrite each other's
+values.
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- SetLastError

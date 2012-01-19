@@ -1,0 +1,20 @@
+
+_GUICtrlMenu_SetMenuData
+
+Sets the application defined for the menu
+
+#Include 
+_GUICtrlMenu_SetMenuData($hMenu, $iData)
+
+---  Таблица параметров  ---
+$hMenu
+	Handle of the menu
+$iData
+	Application defined data
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlMenu_GetMenuData

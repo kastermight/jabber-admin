@@ -1,0 +1,18 @@
+
+Break
+
+Включает или отключает возможность завершения работы скрипта с помощью меню значка в системном трее.
+
+Break ( mode )
+
+---  Таблица параметров  ---
+mode
+	Устанавливает возможность выхода с помощью меню значка в системном трее:
+	  1 = выход разрешён (по умолчанию)
+	  0 = выход запрещён.
+
+---  Примечания  ---
+Нет
+<!-- Wtf?
+Please only disable break with good reason.
+AutoIt normally creates a tray icon when running, and right-clicking this icon allows the user to pause or exit the script.  If Break is disabled (0), then the user cannot terminate the script this way.-->

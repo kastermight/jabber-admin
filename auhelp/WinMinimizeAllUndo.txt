@@ -1,0 +1,14 @@
+
+WinMinimizeAllUndo
+
+Отмена предыдущей использованной функции WinMinimizeAll.
+
+WinMinimizeAllUndo (  )
+
+None.
+
+---  Примечания  ---
+Send("#+m") возможная альтернатива (Win+Shift+M, Win+D).
+
+---  Смотрите также  ---
+WinMinimizeAll, WinSetState

@@ -1,0 +1,22 @@
+
+_DebugReportVar
+
+Writes to debugging session the content of a variable
+
+#include 
+_DebugReportVar ($sVarname, $vVar [,$bErrExt = False])
+
+---  Таблица параметров  ---
+$sVarname
+	string representing name of the variable or a comment
+$vVar
+	the variable to be reported
+$bErrExt
+	[опционально] True if @error and @extended must be also displayed
+
+---  Примечания  ---
+If no _DebugSetup() have been issued the function always returns.
+@error of the caller is preserved.
+
+---  Смотрите также  ---
+_DebugSetup

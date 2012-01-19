@@ -1,0 +1,24 @@
+
+_GUICtrlToolbar_EnableButton
+
+Enables or disables the specified button
+
+#Include 
+_GUICtrlToolbar_EnableButton($hWnd, $iCommandID[, $fEnable = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+$fEnable
+	[опционально] Enable flag:
+		 True - Button will be enabled
+		False - Button will be disabled
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlToolbar_HideButton

@@ -1,0 +1,20 @@
+
+_GUICtrlTreeView_GetPrevSibling
+
+Returns the previous item before the calling item at the same level
+
+#Include 
+_GUICtrlTreeView_GetPrevSibling($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hItem
+	Handle to the item
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to the previous sibling item
+Ошибка:	0
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetNextSibling

@@ -1,0 +1,20 @@
+
+_GUICtrlTreeView_GetSelected
+
+Возвращает состояние пункта, выделенный или не выделенный
+
+#Include 
+_GUICtrlTreeView_GetSelected($hWnd, $hItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$hItem
+	Дескриптор пункта
+
+---  Таблица возвращаемых значений  ---
+True:	Пункт выделен
+False:	Пункт не выделен
+
+---  Смотрите также  ---
+_GUICtrlTreeView_SetSelected

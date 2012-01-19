@@ -1,0 +1,22 @@
+
+StringRight
+
+Возвращает указанное число символов строки справа.
+
+StringRight ( "string", count )
+
+---  Таблица параметров  ---
+string
+	Используемая строка.
+count
+	Количество возвращаемых символов.
+
+---  Таблица возвращаемых значений  ---
+Возвращает строку, содержащую самую правую часть строки по указанному количеству символов.
+
+---  Примечания  ---
+Если count превышает длину строки, то возвращается вся строка.
+Если count отрицательное число, то возвращается пустая строка.
+
+---  Смотрите также  ---
+StringInStr, StringLeft, StringLen, StringLower, StringMid, StringTrimLeft, StringTrimRight, StringUpper, StringCompare, StringReplace, StringSplit

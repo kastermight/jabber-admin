@@ -1,0 +1,30 @@
+
+_GUICtrlListView_SetImageList
+
+Assigns an image list to the control
+
+#Include 
+_GUICtrlListView_SetImageList($hWnd, $hHandle[, $iType = 0])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hHandle
+	Handle to the image list to assign
+$iType
+	[опционально] Type of image list:
+		0 - Image list with large icons
+		1 - Image list with small icons
+		2 - Image list with state images
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle to the previous image list
+Ошибка:	0
+
+---  Примечания  ---
+The current image list will be destroyed when the control is destroyed unless you set the $LVS_SHAREIMAGELISTS
+style. If you use this message to replace one image list with another your application must explicitly destroy
+all image lists other than the current one.
+
+---  Смотрите также  ---
+_GUICtrlListView_GetImageList

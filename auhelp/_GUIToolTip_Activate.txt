@@ -1,0 +1,17 @@
+
+_GUIToolTip_Activate
+
+Activates or deactivates the control
+
+#Include 
+_GUIToolTip_Activate($hWnd[, $fActivate = True])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$fActivate
+	[опционально] Activation flag:
+		True - Activate ToolTip
+		False - Deactivate ToolTip
+
+---  Смотрите также  ---

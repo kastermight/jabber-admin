@@ -1,0 +1,21 @@
+
+HWnd
+
+Преобразовывает выражение в дескриптор HWND.
+
+HWnd ( expression )
+
+---  Таблица параметров  ---
+expression
+	Выражение для преобразования в дескриптор HWND.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Если выражение может быть преобразовано в HWND, то возвращается представление выражения в виде HWND.
+Ошибка:	Если выражение не соответствует какому-либо окну, возвращается 0 (NULL) HWND и значение @error устанавливается равным 1.
+
+---  Примечания  ---
+Double numbers can not be converted to an HWND.
+No literal string should be converted to an HWND because there is no guarantee that a given window will have the same HWND ever again.  This is not strictly forbidden, but it is a programming mistake and should be avoided.
+
+---  Смотрите также  ---
+Int, String, Number, Ptr

@@ -1,0 +1,27 @@
+
+_GDIPlus_ImageSaveToFileEx
+
+Save an image to file
+
+#Include 
+_GDIPlus_ImageSaveToFileEx($hImage, $sFileName, $sEncoder[, $pParams = 0])
+
+---  Таблица параметров  ---
+$hImage
+	Handle to an image object
+$sFileName
+	Fully qualified image file name
+$sEncoder
+	GUID string of encoder to be used
+$pParams
+	[опционально] Pointer to a $tagGDIPPENCODERPARAMS structure
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GDIPlus_ImageLoadFromFile, _GDIPlus_ImageSaveToFile, $tagGDIPPENCODERPARAMS
+
+
+---  Таблица  --- GdipSaveImageToFile

@@ -1,0 +1,44 @@
+
+_GUICtrlRichEdit_GetParaTabStops
+
+Gets the tabstops of (first) selected paragraph or (if no selection) of the current paragraph
+
+#Include 
+_GUICtrlRichEdit_GetParaTabStops($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	A string consisting of values separated by ; (semicolons).
+	value 1 - number of tabstops
+	values 2 to  + 1 - description of a tabstop:
+	 absolute position of a tab stop (in space units)
+	 kind of tab
+	   l - left tab
+	   c - center tab
+	   r - decimal tab
+	   b - bar tab (a vertical bar, as in Word)
+	 kind of dot leader
+	   . - dotted leader
+	   - - dashed leader
+	   _ - underline leader
+	   = - double line leader
+	   t - thick-line leader
+	   a space - no leader
+	Value  + 2 - scope:
+	   a - all (or only) selected paragraphs have these settings
+	   f - the first selected paragraph has these settings, but other(s) don't
+	   c - the current paragraph has these settings
+Ошибка:	"" and sets @error
+@error:	101 - $hWnd is not a handle
+
+---  Примечания  ---
+To enter a tab into a control, press Ctrl_Tab
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_SetParaTabStops
+
+
+---  Таблица  --- EM_GETPARAFORMAT

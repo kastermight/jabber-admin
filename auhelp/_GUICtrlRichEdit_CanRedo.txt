@@ -1,0 +1,22 @@
+
+_GUICtrlRichEdit_CanRedo
+
+Can an undone action be redone?
+
+#Include 
+_GUICtrlRichEdit_CanRedo($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	True or False
+Ошибка:	False and sets @error
+@error:	101 - $hWnd is not a handle
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_Redo, _GUICtrlRichEdit_SetUndoLimit
+
+
+---  Таблица  --- EM_CANREDO

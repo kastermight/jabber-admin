@@ -1,0 +1,20 @@
+
+_GUICtrlMenu_SetMenuHeight
+
+Sets the maximum height of the menu
+
+#Include 
+_GUICtrlMenu_SetMenuHeight($hMenu, $iHeight)
+
+---  Таблица параметров  ---
+$hMenu
+	Handle of the menu
+$iHeight
+	Maximum height of the menu
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlMenu_GetMenuHeight

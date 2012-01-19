@@ -1,0 +1,21 @@
+
+_GUICtrlSlider_Destroy
+
+Delete the control
+
+#Include 
+_GUICtrlSlider_Destroy(ByRef $hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: True, Handle is set to 0
+Ошибка: False
+
+---  Примечания  ---
+Restricted to only be used on slider created with _GUICtrlSlider_Create
+
+---  Смотрите также  ---
+_GUICtrlSlider_Create

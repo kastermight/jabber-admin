@@ -1,0 +1,22 @@
+
+_EventLog__Count
+
+Retrieves the number of records in the event log
+
+#Include 
+_EventLog__Count($hEventLog)
+
+---  Таблица параметров  ---
+$hEventLog
+	A handle to the event log
+
+---  Таблица возвращаемых значений  ---
+Успех:	Number of records in the event log
+Ошибка:	-1
+
+---  Примечания  ---
+The oldest record in an event log is not necessarily record number 1. To determine the record number of the
+oldest record in an event log, use the _EventLog__Oldest function.
+
+---  Смотрите также  ---
+_EventLog__Oldest, _EventLog__Full

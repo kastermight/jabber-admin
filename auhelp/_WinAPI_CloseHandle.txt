@@ -1,0 +1,21 @@
+
+_WinAPI_CloseHandle
+
+Закрывает открытый дескриптор объекта
+
+#Include 
+_WinAPI_CloseHandle($hObject)
+
+---  Таблица параметров  ---
+$hObject
+	Дескриптор объекта для закрытия
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_WinAPI_CreateFile, _WinAPI_FlushFileBuffers, _WinAPI_GetFileSizeEx, _WinAPI_ReadFile, _WinAPI_SetEndOfFile, _WinAPI_SetFilePointer, _WinAPI_WriteFile
+
+
+---  Таблица  --- CloseHandle

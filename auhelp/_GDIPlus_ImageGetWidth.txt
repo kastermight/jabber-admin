@@ -1,0 +1,21 @@
+
+_GDIPlus_ImageGetWidth
+
+Get the image width
+
+#Include 
+_GDIPlus_ImageGetWidth($hImage)
+
+---  Таблица параметров  ---
+$hImage
+	Handle to am image object
+
+---  Таблица возвращаемых значений  ---
+Успех:	Image width, in pixels
+Ошибка:	-1 and @error is set
+
+---  Смотрите также  ---
+_GDIPlus_ImageGetHeight
+
+
+---  Таблица  --- GdipGetImageWidth

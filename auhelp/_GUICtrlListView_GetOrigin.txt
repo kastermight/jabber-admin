@@ -1,0 +1,19 @@
+
+_GUICtrlListView_GetOrigin
+
+Возвращает текущие координаты начала в ListView
+
+#Include 
+_GUICtrlListView_GetOrigin($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Возвращает массив следующего формата:
+		[0] - X-координата
+		[1] - Y-координата
+
+---  Смотрите также  ---
+_GUICtrlListView_GetOriginX, _GUICtrlListView_GetOriginY

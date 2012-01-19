@@ -1,0 +1,20 @@
+
+_GUICtrlRebar_GetBarInfo
+
+Retrieves information about the rebar control and the image list it uses
+
+#Include 
+_GUICtrlRebar_GetBarInfo($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+
+---  Таблица возвращаемых значений  ---
+Returns the Handle to an image list. The rebar control will use the specified image list to obtain images
+
+---  Примечания  ---
+Currently, rebar controls support only image list handle
+
+---  Смотрите также  ---
+_GUICtrlRebar_SetBarInfo

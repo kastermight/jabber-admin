@@ -1,0 +1,23 @@
+
+_GDIPlus_EncodersGetParamList
+
+Get the parameter list for a specified image encoder
+
+#Include 
+_GDIPlus_EncodersGetParamList($hImage, $sEncoder)
+
+---  Таблица параметров  ---
+$hImage
+	Handle to an image object
+$sEncoder
+	GUID string of encoder to be used
+
+---  Таблица возвращаемых значений  ---
+Успех:	$tagGDIPPENCODERPARAMS structure
+Ошибка:	0
+
+---  Смотрите также  ---
+_GDIPlus_EncodersGetParamListSize, $tagGDIPENCODERPARAMS
+
+
+---  Таблица  --- GdipGetEncoderParameterList

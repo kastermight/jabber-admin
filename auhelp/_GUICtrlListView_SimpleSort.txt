@@ -1,0 +1,27 @@
+
+_GUICtrlListView_SimpleSort
+
+Сортировка ListView (ограниченно)
+
+#Include 
+_GUICtrlListView_SimpleSort($hWnd, ByRef $vDescending, $iCol)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$vDescending
+	Могут быть следующие значения:
+		 True - Сортировка по убыванию
+		 False - Сортировка по возрастанию
+		 Array - в следующем формате:
+		[0] - Первая колонка
+		[1] - Вторая колонка
+		[n] - Последняя колонка
+$iCol
+	Номер колонки
+
+---  Примечания  ---
+Это базовые функции сортировки, экспертные способы сортировки смотрите в GUICtrlRegisterListViewSort
+
+---  Смотрите также  ---
+GUICtrlRegisterListViewSort

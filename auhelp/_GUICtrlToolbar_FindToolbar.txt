@@ -1,0 +1,19 @@
+
+_GUICtrlToolbar_FindToolbar
+
+Finds a specific toolbar
+
+#Include 
+_GUICtrlToolbar_FindToolbar($hWnd, $sText)
+
+---  Таблица параметров  ---
+$hWnd
+	Window handle or text of window
+$sText
+	Button text to search for
+
+---  Таблица возвращаемых значений  ---
+Успех: Handle of the toolbar
+Ошибка: 0
+
+---  Смотрите также  ---

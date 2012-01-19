@@ -1,0 +1,23 @@
+
+_GUICtrlRebar_SetBarInfo
+
+Sets the characteristics of a rebar control
+
+#Include 
+_GUICtrlRebar_SetBarInfo($hWnd, $himl)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$himl
+	Handle to the Image list
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+Currently, rebar controls support only image list handle
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetBarInfo

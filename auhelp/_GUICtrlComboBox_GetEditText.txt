@@ -1,0 +1,22 @@
+
+_GUICtrlComboBox_GetEditText
+
+Get the text from the edit control of a ComboBox
+
+#Include 
+_GUICtrlComboBox_GetEditText($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех:	String from the edit control
+Ошибка:	Empty string
+
+---  Примечания  ---
+Minimum OS - Windows XP.
+If the message is sent to a ComboBox with the $CBS_DROPDOWN or $CBS_DROPDOWNLIST style the Function will fail.
+
+---  Смотрите также  ---
+_GUICtrlComboBox_SetEditText, _GUICtrlComboBoxEx_SetEditText

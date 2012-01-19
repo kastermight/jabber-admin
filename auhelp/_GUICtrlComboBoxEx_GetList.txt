@@ -1,0 +1,20 @@
+
+_GUICtrlComboBoxEx_GetList
+
+Retrieves all items from the list portion of a ComboBox control
+
+#Include 
+_GUICtrlComboBoxEx_GetList($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: Delimited string of all ComboBox items
+
+---  Примечания  ---
+Default delimiter is "|" this can be change using the Opt("GUIDataSeparatorChar", "new delimiter")
+
+---  Смотрите также  ---
+_GUICtrlComboBoxEx_GetListArray

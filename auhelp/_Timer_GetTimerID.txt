@@ -1,0 +1,18 @@
+
+_Timer_GetTimerID
+
+Returns the Timer ID from $iwParam
+
+#Include 
+_Timer_GetTimerID($iwParam)
+
+---  Таблица параметров  ---
+$iwParam
+	Specifies the timer identifier event.
+
+---  Таблица возвращаемых значений  ---
+Успех:	The Timer ID
+Ошибка:	0
+
+---  Смотрите также  ---
+_Timer_SetTimer

@@ -1,0 +1,20 @@
+
+_Date_Time_FileTimeToStr
+
+Decode a file time to a date/time string
+
+#Include 
+_Date_Time_FileTimeToStr(ByRef $tFileTime [, $bFmt = 0])
+
+---  Таблица параметров  ---
+$tFileTime
+	$tagFILETIME structure
+$bFmt
+	[опционально] 0 returns mm/dd/yyyy hh:mm:ss (Default)
+	1 returns yyyy/mm/dd hh:mm:ss
+
+---  Таблица возвращаемых значений  ---
+Returns a Date/time string formatted according to $bFmt
+
+---  Смотрите также  ---
+$tagFILETIME

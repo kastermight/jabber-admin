@@ -1,0 +1,21 @@
+
+_WinAPI_GetWindowPlacement
+
+Retrieves the placement of the window for Min, Max, and normal positions
+
+#Include 
+_WinAPI_GetWindowPlacement($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle of the window
+
+---  Таблица возвращаемых значений  ---
+Успех:	$tagWINDOWPLACEMENT structure with the placement coordinates
+Ошибка:	0, @error = 1, @extended = _WinAPI_GetLastError()
+
+---  Смотрите также  ---
+_WinAPI_SetWindowPlacement, $tagWINDOWPLACEMENT
+
+
+---  Таблица  --- GetWindowPlacement

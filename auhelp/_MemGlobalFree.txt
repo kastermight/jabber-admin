@@ -1,0 +1,21 @@
+
+_MemGlobalFree
+
+Frees the specified global memory object and invalidates its handle
+
+#Include 
+_MemGlobalFree($hMem)
+
+---  Таблица параметров  ---
+$hMem
+	Handle to the global memory object
+
+---  Таблица возвращаемых значений  ---
+Успех:	0
+Ошибка:	$hMem
+
+---  Смотрите также  ---
+_MemGlobalAlloc
+
+
+---  Таблица  --- GlobalFree

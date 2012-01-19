@@ -1,0 +1,19 @@
+
+_GUICtrlTreeView_SetNormalImageList
+
+Устанавливает обычный список изображений для TreeView
+
+#Include 
+_GUICtrlTreeView_SetNormalImageList($hWnd, $hImageList)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$hImageList
+	Дескриптор списка изображений. Если 0, то все изображения будут удалены
+
+---  Таблица возвращаемых значений  ---
+Возвращает дескриптор предыдущего списка изображений
+
+---  Смотрите также  ---
+_GUICtrlTreeView_GetNormalImageList

@@ -1,0 +1,22 @@
+
+_GUICtrlMonthCal_SetMaxSelCount
+
+Sets the maximum number of days that can be selected in a month calendar control
+
+#Include 
+_GUICtrlMonthCal_SetMaxSelCount($hWnd, $iMaxSel)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iMaxSel
+	Value of type int that will be set to represent the maximum number of days that can be selected
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Примечания  ---
+This will fail if applied to a month calendar control that does not use the $MCS_MULTISELECT style
+
+---  Смотрите также  ---

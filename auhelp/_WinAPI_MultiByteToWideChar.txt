@@ -1,0 +1,37 @@
+
+_WinAPI_MultiByteToWideChar
+
+Maps a character string to a wide-character (Unicode) string
+
+#Include 
+_WinAPI_MultiByteToWideChar($sText [, $iCodePage = 0 [, $iFlags = 0 [, $bRetString = False]]])
+
+---  Таблица параметров  ---
+$sText
+	Text or DllStruct containing multibyte text to be converted
+$iCodePage
+	[опционально] Specifies the code page to be used to perform the conversion:
+		0 - ANSI code page
+		1 - OEM code page
+		2 - Macintosh code page
+		3 - The Windows ANSI code page for the current thread
+		42 - Symbol code page
+		65000 - UTF-7
+		65001 - UTF-8
+$iFlags
+	[опционально] Flags that indicate whether to translate to precomposed or composite wide characters:
+		$MB_PRECOMPOSED - Always use precomposed characters
+		$MB_COMPOSITE - Always use composite characters
+		$MB_USEGLYPHCHARS - Use glyph characters instead of control characters
+$bRetString
+	[опционально] Flags that indicate whether to return a String or a DllStruct (default False : Structure)
+
+---  Таблица возвращаемых значений  ---
+Успех:	String or DllStruct that contains the Unicode character string
+Ошибка:	set @error
+
+---  Смотрите также  ---
+_WinAPI_WideCharToMultiByte, _WinAPI_MultiByteToWideCharEx
+
+
+---  Таблица  --- MultiByteToWideChar

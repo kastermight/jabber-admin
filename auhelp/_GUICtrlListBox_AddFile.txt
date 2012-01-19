@@ -1,0 +1,20 @@
+
+_GUICtrlListBox_AddFile
+
+Adds the specified filename that contains a directory listing
+
+#Include 
+_GUICtrlListBox_AddFile($hWnd, $sFile)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$sFile
+	Name of the file to add
+
+---  Таблица возвращаемых значений  ---
+Успех: Zero based index of the file that was added
+Ошибка: -1
+
+---  Смотрите также  ---
+_GUICtrlListBox_AddString, _GUICtrlListBox_DeleteString, _GUICtrlListBox_InitStorage

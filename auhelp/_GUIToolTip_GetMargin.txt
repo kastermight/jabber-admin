@@ -1,0 +1,21 @@
+
+_GUIToolTip_GetMargin
+
+Retrieves the top, left, bottom, and right margins
+
+#Include 
+_GUIToolTip_GetMargin($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: Array with the following format:
+		[0] - Distance between top border and top of text, in pixels
+		[1] - Distance between left border and left end of text, in pixels
+		[2] - Distance between bottom border and bottom of text, in pixels
+		[3] - Distance between right border and right end of text, in pixels
+
+---  Смотрите также  ---
+_GUIToolTip_GetMarginEx, _GUIToolTip_SetMargin

@@ -1,0 +1,21 @@
+
+_GUICtrlEdit_CanUndo
+
+Определяет существует ли в очереди отмены какое либо действие
+
+#Include 
+_GUICtrlEdit_CanUndo($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+True: Если существует действия в очереди отмены
+False: Если очередь отмены пуста
+
+---  Примечания  ---
+Если очередь отмены не пуста, то используйте _GUICtrlEdit_Undo, чтобы отменить последнюю операцию.
+
+---  Смотрите также  ---
+_GUICtrlEdit_EmptyUndoBuffer, _GUICtrlEdit_GetModify, _GUICtrlEdit_SetModify, _GUICtrlEdit_Undo

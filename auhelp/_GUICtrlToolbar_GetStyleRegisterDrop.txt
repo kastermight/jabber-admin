@@ -1,0 +1,18 @@
+
+_GUICtrlToolbar_GetStyleRegisterDrop
+
+Indicates that the control generates TBN_GETOBJECT notification messages
+
+#Include 
+_GUICtrlToolbar_GetStyleRegisterDrop($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+True: Style is present
+False: Style is not present
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetStyleRegisterDrop

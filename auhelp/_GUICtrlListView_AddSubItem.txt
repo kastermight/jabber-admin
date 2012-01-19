@@ -1,0 +1,26 @@
+
+_GUICtrlListView_AddSubItem
+
+Добавляет новый подпункт в ListView
+
+#Include 
+_GUICtrlListView_AddSubItem($hWnd, $iIndex, $sText, $iSubItem[, $iImage = -1])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта
+$sText
+	Текст пункта или подпункта
+$iSubItem
+	Индекс подпункта
+$iImage
+	[опционально] Индекс иконки списка изображений
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlListView_AddItem

@@ -1,0 +1,32 @@
+
+_WinAPI_CreateRectRgn
+
+Создаёт прямоугольную область
+
+#Include 
+_WinAPI_CreateRectRgn($iLeftRect, $iTopRect, $iRightRect, $iBottomRect)
+
+---  Таблица параметров  ---
+$iLeftRect
+	X-координата левой стороны
+$iTopRect
+	Y-координата верхней стороны
+$iRightRect
+	X-координата правой стороны
+$iBottomRect
+	Y-координата нижней стороны
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает дескриптор области
+Ошибка:	0
+
+---  Примечания  ---
+Если вам больше не нужен объект HRGN, то удалите его используя функцию _WinAPI_DeleteObject.
+Координаты областей представлены в виде 27-битных чисел.
+The region will be exclusive of the bottom and right edges.
+
+---  Смотрите также  ---
+_WinAPI_CreateRoundRectRgn, _WinAPI_SetWindowRgn, _WinAPI_DeleteObject, _WinAPI_CombineRgn, _WinAPI_GetWindowRgn
+
+
+---  Таблица  --- CreateRectRgn

@@ -1,0 +1,24 @@
+
+_GUICtrlStatusBar_GetTextLengthEx
+
+Retrieves the uFlag of a part
+
+#Include 
+_GUICtrlStatusBar_GetTextLengthEx($hwnd, $iPart)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iPart
+	Zero based part index
+
+---  Таблица возвращаемых значений  ---
+Returns the Type of drawing operation. The type can be one of the following values:
+		0 - The text is drawn with a border to appear lower than the plane of the window
+		$SBT_NOBORDERS - The text is drawn without borders
+		$SBT_OWNERDRAW - The text is drawn by the parent window
+		$SBT_POPOUT - The text is drawn with a border to appear higher than the plane of the window
+		$SBT_RTLREADING - The text will be displayed in the opposite direction to the text in the parent window
+
+---  Смотрите также  ---
+_GUICtrlStatusBar_GetTextFlags, _GUICtrlStatusBar_GetTextLength

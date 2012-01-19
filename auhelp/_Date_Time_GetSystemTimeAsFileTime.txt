@@ -1,0 +1,15 @@
+
+_Date_Time_GetSystemTimeAsFileTime
+
+Retrieves the current system date and time expressed in UTC
+
+#Include 
+_Date_Time_GetSystemTimeAsFileTime()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Returns $tagFILETIME structure with the current system date and time
+
+---  Смотрите также  ---
+$tagFILETIME

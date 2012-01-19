@@ -1,0 +1,24 @@
+
+_GUICtrlListView_SetOutlineColor
+
+Устанавливает цвет рамки пунктов ListView
+
+#Include 
+_GUICtrlListView_SetOutlineColor($hWnd, $iColor)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iColor
+	Цвет устанавливаемой рамки
+
+---  Таблица возвращаемых значений  ---
+Возвращает предыдущий цвет рамки
+
+---  Примечания  ---
+Минимальная ОС - Windows XP.
+
+ListView должен иметь стиль $LVS_EX_BORDERSELECT
+
+---  Смотрите также  ---
+_GUICtrlListView_GetOutlineColor

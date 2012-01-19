@@ -1,0 +1,17 @@
+
+_GUICtrlListView_GetItemCount
+
+Возвращает количество пунктов в ListView
+
+#Include 
+_GUICtrlListView_GetItemCount($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Возвращает количество пунктов
+
+---  Смотрите также  ---
+_GUICtrlListView_SetItemCount

@@ -1,0 +1,16 @@
+
+_WinAPI_SubLangId
+
+Extract sublanguage id from a language id
+
+#Include 
+_WinAPI_SubLangId($lgid)
+
+---  Таблица параметров  ---
+$lgid
+	Language id
+
+---  Таблица возвращаемых значений  ---
+Returns a Sub-Language id
+
+---  Смотрите также  ---

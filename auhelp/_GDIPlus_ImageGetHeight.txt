@@ -1,0 +1,21 @@
+
+_GDIPlus_ImageGetHeight
+
+Get the image height
+
+#Include 
+_GDIPlus_ImageGetHeight($hImage)
+
+---  Таблица параметров  ---
+$hImage
+	Handle to an image object
+
+---  Таблица возвращаемых значений  ---
+Успех:	Image height, in pixels
+Ошибка:	-1 and @error is set
+
+---  Смотрите также  ---
+_GDIPlus_ImageGetWidth
+
+
+---  Таблица  --- GdipGetImageHeight

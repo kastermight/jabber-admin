@@ -1,0 +1,18 @@
+
+_GUICtrlRebar_SetColorScheme
+
+Retrieves a rebar control's default background color
+
+#Include 
+_GUICtrlRebar_SetColorScheme($hWnd, $BtnHighlight, $BtnShadow)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$BtnHighlight
+	COLORREF value that represents the highlight color of the buttons
+$BtnShadow
+	COLORREF value that represents the shadow color of the buttons
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetColorScheme

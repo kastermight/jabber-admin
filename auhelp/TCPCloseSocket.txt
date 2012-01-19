@@ -1,0 +1,18 @@
+
+TCPCloseSocket
+
+Closes a TCP socket.
+
+TCPCloseSocket ( socket )
+
+---  Таблица параметров  ---
+socket
+	The socket identifier (SocketID) as returned by a TCPListen or TCPAccept functions.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns 1.
+Ошибка:	Returns 0 and set @error
+@error:	windows API WSAGetError return value (see MSDN).
+
+---  Смотрите также  ---
+TCPStartup, TCPListen, TCPAccept, TCPShutdown

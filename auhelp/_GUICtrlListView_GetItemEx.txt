@@ -1,0 +1,20 @@
+
+_GUICtrlListView_GetItemEx
+
+Возвращает все или некоторые атрибуты пунктов
+
+#Include 
+_GUICtrlListView_GetItemEx($hWnd, ByRef $tItem)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$tItem
+	Структура $tagLVITEM, определяющая возвращаемую информацию
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlListView_GetItem, $tagLVITEM

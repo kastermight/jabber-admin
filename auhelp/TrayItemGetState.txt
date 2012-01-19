@@ -1,0 +1,16 @@
+
+TrayItemGetState
+
+Возвращает текущее состояние элемента меню трея.
+
+TrayItemGetState ( [controlID] )
+
+---  Таблица параметров  ---
+controlID
+	[опционально] Идентификатор элемента (controlID), возвращаемый функциями TrayCreateItem or TrayCreateMenu.
+
+---  Таблица возвращаемых значений  ---
+Возвращает состояние. Смотрите значения в таблице TrayItemSetState table.
+
+---  Смотрите также  ---
+TrayItemSetState, TrayItemGetHandle

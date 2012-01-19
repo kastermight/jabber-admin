@@ -1,0 +1,23 @@
+
+_ClipBoard_GetOpenWindow
+
+Retrieves the handle to the window that currently has the clipboard open
+
+#Include 
+_ClipBoard_GetOpenWindow()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle to the window that has the clipboard open
+Ошибка:	Zero if no window has the clipboard open
+
+---  Примечания  ---
+If an application or DLL specifies a NULL window handle when calling the _ClipBoard_Open function, the clipboard
+is opened but is not associated with a window. In such a case, _ClipBoard_GetOpenWindow returns 0.
+
+---  Смотрите также  ---
+_ClipBoard_GetOwner, _ClipBoard_Open
+
+
+---  Таблица  --- GetOpenClipboardWindow

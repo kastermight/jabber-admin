@@ -1,0 +1,22 @@
+
+_GDIPlus_Shutdown
+
+Очищает ресурсы используемые Microsoft Windows GDI+
+
+#Include 
+_GDIPlus_Shutdown()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+Вы должны избавиться от всех созданных вами объектов GDI+, прежде чем вызвать _GDIPlus_Shutdown
+
+---  Смотрите также  ---
+_GDIPlus_Startup
+
+
+---  Таблица  --- GdiplusShutdown

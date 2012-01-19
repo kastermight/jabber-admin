@@ -1,0 +1,25 @@
+
+_GDIPlus_BrushGetType
+
+Retrieve the type of Brush object
+
+#Include 
+_GDIPlus_BrushGetType($hBrush)
+
+---  Таблица параметров  ---
+$hBrush
+	Handle to a Brush object
+
+---  Таблица возвращаемых значений  ---
+Успех:	Brush type:
+	0 - Solid color
+	1 - Hatch fill
+	2 - Texture fill
+	3 - Path gradient
+	4 - Linear gradient
+Ошибка:	-1 and @error is set
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GdipGetBrushType

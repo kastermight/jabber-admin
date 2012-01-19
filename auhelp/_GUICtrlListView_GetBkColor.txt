@@ -1,0 +1,17 @@
+
+_GUICtrlListView_GetBkColor
+
+Возвращает цвет фона ListView
+
+#Include 
+_GUICtrlListView_GetBkColor($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Возвращает шестнадцатеричный RGB цвет фона
+
+---  Смотрите также  ---
+_GUICtrlListView_SetBkColor

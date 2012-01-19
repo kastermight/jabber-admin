@@ -1,0 +1,21 @@
+
+_GUICtrlIpAddress_Destroy
+
+Удаляет элемент
+
+#Include 
+_GUICtrlIpAddress_Destroy(ByRef $hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех: Возвращает True, дескриптор устанавливает в 0
+Ошибка: Возвращает False
+
+---  Примечания  ---
+Ограничение, используется только для элемента IP Address созданного функцией _GUICtrlIpAddress_Create
+
+---  Смотрите также  ---
+_GUICtrlIpAddress_Create

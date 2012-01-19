@@ -1,0 +1,29 @@
+
+_WinAPI_DrawLine
+
+Рисует линию
+
+#Include 
+_WinAPI_DrawLine($hDC, $iX1, $iY1, $iX2, $iY2)
+
+---  Таблица параметров  ---
+$hDC
+	Дескриптор контекста устройства
+$iX1
+	X-координата начала линии.
+$iY1
+	Y-координата начала линии.
+$iX2
+	X-координата конца линии.
+$iY2
+	Y-координата конца линии.
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+Internally calls _WinAPI_MoveTo() and _WinAPI_LineTo(), see _WinAPI_LineTo() for details
+
+---  Смотрите также  ---
+_WinAPI_MoveTo, _WinAPI_LineTo, _WinAPI_SelectObject, _WinAPI_CreatePen

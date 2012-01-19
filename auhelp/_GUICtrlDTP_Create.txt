@@ -1,0 +1,43 @@
+
+_GUICtrlDTP_Create
+
+Create a DTP control
+
+#Include 
+_GUICtrlDTP_Create($hWnd, $iX, $iY[, $iWidth = 120[, $iHeight = 21[, $iStyle = 0x00000000[, $iExStyle = 0x00000000]]]])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to parent or owner window
+$iX
+	Horizontal position of the control
+$iY
+	Vertical position of the control
+$iWidth
+	[опционально] Control width
+$iHeight
+	[опционально] Control height
+$iStyle
+	[опционально] Control styles:
+		$DTS_APPCANPARSE - Allows the owner to parse user input and take action
+		$DTS_LONGDATEFORMAT - Displays the date in long format
+		$DTS_RIGHTALIGN - The calendar will be right-aligned
+		$DTS_SHOWNONE - Displays a check box that can be checked once a date is entered
+		$DTS_SHORTDATEFORMAT - Displays the date in short format
+		$DTS_SHORTDATECENTURYFORMAT - The year is a four-digit field
+		$DTS_TIMEFORMAT - Displays the time
+		$DTS_UPDOWN - Places an up-down control to the right of the control
+
+		Forced: $WS_CHILD, $WS_VISIBLE
+$iExStyle
+	[опционально] Control external styles
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle to the DTP control
+Ошибка:	0
+
+---  Примечания  ---
+This function is for Advanced users and for learning how the control works.
+
+---  Смотрите также  ---
+_GUICtrlDTP_Destroy

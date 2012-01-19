@@ -1,0 +1,18 @@
+
+_GUICtrlListView_DeleteItemsSelected
+
+Удаляет выделенные пункты
+
+#Include 
+_GUICtrlListView_DeleteItemsSelected($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Идентификатор или дескриптор ListView
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlListView_DeleteItem, _GUICtrlListView_DeleteAllItems

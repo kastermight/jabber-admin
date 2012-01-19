@@ -1,0 +1,19 @@
+
+_GUICtrlIpAddress_ShowHide
+
+Скрыть/отобразить элемент IP address
+
+#Include 
+_GUICtrlIpAddress_ShowHide($hWnd, $iState)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iState
+	Состояние элемента IP Address могут быть следующими: @SW_HIDE или @SW_SHOW
+
+---  Таблица возвращаемых значений  ---
+True: элемент ранее был видимым
+False: элемент ранее был скрытым
+
+---  Смотрите также  ---

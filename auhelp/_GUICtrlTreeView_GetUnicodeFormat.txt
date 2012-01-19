@@ -1,0 +1,18 @@
+
+_GUICtrlTreeView_GetUnicodeFormat
+
+Возвращает флаг формата символов Unicode
+
+#Include 
+_GUICtrlTreeView_GetUnicodeFormat($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+True:	Используются символы Unicode
+False:	Используются символы ANSI
+
+---  Смотрите также  ---
+_GUICtrlTreeView_SetUnicodeFormat

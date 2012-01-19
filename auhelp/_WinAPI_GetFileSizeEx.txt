@@ -1,0 +1,21 @@
+
+_WinAPI_GetFileSizeEx
+
+Retrieves the size of the specified file
+
+#Include 
+_WinAPI_GetFileSizeEx($hFile)
+
+---  Таблица параметров  ---
+$hFile
+	Handle to the file whose size is to be returned
+
+---  Таблица возвращаемых значений  ---
+Успех:	File size
+Ошибка:	set @error
+
+---  Смотрите также  ---
+_WinAPI_CloseHandle, _WinAPI_CreateFile, _WinAPI_FlushFileBuffers, _WinAPI_ReadFile, _WinAPI_SetEndOfFile, _WinAPI_SetFilePointer, _WinAPI_WriteFile
+
+
+---  Таблица  --- GetFileSizeEx

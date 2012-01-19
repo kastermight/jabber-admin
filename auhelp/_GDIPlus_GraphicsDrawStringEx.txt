@@ -1,0 +1,31 @@
+
+_GDIPlus_GraphicsDrawStringEx
+
+Draw a string
+
+#Include 
+_GDIPlus_GraphicsDrawStringEx($hGraphics, $sString, $hFont, $tLayout, $hFormat, $hBrush)
+
+---  Таблица параметров  ---
+$hGraphics
+	Handle to a Graphics object
+$sString
+	String to be drawn
+$hFont
+	Handle to the font to use to draw the string
+$tLayout
+	$tagGDIPRECTF structure that bounds the string
+$hFormat
+	Handle to the string format to draw the string
+$hBrush
+	Handle to the brush to draw the string
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GDIPlus_GraphicsDrawString, $tagGDIPRECTF
+
+
+---  Таблица  --- GdipDrawString

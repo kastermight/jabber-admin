@@ -1,0 +1,20 @@
+
+_GUICtrlHeader_SetImageList
+
+Assigns an image list
+
+#Include 
+_GUICtrlHeader_SetImageList($hWnd, $hImage)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$hImage
+	Handle to an image list
+
+---  Таблица возвращаемых значений  ---
+Успех: The handle to the image list previously associated with the control
+Ошибка: 0
+
+---  Смотрите также  ---
+_GUICtrlHeader_GetImageList

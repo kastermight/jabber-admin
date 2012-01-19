@@ -1,0 +1,32 @@
+
+_GUICtrlRichEdit_StreamFromFile
+
+Вставляет форматированный текст в Rich Edit из файла
+
+#Include 
+_GUICtrlRichEdit_StreamFromFile($hWnd, $sFilespec)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$sFileSpec
+	Путь к файлу
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False и устанавливает @error
+@error:	101 - $HWnd не является дескриптором
+	1021 - Не удается открыть $sFilespec
+	1022 - файл пуст
+	700 - attempt to stream in too many characters
+
+---  Примечания  ---
+Если текст выделен, то заменяется выделенное, иначе заменяется весь текст в элементе Rich Edit
+
+Call _GUICtrlRichEdit_SetLimitonText to increase the number of characters the control can contain
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_SetLimitOnText, _GUICtrlRichEdit_StreamFromVar, _GUICtrlRichEdit_StreamToFile
+
+
+---  Таблица  --- EM_STREAMIN

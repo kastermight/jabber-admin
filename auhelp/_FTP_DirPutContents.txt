@@ -1,0 +1,27 @@
+
+_FTP_DirPutContents
+
+Передача папки на FTP сервер. Рекурсивный, если выбран.
+
+#Include 
+_FTP_DirPutContents($l_InternetSession, $s_LocalFolder, $s_RemoteFolder, $b_RecursivePut [, $l_Context])
+
+---  Таблица параметров  ---
+$l_InternetSession
+	Указатель возвращённый функцией _FTP_Connect().
+$s_LocalFolder
+	Локальная папка, например "c:\temp".
+$s_RemoteFolder
+	Удалённая папка, например '/website/home'.
+$b_RecursivePut
+	Рекурсия через подпапки. 0=Не рекурсивный, 1=Рекурсивный
+$l_Context
+	[опционально] A variable that contains the application-defined value that associates this search with any application data.
+	This is only used if the application has already called _FTP_SetStatusCallback() to set up a status callback function.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает имя каталога
+Ошибка:	Возвращает 0 и устанавливает @error
+
+---  Смотрите также  ---
+_FTP_Connect, _FTP_SetStatusCallback

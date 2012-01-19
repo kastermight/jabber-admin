@@ -1,0 +1,28 @@
+
+_GUICtrlComboBox_InsertString
+
+Insert a string
+
+#Include 
+_GUICtrlComboBox_InsertString($hWnd, $sText[, $iIndex = -1])
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$sText
+	Text string to be inserted
+$iIndex
+	[опционально] Specifies the zero based index of the position at which to insert the string.
+
+---  Таблица возвращаемых значений  ---
+Успех: Zero based index of the position at which the string was inserted
+Ошибка: -1
+
+---  Примечания  ---
+If the $iIndex parameter is –1, the string is added to the end of the list.
+
+If the ComboBox has $WS_HSCROLL style and you insert a string wider than the ComboBox,
+you should use the _GUICtrlComboBox_SetHorizontalExtent function to ensure the horizontal scrollbar appears.
+
+---  Смотрите также  ---
+_GUICtrlComboBox_AddString, _GUICtrlComboBox_InitStorage

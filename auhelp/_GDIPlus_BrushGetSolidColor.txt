@@ -1,0 +1,22 @@
+
+_GDIPlus_BrushGetSolidColor
+
+Get the color of a Solid Brush object
+
+#Include 
+_GDIPlus_BrushGetSolidColor($hBrush, [$iARGB = 0xFF000000])
+
+---  Таблица параметров  ---
+$hBrush
+	Handle to a Brush object
+$iARGB
+	[опционально] The color of the brush.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Brush color
+Ошибка:	-1 and @error is set
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GdipGetSolidFillColor

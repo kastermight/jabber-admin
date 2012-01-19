@@ -1,0 +1,21 @@
+
+_WinNet_DisconnectDialog
+
+Starts a general browsing dialog box for disconnecting from network resources
+
+#Include 
+_WinNet_DisconnectDialog($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the owner window for the dialog box
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_WinNet_DisconnectDialog1
+
+
+---  Таблица  --- WNetDisconnectDialog

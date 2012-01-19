@@ -1,0 +1,20 @@
+
+_WinAPI_SetCapture
+
+Sets the mouse capture to the specified window belonging to the current thread
+
+#Include 
+_WinAPI_SetCapture($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the window in the current thread that is to capture the mouse
+
+---  Таблица возвращаемых значений  ---
+Успех:	handle to the window that had previously captured the mouse
+Ошибка:	0
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- SetCapture

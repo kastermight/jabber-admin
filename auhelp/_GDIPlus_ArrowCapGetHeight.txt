@@ -1,0 +1,24 @@
+
+_GDIPlus_ArrowCapGetHeight
+
+Gets the height of the arrow cap
+
+#Include 
+_GDIPlus_ArrowCapGetHeight($hArrowCap)
+
+---  Таблица параметров  ---
+$hArrowCap
+	Handle to a ArrowCap object
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns the height of the arrow cap
+Ошибка:	0
+
+---  Примечания  ---
+The height is the distance from the base of the arrow to its vertex
+
+---  Смотрите также  ---
+_GDIPlus_ArrowCapSetHeight
+
+
+---  Таблица  --- GdipGetAdjustableArrowCapHeight

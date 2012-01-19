@@ -1,0 +1,22 @@
+
+_GUIToolTip_GetMarginEx
+
+Retrieves the top, left, bottom, and right margins
+
+#Include 
+_GUIToolTip_GetMarginEx($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: $tagRECT structure that will receive the margin information:
+		Top - Distance between top border and top of ToolTip text, in pixels
+		Left - Distance between left border and left end of ToolTip text, in pixels
+		Bottom - Distance between bottom border and bottom of ToolTip text, in pixels
+		Right - Distance between right border and right end of ToolTip text, in pixels
+		Result - True on success, otherwise False
+
+---  Смотрите также  ---
+_GUIToolTip_GetMargin

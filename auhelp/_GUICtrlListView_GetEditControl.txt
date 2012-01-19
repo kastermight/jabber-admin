@@ -1,0 +1,29 @@
+
+_GUICtrlListView_GetEditControl
+
+Возвращает дескриптор элемента редактирования, используемого для редактирования текста пункта
+
+#Include 
+_GUICtrlListView_GetEditControl($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает дескриптор элемента редактирования
+Ошибка:	0
+
+---  Примечания  ---
+Когда начинается редактирование текста, создаётся элемент редактирования, позиционируется и инициализируется. Перед отображением элемента родительскому окну посылается уведомительное сообщение $LVN_BEGINLABELEDIT.
+
+If you want to customize label editing implement a handler for $LVN_BEGINLABELEDITA, $LVN_BEGINLABELEDITAW and have it send an $LVM_GETEDITCONTROL message to the control. If a label is being edited, the return value will be a handle to the edit control. Use this handle to customize the edit control by sending the usual EM_XXX messages.
+
+Когда пользователь завершает или отменяет редактирование, элемент редактирования уничтожается и дескриптор больше не существует.
+Вы можете унаследовать элемент редактирования, но вы не должны уничтожать его. Для отмены редактирования, необходимо элементу выслать сообщение $WM_CANCELMODE.
+
+The control item being edited is the currently focused item. To find an item based on its state, use the
+$LVM_GETNEXTITEM message.
+
+---  Смотрите также  ---
+_GUICtrlListView_CancelEditLabel

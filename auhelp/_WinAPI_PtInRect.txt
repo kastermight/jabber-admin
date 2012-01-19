@@ -1,0 +1,23 @@
+
+_WinAPI_PtInRect
+
+Determines whether the specified point lies within the specified rectangle
+
+#Include 
+_WinAPI_PtInRect(ByRef $tRect, ByRef $tPoint)
+
+---  Таблица параметров  ---
+$tRect
+	$tagRECT structure that contains the specified rectangle
+$tPoint
+	$tagPOINT structure that contains the specified point
+
+---  Таблица возвращаемых значений  ---
+True:	Point lies within the rectangle
+False:	Point does not lie within the rectangle
+
+---  Смотрите также  ---
+$tagRECT, $tagPOINT
+
+
+---  Таблица  --- PtInRect

@@ -1,0 +1,22 @@
+
+_GUICtrlListView_GetItemGroupID
+
+Возвращает идентификатор группы указанного пункта ListView
+
+#Include 
+_GUICtrlListView_GetItemGroupID($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта
+
+---  Таблица возвращаемых значений  ---
+Возвращает идентификатор группы (ID)
+
+---  Примечания  ---
+Минимальная ОС - Windows XP.
+
+---  Смотрите также  ---
+_GUICtrlListView_SetItemGroupID

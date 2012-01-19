@@ -1,0 +1,18 @@
+
+_WinAPI_MakeQWord
+
+Returns a QWORD value from two int values
+
+#Include 
+_WinAPI_MakeQWord($LoDWORD, $HiDWORD)
+
+---  Таблица параметров  ---
+$LoDWORD
+	Low DWORD (int)
+$HiDWORD
+	Hi DWORD (int)
+
+---  Таблица возвращаемых значений  ---
+Returns a QWORD (int64) value
+
+---  Смотрите также  ---

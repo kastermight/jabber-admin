@@ -1,0 +1,24 @@
+
+_GUICtrlMenu_GetItemDisabled
+
+Retrieves the status of the menu item disabled state
+
+#Include 
+_GUICtrlMenu_GetItemDisabled($hMenu, $iItem[, $fByPos = True])
+
+---  Таблица параметров  ---
+$hMenu
+	Handle of the menu
+$iItem
+	Identifier or position of the menu item
+$fByPos
+	[опционально] Menu identifier flag:
+		 True - $iItem is a zero based item position
+		False - $iItem is a menu item identifier
+
+---  Таблица возвращаемых значений  ---
+True:	Item is disabled
+False:	Item is not disabled
+
+---  Смотрите также  ---
+_GUICtrlMenu_SetItemDisabled

@@ -1,0 +1,25 @@
+
+_WinAPI_WaitForSingleObject
+
+Waits until the specified object is in the signaled state
+
+#Include 
+_WinAPI_WaitForSingleObject($hHandle [, $iTimeout = -1])
+
+---  Таблица параметров  ---
+$hHandle
+	A handle to the object
+$iTimeout
+	[опционально] The time-out interval, in milliseconds. The function returns if the interval elapses, even if
+		the conditions specified by the fWaitAll parameter are not met. If 0, the function tests the states of the
+		specified objects and returns immediately. If -1, the function's time-out interval never elapses.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Indicates the event that caused the function to return
+Ошибка:	-1
+
+---  Смотрите также  ---
+_WinAPI_WaitForMultipleObjects
+
+
+---  Таблица  --- WaitForSingleObject

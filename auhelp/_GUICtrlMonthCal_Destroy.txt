@@ -1,0 +1,21 @@
+
+_GUICtrlMonthCal_Destroy
+
+Delete the MonthCal control
+
+#Include 
+_GUICtrlMonthCal_Destroy(ByRef $hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: True, Handle is set to 0
+Ошибка: False
+
+---  Примечания  ---
+Restricted to only be used on Month Calendars created with _GUICtrlMonthCal_Create
+
+---  Смотрите также  ---
+_GUICtrlMonthCal_Create

@@ -1,0 +1,22 @@
+
+_GUICtrlTab_SetItemText
+
+Sets the text of a tab
+
+#Include 
+_GUICtrlTab_SetItemText($hWnd, $iIndex, $sText)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based item index
+$sText
+	Item text
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlTab_GetItemText

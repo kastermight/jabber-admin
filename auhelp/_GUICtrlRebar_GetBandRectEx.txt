@@ -1,0 +1,19 @@
+
+_GUICtrlRebar_GetBandRectEx
+
+Retrieves the bounding rectangle for a given band in a rebar control
+
+#Include 
+_GUICtrlRebar_GetBandRectEx($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of a band in the rebar control
+
+---  Таблица возвращаемых значений  ---
+Returns a $tagRECT structure
+
+---  Смотрите также  ---
+_GUICtrlRebar_GetBandRect, _GUICtrlRebar_GetBandBorders, _GUICtrlRebar_GetBandBordersEx

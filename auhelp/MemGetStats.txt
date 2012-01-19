@@ -1,0 +1,19 @@
+
+MemGetStats
+
+Возвращает информацию, связанную с памятью.
+
+MemGetStats (  )
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Возвращает массив, состоящий из семи элементов:
+$array[0] = загрузка памяти (Процент используемой памяти, Memory Load, Percentage of memory in use)
+$array[1] = общее количество физической памяти (Total physical RAM)
+$array[2] = доступное количество физической памяти (Available physical RAM)
+$array[3] = размер файла подкачки (Total Pagefile)
+$array[4] = доступный размер файла подкачки (Available Pagefile)
+$array[5] = всего виртуальной памяти (Total virtual)
+$array[6] = доступно виртуальной памяти (Available virtual)
+Все размеры возвращаются в килобайтах.

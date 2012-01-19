@@ -1,0 +1,18 @@
+
+_GUICtrlToolbar_GetStyleFlat
+
+Indicates that the control is flat
+
+#Include 
+_GUICtrlToolbar_GetStyleFlat($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+True: Style is present
+False: Style is not present
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetStyleFlat

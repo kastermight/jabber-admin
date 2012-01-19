@@ -1,0 +1,17 @@
+
+_GUICtrlComboBox_GetLocalePrimLang
+
+Extract primary language id from a language id
+
+#Include 
+_GUICtrlComboBox_GetLocalePrimLang($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: Primary language id
+
+---  Смотрите также  ---
+_GUICtrlComboBox_GetLocale

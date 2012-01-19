@@ -1,0 +1,28 @@
+
+_EventLog__RegisterSource
+
+Retrieves a registered handle to the specified event log
+
+#Include 
+_EventLog__RegisterSource($sServerName, $sSourceName)
+
+---  Таблица параметров  ---
+$sServerName
+	The UNC name of the server on where the event log will be opened. If blank, the operation is
+		performed on the local computer.
+$sSourceName
+	The name of the event source whose handle is to be retrieved. The source name must be a subkey
+		of a log under the Eventlog registry key.
+
+---  Таблица возвращаемых значений  ---
+Успех:	The handle to an event log
+Ошибка:	0
+
+---  Примечания  ---
+If the source name cannot be found, the event logging service uses the Application log; it does not create a
+new source. Events are reported for the source, however, there are no message and category message files
+specified for looking up descriptions of the event identifiers for the source. To close the handle to the
+event log, use the DeregisterEventSource function.
+
+---  Смотрите также  ---
+_EventLog__DeregisterSource

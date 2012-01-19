@@ -1,0 +1,27 @@
+
+_GUICtrlMenu_DeleteMenu
+
+Deletes an item from the specified menu
+
+#Include 
+_GUICtrlMenu_DeleteMenu($hMenu, $iItem[, $fByPos = True])
+
+---  Таблица параметров  ---
+$hMenu
+	Menu handle
+$iItem
+	Identifier or position of the menu item
+$fByPos
+	[опционально] Menu identifier flag:
+		 True - $iItem is a zero based item position
+		False - $iItem is a menu item identifier
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUICtrlMenu_DestroyMenu
+
+
+---  Таблица  --- DeleteMenu

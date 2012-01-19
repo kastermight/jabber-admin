@@ -1,0 +1,38 @@
+
+_IELinkClickByText
+
+Simulate a mouse click on a link with text sub-string matching the string provided.
+
+#include  
+_IELinkClickByText ( ByRef $o_object, $s_linkText [, $i_index = 0[, $f_wait = 1]] )
+
+---  Таблица параметров  ---
+$o_object
+	Object variable of an InternetExplorer.Application, Window or Frame object
+$s_linkText
+	Text displayed on the web page for the desired link to click
+$i_index
+	[опционально] If the link text occurs more than once, specify which instance you want by 0-based index
+$f_wait
+	[опционально] specifies whether to wait for page to load before returning
+	0 = Return immediately, not waiting for page to load
+	1 = (Default) Wait for page load to complete before returning
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns -1
+Ошибка:	Returns 0 and sets @ERROR
+@Error:	0 ($_IEStatus_Success) = No Error
+	1 ($_IEStatus_GeneralError) = General Error
+	3 ($_IEStatus_InvalidDataType) = Invalid Data Type
+	4 ($_IEStatus_InvalidObjectType) = Invalid Object Type
+	6 ($_IEStatus_LoadWaitTimeout) = Load Wait Timeout
+	7 ($_IEStatus_NoMatch) = No Match
+	8 ($_IEStatus_AccessIsDenied) = Access Is Denied
+	9 ($_IEStatus_ClientDisconnected) = Client Disconnected
+@Extended:	Contains invalid parameter number
+
+---  Примечания  ---
+Not all elements that appear to be links actually are.  It is common practice to attach onClick JavaScript events to other DOM elements to simulate the behavior of links.  To activate such elements, use "click" with _IEAction.
+
+---  Смотрите также  ---
+_IELinkClickByIndex, _IELoadWait

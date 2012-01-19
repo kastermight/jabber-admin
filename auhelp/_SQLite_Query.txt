@@ -1,0 +1,25 @@
+
+_SQLite_Query
+
+Prepares a SQLite Query
+
+#include 
+_SQLite_Query ( $hDB, $sSQL, ByRef $hQuery )
+
+---  Таблица параметров  ---
+$hDB
+	An open database, use -1 to use last opened database
+$sSQL
+	SQL statement to be executed
+$hQuery
+	Passes out a query handle
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns $SQLITE_OK
+Ошибка:	Return value can be compared against $SQLITE_* constants
+@error:	-1 - SQLite reported an error (Check return value)
+	1 - Error calling SQLite API 'sqlite3_prepare16_v2'
+	2 - Call prevented by SafeMode
+
+---  Смотрите также  ---
+_SQLite_FetchData, _SQLite_FetchNames, _SQLite_Exec, _SQLite_GetTable, _SQLite_GetTable2d, _SQLite_QueryFinalize, _SQLite_QueryReset, _SQLite_QuerySingleRow, _SQLite_SetTimeout

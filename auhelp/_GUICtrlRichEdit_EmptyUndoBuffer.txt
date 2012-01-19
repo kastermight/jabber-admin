@@ -1,0 +1,22 @@
+
+_GUICtrlRichEdit_EmptyUndoBuffer
+
+Resets the undo flag of the control
+
+#Include 
+_GUICtrlRichEdit_EmptyUndoBuffer($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False and sets @error
+@error:	101 - $hWnd is not a handle
+
+---  Смотрите также  ---
+_GUICtrlRichEdit_Undo, _GUICtrlRichEdit_Redo, _GUICtrlRichEdit_SetText
+
+
+---  Таблица  --- EM_SETEMPTYUNDOBUFFER

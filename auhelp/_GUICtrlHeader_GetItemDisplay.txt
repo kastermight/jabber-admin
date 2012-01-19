@@ -1,0 +1,23 @@
+
+_GUICtrlHeader_GetItemDisplay
+
+Returns the item display information
+
+#Include 
+_GUICtrlHeader_GetItemDisplay($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Zero based item index
+
+---  Таблица возвращаемых значений  ---
+Успех: Item display information:
+		1 - The item displays a bitmap
+		2 - The bitmap appears to the right of text
+		4 - The control's owner draws the item
+		8 - The item displays a string
+
+---  Смотрите также  ---
+_GUICtrlHeader_SetItemDisplay

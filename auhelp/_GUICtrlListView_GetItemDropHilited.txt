@@ -1,0 +1,20 @@
+
+_GUICtrlListView_GetItemDropHilited
+
+Определяет, является ли пункт выделен как перетаскиваемый (drag-and-drop), чтобы бросить
+
+#Include 
+_GUICtrlListView_GetItemDropHilited($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Смотрите также  ---
+_GUICtrlListView_SetItemDropHilited

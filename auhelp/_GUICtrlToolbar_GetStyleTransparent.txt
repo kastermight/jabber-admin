@@ -1,0 +1,18 @@
+
+_GUICtrlToolbar_GetStyleTransparent
+
+Определяет, является ли Toolbar прозрачным
+
+#Include 
+_GUICtrlToolbar_GetStyleTransparent($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+
+---  Таблица возвращаемых значений  ---
+True: Включен стиль прозрачности
+False: Отключен стиль прозрачности
+
+---  Смотрите также  ---
+_GUICtrlToolbar_SetStyleTransparent

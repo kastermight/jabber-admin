@@ -1,0 +1,25 @@
+
+_WinAPI_ShowCursor
+
+Displays or hides the cursor
+
+#Include 
+_WinAPI_ShowCursor($fShow)
+
+---  Таблица параметров  ---
+$fShow
+	If True, the cursor is shown, otherwise it is hidden
+
+---  Таблица возвращаемых значений  ---
+Успех:	The new display counter
+Failed:	0
+
+---  Примечания  ---
+This function sets an internal display counter that determines whether the cursor should be displayed. The
+cursor is displayed only if the display count is greater than or equal to 0. If a mouse is installed, the
+initial display count is 0. If no mouse is installed, the display count is -1.
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- ShowCursor

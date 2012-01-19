@@ -1,0 +1,26 @@
+
+_ClipBoard_EnumFormats
+
+Enumerates the data formats currently available on the clipboard
+
+#Include 
+_ClipBoard_EnumFormats($iFormat)
+
+---  Таблица параметров  ---
+$iFormat
+	Specifies a clipboard format that is known to be available. To start an enumeration of formats,
+		set $iFormat to zero. When $iFormat is zero, the function retrieves the first available clipboard format. For
+		subsequent calls during an enumeration, set $iFormat to the result of the previous call.
+
+---  Таблица возвращаемых значений  ---
+Успех:	The clipboard format that follows the specified format
+Ошибка:	0
+
+---  Примечания  ---
+You must open the clipboard before enumerating its formats
+
+---  Смотрите также  ---
+_ClipBoard_Open, _ClipBoard_CountFormats, _ClipBoard_GetPriorityFormat, _ClipBoard_RegisterFormat
+
+
+---  Таблица  --- EnumClipboardFormats

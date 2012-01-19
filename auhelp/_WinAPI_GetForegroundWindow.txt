@@ -1,0 +1,18 @@
+
+_WinAPI_GetForegroundWindow
+
+Returns the handle of the foreground window
+
+#Include 
+_WinAPI_GetForegroundWindow()
+
+None.
+
+---  Таблица возвращаемых значений  ---
+Успех:	Handle of the foreground window
+Ошибка:	The foreground window can be NULL in certain circumstances, such as when a window is losing activation 
+
+---  Смотрите также  ---
+
+
+---  Таблица  --- GetForegroundWindow

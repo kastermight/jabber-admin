@@ -1,0 +1,25 @@
+
+_GUICtrlListView_SetItemGroupID
+
+Устанавливает принадлежность пункта ListView к идентификатору группы
+
+#Include 
+_GUICtrlListView_SetItemGroupID($hWnd, $iIndex, $iGroupID)
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс пункта ListView
+$iGroupID
+	Идентификатор группы (ID)
+
+---  Таблица возвращаемых значений  ---
+Успех:	Возвращает True
+Ошибка:	Возвращает False
+
+---  Примечания  ---
+Минимальная ОС - Windows XP.
+
+---  Смотрите также  ---
+_GUICtrlListView_GetItemGroupID, _GUICtrlListView_InsertGroup

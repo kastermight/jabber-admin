@@ -1,0 +1,25 @@
+
+_GUICtrlHeader_SetItemAlign
+
+Sets the item text alignment
+
+#Include 
+_GUICtrlHeader_SetItemAlign($hWnd, $iIndex, $iAlign)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+$iIndex
+	Zero based item index
+$iAlign
+	Text alignment:
+		0 - Text is left-aligned
+		1 - Text is right-aligned
+		2 - Text is centered
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlHeader_GetItemAlign

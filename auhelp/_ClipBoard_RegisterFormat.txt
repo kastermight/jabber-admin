@@ -1,0 +1,26 @@
+
+_ClipBoard_RegisterFormat
+
+Registers a new clipboard format
+
+#Include 
+_ClipBoard_RegisterFormat($sFormat)
+
+---  Таблица параметров  ---
+$sFormat
+	The name of the new format
+
+---  Таблица возвращаемых значений  ---
+Успех:	The registered clipboard format
+Ошибка:	0
+
+---  Примечания  ---
+If a registered format with the specified name already exists, a new format is not registered and the return
+value identifies the existing format. This enables more than one application to copy and paste data using the
+same registered clipboard format. Note that the format name comparison is case-insensitive.
+
+---  Смотрите также  ---
+_ClipBoard_EnumFormats
+
+
+---  Таблица  --- RegisterClipboardFormat

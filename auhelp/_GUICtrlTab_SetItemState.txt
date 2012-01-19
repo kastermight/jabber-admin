@@ -1,0 +1,24 @@
+
+_GUICtrlTab_SetItemState
+
+Sets the state of a tab
+
+#Include 
+_GUICtrlTab_SetItemState($hWnd, $iIndex, $iState)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero based item index
+$iState
+	Item state. Can be a combination of:
+		$TCIS_BUTTONPRESSED - The tab control item is selected
+		$TCIS_HIGHLIGHTED - The tab control item is highlighted
+
+---  Таблица возвращаемых значений  ---
+Успех: True
+Ошибка: False
+
+---  Смотрите также  ---
+_GUICtrlTab_GetItemState

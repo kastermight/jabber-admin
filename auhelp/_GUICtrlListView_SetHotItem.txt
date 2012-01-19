@@ -1,0 +1,20 @@
+
+_GUICtrlListView_SetHotItem
+
+Sets the hot item
+
+#Include 
+_GUICtrlListView_SetHotItem($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$iIndex
+	Zero-based index of the item to be set as the hot item
+
+---  Таблица возвращаемых значений  ---
+Успех:	Index of the item that was previously hot
+Ошибка:	-1
+
+---  Смотрите также  ---
+_GUICtrlListView_GetHotItem

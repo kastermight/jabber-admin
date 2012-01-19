@@ -1,0 +1,18 @@
+
+_GUICtrlRebar_GetRowHeight
+
+Retrieves the height of a specified row in a rebar control
+
+#Include 
+_GUICtrlRebar_GetRowHeight($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of a band. The height of the row that contains the specified band will be retrieved
+
+---  Таблица возвращаемых значений  ---
+Returns A value that represents the row height, in pixels
+
+---  Смотрите также  ---

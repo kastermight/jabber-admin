@@ -1,0 +1,12 @@
+
+_GUIImageList_EndDrag
+
+Ends a drag operation
+
+#Include 
+_GUIImageList_EndDrag()
+
+None.
+
+---  Смотрите также  ---
+_GUIImageList_BeginDrag, _GUIImageList_DragLeave

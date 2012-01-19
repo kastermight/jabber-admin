@@ -1,0 +1,25 @@
+
+_GUICtrlToolbar_SetAnchorHighlight
+
+Sets the anchor highlight setting
+
+#Include 
+_GUICtrlToolbar_SetAnchorHighlight($hWnd, $fAnchor)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$fAnchor
+	Anchor highlighting setting:
+		 True - Anchor highlighting will be enabled
+		False - Anchor highlighting will be disabled
+
+---  Таблица возвращаемых значений  ---
+Успех: The previous anchor highlight setting
+
+---  Примечания  ---
+Anchor highlighting means that the last highlighted item will remain highlighted until another item is
+highlighted. This occurs even if the cursor leaves the toolbar control.
+
+---  Смотрите также  ---
+_GUICtrlToolbar_GetAnchorHighlight

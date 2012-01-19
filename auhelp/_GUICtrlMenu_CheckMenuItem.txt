@@ -1,0 +1,34 @@
+
+_GUICtrlMenu_CheckMenuItem
+
+Sets the state of the specified menu item's check mark attribute to either selected or clear
+
+#Include 
+_GUICtrlMenu_CheckMenuItem($hMenu, $iItem[, $fCheck = True[, $fByPos = True]])
+
+---  Таблица параметров  ---
+$hMenu
+	Handle of the menu
+$iItem
+	Identifier or position of the menu item to check
+$fCheck
+	[опционально] True to set the check mark, False to remove it
+$fByPos
+	[опционально] Menu identifier flag:
+		 True - $iItem is a zero based item position
+		False - $iItem is a menu item identifier
+
+---  Таблица возвращаемых значений  ---
+Успех:	The previous state of the menu item (either $MF_CHECKED or $MF_UNCHECKED)
+Ошибка:	-1
+
+---  Примечания  ---
+An item in a menu bar cannot have a check mark. The $iItem parameter identifies a item that opens a submenu or
+a command item. For an item that opens a submenu, the $Item parameter must specify the position of the item.
+For a command item, the $Item parameter can specify either the item's position or its identifier.
+
+---  Смотрите также  ---
+_GUICtrlMenu_CheckRadioItem
+
+
+---  Таблица  --- CheckMenuItem

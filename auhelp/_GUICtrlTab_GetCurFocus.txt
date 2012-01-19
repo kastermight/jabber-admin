@@ -1,0 +1,21 @@
+
+_GUICtrlTab_GetCurFocus
+
+Returns the index of the item that has the focus in a tab control
+
+#Include 
+_GUICtrlTab_GetCurFocus($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: The zero based index of the tab item that has the focus
+Ошибка: -1
+
+---  Примечания  ---
+The item that has the focus may be different than the selected item
+
+---  Смотрите также  ---
+_GUICtrlTab_SetCurFocus

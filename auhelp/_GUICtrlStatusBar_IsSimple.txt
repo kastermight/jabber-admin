@@ -1,0 +1,18 @@
+
+_GUICtrlStatusBar_IsSimple
+
+Checks a status bar control to determine if it is in simple mode
+
+#Include 
+_GUICtrlStatusBar_IsSimple($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+True:	Status bar is in simple mode
+False:	Status bar is not in simple mode
+
+---  Смотрите также  ---
+_GUICtrlStatusBar_SetSimple

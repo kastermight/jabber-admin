@@ -1,0 +1,23 @@
+
+_GUICtrlComboBox_GetCueBanner
+
+Gets the cue banner text displayed in the edit control of a combo box
+
+#Include 
+_GUICtrlComboBox_GetCueBanner($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to control
+
+---  Таблица возвращаемых значений  ---
+Успех: The cue banner text
+Ошибка: empty string ""
+
+---  Примечания  ---
+The cue banner is text that is displayed in the edit control of a combo box when there is no selection
+
+Minimum Operating Systems: Windows Vista
+
+---  Смотрите также  ---
+_GUICtrlComboBox_SetCueBanner

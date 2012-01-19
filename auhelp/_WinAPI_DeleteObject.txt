@@ -1,0 +1,25 @@
+
+_WinAPI_DeleteObject
+
+Deletes a logical pen, brush, font, bitmap, region, or palette
+
+#Include 
+_WinAPI_DeleteObject($hObject)
+
+---  Таблица параметров  ---
+$hObject
+	Identifies a logical pen, brush, font, bitmap, region, or palette
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Примечания  ---
+Do not delete a drawing object while it is still selected into a device context. When a pattern brush
+is deleted the bitmap associated with the brush is not deleted. The bitmap must be deleted independently.
+
+---  Смотрите также  ---
+_GDIPlus_BitmapCloneArea, _GDIPlus_BitmapCreateFromFile, _GDIPlus_BitmapCreateFromGraphics, _GDIPlus_BitmapCreateFromHBITMAP, _GDIPlus_BitmapCreateHBITMAPFromBitmap, _GDIPlus_BitmapLockBits, _GDIPlus_BitmapUnlockBits, _ScreenCapture_Capture, _ScreenCapture_CaptureWnd, _WinAPI_CreateCompatibleBitmap, _WinAPI_CreatePen, _WinAPI_CreateRectRgn, _WinAPI_CreateRoundRectRgn
+
+
+---  Таблица  --- DeleteObject

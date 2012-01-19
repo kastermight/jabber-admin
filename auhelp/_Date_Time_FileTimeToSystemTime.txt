@@ -1,0 +1,18 @@
+
+_Date_Time_FileTimeToSystemTime
+
+Converts a file time to system time format
+
+#Include 
+_Date_Time_FileTimeToSystemTime($pFileTime)
+
+---  Таблица параметров  ---
+$pFileTime
+	Pointer to a $tagFILETIME structure containing the file time to convert to system date and time
+		format.
+
+---  Таблица возвращаемых значений  ---
+Returns $tagSYSTEMTIME structure that contains the converted file time
+
+---  Смотрите также  ---
+_Date_Time_FileTimeToDosDateTime, _Date_Time_FileTimeToLocalFileTime, $tagFILETIME, $tagSYSTEMTIME

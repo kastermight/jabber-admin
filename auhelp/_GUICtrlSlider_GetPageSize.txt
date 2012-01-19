@@ -1,0 +1,17 @@
+
+_GUICtrlSlider_GetPageSize
+
+Retrieves the number of logical positions the slider moves
+
+#Include 
+_GUICtrlSlider_GetPageSize($hWnd)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+
+---  Таблица возвращаемых значений  ---
+Успех: The page size for the slider
+
+---  Смотрите также  ---
+_GUICtrlSlider_SetPageSize

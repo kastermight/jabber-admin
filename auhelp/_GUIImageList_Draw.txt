@@ -1,0 +1,32 @@
+
+_GUIImageList_Draw
+
+Рисует изображение элемента списка в указанный контекст устройства (DC) 
+
+#Include 
+_GUIImageList_Draw($hWnd, $iIndex, $hDC, $iX, $iY[, $iStyle=0])
+
+---  Таблица параметров  ---
+$hWnd
+	Дескриптор элемента
+$iIndex
+	Индекс изображения, отсчёт от 0
+$hDC
+	Дескриптор контекста устройства
+$iX
+	X координата, в которой будет нарисовано изображение
+$iY
+	Y координата, в которой будет нарисовано изображение
+$iStyle
+	[опционально] Drawing style and overlay image:
+		1 - Draws the image transparently using the mask, regardless of the background color
+		2 - Draws the image, blending 25 percent with the system highlight color
+		4 - Draws the image, blending 50 percent with the system highlight color
+		8 - Draws the mask
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_GUIImageList_DrawEx

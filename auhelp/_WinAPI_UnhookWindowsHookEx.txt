@@ -1,0 +1,21 @@
+
+_WinAPI_UnhookWindowsHookEx
+
+Removes a hook procedure installed in a hook chain by the _WinAPI_SetWindowsHookEx function
+
+#Include 
+_WinAPI_UnhookWindowsHookEx($hhk)
+
+---  Таблица параметров  ---
+$hhk
+	Handle to the hook to be removed
+
+---  Таблица возвращаемых значений  ---
+Успех:	True
+Ошибка:	False
+
+---  Смотрите также  ---
+_WinAPI_SetWindowsHookEx, DllCallbackFree
+
+
+---  Таблица  --- UnhookWindowsHookEx

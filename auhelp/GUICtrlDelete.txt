@@ -1,0 +1,20 @@
+
+GUICtrlDelete
+
+Удалить элемент управления.
+
+GUICtrlDelete ( controlID )
+
+---  Таблица параметров  ---
+controlID
+	Идентификатор (controlID) элемента возвращаемый функцией GUICtrlCreate....
+
+---  Таблица возвращаемых значений  ---
+Успех:	Returns 1.
+Ошибка:	Returns 0.
+
+---  Примечания  ---
+Для элементов контекстного меню смотрите примечание в GUICtrlCreateContextMenu.
+
+---  Смотрите также  ---
+GUICreate, GUICtrlCreate..., GUICtrlCreateContextMenu

@@ -1,0 +1,19 @@
+
+_GUICtrlRebar_GetBandStyle
+
+Get the band style Flags
+
+#Include 
+_GUICtrlRebar_GetBandStyle($hWnd, $iIndex)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to rebar control
+$iIndex
+	Zero-based index of the band
+
+---  Таблица возвращаемых значений  ---
+Returns a value of band flags, see fStyle of $tagREBARBANDINFO
+
+---  Смотрите также  ---
+_GUICtrlRebar_SetBandStyle, $tagREBARBANDINFO, _GUICtrlRebar_GetBandStyleBreak, _GUICtrlRebar_GetBandStyleChildEdge, _GUICtrlRebar_GetBandStyleFixedBMP, _GUICtrlRebar_GetBandStyleFixedSize, _GUICtrlRebar_GetBandStyleGripperAlways, _GUICtrlRebar_GetBandStyleHidden, _GUICtrlRebar_GetBandStyleHideTitle, _GUICtrlRebar_GetBandStyleNoGripper, _GUICtrlRebar_GetBandStyleTopAlign, _GUICtrlRebar_GetBandStyleUseChevron, _GUICtrlRebar_GetBandStyleVariableHeight

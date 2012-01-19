@@ -1,0 +1,19 @@
+
+_GUICtrlTab_SetImageList
+
+Sets the image list associated with a tab control
+
+#Include 
+_GUICtrlTab_SetImageList($hWnd, $hImage)
+
+---  Таблица параметров  ---
+$hWnd
+	Handle to the control
+$hImage
+	Handle to the image list to assign to the tab control
+
+---  Таблица возвращаемых значений  ---
+Успех: Handle to the previous image list
+
+---  Смотрите также  ---
+_GUICtrlTab_GetImageList
