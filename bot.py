@@ -3,7 +3,7 @@ import xmpp
 import time
 import thread
 from xmpp.roster import Roster
-
+#some comment
 def loadConfig():
 	import ConfigParser
 	config = ConfigParser.ConfigParser()
