@@ -34,7 +34,7 @@ def run(bot,mess,mode='chat'):
 	elif not command:
 		mes = u'Ввод параметра в виде ip-адреса или имени хоста обязателен'
 	else:
-		ippat = '\d{1:3}\.\d{1:3}\.\d{1:3}\.\d{1:3}'
+		ippat = '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}'
 		hostpat = u'(.+\.)?([^.]+\.[A-Za-zРФрф]+)'
 		ip = re.search(ippat, command)
 		host = re.search(hostpat, command)
