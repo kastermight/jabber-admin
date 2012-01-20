@@ -14,6 +14,7 @@ DESCR_ANEK=Случайный анекдот с сайта anekdot.ru
 DESCR_MODER=Управление списком модераторов конференций
 DESCR_NO=Голосование: нет
 DESCR_OFF=Выключение бота
+DESCR_URL=Выводит короткий URL используя сервис google url shortener
 DESCR_LOGIN=Вход в систему бота
 DESCR_PASSWD=Изменение пароля уровней доступа
 DESCR_ROOMS=Управление конференциями
