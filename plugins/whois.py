@@ -7,27 +7,18 @@ import os
 import time
 try:
   from lxml import etree
-  print("running with lxml.etree")
 except ImportError:
   try:
-    # Python 2.5
     import xml.etree.cElementTree as etree
-    print("running with cElementTree on Python 2.5+")
   except ImportError:
     try:
-      # Python 2.5
       import xml.etree.ElementTree as etree
-      print("running with ElementTree on Python 2.5+")
     except ImportError:
       try:
-        # normal cElementTree install
         import cElementTree as etree
-        print("running with cElementTree")
       except ImportError:
         try:
-          # normal ElementTree install
           import elementtree.ElementTree as etree
-          print("running with ElementTree")
         except ImportError:
           print("Failed to import ElementTree from any known place")
 
@@ -44,7 +35,7 @@ def run(bot,mess,mode='chat'):
 		mes = u'Ввод параметра в виде ip-адреса или имени хоста обязателен'
 	else:
 		ippat = '\d{1:3}\.\d{1:3}\.\d{1:3}\.\d{1:3}'
-		hostpat = '(.+\.)?([^.]+\.\w+)'
+		hostpat = u'(.+\.)?([^.]+\.[A-Za-zРФрф]+)'
 		ip = re.search(ippat, command)
 		host = re.search(hostpat, command)
 		if ip or host:
@@ -52,18 +43,22 @@ def run(bot,mess,mode='chat'):
 				ip = ip.group(0)
 			elif host:
 				host = host.group(2)
-				ip = socket.gethostbyname(host)
-			url = URLRIPE % ip
-			mes = getwhoisRIPE(url)
-			if not mes:
-				mes = u'Введенный узел в базе данных RIPE (Европа) не обнаружен. Попробую поискать в базе данных ARIN (Северная Америка)\n'
-				mes += '-'*100 + '\n'
-				url = URLARIN % ip
-				mestmp = getwhoisARIN(url)
-				if not mestmp:
-					mes += u'Введенный узел так же не обнаружен в базе данных ARIN. Других баз пока нет. Попробуйте поискать вручную.'
+				try:
+					ip = socket.gethostbyname(host.encode('idna'))
+				except:
+					mes = u'Введенное имя не содержится ни в одной из DNS-серверов'
 				else:
-					mes += mestmp
+					url = URLRIPE % ip
+					mes = getwhoisRIPE(url)
+					if not mes:
+						mes = u'Введенный узел в базе данных RIPE (Европа) не обнаружен. Попробую поискать в базе данных ARIN (Северная Америка)\n'
+						mes += '-'*100 + '\n'
+						url = URLARIN % ip
+						mestmp = getwhoisARIN(url)
+						if not mestmp:
+							mes += u'Введенный узел так же не обнаружен в базе данных ARIN. Других баз пока нет. Попробуйте поискать вручную.'
+						else:
+							mes += mestmp
 		else:
 			mes = u'Введеное значение не является ни ip-адресом, ни именем хоста в привычном понимание - something.somesite.xx'
 	bot.send(xmpp.Message(mess.getFrom(),mes,mode))
