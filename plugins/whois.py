@@ -4,6 +4,7 @@ import urllib2
 import socket
 import re
 import os
+import time
 try:
   from lxml import etree
   print("running with lxml.etree")
@@ -35,41 +36,43 @@ def init(bot):
 
 def run(bot,mess,mode='chat'):
 	command = unicode(mess.getBody()[6:])
-	URL = 'https://apps.db.ripe.net/whois/search.xml?query-string=%s&source=ripe'
+	URLRIPE = 'https://apps.db.ripe.net/whois/search.xml?query-string=%s&source=ripe'
+	URLARIN = 'http://adam.kahtava.com/services/whois.xml?query=%s'
 	if command == 'help':
 		mes = u' Плагин для выдачи информации о хосте или ip-адресе. Допускаются русскоязычные домены, например - президент.рф или путин.рф'
 	elif not command:
 		mes = u'Ввод параметра в виде ip-адреса или имени хоста обязателен'
 	else:
-		puny = command.encode('idna')
-		try:
-			hostip = socket.gethostbyaddr(puny)
-		except socket.gaierror:
-			mes = u'Введенное имя хоста или ip-aдрес неверен, либо не содержится в базe DNS'
-		except socket.herror:
-			ip = socket.gethostbyname(puny)
-			host = puny
+		ippat = '\d{1:3}\.\d{1:3}\.\d{1:3}\.\d{1:3}'
+		hostpat = '(.+\.)?([^.]+\.\w+)'
+		ip = re.search(ippat, command)
+		host = re.search(hostpat, command)
+		if ip or host:
+			if ip:
+				ip = ip.group(0)
+			elif host:
+				host = host.group(2)
+				ip = socket.gethostbyname(host)
+			url = URLRIPE % ip
+			mes = getwhoisRIPE(url)
+			if not mes:
+				mes = u'Введенный узел в базе данных RIPE (Европа) не обнаружен. Попробую поискать в базе данных ARIN (Северная Америка)\n'
+				mes += '-'*100 + '\n'
+				url = URLARIN % ip
+				mestmp = getwhoisARIN(url)
+				if not mestmp:
+					mes += u'Введенный узел так же не обнаружен в базе данных ARIN. Других баз пока нет. Попробуйте поискать вручную.'
+				else:
+					mes += mestmp
 		else:
-			ip = hostip[2][0]
-			host = hostip[0].split('.')
-			host = host[-2] + '.' + host[-1]
-		url = URL % ip
-		mes = getwhois(url)
-		if not mes:
-			mes = u'Данного узла в базе ripe.net нет, попробую поискать в локальной базе\n'
-			mes += '-'*50 + '\n'
-			ans = getfromcon(host)
-			if not ans: mes += u'Для данного узла информация не найдена'
-			mes += ans
-		mes = mes[:-1]
+			mes = u'Введеное значение не является ни ip-адресом, ни именем хоста в привычном понимание - something.somesite.xx'
 	bot.send(xmpp.Message(mess.getFrom(),mes,mode))
 
 def rungc(bot,mess):
-	print mess.getFrom()
 	mess.setFrom(unicode(mess.getFrom()).split('/')[0])
 	run(bot,mess,'groupchat')
 
-def getwhois(url):
+def getwhoisRIPE(url):
 	db = urllib2.urlopen(url)
 	xmldoc = etree.parse(db)
 	allobj = xmldoc.findall('objects/object')
@@ -104,21 +107,26 @@ def getwhois(url):
 				if attr['name'] in ['route', 'descr', 'origin']:
 					whoinfo += '%s: %s\n' % (attr['name'].ljust(15), attr['value'])
 			whoinfo += '-'*50 + '\n'
-	return whoinfo
+	return whoinfo[:-1]
 
-def getfromcon(host):
-	os.system('whois ' + host + ' > tmp')
-	tmp = open('tmp')
-	lines = tmp.readlines()
-	tmp.close()
-	os.remove('tmp')
-	pat = '^([^%#,>]+?)\:(.+)'
-	ans = ''
-	ansre = re.compile(pat)
-	for line in lines:
-		if 'No match for domain' in line:
-			return False
-		line = ansre.search(line)
-		if line:
-			ans += '%s: %s\n' % (line.group(1).ljust(30), line.group(2))
-	return ans
+def getwhoisARIN(url):
+	import urllib2
+	from lxml import etree
+	def xmlprint(el, n):
+		out = '  '*n
+		if el.text:
+			out += el.tag + ': ' + el.text + '\n'
+		else:
+			out += el.tag + '\n'
+			for sel in el:
+				out += xmlprint(sel, n + 1)
+		return out
+	db = urllib2.urlopen(url).read().replace('xmlns="http://adam.kahtava.com/services/whois" ', '').replace('&#xD;', '')
+	try:
+		xmldoc = etree.fromstring(db)
+	except:
+		return False
+	out = ''
+	for sxml in xmldoc:
+		out += xmlprint(sxml, 0)
+	return out[:-1]
