@@ -36,31 +36,32 @@ def run(bot,mess,mode='chat'):
 	else:
 		ippat = '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}'
 		hostpat = u'(.+\.)?([^.]+\.[A-Za-zРФрф]+)'
-		ip = re.search(ippat, command)
+		ipans = re.search(ippat, command)
 		host = re.search(hostpat, command)
-		if ip or host:
-			if ip:
-				ip = ip.group(0)
-			elif host:
+		ip = ''
+		try:
+			ip = ipans.group(0)
+		except:
+			try:
 				host = host.group(2)
 				try:
 					ip = socket.gethostbyname(host.encode('idna'))
 				except:
 					mes = u'Введенное имя не содержится ни в одной из DNS-серверов'
+			except:
+				mes = u'Введеное значение не является ни ip-адресом, ни именем хоста в привычном понимание - something.somesite.xx'
+		if ip:
+			url = URLRIPE % ip
+			mes = getwhoisRIPE(url)
+			if not mes:
+				mes = u'Введенный узел в базе данных RIPE (Европа) не обнаружен. Попробую поискать в базе данных ARIN (Северная Америка)\n'
+				mes += '-'*100 + '\n'
+				url = URLARIN % ip
+				mestmp = getwhoisARIN(url)
+				if not mestmp:
+					mes += u'Введенный узел так же не обнаружен в базе данных ARIN. Других баз пока нет. Попробуйте поискать вручную.'
 				else:
-					url = URLRIPE % ip
-					mes = getwhoisRIPE(url)
-					if not mes:
-						mes = u'Введенный узел в базе данных RIPE (Европа) не обнаружен. Попробую поискать в базе данных ARIN (Северная Америка)\n'
-						mes += '-'*100 + '\n'
-						url = URLARIN % ip
-						mestmp = getwhoisARIN(url)
-						if not mestmp:
-							mes += u'Введенный узел так же не обнаружен в базе данных ARIN. Других баз пока нет. Попробуйте поискать вручную.'
-						else:
-							mes += mestmp
-		else:
-			mes = u'Введеное значение не является ни ip-адресом, ни именем хоста в привычном понимание - something.somesite.xx'
+					mes += mestmp
 	bot.send(xmpp.Message(mess.getFrom(),mes,mode))
 
 def rungc(bot,mess):
