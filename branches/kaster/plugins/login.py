@@ -7,7 +7,7 @@ def init(bot):
 	return {'status':0,'usage':'<level> <password>','descr':bot.phrases['DESCR_LOGIN'],'gc':0}
 
 def run(bot,mess):
-	user=unicode(mess.getFrom())
+	user=unicode(mess.getFrom()).split('/')[0]
 	priv = bot.get_priv(user)
 	passw = re.match('login (\d{1,2}) (.*)', mess.getBody())
 	level = ''

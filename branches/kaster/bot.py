@@ -91,15 +91,16 @@ def plugins_exec(func,*args):
 
 def runPlugin(command,mess,mode):
 	global bot
+	user = unicode(mess.getFrom()).split('/')[1]
 	plugin = getattr(bot.plugins['plugins'],command)
 	if (mode=='gc') and (plugin.init(bot)['gc'] != 0):
 		plugin.rungc(bot,mess)
-	elif plugin.init(bot)['gc'] != 1:
-		plugin.run(bot,mess)
+	elif (mode == 'chat') and (plugin.init(bot)['gc'] != 1):
+			plugin.run(bot,mess)
 
 def message(conn,mess):
 	global bot
-	user=unicode(mess.getFrom())
+	user=unicode(mess.getFrom()).split('/')[0]
 	plugins_exec('onMessage',mess)
 	if mess.getType() == 'chat':
 		if mess.getFrom() == bot.config['connect']['login']:
@@ -116,8 +117,8 @@ def message(conn,mess):
 				thread.start_new_thread(runPlugin,(command,mess,'chat'))
 				break
 	elif (mess.getType() == 'groupchat') and (unicode(mess.getBody())[0] == u'!'):
-		if (len(unicode(mess.getFrom()).split('/')) > 1) and (unicode(mess.getFrom()).split('/')[1] == bot.config['conferences']['nick']):
-			return None
+#		if (len(unicode(mess.getFrom()).split('/')) > 1) and (unicode(mess.getFrom()).split('/')[1] == bot.config['conferences']['nick']):
+#			return None
 		text = mess.getBody()
 		if ( text == None ):
 			return
@@ -190,7 +191,7 @@ while c == 0:
 		print 'There is no network, reconnecting in 5 minutes'
 		plugins_exec('noNetwork')
 		time.sleep(300)
-print '# Connected!'
+print '\n# Connected!\n'
 bot.online = 1
 last_time = 0
 keepalive = 30
