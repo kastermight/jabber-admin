@@ -6,7 +6,7 @@ def init(bot):
 	return {'status':0,'descr':bot.phrases['DESCR_HELP'],'gc':2}
 
 def run(bot,mess):
-	user=unicode(mess.getFrom())
+	user=unicode(mess.getFrom()).split('/')[0]
 	priv = bot.get_priv(user)
 	text = bot.phrases['ACC_LEVEL']%priv
 	for i in range(priv,-1,-1):
