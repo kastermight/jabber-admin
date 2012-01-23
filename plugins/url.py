@@ -28,7 +28,7 @@ def getshorturl(url):
 	httpServ.connect()
 	
 	header = {'Content-Type': 'application/json'}
-	body = '{"longUrl": "%s"}' % url
+	body = '{"longUrl": "%s"}' % url.encode('idna')
 	try:
 		httpServ.request('POST', '/urlshortener/v1/url', body, header)
 		response = httpServ.getresponse()
