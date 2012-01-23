@@ -19,7 +19,7 @@ def onPluginStart(bot):
 			p.getTag('x').addChild('password')
 			p.getTag('x').getTag('password').setData('japass')
 			p.getTag('x').addChild('history',{'maxchars':'0','maxstanzas':'0'})
-			p.setStatus('JAdmin - just rule the lulz')
+			p.setStatus('JAdmin - Conference administrator and AutoIt Helper written on Python')
 			bot.send(p)
 			bot.vote.update({room:{}})
 			bot.visitors.update({room:{}})
