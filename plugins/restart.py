@@ -11,4 +11,5 @@ def run(bot,mess,mode='chat'):
 	bot.send(xmpp.Message(mess.getFrom(),bot.phrases['BOT_RS'],mode))
 	bot.online = 0
 	os.system('python bot.py')
+	#13
 	sys.exit()
