@@ -22,7 +22,7 @@ def run(bot,mess,mode='chat'):
 			mes = u'Разуй зенки, ' + nick + u' же тут :)'
 		else:
 			try:
-				mes = open('users/' + nick).read()
+				mes = open('users/' + nick.lower()).read()
 				mes = u'Последний раз ' + nick + u' был тут замечен ' + mes
 			except:
 				mes = u'На моей памяти, ' + nick + u' тут не появлялся'
