@@ -38,6 +38,8 @@ def onConference(bot,pres,x):
 	except:
 		pass
 	if pres.getAttr('type') == 'unavailable':
+		os.environ['TZ'] = 'Europe/Moscow'
+		time.tzset()
 		loctime = time.localtime()
 		loctime = '%02d:%02d:%02d, %02d.%02d.%d' % (loctime[3], loctime[4], loctime[5], loctime[2], loctime[1], loctime[0])
 		nickout = unicode(pres.getAttr('from')).split('/')[1]
