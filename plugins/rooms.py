@@ -46,7 +46,7 @@ def onConference(bot,pres,x):
 		conf = unicode(pres.getAttr('from')).split('/')[0]
 		del bot.visitors[conf][nickout.lower()]
 		#		print bot.visitors[conf]
-		seen = open('users/' + nickout, 'w')
+		seen = open('users/' + nickout.lower(), 'w')
 		seen.write(loctime)
 		seen.close()
 	if (unicode(pres.getFrom()).split('/')[1] not in bot.config['conferences'][unicode(pres.getFrom()).split('/')[0]]) or (x.getTag('item').getAttr('affiliation') == 'owner') or (x.getTag('item').getAttr('affiliation') == 'admin'):
