@@ -1,4 +1,4 @@
-# coding: utf-8
+# -*- coding: utf-8 -*-
 import xmpp
 import time
 
@@ -28,9 +28,25 @@ def onPluginStart(bot):
 			time.sleep(0.5)
 
 def onConference(bot,pres,x):
+	import os
+	import time
 	if x.getTag('item').getAttr('role') == 'visitor':
 		bot.send(xmpp.Message(pres.getFrom(),bot.phrases['VISITOR_HELP'],'chat'))
 	bot.visitors[unicode(pres.getFrom()).split('/')[0]].update({unicode(pres.getFrom()).split('/')[1]:[x.getTag('item').getAttr('jid'),x.getTag('item').getAttr('affiliation')]})
+	try:
+		os.makedirs('users')
+	except:
+		pass
+	if pres.getAttr('type') == 'unavailable':
+		loctime = time.localtime()
+		loctime = '%02d:%02d:%02d, %02d.%02d.%d' % (loctime[3], loctime[4], loctime[5], loctime[2], loctime[1], loctime[0])
+		nickout = unicode(pres.getAttr('from')).split('/')[1]
+		conf = unicode(pres.getAttr('from')).split('/')[0]
+		del bot.visitors[conf][nickout]
+		#		print bot.visitors[conf]
+		seen = open('users/' + nickout, 'w')
+		seen.write(loctime)
+		seen.close()
 	if (unicode(pres.getFrom()).split('/')[1] not in bot.config['conferences'][unicode(pres.getFrom()).split('/')[0]]) or (x.getTag('item').getAttr('affiliation') == 'owner') or (x.getTag('item').getAttr('affiliation') == 'admin'):
 		return
 	iq = xmpp.Iq('set')
