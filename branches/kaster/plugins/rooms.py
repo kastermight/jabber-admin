@@ -32,7 +32,7 @@ def onConference(bot,pres,x):
 	import time
 	if x.getTag('item').getAttr('role') == 'visitor':
 		bot.send(xmpp.Message(pres.getFrom(),bot.phrases['VISITOR_HELP'],'chat'))
-	bot.visitors[unicode(pres.getFrom()).split('/')[0]].update({unicode(pres.getFrom()).split('/')[1]:[x.getTag('item').getAttr('jid'),x.getTag('item').getAttr('affiliation')]})
+	bot.visitors[unicode(pres.getFrom()).split('/')[0]].update({unicode(pres.getFrom()).split('/')[1].lower():[x.getTag('item').getAttr('jid'),x.getTag('item').getAttr('affiliation')]})
 	try:
 		os.makedirs('users')
 	except:
@@ -44,7 +44,7 @@ def onConference(bot,pres,x):
 		loctime = '%02d:%02d:%02d, %02d.%02d.%d' % (loctime[3], loctime[4], loctime[5], loctime[2], loctime[1], loctime[0])
 		nickout = unicode(pres.getAttr('from')).split('/')[1]
 		conf = unicode(pres.getAttr('from')).split('/')[0]
-		del bot.visitors[conf][nickout]
+		del bot.visitors[conf][nickout.lower()]
 		#		print bot.visitors[conf]
 		seen = open('users/' + nickout, 'w')
 		seen.write(loctime)

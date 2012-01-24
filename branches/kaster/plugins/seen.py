@@ -18,7 +18,7 @@ def run(bot,mess,mode='chat'):
 			mes = u'Зачем, интересно, тебе понадобилось меня искать? :-/'
 		elif nick == asker:
 			mes = u'Сам себя искать? Тебе к Зигмунду, который Фрейд :)'
-		elif bot.visitors[conf].has_key(nick):
+		elif bot.visitors[conf].has_key(nick.lower()):
 			mes = u'Разуй зенки, ' + nick + u' же тут :)'
 		else:
 			try:
