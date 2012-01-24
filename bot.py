@@ -96,7 +96,7 @@ def runPlugin(command,mess,mode):
 	if (mode=='gc') and (plugin.init(bot)['gc'] != 0):
 		plugin.rungc(bot,mess)
 	elif (mode == 'chat') and (plugin.init(bot)['gc'] != 1):
-			plugin.run(bot,mess)
+		plugin.run(bot,mess)
 
 def message(conn,mess):
 	global bot

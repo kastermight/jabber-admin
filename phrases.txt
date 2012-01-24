@@ -4,6 +4,7 @@ DESCR_ADMINS=Администраторы
 DESCR_RESTART=Перегрузка бота
 DESCR_ALIAS=Управление алиасами
 DESCR_BANS=Система банов
+DESCR_SEEN=Время последнего визита участника с определенным ником
 DESCR_CMD=Системный шелл
 DESCR_ECHO=Вывод сообщений
 DESCR_BASH=Вывод цитат из баша
