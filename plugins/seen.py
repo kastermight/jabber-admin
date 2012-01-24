@@ -10,13 +10,13 @@ def run(bot,mess,mode='chat'):
 	conf = unicode(mess.getFrom()).split('/')[0]
 	if command == 'help':
 		mes = u'Выводит информацию о последнем посещении участника с указанным ником конференции, при условии, что его нету в данный момент'
-	elif command == '':
-		mes = u'Может введешь ник того, кого ищещь? :-/'
-	elif command == bot.config['conferences']['nick']:
-		mes = u'Зачем, интересно, тебе понадобилось меня искать? :-/'
 	else:
 		nick = command
-		if nick == asker:
+		if command == '':
+			mes = u'Может введешь ник того, кого ищещь? :-/'
+		elif command == bot.config['conferences']['nick']:
+			mes = u'Зачем, интересно, тебе понадобилось меня искать? :-/'
+		elif nick == asker:
 			mes = u'Сам себя искать? Тебе к Зигмунду, который Фрейд :)'
 		elif bot.visitors[conf].has_key(nick):
 			mes = u'Разуй зенки, ' + nick + u' же тут :)'
