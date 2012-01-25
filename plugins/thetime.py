@@ -30,7 +30,7 @@ def run(bot,mess,mode='chat'):
 	elif command == '0':
 		command = u'Хабаровск,Россия'
 	elif command == '10':
-		command = u'Курск\n'
+		command = u'Курск'
 	# ---------------------------
 	if command == 'help':
 		mes = u'Вывод времени для любого заданного географического объекта при наличии в базе карт Goolge maps.\n'
@@ -50,7 +50,7 @@ def run(bot,mess,mode='chat'):
 		8 = Набережные Челны\n\
 		9 = Краснодар\n\
 		0 = Хабаровск\n\
-		10 = Курск'
+		10 = Курск\n'
 	else:
 		mes = getTime(command)
 		if not mes: mes = u'Не могу вывести время для ' + command + '\n'
