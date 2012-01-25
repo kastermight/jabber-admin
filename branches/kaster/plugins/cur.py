@@ -88,7 +88,7 @@ def run(bot,mess,mode='chat'):
 					else:
 						fmtstr += shortcut + u' - такого сокращения в базе нет. Наберите !cur help для списка сокращений\n'
 			if ind: fmtstr = u'По вашему запросу ничего не найдено\n'
-	bot.send(xmpp.Message(mess.getFrom(),fmtstr,mode))
+	bot.send(xmpp.Message(mess.getFrom(),fmtstr[:-1],mode))
 
 def rungc(bot,mess):
 	mess.setFrom(unicode(mess.getFrom()).split('/')[0])
