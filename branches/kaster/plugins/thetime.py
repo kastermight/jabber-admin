@@ -24,7 +24,7 @@ def run(bot,mess,mode='chat'):
 	elif command == '7':
 		command = u'Ташкент,Узбекистан'
 	elif command == '8':
-		command = u'Набережные челны,Россия'
+		command = u'Набережныечелны,Россия'
 	elif command == '9':
 		command = u'Краснодар,Россия'
 	elif command == '0':
