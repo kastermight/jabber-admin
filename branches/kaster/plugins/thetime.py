@@ -16,7 +16,7 @@ def run(bot,mess,mode='chat'):
 	elif command == '3':
 		command = 'Boulder80305'
 	elif command == '4':
-		command = u'Брест,Беларусь'
+		command = u'Киев,Украина'
 	elif command == '5':
 		command = u'Бат-Ям,Израиль'
 	elif command == '6':
@@ -53,7 +53,7 @@ def run(bot,mess,mode='chat'):
 		10 = Курск\n'
 		mes += '-'*75 + '\n'
 		mes += u'Для предотвращения многочисленных однотипных запросов на веб-ресурс с которого берутся данные, '
-		mes += u'единожды запрошенные данные заносятся в базу данных SQL. Наберите !thetime version для получение версии SQL-библиотеки используемой плагином\n'
+		mes += u'единожды запрошенные данные заносятся в базу данных SQL. Наберите !thetime version для получения версии SQL-библиотеки используемой плагином\n'
 	elif command == 'version':
 		import sqlite3
 		mes = u'Я использую SQLite3 версии ' + sqlite3.version + '\n'
@@ -77,27 +77,6 @@ def getTime(location):
 		mes += u'Время: %02d:%02d:%02d, %02d.%02d.%d%s\n' % (loctime[3], loctime[4], loctime[5], loctime[2], loctime[1], loctime[0], tz['Comment'])
 		mes += '-'*50 + '\n'
 	return mes
-
-def getTimeZones(location):
-	import urllib2
-	import json
-	tz = getFromTable(lcoation)
-	key = 'j3mf52lpisjfaaah5iatjhrltf'
-	url = 'http://www.askgeo.com/api/950112/%s/timezone.json?points='
-	url = url % key
-	(locs, lats, lngs) = getlatlong(location)
-	urlex = [url, []]
-	for loc, lat, lng in zip(locs, lats, lngs):
-		urlex[0] += lat + ',' + lng + ';'
-		urlex[1].append(loc)
-	url = urlex[0][:-1]
-	ans = urllib2.urlopen(url)
-	ans = json.load(ans)
-	tz = []
-	if not ans['code']:
-		for data in ans['data']:
-			tz.append({'name':data['timeZone'], 'Name':data['windowsStandardName']})
-	return (tz, urlex[1])
 
 def getlatlong(location):
 	import urllib2
