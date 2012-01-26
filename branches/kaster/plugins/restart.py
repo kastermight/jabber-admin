@@ -10,6 +10,6 @@ def run(bot,mess,mode='chat'):
 	import sys
 	bot.send(xmpp.Message(mess.getFrom(),bot.phrases['BOT_RS'],mode))
 	bot.online = 0
-	os.system('nohup python bot.py')
+	os.system('nohup python2.7 bot.py')
 	#13
 	sys.exit()
