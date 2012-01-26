@@ -34,10 +34,6 @@ def onConference(bot,pres,x):
 	if x.getTag('item').getAttr('role') == 'visitor':
 		bot.send(xmpp.Message(pres.getFrom(),bot.phrases['VISITOR_HELP'],'chat'))
 	bot.visitors[unicode(pres.getFrom()).split('/')[0]].update({unicode(pres.getFrom()).split('/')[1].lower():[x.getTag('item').getAttr('jid'),x.getTag('item').getAttr('affiliation')]})
-	try:
-		os.makedirs('users')
-	except:
-		pass
 	if pres.getAttr('type') == 'unavailable':
 		os.environ['TZ'] = 'Europe/Moscow'
 		time.tzset()
