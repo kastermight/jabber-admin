@@ -51,6 +51,11 @@ def run(bot,mess,mode='chat'):
 		9 = Краснодар\n\
 		0 = Хабаровск\n\
 		10 = Курск\n'
+		mes += '-'*75 + '\n'
+		mes += u'Наберите !thetime version для получение версии SQL-библиотеки используемой плагином\n'
+	elif command == 'version':
+		import sqlite3
+		mes = u'Я использую SQLite3 версии ' + sqlite3.version + '\n'
 	else:
 		mes = getTime(command)
 		if not mes: mes = u'Не могу вывести время для ' + command + '\n'
