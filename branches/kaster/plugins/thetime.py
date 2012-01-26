@@ -61,30 +61,29 @@ def rungc(bot,mess):
 	run(bot,mess,'groupchat')
 
 def getTime(location):
-	(alltz, locations) = getTimeZones(location)
-	n = len(alltz)
+	(alltz, locations) = getTZFromTable(location)
 	mes = ''
-	for i in range(n):
-		mes += u'Объект: ' + locations[i] + '\n'
-		os.environ['TZ'] = alltz[i]['name']
+	for tz, location in zip(alltz, locations):
+		mes += u'Объект: ' + location + '\n'
+		os.environ['TZ'] = tz['name']
 		time.tzset()
 		loctime = time.localtime()
-		mes += u'Время: %02d:%02d:%02d, %02d.%02d.%d\n' % (loctime[3], loctime[4], loctime[5], loctime[2], loctime[1], loctime[0])
+		mes += u'Время: %02d:%02d:%02d, %02d.%02d.%d%s\n' % (loctime[3], loctime[4], loctime[5], loctime[2], loctime[1], loctime[0], tz['Comment'])
 		mes += '-'*50 + '\n'
 	return mes
 
 def getTimeZones(location):
 	import urllib2
 	import json
+	tz = getFromTable(lcoation)
 	key = 'j3mf52lpisjfaaah5iatjhrltf'
 	url = 'http://www.askgeo.com/api/950112/%s/timezone.json?points='
 	url = url % key
-	(locname, lat, lng) = getlatlong(location)
-	n = len(locname)
+	(locs, lats, lngs) = getlatlong(location)
 	urlex = [url, []]
-	for i in range(n):
-		urlex[0] += lat[i] + ',' + lng[i] + ';'
-		urlex[1].append(locname[i])
+	for loc, lat, lng in zip(locs, lats, lngs):
+		urlex[0] += lat + ',' + lng + ';'
+		urlex[1].append(loc)
 	url = urlex[0][:-1]
 	ans = urllib2.urlopen(url)
 	ans = json.load(ans)
@@ -120,3 +119,44 @@ def iriToUri(iri):
 	import urlparse
 	parts= urlparse.urlparse(iri)
 	return urlparse.urlunparse(part.encode('idna') if parti==1 else urlEncodeNonAscii(part.encode('utf-8')) for parti, part in enumerate(parts))
+
+def getTZFromTable(location):
+	import sqlite3
+	import json
+	import urllib2
+	key = 'j3mf52lpisjfaaah5iatjhrltf'
+	url = 'http://www.askgeo.com/api/950112/%s/timezone.json?points='
+	conn = sqlite3.connect('maindb')
+	tz = []
+	(locs, lats, lngs) = getlatlong(location)
+	url = url % key
+	urlex = [url, []]
+	ind = False
+	tobeadd = []
+	unloc = []
+	cur = conn.cursor()
+	for loc, lat, lng in zip(locs, lats, lngs):
+		latlng = lat + ';' + lng
+		gettz = "SELECT tz, sttime FROM tzdata WHERE geodata = '" + latlng + "'"
+		ans = cur.execute(gettz).fetchone()
+		if ans:
+			tz.append({'name':ans[0], 'Name':ans[1], 'Comment': u' (Взято из базы)'})
+		else:
+			ind = True
+			urlex[0] += lat + ',' + lng + ';'
+			tobeadd.append(latlng)
+			unloc.append(loc)
+		urlex[1].append(loc)
+	if ind:
+		url = urlex[0][:-1]
+		ans = urllib2.urlopen(url)
+		ans = json.load(ans)
+		if not ans['code']:
+			for data, latlng, location in zip(ans['data'], tobeadd, unloc):
+				tz.append({'name':data['timeZone'], 'Name':data['windowsStandardName'], 'Comment': u' (Взято c сайта, добавлено в базу)'})
+				settz = "INSERT INTO tzdata values ('%s', '%s', '%s', '%s')" % (latlng, location, data['windowsStandardName'], data['timeZone'])
+				cur.execute(settz)
+			conn.commit()
+	cur.close()
+	conn.close()
+	return (tz, urlex[1])

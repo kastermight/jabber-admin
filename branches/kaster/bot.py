@@ -4,6 +4,20 @@ import time
 import thread
 from xmpp.roster import Roster
 #some comment
+def createDataBases():
+	import sqlite3
+	conn = sqlite3.connect('maindb')
+	cur = conn.cursor()
+	userscreate = 'CREATE TABLE IF NOT EXISTS users (username UNIQUE ON CONFLICT REPLACE, lastdate)'
+	helpcreate = 'CREATE TABLE IF NOT EXISTS help (plugname UNIQUE ON CONFLICT REPLACE, helpcont)'
+	tzcreate = 'CREATE TABLE IF NOT EXISTS tzdata (geodata UNIQUE ON CONFLICT REPLACE, location, sttime, tz)'
+	cur.execute(userscreate)
+	cur.execute(helpcreate)
+	cur.execute(tzcreate)
+	conn.commit()
+	cur.close()
+	conn.close()
+
 def loadConfig():
 	import ConfigParser
 	config = ConfigParser.ConfigParser()
@@ -159,6 +173,8 @@ def presenseHandler(conn, pres):
 			return
 		bot.plugins_exec('onConference',pres,x)
 
+
+createDataBases()
 status = open('status.txt', 'a')
 ltime = time.localtime()
 towrite = 'I was run at %02d:%02d:%02d, on %02d/%02d/%d' % (ltime[3], ltime[4], ltime[5], ltime[2], ltime[1], ltime[0])
