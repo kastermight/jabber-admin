@@ -50,33 +50,43 @@ def run(bot,mess,mode='chat'):
 		else:
 			date = u'Дата: '
 		
-		allcond = re.search(allcond_pat, alldata).group(1)
-		cond = re.search(cond_pat, allcond)
-		if cond:
-			cond = cond.group(1).decode('cp1251')
+		allcond = re.search(allcond_pat, alldata)
+		if allcond:
+			allcond = allcond.group(1)
+			cond = re.search(cond_pat, allcond)
+			if cond:
+				cond = cond.group(1).decode('cp1251')
+			else:
+				cond = ''
+				
+			temp = re.search(temp_pat, allcond)
+			if temp:
+				temp = temp.group(1)
+			else:
+				temp = ''
+				
+			hum = re.search(hum_pat, allcond)
+			if hum:
+				hum = hum.group(1).decode('cp1251')
+			else:
+				hum = u'Влажность: '
+				
+			wind = re.search(wind_pat, allcond)
+			if wind:
+				windir = {u'С':unichr(0x21d1), u'Ю':unichr(0x21d3), u'В':unichr(0x21d2), u'З':unichr(0x21d0), \
+				       u'СВ':unichr(0x21d7), u'СЗ':unichr(0x21d6), u'ЮВ':unichr(0x21d8), u'ЮЗ':unichr(0x21d9)}
+				wind = unicode(wind.group(1).decode('cp1251'))
+				wind_pat = u'(Ветер\:\s)(.+)(,\s\d+\sм/с)'
+				wind = re.search(wind_pat, wind)
+				#wind = wind.group(1) + windir[wind.group(2)] + '(' + wind.group(2) + ')' + wind.group(3)
+				wind = wind.group(1) + windir[wind.group(2)] + wind.group(3)
+			else:
+				wind = u'Ветер:'
+				
+			fmt = u'Погода в городе %s на %s\nПогодные условия: %s\nТемпература воздуха: %s\n%s\n%s'
+			fmtstr = fmt % (city_raw, date, cond, temp, hum, wind)
 		else:
-			cond = ''
-		
-		temp = re.search(temp_pat, allcond)
-		if temp:
-			temp = temp.group(1)
-		else:
-			temp = ''
-
-		hum = re.search(hum_pat, allcond)
-		if hum:
-			hum = hum.group(1).decode('cp1251')
-		else:
-			hum = u'Влажность: '
-		
-		wind = re.search(wind_pat, allcond)
-		if wind:
-			wind = wind.group(1).decode('cp1251')
-		else:
-			wind = u'Ветер:'
-		
-		fmt = u'Погода в городе %s на %s\nПогодные условия: %s\nТемпература воздуха: %s\n%s\n%s'
-		fmtstr = fmt % (city_raw, date, cond, temp, hum, wind)
+			fmtstr = u'Для данного города погода недоступна. Попробуйте ввести название на латинице'
 	bot.send(xmpp.Message(mess.getFrom(),fmtstr,mode))
 
 def rungc(bot,mess):
