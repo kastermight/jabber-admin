@@ -5,7 +5,7 @@ import os
 
 
 def init(bot):
-	return {'status':0,'descr [location]':bot.phrases['DESCR_THETIME'],'gc':2}
+	return {'status':0,'usage':'[location|shortcut]', 'descr':bot.phrases['DESCR_THETIME'],'gc':2}
 
 def run(bot,mess,mode='chat'):
 	import sqlite3
