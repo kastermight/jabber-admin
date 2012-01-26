@@ -8,6 +8,7 @@ def init(bot):
 	return {'status':0,'descr [location]':bot.phrases['DESCR_THETIME'],'gc':2}
 
 def run(bot,mess,mode='chat'):
+	import sqlite3
 	command = mess.getBody()[8:].strip().replace(' ', '')
 	if command == '1' or command == '':
 		command = u'Москва,Московскаяобласть,Россия'
@@ -53,10 +54,7 @@ def run(bot,mess,mode='chat'):
 		10 = Курск\n'
 		mes += '-'*75 + '\n'
 		mes += u'Для предотвращения многочисленных однотипных запросов на веб-ресурс с которого берутся данные, '
-		mes += u'единожды запрошенные данные заносятся в базу данных SQL. Наберите !thetime version для получения версии SQL-библиотеки используемой плагином\n'
-	elif command == 'version':
-		import sqlite3
-		mes = u'Я использую SQLite3 версии ' + sqlite3.version + '\n'
+		mes += u'единожды запрошенная информация заносится в базу данных SQL. Версия SQL-библиотеки используемой плагином - SQLite v' + sqlite3.version + '\n'
 	else:
 		mes = getTime(command)
 		if not mes: mes = u'Не могу вывести время для ' + command + '\n'
