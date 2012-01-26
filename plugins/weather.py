@@ -12,7 +12,7 @@ def run(bot,mess,mode='chat'):
 		1 = Москва\n\
 		2 = Санкт-Петербург\n\
 		3 = Boulder\n\
-		4 = Брест\n\
+		4 = Киев\n\
 		5 = Бат-Ям\n\
 		6 = Ростов-на-Дону\n\
 		7 = Ташкент\n\
@@ -24,7 +24,7 @@ def run(bot,mess,mode='chat'):
 		if city_raw == '1': city_raw = u'Москва'
 		if city_raw == '2': city_raw = u'Санкт-Петербург'
 		if city_raw == '3': city_raw = u'Boulder'
-		if city_raw == '4': city_raw = u'Брест'
+		if city_raw == '4': city_raw = u'Киев'
 		if city_raw == '5': city_raw = u'Бат-Ям'
 		if city_raw == '6': city_raw = u'Ростов-на-Дону'
 		if city_raw == '7': city_raw = u'Ташкент'
