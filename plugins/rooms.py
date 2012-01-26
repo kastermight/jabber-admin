@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import xmpp
 import time
+import sqlite3
 
 def init(bot):
 	return {'status':10,'usage':'<join|leave> <room>','descr':bot.phrases['DESCR_ROOMS'],'gc':0}
@@ -45,10 +46,13 @@ def onConference(bot,pres,x):
 		nickout = unicode(pres.getAttr('from')).split('/')[1]
 		conf = unicode(pres.getAttr('from')).split('/')[0]
 		del bot.visitors[conf][nickout.lower()]
-		#		print bot.visitors[conf]
-		seen = open('users/' + nickout.lower(), 'w')
-		seen.write(loctime)
-		seen.close()
+		conn = sqlite3.connect('maindb')
+		cur = conn.cursor()
+		st = "INSERT INTO users values ('%s', '%s')" % (nickout.lower(), loctime)
+		cur.execute(st)
+		conn.commit()
+		cur.close()
+		conn.close()
 	if (unicode(pres.getFrom()).split('/')[1] not in bot.config['conferences'][unicode(pres.getFrom()).split('/')[0]]) or (x.getTag('item').getAttr('affiliation') == 'owner') or (x.getTag('item').getAttr('affiliation') == 'admin'):
 		return
 	iq = xmpp.Iq('set')
