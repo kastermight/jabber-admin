@@ -25,7 +25,7 @@ def run(bot,mess,mode='chat'):
 		else:
 			conn = sqlite3.connect('maindb')
 			cur = conn.cursor()
-			st = "SELECT lastdate FROM users WHERE username = '%s'" % nick.lower()
+			st = "SELECT lastdate FROM users WHERE username = '%s' AND conf = '%s'" % (nick.lower(), conf)
 			ans = cur.execute(st).fetchone()
 			if ans:
 				lasttime = ans[0]
