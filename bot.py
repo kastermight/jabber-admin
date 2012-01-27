@@ -8,7 +8,7 @@ def createDataBases():
 	import sqlite3
 	conn = sqlite3.connect('maindb')
 	cur = conn.cursor()
-	userscreate = 'CREATE TABLE IF NOT EXISTS users (username UNIQUE ON CONFLICT REPLACE, lastdate)'
+	userscreate = 'CREATE TABLE IF NOT EXISTS users_tmp (username, lastdate, conf, UNIQUE (username, conf) ON CONFLICT REPLACE)'
 	helpcreate = 'CREATE TABLE IF NOT EXISTS help (plugname UNIQUE ON CONFLICT REPLACE, helpcont)'
 	tzcreate = 'CREATE TABLE IF NOT EXISTS tzdata (geodata UNIQUE ON CONFLICT REPLACE, location, sttime, tz)'
 	cur.execute(userscreate)
