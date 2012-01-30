@@ -23,7 +23,6 @@ def run(bot,mess,mode='chat'):
 		cur.execute(st)
 		conn.commit()
 	if command == 'help':
-		print nick, conf, mode
 		mes = u'Данный плагин предназначен для публикации кода на pastebin.com.\n'
 		mes += u'Синтаксис команды:\n\
 	pb <code>\nв личке у бота. '
@@ -60,7 +59,7 @@ def run(bot,mess,mode='chat'):
 			mes += u'PS: Если вызвать команду !pb set/get без параметров, то все настройки сбросятся в значения по умолчанию, а счетчик сбросится до 1 (set), '
 			mes += u'либо выведутся текущие настройки (get).\n'
 			mes += u'Например: !pb set fnb:"MyPBCodes" fct:10 exd:1M fmt:python для установления значений, или !pb get fnb fct для отображения значений.'
-		if setget == 'set':
+		elif setget == 'set':
 			if subcommand == '':
 				setUDefaults(conn, cur, asker)
 			else:
