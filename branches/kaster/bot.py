@@ -125,6 +125,7 @@ def message(conn,mess):
 		user = ''
 	plugins_exec('onMessage',mess)
 	if mess.getType() == 'chat':
+		#print mess.getFrom()
 		if mess.getFrom() == bot.config['connect']['login']:
 			return None
 		text = mess.getBody()
@@ -139,12 +140,8 @@ def message(conn,mess):
 				thread.start_new_thread(runPlugin,(command,mess,'chat'))
 				break
 	elif mess.getType() == 'groupchat':
-		if (len(unicode(mess.getBody())) >= 100):
-			try:
-				print bot.visitors[user]
-			except:
-				print bot.visitors[conf]
-		elif unicode(mess.getBody())[0] == u'!':
+		#print mess.getFrom()
+		if unicode(mess.getBody())[0] == u'!':
 			text = mess.getBody()
 			if ( text == None ):
 				return
