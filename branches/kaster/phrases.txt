@@ -11,6 +11,7 @@ DESCR_BASH=Вывод цитат из баша
 DESCR_EXIT=Выход из сессии
 DESCR_CURR=Вывод курса валют на текущий или заданный день
 DESCR_HELP=Помощь по командам
+DESCR_PB=Отправка код на pastebin.com
 DESCR_WEATHER=Вывод погоды по городам
 DESCR_ANEK=Случайный анекдот с сайта anekdot.ru
 DESCR_MODER=Управление списком модераторов конференций
