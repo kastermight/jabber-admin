@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+# -*- coding: utf-8 -*-
 import xmpp
 import time
 import thread
@@ -8,12 +8,16 @@ def createDataBases():
 	import sqlite3
 	conn = sqlite3.connect('maindb')
 	cur = conn.cursor()
-	userscreate = 'CREATE TABLE IF NOT EXISTS users_tmp (username, lastdate, conf, UNIQUE (username, conf) ON CONFLICT REPLACE)'
-	helpcreate = 'CREATE TABLE IF NOT EXISTS help (plugname UNIQUE ON CONFLICT REPLACE, helpcont)'
-	tzcreate = 'CREATE TABLE IF NOT EXISTS tzdata (geodata UNIQUE ON CONFLICT REPLACE, location, sttime, tz)'
+	userscreate = "CREATE TABLE IF NOT EXISTS users_tmp (username, lastdate, conf, UNIQUE (username, conf) ON CONFLICT REPLACE)"
+	helpcreate = "CREATE TABLE IF NOT EXISTS help (plugname UNIQUE ON CONFLICT REPLACE, helpcont)"
+	tzcreate = "CREATE TABLE IF NOT EXISTS tzdata (geodata UNIQUE ON CONFLICT REPLACE, location, sttime, tz)"
+	setcreate = "CREATE TABLE IF NOT EXISTS usettings (username, filenamebase, filecount, expdate, format)"
+	lastcreate = "CREATE TABLE IF NOT EXISTS dlimit (number, lastdate)"
 	cur.execute(userscreate)
 	cur.execute(helpcreate)
 	cur.execute(tzcreate)
+	cur.execute(setcreate)
+	cur.execute(lastcreate)
 	conn.commit()
 	cur.close()
 	conn.close()
@@ -114,7 +118,11 @@ def runPlugin(command,mess,mode):
 
 def message(conn,mess):
 	global bot
-	user=unicode(mess.getFrom()).split('/')[0]
+	conf=unicode(mess.getFrom()).split('/')[0]
+	try:
+		user=unicode(mess.getFrom()).split('/')[1]
+	except:
+		user = ''
 	plugins_exec('onMessage',mess)
 	if mess.getType() == 'chat':
 		if mess.getFrom() == bot.config['connect']['login']:
@@ -130,22 +138,28 @@ def message(conn,mess):
 			if ((geted != None) and (command in geted)):
 				thread.start_new_thread(runPlugin,(command,mess,'chat'))
 				break
-	elif (mess.getType() == 'groupchat') and (unicode(mess.getBody())[0] == u'!'):
-#		if (len(unicode(mess.getFrom()).split('/')) > 1) and (unicode(mess.getFrom()).split('/')[1] == bot.config['conferences']['nick']):
-#			return None
-		text = mess.getBody()
-		if ( text == None ):
-			return
-		text = text[1:]
-		mess.setBody(unicode(mess.getBody())[1:])
-		command = text.split(' ')
-		command = command[0]
-		for i in range(bot.config['permissions']['max_level'],-1,-1):
-			geted = bot.plugins.get('commands_'+unicode(i))
-			if ((geted != None) and (command in geted)):
-				thread.start_new_thread(runPlugin,(command,mess,'gc',))
-				break
-
+	elif mess.getType() == 'groupchat':
+		if (len(unicode(mess.getBody())) >= 100):
+			try:
+				print bot.visitors[user]
+			except:
+				print bot.visitors[conf]
+		elif unicode(mess.getBody())[0] == u'!':
+			text = mess.getBody()
+			if ( text == None ):
+				return
+			text = text[1:]
+			mess.setBody(unicode(mess.getBody())[1:])
+			command = text.split(' ')
+			command = command[0]
+			for i in range(bot.config['permissions']['max_level'],-1,-1):
+				geted = bot.plugins.get('commands_'+unicode(i))
+				if ((geted != None) and (command in geted)):
+					thread.start_new_thread(runPlugin,(command,mess,'gc',))
+					break
+		elif unicode(mess.getBody()).startswith(bot.config['conferences']['nick']):
+			mess.setBody(user + u': Я откликаюсь только на команды начинающиеся на "!" адресованные в общий чат.')
+			bot.send(xmpp.Message(conf,mess.getBody(),'groupchat'))
 def subscribeHandler(conn, pres):
 	plugins_exec('onSubscribe',pres)
 	jid = pres.getFrom().getStripped()

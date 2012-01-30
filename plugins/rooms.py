@@ -47,7 +47,6 @@ def onConference(bot,pres,x):
 		st = "INSERT INTO users values ('%s', '%s', '%s')" % (nickout.lower(), loctime, conf)
 		cur.execute(st)
 		conn.commit()
-		cur.execute('VACUUM')
 		cur.close()
 		conn.close()
 	if (unicode(pres.getFrom()).split('/')[1] not in bot.config['conferences'][unicode(pres.getFrom()).split('/')[0]]) or (x.getTag('item').getAttr('affiliation') == 'owner') or (x.getTag('item').getAttr('affiliation') == 'admin'):
