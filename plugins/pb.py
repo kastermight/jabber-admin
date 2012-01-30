@@ -11,15 +11,19 @@ def run(bot,mess,mode='chat'):
 	conn = sqlite3.connect('maindb')
 	cur = conn.cursor()
 	command = mess.getBody()[3:].strip()
-	nick = unicode(mess.getFrom()).split('/')[1]
+	full = unicode(mess.getFrom())
+	afull = full.split('/')
+	nick = afull[1]
 	asker = nick.lower()
-	conf = unicode(mess.getFrom()).split('/')[0]
+	conf = afull[0]
+	#dconf = {'chat':}
 	st = "SELECT username FROM usettings WHERE username = '%s'" % asker
 	if not cur.execute(st).fetchall():
 		st = "INSERT INTO usettings VALUES ('%s', 'code by %s', 1, '1D', 'autoit')" % (asker, asker)
 		cur.execute(st)
 		conn.commit()
 	if command == 'help':
+		print nick, conf, mode
 		mes = u'Данный плагин предназначен для публикации кода на pastebin.com.\n'
 		mes += u'Синтаксис команды:\n\
 	pb <code>\nв личке у бота. '
@@ -32,7 +36,7 @@ def run(bot,mess,mode='chat'):
 		mes += u'Внимание, на бесплатный аккаунт pastebin.com наложено ограничение в 25 кодов в сутки. '
 		mes += u'Бот ведет счет, поэтому узнать о количестве уже опубликованных кодов можно командой !pb ?\n'
 		mes += '-'*75 + '\n'
-		mes += u'PS: Помните, в общем чате код не постить, любая попытка запостить большой код или сообщение будет караться киком из комнаты в автоматическом режиме, поэтому не обижайтесь.\n'
+		mes += u'PS: Помните, в общем чате код не постить, любая попытка запостить большой код или сообщение будет караться киком из комнаты, поэтому не обижайтесь.\n'
 	elif command == 'format':
 		mes = u'Список наиболее популярных форматов для подсветки кода на http://pastebin.com\n'
 		mes += 'autoit - AutoIt\nc - C\ncsharp - C#\ncpp - C++\nhtml4strict - HTML\njava - Java\nlua - Lua\nperl - Perl\nphp - PHP\npython - Python\nvb - Visual Basic\nxml - XML\n'
@@ -65,10 +69,17 @@ def run(bot,mess,mode='chat'):
 		elif setget == 'get':
 			mes = getUSettings(cur, nick, subcommand)
 	else:
+		mode = 'groupchat'
 		mes = sendpb(conn, cur, nick, command)
-	bot.send(xmpp.Message(conf,mes,mode))
+		#if mode == 'chat':
+		#bot.send(xmpp.Message(conf,mes,mode))
+	if mode == 'chat':
+		bot.send(xmpp.Message(full,mes,mode))
+	else:
+		bot.send(xmpp.Message(conf,mes,mode))
 
 def rungc(bot,mess):
+	#mess.setFrom(unicode(mess.getFrom()).split('/')[0])
 	run(bot,mess,'groupchat')
 
 def setUDefaults(conn, cur, user):
@@ -128,8 +139,8 @@ def getUSettings(cur, nick, command):
 		st = st % ('filenamebase, filecount, expdate, format', user)
 		allmes = cur.execute(st).fetchone()
 		mes += u'Корневое название для публикуемых кодов: %s (fnb)\n' % allmes[0]
-		mes += u'Начальный индекс для инкремента: %d (fct)\n' % allmes[1]
-		mes += u'Длительность хранения кода: %s\n (exd)' % allmes[2]
+		mes += u'Состояние индекса для инкремента: %d (fct)\n' % allmes[1]
+		mes += u'Длительность хранения кода: %s (exd)\n' % allmes[2]
 		mes += u'Формат для подсветки кода: %s (fmt)\n' % allmes[3]
 	return mes
 
@@ -191,9 +202,12 @@ def sendpb(conn, cur, user, code):
 		httpServ = httplib.HTTPConnection("pastebin.com")
 		httpServ.connect()
 		httpServ.request('POST', '/api/api_post.php', body, header)
-		ans = httpServ.getresponse().read()
+		resp = httpServ.getresponse().read()
 		httpServ.close()
+		st = "UPDATE usettings SET filecount = %d WHERE username = '%s'" % (ans[1] + 1, user.lower())
+		cur.execute(st)
+		conn.commit()
 		setLimit(conn, cur)
 	else:
-		ans= u'Лимит в 25 кодов на сегодня истек. Попробуйте завтра.'
-	return ans
+		resp= u'Лимит в 25 кодов на сегодня истек. Попробуйте завтра.'
+	return resp
