@@ -12,3 +12,6 @@ def run(bot,mess,mode='chat'):
 	bot.online = 0
 	os.system('nohup python2.7 bot.py')
 	sys.exit()
+
+def rungc(bot, mess):
+	run(bot, mess, 'groupchat')
