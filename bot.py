@@ -133,7 +133,7 @@ def message(conn,mess):
 			return
 		command = text.split(' ')
 		command = command[0]
-		isf = get_priv(user)
+		isf = get_priv(conf)
 		for i in range(isf,-1,-1):
 			geted = bot.plugins.get('commands_'+unicode(i))
 			if ((geted != None) and (command in geted)):
