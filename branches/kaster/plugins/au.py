@@ -6,6 +6,13 @@ def init(bot):
 
 def run(bot,mess,mode='chat'):
 	command = mess.getBody()[3:]
+	full = unicode(mess.getFrom())
+	afull = full.split('/')
+	try:
+		nick = afull[1]
+	except:
+		nick = ''
+	conf = afull[0]
 	funcs = getfuncs()
 	if command == 'help':
 		mes = u'Этот плагин отображет раздел справки по введенной функции или ее сокращению. '
@@ -30,12 +37,13 @@ def run(bot,mess,mode='chat'):
 				mes = open('auhelp/' + func + '.txt').read().decode('cp1251')
 			except:
 				mes = u'В моей базе такой функции или ее сокращения нет'
-	if (len(mes) > 400) and (mode == 'groupchat'):
-		mes = u'Справка для этой функции слишком объемная для общего чата. Попробуйте в личке. И помните, в личке ведущий восклицательный знак не нужен. Например - au help, вместо !au help'
-	bot.send(xmpp.Message(mess.getFrom(),mes,mode))
+			if (len(mes) > 400) and (mode == 'groupchat'):
+				mode = 'chat'
+				conf = full
+	bot.send(xmpp.Message(conf,mes,mode))
 
 def rungc(bot,mess):
-	mess.setFrom(unicode(mess.getFrom()).split('/')[0])
+	#mess.setFrom(unicode(mess.getFrom()).split('/')[0])
 	run(bot,mess,'groupchat')
 
 

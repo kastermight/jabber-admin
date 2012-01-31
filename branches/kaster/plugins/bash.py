@@ -6,6 +6,13 @@ def init(bot):
 
 def run(bot,mess,mode='chat'):
 	command = mess.getBody()[5:]
+	full = unicode(mess.getFrom())
+	afull = full.split('/')
+	try:
+		nick = afull[1]
+	except:
+		nick = ''
+	conf = afull[0]
 	if command == 'help':
 		mes = u'Плагин выводит случайный анекдот с сайта http://anekdot.ru (не больше 5 за раз)'
 	elif command.isdigit():
@@ -13,18 +20,18 @@ def run(bot,mess,mode='chat'):
 			mes = getbash(int(command))
 		else:
 			if mode == 'groupchat':
-				mes = u'В общий чат больше 5 цитат выводить нельзя. Попробуйте в личку. Помните, ведущий восклицательный знак перед командой не нужен'
-			else:
+				mode = 'chat'
+				conf = full
 				if int(command) > 10:
 					mes = u'Больше 10 цитат нельзя даже в личку'
 				else:
 					mes = getbash(int(command))
 	else:
 		mes = getbash(1)
-	bot.send(xmpp.Message(mess.getFrom(),mes,mode))
+	bot.send(xmpp.Message(conf,mes,mode))
 
 def rungc(bot,mess):
-	mess.setFrom(unicode(mess.getFrom()).split('/')[0])
+	#mess.setFrom(unicode(mess.getFrom()).split('/')[0])
 	run(bot,mess,'groupchat')
 
 def getbash(i):

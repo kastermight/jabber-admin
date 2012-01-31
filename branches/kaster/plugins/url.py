@@ -8,7 +8,7 @@ def init(bot):
 def run(bot,mess,mode='chat'):
 	command = mess.getBody()[4:]
 	if command == 'help':
-		mes = u'Данный плагин преобразовывает длинные (и не очень) ссылки в короткий аналог, используя сервис http://goo.gl. Помните, в ссылке не должны содержаться символы несовместимые с URL, например http://ru.wikipedia.org/wiki/мандрагора, вместо этого дожно быть http://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BD%D0%B4%D1%80%D0%B0%D0%B3%D0%BE%D1%80%D0%B0. Как правило, современные браузеры при копировании адреса страницы из адресной строки автоматически конвертируют подобные символы в нужном направлении. Редкие случаи, когда обратное может произойти - если вы набираете ссылку руками, чего делать, конечно же, не стоит.'
+		mes = u'Данный плагин преобразовывает длинные (и не очень) ссылки в короткий аналог, используя сервис http://goo.gl.'
 	else:
 		mes = getshorturl(command)
 		if not mes: mes = u'Для данного URL короткая версия не может быть найдена'
@@ -22,13 +22,13 @@ def rungc(bot,mess):
 def getshorturl(url):
 	import httplib
 	import json
-	
+	url = iriToUri(url)
 	ans = ''
 	httpServ = httplib.HTTPSConnection("www.googleapis.com")
 	httpServ.connect()
 	
 	header = {'Content-Type': 'application/json'}
-	body = '{"longUrl": "%s"}' % url.encode('idna')
+	body = '{"longUrl": "%s"}' % url
 	try:
 		httpServ.request('POST', '/urlshortener/v1/url', body, header)
 		response = httpServ.getresponse()
@@ -37,3 +37,12 @@ def getshorturl(url):
 	except:
 		ans = {'id':u'В ссылке находятся символы недопустимые с форматом URL'}
 	return ans['id']
+
+def urlEncodeNonAscii(b):
+	import re
+	return re.sub('[\x80-\xFF]', lambda c: '%%%02x' % ord(c.group(0)), b)
+
+def iriToUri(iri):
+	import urlparse
+	parts= urlparse.urlparse(iri)
+	return urlparse.urlunparse(part.encode('idna') if parti==1 else urlEncodeNonAscii(part.encode('utf-8')) for parti, part in enumerate(parts))
