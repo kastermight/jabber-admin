@@ -21,6 +21,7 @@ def run(bot,mess,mode='chat'):
 		0 = Хабаровск\n\
 		10 = Курск'
 	else:
+		if city_raw == '': city_raw = u'Москва'
 		if city_raw == '1': city_raw = u'Москва'
 		if city_raw == '2': city_raw = u'Санкт-Петербург'
 		if city_raw == '3': city_raw = u'Boulder'

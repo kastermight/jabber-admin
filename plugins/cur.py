@@ -37,7 +37,7 @@ def run(bot,mess,mode='chat'):
 		else:
 			dateind = True
 			command = command.replace(date.group(0), '')
-			if not command: command += 'list'
+			if not command: command += 'USD, EUR'
 			date = '%02d/%02d/%d' % (int(date.group(1)), int(date.group(2)), int(date.group(3)))
 		cur_list = {}
 		url = URL % date
