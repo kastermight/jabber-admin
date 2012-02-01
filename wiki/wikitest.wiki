@@ -1,0 +1,8 @@
+#summary phrases - что это и зачем оно нужно
+
+= Проверяем =
+
+Код:
+<syntaxhighlight lang="html4strict" line start="100" highlight="5">
+HTML module goes here...
+</syntaxhighlight>
