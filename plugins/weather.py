@@ -21,8 +21,7 @@ def run(bot,mess,mode='chat'):
 		0 = Хабаровск\n\
 		10 = Курск'
 	else:
-		if city_raw == '': city_raw = u'Москва'
-		if city_raw == '1': city_raw = u'Москва'
+		if city_raw in ['', '1']: city_raw = u'Москва'
 		if city_raw == '2': city_raw = u'Санкт-Петербург'
 		if city_raw == '3': city_raw = u'Boulder'
 		if city_raw == '4': city_raw = u'Киев'
@@ -74,13 +73,7 @@ def run(bot,mess,mode='chat'):
 				
 			wind = re.search(wind_pat, allcond)
 			if wind:
-				windir = {u'С':unichr(0x21d1), u'Ю':unichr(0x21d3), u'В':unichr(0x21d2), u'З':unichr(0x21d0), \
-				       u'СВ':unichr(0x21d7), u'СЗ':unichr(0x21d6), u'ЮВ':unichr(0x21d8), u'ЮЗ':unichr(0x21d9)}
 				wind = unicode(wind.group(1).decode('cp1251'))
-				wind_pat = u'(Ветер\:\s)(.+)(,\s\d+\sм/с)'
-				wind = re.search(wind_pat, wind)
-				#wind = wind.group(1) + windir[wind.group(2)] + '(' + wind.group(2) + ')' + wind.group(3)
-				wind = wind.group(1) + windir[wind.group(2)] + wind.group(3)
 			else:
 				wind = u'Ветер:'
 				
