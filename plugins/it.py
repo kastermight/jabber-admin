@@ -36,7 +36,7 @@ def getit():
 	import re
 	import urllib2
 	from BeautifulSoup import BeautifulSoup
-	#url = 'http://ithappens.ru/story/53'
+	#url = 'http://ithappens.ru/story/6439'
 	url = 'http://ithappens.ru/random'
 	html = urllib2.urlopen(url).read()
 	html = urlreplace(html)
@@ -49,21 +49,28 @@ def getit():
 	date = date[0].contents[0]
 	text = text.find('p', 'text')
 	id = text['id'][6:]
-	text = text.contents[0]
+	textcont = text.contents
+	text = ''
+	for txt in textcont:
+		try:
+			subtext = txt.contents[0]
+		except:
+			subtext = txt
+		text += subtext
 	return (date, rank, id, text, title)
 
 def urlreplace(text):
 	text = text.replace('<br />', '\n')
-	text = text.replace('<nobr>', '')
-	text = text.replace('</nobr>', '')
 	text = text.replace('<br>', '\n')
 	text = text.replace('&nbsp;', ' ')
 	text = text.replace('&gt;', '>')
 	text = text.replace('&lt;', '<')
 	text = text.replace('&quot;', '"')
 	text = text.replace('&#39;', '\'')
-	text = text.replace('<i>', '')
-	text = text.replace('</i>', '')
-	text = text.replace('<b>', '')
-	text = text.replace('</b>', '')
+	#text = text.replace('<i>', '')
+	#text = text.replace('</i>', '')
+	#text = text.replace('<b>', '')
+	#text = text.replace('</b>', '')
+	#text = text.replace('<nobr>', '')
+	#text = text.replace('</nobr>', '')
 	return text
