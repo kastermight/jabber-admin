@@ -14,9 +14,16 @@ def run(bot,mess,mode='chat'):
 		nick = ''
 	conf = afull[0]
 	if command == 'help':
-		mes = u'Плагин выводит случайную историю с сайта http://ithappens.ru'
+		mes = u'Плагин выводит случайную историю сайта http://ithappens.ru. Если задан аргумент, то выводит историю с этим номером. '
+		mes += u'Если истории с заданным номером не существует, выводится последняя история опубликованная на текущий момент.'
+		if mode == 'chat': conf = full
 	else:
-		(date, rank, id, text, title) = getit()
+		url = 'http://ithappens.ru/'
+		if command.isdigit():
+			url += 'story/' + command
+		else:
+			url += 'random'
+		(date, rank, id, text, title) = getit(url)
 		mes = u'История №%s от %s - "%s" (%s)\n' % (id, date, title, rank)
 		mes += '-'*75 + '\n'
 		mes += text
@@ -32,18 +39,22 @@ def rungc(bot,mess):
 	#mess.setFrom(unicode(mess.getFrom()).split('/')[0])
 	run(bot,mess,'groupchat')
 
-def getit():
+def getit(url):
 	import re
 	import urllib2
 	from BeautifulSoup import BeautifulSoup
 	#url = 'http://ithappens.ru/story/6439'
-	url = 'http://ithappens.ru/random'
+	#url = 'http://ithappens.ru/random'
 	html = urllib2.urlopen(url).read()
 	html = urlreplace(html)
 	soup = BeautifulSoup(html)
 	text = soup.find('div', 'text')
 	date = text.findAll('p', 'date')
 	title = text.h3.contents[0]
+	try:
+		title = title.contents[0]
+	except:
+		pass
 	title = re.search('#\d+\:\s(.*)', title).group(1)
 	rank = date[1].contents[0][9:].strip()
 	date = date[0].contents[0]
