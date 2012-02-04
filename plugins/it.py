@@ -2,7 +2,7 @@
 import xmpp
 
 def init(bot):
-	return {'status':0,'usage':'','descr':bot.phrases['DESCR_ANEK'],'gc':2}
+	return {'status':0,'usage':'','descr':bot.phrases['DESCR_IT'],'gc':2}
 
 def run(bot,mess,mode='chat'):
 	command = mess.getBody()[3:]

@@ -14,6 +14,7 @@ DESCR_HELP=Помощь по командам
 DESCR_PB=Отправка код на pastebin.com
 DESCR_WEATHER=Вывод погоды по городам
 DESCR_ANEK=Случайный анекдот с сайта anekdot.ru
+DESCR_IT=Случайная история с сайта ithappens.ru
 DESCR_MODER=Управление списком модераторов конференций
 DESCR_NO=Голосование: нет
 DESCR_OFF=Выключение бота
