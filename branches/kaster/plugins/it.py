@@ -78,5 +78,5 @@ def urlreplace(text):
 	text = text.replace('&lt;', ' < ')
 	text = text.replace('&quot;', '"')
 	text = text.replace('&#39;', '\'')
-	text = text.replace('&#8594;', u'\u2192')
+	text = text.replace('&#8594;', '\u2192')
 	return text
