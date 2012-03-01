@@ -14,7 +14,7 @@ def run(bot,mess):
 	item.setAttr('nick',unicode(mess.getFrom()).split('/')[1])
 	item.setAttr('role','participant')
 	item2 = query.addChild('item')
-	item2.setAttr('jid',bot.visitors[unicode(mess.getFrom()).split('/')[0]][unicode(mess.getFrom()).split('/')[1]][0])
+	item2.setAttr('jid',bot.visitors[unicode(mess.getFrom()).split('/')[0]][unicode(mess.getFrom()).split('/')[1].lower()][0])
 	item2.setAttr('affiliation','member')
 	bot.visitors[unicode(mess.getFrom()).split('/')[0]][unicode(mess.getFrom()).split('/')[1]][1] = 'member'
 	bot.send(iq)
