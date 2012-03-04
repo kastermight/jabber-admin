@@ -22,6 +22,7 @@ DESCR_YES=Vote yes
 DESCR_LOG=Logging
 DESCR_UPTIME=Bot's uptime
 DESCR_AUBAN=JIDs autoban
+DESCR_CALC=Calculator with math functions
 INIT_KICK=%s started voting for kick %s (you have 1 minute to vote !yes or !no)
 NICK_KICKED=%s kicked
 NICK_NOT_KICKED=%s not kicked
