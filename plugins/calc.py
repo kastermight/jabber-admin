@@ -2,8 +2,70 @@
 from __future__ import division
 import xmpp
 from math import *
+from re import sub
 def init(bot):
 	return {'status':0,'usage':'expression','descr':bot.phrases['DESCR_CALC'],'gc':2}
+
+alias = [("^","**"),
+	 (",","."),
+	 ("coth","1/tanh"),
+	 ("cot","1/tan"),
+	 ("csec","1/sin"),
+	 ("sech","1/cosh"),
+	 ("sec","1/cos"),
+	 ("csh","1/sinh"),
+	 ("fact","factorial"),
+	 ("gamm","gamma"),
+	 ("degr","degrees"),
+	 ("rad","radians"),
+	 (unichr(8722),"-"),
+	 ("ctg","1/tan"),
+	 ("tg","tan"),
+	 ("ctan","1/tan"),
+	 ("arccos","acos"),
+	 ("arcsin","asin"),
+	 ("arctg","atan"),
+	 ("arccos","acos"),
+	 ("lg10","log10"),
+	 ("lg","log"),
+	 ("mod","fmod"),
+	 ("true","True"),
+	 ("false","False")]
+
+genuine = ["atanh",
+	   "atan",
+	   "tanh",
+	   "tan",
+	   "asinh",
+	   "asin",
+	   "sinh",
+	   "sin",
+	   "acosh",
+	   "acos",
+	   "cosh",
+	   "cos",
+	   "pow",
+	   "factorial",
+	   "gamma",
+	   "radians",
+	   "log",
+	   "log10",
+	   "fabs",
+	   "abs",
+	   "fmod",
+	   "int",
+	   "round",
+	   "sqrt",
+	   "exp",
+	   "max",
+	   "min",
+	   "erf",
+	   "e", "pi"]
+
+pats = {"digitpat":"[0-9a-fA-F]",
+	"bracespat":"[()\[\]]",
+	"arithpat":"[*/%\-+.]",
+	"spacespat":"[\s\t]"}
 
 def run(bot,mess,mode='chat'):
 	command = mess.getBody()[5:]
@@ -40,7 +102,7 @@ def run(bot,mess,mode='chat'):
 		"cosh" - Гиперболический косинус (Кошинус)\n\
 		"tanh" - Гиперболический тангенс\n\
 		"coth" - Гиперболический котангенс\n\
-		"sh" - Гиперболический секанс\n\
+		"sech" - Гиперболический секанс\n\
 		"csh" - Гиперболический косеканс\n\
 		"asin" - Арксинус числа\n\
 		"acos" - Арккосинус числа\n\
@@ -88,36 +150,36 @@ def run(bot,mess,mode='chat'):
 		else:
 			ans = u'К сожалению, такой справки у меня нет'
 	else:
-		command = command.replace('^', '**')
-		command = command.replace('cot', '1/tan')
-		command = command.replace('sec', '1/cos')
-		command = command.replace('csec', '1/sin')
-		command = command.replace('coth', '1/tanh')
-		command = command.replace('sh', '1/cosh')
-		command = command.replace('csh', '1/sinh')
-		command = command.replace('fact', 'factorial')
-		command = command.replace('gam', 'gamma')
-		command = command.replace('degr', 'degrees')
-		command = command.replace('rad', 'radians')
-		command = command.replace(unichr(8722), '-')
-		try:
-			ans = eval(command)
-		except ValueError:
-			ans = u'Аргументы некоторых функций некорректны'
-		except ZeroDivisionError:
-			ans = u'Произошло деление на нуль'
-		except TypeError:
-			ans = u'Типы аргументов некоторых функций некорректны'
-		except NameError:
-			ans = u'Некоторые функции мне неизвестны. Используйте !calc help для списка функций'
-		else:
-			tmp = ans
+		for pair in alias:
+			command = command.replace(pair[0], pair[1])
+		rem = command
+		for func in genuine:
+			rem = rem.replace(func, "")
+		for pat in pats:
+			rem = sub(pats[pat], "", rem)
+		if not rem:
 			try:
-				ans = round(ans, 14)
+				ans = eval(command)
+			except ValueError:
+				ans = u'Аргументы некоторых функций некорректны'
+			except ZeroDivisionError:
+				ans = u'Произошло деление на ноль'
 			except TypeError:
-				ans = u'Не могу произвести числовые операции. Тип передаваемых аргументов неверен. Попробуйте целые числа для конвертации чисел'
-			finally:
-				ans = str(tmp)
+				ans = u'Типы аргументов некоторых функций некорректны'
+			except NameError:
+				ans = u'Некоторые функции мне неизвестны. Используйте !calc help для списка функций'
+			except SyntaxError:
+				ans = u'Неверный синтаксис выражения'
+			else:
+				tmp = ans
+				try:
+					ans = round(ans, 14)
+				except TypeError:
+					ans = u'Не могу произвести числовые операции. Тип передаваемых аргументов неверен. Попробуйте целые числа для конвертации чисел'
+				finally:
+					ans = str(tmp)
+		else:
+			ans = u"Введенное вами выражение не может быть посчитано"
 	bot.send(xmpp.Message(mess.getFrom(),ans,mode))
 
 def rungc(bot,mess):
