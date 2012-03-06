@@ -3,14 +3,14 @@ import xmpp
 
 
 def init(bot):
-	return {'status':0,'usage':'<text>','descr':bot.phrases['DESCR_ECHO'],'gc':2}
+	return {'status':0,'usage':'[help|<plugin name>]','descr':bot.phrases['DESCR_VER'],'gc':2}
 
 def run(bot,mess,mode='chat'):
 	import subprocess as sp
 	import re
 	command = mess.getBody()[4:].strip()
 	if command == 'help':
-		mes = u'Эта команда выводит версию бота'
+		mes = u'Эта команда выводит версию бота и плагинов'
 	else:
 		version = re.search("Revision:\s(\d+)", sp.check_output(["svn", "info"])).group(1)
 		mes = u'JAdmin V.%s' % version

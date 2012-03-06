@@ -7,7 +7,6 @@ def init(bot):
 	return {'status':0,'usage':'expression','descr':bot.phrases['DESCR_CALC'],'gc':2}
 
 alias = [("^","**"),
-	 (",","."),
 	 ("coth","1/tanh"),
 	 ("cot","1/tan"),
 	 ("csec","1/sin"),
@@ -171,13 +170,12 @@ def run(bot,mess,mode='chat'):
 			except SyntaxError:
 				ans = u'Неверный синтаксис выражения'
 			else:
-				tmp = ans
 				try:
 					ans = round(ans, 14)
 				except TypeError:
 					ans = u'Не могу произвести числовые операции. Тип передаваемых аргументов неверен. Попробуйте целые числа для конвертации чисел'
 				finally:
-					ans = str(tmp)
+					ans = str(ans)
 		else:
 			ans = u"Введенное вами выражение не может быть посчитано"
 	bot.send(xmpp.Message(mess.getFrom(),ans,mode))
