@@ -138,7 +138,7 @@ def getTZFromTable(location):
 		if not ans['code']:
 			for data, latlng, location in zip(ans['data'], tobeadd, unloc):
 				tz.append({'name':data['TimeZone']['TimeZoneId'], 'Name':data['TimeZone']['WindowsStandardName'], 'Comment': u' (Взято c сайта, добавлено в базу)'})
-				settz = "INSERT INTO tzdata values ('%s', '%s', '%s', '%s')" % (latlng, location, data['WindowsStandardName'], data['timeZone'])
+				settz = "INSERT INTO tzdata values ('%s', '%s', '%s', '%s')" % (latlng, location, data['TimeZone']['WindowsStandardName'], data['TimeZone']['TimeZoneId'])
 				cur.execute(settz)
 			conn.commit()
 	cur.close()
