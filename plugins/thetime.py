@@ -107,12 +107,13 @@ def getTZFromTable(location):
 	import sqlite3
 	import json
 	import urllib2
-	key = 'j3mf52lpisjfaaah5iatjhrltf'
-	url = 'http://www.askgeo.com/api/950112/%s/timezone.json?points='
+	acckey = '727fe763c079ab5dbf7e3689b3397d9e656e3e9c846245ef0f4272eb0f7e5cda'
+	accid = 407
+	url = 'http://api.askgeo.com/v1/%d/%s/query.json?databases=TimeZone&points='
 	conn = sqlite3.connect('maindb')
 	tz = []
 	(locs, lats, lngs) = getlatlong(location)
-	url = url % key
+	url = url % (accid, acckey)
 	urlex = [url, []]
 	ind = False
 	tobeadd = []
@@ -126,18 +127,18 @@ def getTZFromTable(location):
 			tz.append({'name':ans[0], 'Name':ans[1], 'Comment': u' (Взято из базы)'})
 		else:
 			ind = True
-			urlex[0] += lat + ',' + lng + ';'
+			urlex[0] += lat + '%2C' + lng + '%3B'
 			tobeadd.append(latlng)
 			unloc.append(loc)
 		urlex[1].append(loc)
 	if ind:
-		url = urlex[0][:-1]
+		url = urlex[0][:-3]
 		ans = urllib2.urlopen(url)
 		ans = json.load(ans)
 		if not ans['code']:
 			for data, latlng, location in zip(ans['data'], tobeadd, unloc):
-				tz.append({'name':data['timeZone'], 'Name':data['windowsStandardName'], 'Comment': u' (Взято c сайта, добавлено в базу)'})
-				settz = "INSERT INTO tzdata values ('%s', '%s', '%s', '%s')" % (latlng, location, data['windowsStandardName'], data['timeZone'])
+				tz.append({'name':data['TimeZone']['TimeZoneId'], 'Name':data['TimeZone']['WindowsStandardName'], 'Comment': u' (Взято c сайта, добавлено в базу)'})
+				settz = "INSERT INTO tzdata values ('%s', '%s', '%s', '%s')" % (latlng, location, data['WindowsStandardName'], data['timeZone'])
 				cur.execute(settz)
 			conn.commit()
 	cur.close()
